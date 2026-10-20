@@ -5,3 +5,5 @@ set -euo pipefail
 cd "$CLAUDE_PROJECT_DIR"
 npm install --no-audit --no-fund
 npx hyperframes browser ensure
+# Node's fetch ignores HTTPS_PROXY unless told; the render compiler needs it to inline CDN scripts.
+[ -n "${CLAUDE_ENV_FILE:-}" ] && echo 'export NODE_USE_ENV_PROXY=1' >> "$CLAUDE_ENV_FILE"
