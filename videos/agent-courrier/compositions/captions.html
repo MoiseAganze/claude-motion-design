@@ -1,0 +1,227 @@
+<template id="captions-template" data-composition-id="captions" data-width="1080" data-height="1920">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+
+
+<style data-brand-tokens>
+      @font-face { font-family: 'Space Grotesk'; src: url('assets/fonts/SpaceGrotesk-latin.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: block; }
+      @font-face { font-family: 'Inter'; src: url('assets/fonts/Inter-latin.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: block; }
+      :root {
+      --bg: #070B18;
+      --primary: #3D7BFF;
+      --text: #F4F6FB;
+      --text-muted: #9AA3B8;
+      --text-light: #5C6680;
+      --accent-light: rgba(61, 123, 255, 0.08);
+      --accent-medium: rgba(61, 123, 255, 0.15);
+      --border: rgba(61, 123, 255, 0.2);
+      --card-bg: rgba(61, 123, 255, 0.07);
+      --secondary: #7C5CFF;
+      --surface: #0E1430;
+      --positive: #38E1A6;
+      --negative: #FF5C7A;
+      --cap-ink: #F4F6FB;
+      --cap-canvas: #070B18;
+      --cap-accent: #3D7BFF;
+      --cap-accent-2: #7C5CFF;
+      --font-display: "Space Grotesk", system-ui, serif;
+      --font-body: "Inter", system-ui, sans-serif;
+      --cap-band-top: 1370px;
+      --cap-band-height: 170px;
+      }
+    </style>
+
+<style>
+  #captions-root {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .caption-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    pointer-events: none;
+  }
+  /* the keep-out band, from captionBand(H) — frame content stays above it */
+  .caption-stage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: var(--cap-band-top, 900px);
+    height: var(--cap-band-height, 180px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .caption-group {
+    /* every group is absolutely stacked over the SAME band — exactly one shown at a
+       time via opacity. Must be absolute: in-flow groups would lay out side-by-side. */
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+  }
+
+  /* THE tinted card — 4% cobalt fill, 1.5px 20%-cobalt border, soft 14px corners,
+     NO shadow (the tinted card does the lift; cast depth is forbidden) */
+  .caption-pill {
+    max-width: 78%;
+    padding: 20px 44px 24px;
+    background: color-mix(in srgb, var(--cap-accent, #1e2bfa) 4%, var(--cap-canvas, #fdfae7));
+    border: 1.5px solid color-mix(in srgb, var(--cap-accent, #1e2bfa) 20%, transparent);
+    border-radius: 14px;
+  }
+  .caption-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.1em 0.34em;
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: clamp(40px, 4.4vw, 58px);
+    line-height: 1.16;
+    letter-spacing: -0.02em;
+  }
+
+  /* upcoming — muted gray, no chip */
+  .caption-word {
+    display: inline-block;
+    padding: 0 0.18em;
+    border-radius: 0.32em;
+    color: color-mix(in srgb, var(--cap-ink, #111111) 52%, var(--cap-canvas, #fdfae7));
+  }
+  /* current word — THE solid cobalt chip (the single-accent gesture; pill-rounded
+     fill, NO shadow), cream reading on top */
+  .caption-word.is-active {
+    color: var(--cap-canvas, #fdfae7);
+    background: var(--cap-accent, #1e2bfa);
+    box-shadow: none;
+  }
+  /* already spoken — solid near-black ink, chip cleared */
+  .caption-word.is-spoken {
+    color: var(--cap-ink, #111111);
+    background: transparent;
+    box-shadow: none;
+  }
+
+  /* optional per-word accents (dormant until a word-classer tags them) */
+  /* brand / key term — cobalt, the system's one accent on a key word */
+  .caption-word.cap-brand {
+    color: var(--cap-accent, #1e2bfa);
+  }
+  /* numerals / data — cobalt 700, the figure voice */
+  .caption-word.cap-num {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    font-weight: 700;
+    color: var(--cap-accent, #1e2bfa);
+  }
+  /* emphasis — a directional-red hairline underline (inline only, never a fill) */
+  .caption-word.cap-cta {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--cap-accent-2, #dc2626);
+    text-underline-offset: 0.1em;
+  }
+
+  @media (max-aspect-ratio: 9/16) {
+    .caption-pill {
+      max-width: 92%;
+    }
+    .caption-line {
+      font-size: clamp(34px, 5.4vw, 48px);
+    }
+  }
+</style>
+
+<div
+  id="captions-root"
+  data-composition-id="captions"
+  data-timeline-locked
+  data-start="0"
+  data-duration="50.859"
+  data-fps="30"
+  data-width="1080"
+  data-height="1920"
+>
+  <div class="caption-layer" aria-hidden="true">
+    <div id="caption-stage" class="caption-stage"></div>
+  </div>
+</div>
+
+<script>
+  // captions.mjs injects the engine's scene-aware groups + real duration here.
+  var GROUPS = [{"id": "caption-group-0", "frame": 1, "start": 0.4, "end": 1.089, "text": "Des centaines", "words": [{"id": "caption-word-0-0", "text": "Des", "start": 0.4, "end": 0.615}, {"id": "caption-word-0-1", "text": "centaines", "start": 0.615, "end": 1.089}]}, {"id": "caption-group-1", "frame": 1, "start": 1.089, "end": 1.734, "text": "de courriers", "words": [{"id": "caption-word-1-0", "text": "de", "start": 1.089, "end": 1.261}, {"id": "caption-word-1-1", "text": "courriers", "start": 1.261, "end": 1.734}]}, {"id": "caption-group-2", "frame": 1, "start": 1.734, "end": 2.371, "text": "par mois…", "words": [{"id": "caption-word-2-0", "text": "par", "start": 1.734, "end": 1.949}, {"id": "caption-word-2-1", "text": "mois…", "start": 1.949, "end": 2.251}]}, {"id": "caption-group-3", "frame": 2, "start": 3.571, "end": 4.398, "text": "À lire.", "words": [{"id": "caption-word-3-0", "text": "À", "start": 3.571, "end": 3.783}, {"id": "caption-word-3-1", "text": "lire.", "start": 3.783, "end": 4.278}]}, {"id": "caption-group-4", "frame": 2, "start": 4.478, "end": 5.236, "text": "Trier.", "words": [{"id": "caption-word-4-0", "text": "Trier.", "start": 4.478, "end": 5.116}]}, {"id": "caption-group-5", "frame": 2, "start": 5.368, "end": 6.213, "text": "Saisir.", "words": [{"id": "caption-word-5-0", "text": "Saisir.", "start": 5.368, "end": 6.093}]}, {"id": "caption-group-6", "frame": 2, "start": 6.367, "end": 7.071, "text": "Répondre.", "words": [{"id": "caption-word-6-0", "text": "Répondre.", "start": 6.367, "end": 6.951}]}, {"id": "caption-group-7", "frame": 2, "start": 7.423, "end": 7.623, "text": "À la", "words": [{"id": "caption-word-7-0", "text": "À", "start": 7.423, "end": 7.509}, {"id": "caption-word-7-1", "text": "la", "start": 7.509, "end": 7.623}]}, {"id": "caption-group-8", "frame": 2, "start": 7.623, "end": 7.944, "text": "main.", "words": [{"id": "caption-word-8-0", "text": "main.", "start": 7.623, "end": 7.824}]}, {"id": "caption-group-9", "frame": 2, "start": 8.237, "end": 9.057, "text": "Chaque jour.", "words": [{"id": "caption-word-9-0", "text": "Chaque", "start": 8.237, "end": 8.61}, {"id": "caption-word-9-1", "text": "jour.", "start": 8.61, "end": 8.937}]}, {"id": "caption-group-14", "frame": 4, "start": 14.367, "end": 15.225, "text": "Un mail arrive.", "words": [{"id": "caption-word-14-0", "text": "Un", "start": 14.367, "end": 14.522}, {"id": "caption-word-14-1", "text": "mail", "start": 14.522, "end": 14.755}, {"id": "caption-word-14-2", "text": "arrive.", "start": 14.755, "end": 15.105}]}, {"id": "caption-group-15", "frame": 4, "start": 15.453, "end": 16.016, "text": "L'agent le", "words": [{"id": "caption-word-15-0", "text": "L'agent", "start": 15.453, "end": 15.843}, {"id": "caption-word-15-1", "text": "le", "start": 15.843, "end": 16.016}]}, {"id": "caption-group-16", "frame": 4, "start": 16.016, "end": 17.003, "text": "détecte aussitôt.", "words": [{"id": "caption-word-16-0", "text": "détecte", "start": 16.016, "end": 16.406}, {"id": "caption-word-16-1", "text": "aussitôt.", "start": 16.406, "end": 16.883}]}, {"id": "caption-group-17", "frame": 4, "start": 17.182, "end": 17.481, "text": "Même à", "words": [{"id": "caption-word-17-0", "text": "Même", "start": 17.182, "end": 17.381}, {"id": "caption-word-17-1", "text": "à", "start": 17.381, "end": 17.481}]}, {"id": "caption-group-18", "frame": 4, "start": 17.481, "end": 17.979, "text": "trois heures", "words": [{"id": "caption-word-18-0", "text": "trois", "start": 17.481, "end": 17.713}, {"id": "caption-word-18-1", "text": "heures", "start": 17.713, "end": 17.979}]}, {"id": "caption-group-19", "frame": 4, "start": 17.979, "end": 18.497, "text": "du matin.", "words": [{"id": "caption-word-19-0", "text": "du", "start": 17.979, "end": 18.111}, {"id": "caption-word-19-1", "text": "matin.", "start": 18.111, "end": 18.377}]}, {"id": "caption-group-20", "frame": 5, "start": 20.097, "end": 20.433, "text": "Il lit", "words": [{"id": "caption-word-20-0", "text": "Il", "start": 20.097, "end": 20.246}, {"id": "caption-word-20-1", "text": "lit", "start": 20.246, "end": 20.433}]}, {"id": "caption-group-21", "frame": 5, "start": 20.433, "end": 21.298, "text": "la pièce jointe.", "words": [{"id": "caption-word-21-0", "text": "la", "start": 20.433, "end": 20.582}, {"id": "caption-word-21-1", "text": "pièce", "start": 20.582, "end": 20.843}, {"id": "caption-word-21-2", "text": "jointe.", "start": 20.843, "end": 21.178}]}, {"id": "caption-group-22", "frame": 5, "start": 21.458, "end": 21.845, "text": "Même un", "words": [{"id": "caption-word-22-0", "text": "Même", "start": 21.458, "end": 21.691}, {"id": "caption-word-22-1", "text": "un", "start": 21.691, "end": 21.845}]}, {"id": "caption-group-23", "frame": 5, "start": 21.845, "end": 22.701, "text": "document scanné.", "words": [{"id": "caption-word-23-0", "text": "document", "start": 21.845, "end": 22.233}, {"id": "caption-word-23-1", "text": "scanné.", "start": 22.233, "end": 22.581}]}, {"id": "caption-group-24", "frame": 6, "start": 24.301, "end": 24.882, "text": "Il comprend", "words": [{"id": "caption-word-24-0", "text": "Il", "start": 24.301, "end": 24.467}, {"id": "caption-word-24-1", "text": "comprend", "start": 24.467, "end": 24.882}]}, {"id": "caption-group-25", "frame": 6, "start": 24.882, "end": 25.505, "text": "le courrier,", "words": [{"id": "caption-word-25-0", "text": "le", "start": 24.882, "end": 25.048}, {"id": "caption-word-25-1", "text": "courrier,", "start": 25.048, "end": 25.505}]}, {"id": "caption-group-26", "frame": 6, "start": 25.505, "end": 25.837, "text": "et en", "words": [{"id": "caption-word-26-0", "text": "et", "start": 25.505, "end": 25.671}, {"id": "caption-word-26-1", "text": "en", "start": 25.671, "end": 25.837}]}, {"id": "caption-group-27", "frame": 6, "start": 25.837, "end": 26.913, "text": "extrait l'essentiel.", "words": [{"id": "caption-word-27-0", "text": "extrait", "start": 25.837, "end": 26.211}, {"id": "caption-word-27-1", "text": "l'essentiel.", "start": 26.211, "end": 26.793}]}, {"id": "caption-group-28", "frame": 7, "start": 29.013, "end": 30.001, "text": "Il l'enregistre.", "words": [{"id": "caption-word-28-0", "text": "Il", "start": 29.013, "end": 29.196}, {"id": "caption-word-28-1", "text": "l'enregistre.", "start": 29.196, "end": 29.881}]}, {"id": "caption-group-29", "frame": 7, "start": 30.114, "end": 31.155, "text": "Et l'expéditeur reçoit", "words": [{"id": "caption-word-29-0", "text": "Et", "start": 30.114, "end": 30.274}, {"id": "caption-word-29-1", "text": "l'expéditeur", "start": 30.274, "end": 30.835}, {"id": "caption-word-29-2", "text": "reçoit", "start": 30.835, "end": 31.155}]}, {"id": "caption-group-30", "frame": 7, "start": 31.155, "end": 31.675, "text": "son accusé", "words": [{"id": "caption-word-30-0", "text": "son", "start": 31.155, "end": 31.355}, {"id": "caption-word-30-1", "text": "accusé", "start": 31.355, "end": 31.675}]}, {"id": "caption-group-31", "frame": 7, "start": 31.675, "end": 32.436, "text": "de réception.", "words": [{"id": "caption-word-31-0", "text": "de", "start": 31.675, "end": 31.835}, {"id": "caption-word-31-1", "text": "réception.", "start": 31.835, "end": 32.316}]}, {"id": "caption-group-32", "frame": 7, "start": 32.602, "end": 33.742, "text": "En quelques secondes.", "words": [{"id": "caption-word-32-0", "text": "En", "start": 32.602, "end": 32.765}, {"id": "caption-word-32-1", "text": "quelques", "start": 32.765, "end": 33.173}, {"id": "caption-word-32-2", "text": "secondes.", "start": 33.173, "end": 33.622}]}, {"id": "caption-group-33", "frame": 8, "start": 35.842, "end": 36.378, "text": "Un doute ?", "words": [{"id": "caption-word-33-0", "text": "Un", "start": 35.842, "end": 35.981}, {"id": "caption-word-33-1", "text": "doute ?", "start": 35.981, "end": 36.258}]}, {"id": "caption-group-34", "frame": 8, "start": 36.541, "end": 36.838, "text": "Il vous", "words": [{"id": "caption-word-34-0", "text": "Il", "start": 36.541, "end": 36.66}, {"id": "caption-word-34-1", "text": "vous", "start": 36.66, "end": 36.838}]}, {"id": "caption-group-35", "frame": 8, "start": 36.838, "end": 37.402, "text": "le transmet.", "words": [{"id": "caption-word-35-0", "text": "le", "start": 36.838, "end": 36.956}, {"id": "caption-word-35-1", "text": "transmet.", "start": 36.956, "end": 37.282}]}, {"id": "caption-group-36", "frame": 8, "start": 37.598, "end": 38.234, "text": "Une pub ?", "words": [{"id": "caption-word-36-0", "text": "Une", "start": 37.598, "end": 37.833}, {"id": "caption-word-36-1", "text": "pub ?", "start": 37.833, "end": 38.114}]}, {"id": "caption-group-37", "frame": 8, "start": 38.398, "end": 39.119, "text": "Il l'ignore.", "words": [{"id": "caption-word-37-0", "text": "Il", "start": 38.398, "end": 38.558}, {"id": "caption-word-37-1", "text": "l'ignore.", "start": 38.558, "end": 38.999}]}];
+  var DURATION = 50.859;
+
+  (function () {
+    var stage = document.getElementById("caption-stage");
+
+    // build DOM: one .caption-group per group, .caption-word per word
+    GROUPS.forEach(function (group, g) {
+      var groupEl = document.createElement("div");
+      groupEl.className = "caption-group";
+      groupEl.id = "caption-group-" + g;
+      var pill = document.createElement("div");
+      pill.className = "caption-pill";
+      var line = document.createElement("div");
+      line.className = "caption-line";
+      (group.words || []).forEach(function (w, i) {
+        var span = document.createElement("span");
+        span.className = "caption-word";
+        span.id = "caption-word-" + g + "-" + i;
+        span.textContent = String(w.text);
+        line.appendChild(span);
+      });
+      pill.appendChild(line);
+      groupEl.appendChild(pill);
+      stage.appendChild(groupEl);
+    });
+
+    window.__timelines = window.__timelines || {};
+    var tl = gsap.timeline({ paused: true });
+
+    GROUPS.forEach(function (group, g) {
+      var groupEl = document.getElementById("caption-group-" + g);
+      var words = group.words || [];
+      var next = GROUPS[g + 1];
+      var isLast = g === GROUPS.length - 1;
+      var start = Math.max(0, Number(group.start));
+      var end = isLast ? Number(group.end) + 0.3 : Math.min(Number(next.start), Number(group.end) + 0.3);
+      if (end <= start) end = start + 0.01;
+
+      // group on/off — exactly one group visible at a time
+      tl.set(groupEl, { opacity: 1 }, start);
+      tl.set(groupEl, { opacity: 0 }, end);
+
+      // 3-state karaoke via className SETS — seek-safe (gsap.set applies on the
+      // engine's frame-by-frame seek; .call callbacks would NOT fire).
+      words.forEach(function (w, i) {
+        var el = document.getElementById("caption-word-" + g + "-" + i);
+        var at = Math.max(start, Number(w.start));
+        tl.set(el, { className: "caption-word" }, start); // upcoming (also resets on reverse-seek)
+        tl.set(el, { className: "caption-word is-active" }, at); // current
+        tl.fromTo(el, { scale: 0.985 }, { scale: 1, duration: 0.18, ease: "power1.out" }, at);
+        if (i + 1 < words.length) {
+          var nextAt = Math.max(start, Number(words[i + 1].start));
+          tl.set(el, { className: "caption-word is-spoken" }, nextAt); // demote when next activates
+        }
+      });
+      if (words.length) {
+        var lastEl = document.getElementById("caption-word-" + g + "-" + (words.length - 1));
+        var lastSpoken = Math.min(end, Number(words[words.length - 1].end) + 0.1);
+        tl.set(lastEl, { className: "caption-word is-spoken" }, lastSpoken);
+      }
+    });
+
+    // full-span anchor so the sub-comp timeline spans the whole video
+    tl.to({}, { duration: DURATION }, 0);
+    window.__timelines["captions"] = tl;
+  })();
+</script>
+
+<style>
+  .caption-line { line-height: 1.1 !important; }
+</style>
+</template>

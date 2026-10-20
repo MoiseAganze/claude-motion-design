@@ -1,0 +1,70 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-latin.woff2") format("woff2"); font-weight: 300 700; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-latin.woff2") format("woff2"); font-weight: 100 900; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #F4F6FB; font-family: "Inter", sans-serif; }
+    .f10-bg { position: absolute; inset: 0; background: #070B18; }
+    .f10-bloom { position: absolute; left: 90px; top: 220px; width: 900px; height: 900px; border-radius: 50%; background: radial-gradient(closest-side, rgba(61,123,255,0.55), rgba(124,92,255,0.28) 55%, rgba(7,11,24,0) 100%); filter: blur(50px); }
+    .f10-mark { position: absolute; left: 340px; top: 420px; width: 400px; height: 400px; }
+    .f10-word { position: absolute; left: 0; right: 0; top: 900px; text-align: center; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 132px; letter-spacing: -0.035em; line-height: 1; }
+    .f10-word span { display: inline-block; }
+    .f10-word .b { color: #3D7BFF; }
+    .f10-slogan { position: absolute; left: 80px; right: 80px; top: 1090px; text-align: center; font-family: "Inter", sans-serif; font-weight: 500; font-size: 60px; line-height: 1.25; color: #F4F6FB; }
+    .f10-slogan span { display: inline-block; margin: 0 6px; }
+  </style>
+
+  <div id="root" data-composition-id="10-outro" data-width="1080" data-height="1920" data-duration="6.552">
+    <div id="f10-bg" class="f10-bg clip" data-start="0" data-duration="6.552" data-track-index="0"></div>
+    <div id="f10-bloom" class="f10-bloom clip" data-start="0" data-duration="6.552" data-track-index="1"></div>
+    <div id="f10-lock" class="clip" data-start="0" data-duration="6.552" data-track-index="2" style="position:absolute;inset:0">
+      <svg class="f10-mark" id="f10-mark" viewBox="0 0 400 400">
+        <defs><linearGradient id="f10-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7fa8ff"/><stop offset="0.55" stop-color="#3D7BFF"/><stop offset="1" stop-color="#7C5CFF"/></linearGradient></defs>
+        <rect id="f10-tile" x="20" y="20" width="360" height="360" rx="90" fill="url(#f10-grad)"/>
+        <rect id="f10-body" x="80" y="140" width="240" height="160" rx="22" fill="none" stroke="#F4F6FB" stroke-width="18" stroke-linejoin="round"/>
+        <path id="f10-flap" d="M90 150 L200 230 L310 150" fill="none" stroke="#F4F6FB" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle id="f10-spark" cx="200" cy="96" r="20" fill="#F4F6FB"/>
+      </svg>
+      <div class="f10-word" id="f10-word"></div>
+      <div class="f10-slogan" id="f10-slogan"></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const R = document.querySelector('[data-composition-id="10-outro"]');
+      const word = R.querySelector("#f10-word");
+      "Agent Courrier".split("").forEach((ch, i) => {
+        const s = document.createElement("span"); s.textContent = ch === " " ? " " : ch; if (i > 5) s.className = "b"; word.appendChild(s);
+      });
+      const slogan = R.querySelector("#f10-slogan");
+      "Vos courriers se traitent tout seuls.".split(" ").forEach((w, i) => { const s = document.createElement("span"); s.textContent = w; slogan.appendChild(s); if (i === 1) slogan.appendChild(document.createElement("br")); });
+      const tl = gsap.timeline({ paused: true });
+      // envelope glides in, its outline draws, the flap opens into the mark, a spark rises
+      tl.fromTo("#f10-mark", { y: 260, opacity: 0, scale: 0.8 }, { y: 0, opacity: 1, scale: 1, duration: 1.0, ease: "power3.out" }, 0);
+      const body = R.querySelector("#f10-body"), flap = R.querySelector("#f10-flap");
+      const bl = body.getTotalLength(), fl = flap.getTotalLength();
+      tl.fromTo(body, { strokeDasharray: bl, strokeDashoffset: bl }, { strokeDashoffset: 0, duration: 0.9, ease: "power2.inOut" }, 0.15);
+      tl.fromTo(flap, { strokeDasharray: fl, strokeDashoffset: fl }, { strokeDashoffset: 0, duration: 0.6, ease: "power2.inOut" }, 0.5);
+      tl.fromTo("#f10-tile", { opacity: 0, scale: 0.7, svgOrigin: "200 200" }, { opacity: 1, scale: 1, svgOrigin: "200 200", duration: 0.7, ease: "power3.out" }, 0.9);
+      tl.to(flap, { attr: { d: "M90 150 L200 80 L310 150" }, duration: 0.5, ease: "power3.inOut" }, 1.2);
+      tl.fromTo("#f10-spark", { opacity: 0, y: 60, scale: 0.4, svgOrigin: "200 96" }, { opacity: 1, y: 0, scale: 1, svgOrigin: "200 96", duration: 0.5, ease: "expo.out" }, 1.45);
+      tl.fromTo("#f10-bloom", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 1.4, ease: "power2.out" }, 0.6);
+      // "Agent Courrier" → letter cascade
+      R.querySelectorAll(".f10-word span").forEach((s, i) => {
+        tl.fromTo(s, { opacity: 0, y: 50, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.45, ease: "power3.out" }, 1.38 + i * 0.035);
+      });
+      // slogan, word by word on the VO
+      const cues = [2.58, 2.77, 3.19, 3.35, 3.73, 3.96];
+      R.querySelectorAll(".f10-slogan span").forEach((s, i) => {
+        tl.fromTo(s, { opacity: 0, y: 24, color: "#9AA3B8" }, { opacity: 1, y: 0, color: "#F4F6FB", duration: 0.4, ease: "power3.out" }, cues[i] - 0.04);
+      });
+      // smooth ending: the bloom contracts and the lockup eases into the night
+      tl.to("#f10-bloom", { scale: 0.55, opacity: 0.25, duration: 1.0, ease: "power2.inOut" }, 5.1);
+      tl.to("#f10-lock", { opacity: 0, y: -30, filter: "blur(6px)", duration: 0.9, ease: "power2.inOut" }, 5.55);
+      tl.to("#f10-bloom", { opacity: 0, duration: 0.45, ease: "power2.in" }, 6.1);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["10-outro"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,820 @@
+{
+ "bgm": null,
+ "bgm_pending": false,
+ "voices": [
+  {
+   "frame": 1,
+   "path": "assets/voice/01.wav",
+   "duration_s": 3.331,
+   "words": [
+    {
+     "text": "Des",
+     "start": 0.4,
+     "end": 0.615,
+     "id": "w01_0"
+    },
+    {
+     "text": "centaines",
+     "start": 0.615,
+     "end": 1.089,
+     "id": "w01_1"
+    },
+    {
+     "text": "de",
+     "start": 1.089,
+     "end": 1.261,
+     "id": "w01_2"
+    },
+    {
+     "text": "courriers",
+     "start": 1.261,
+     "end": 1.734,
+     "id": "w01_3"
+    },
+    {
+     "text": "par",
+     "start": 1.734,
+     "end": 1.949,
+     "id": "w01_4"
+    },
+    {
+     "text": "mois…",
+     "start": 1.949,
+     "end": 2.251,
+     "id": "w01_5"
+    }
+   ]
+  },
+  {
+   "frame": 2,
+   "path": "assets/voice/02.wav",
+   "duration_s": 6.486,
+   "words": [
+    {
+     "text": "À",
+     "start": 0.24,
+     "end": 0.452,
+     "id": "w02_0"
+    },
+    {
+     "text": "lire.",
+     "start": 0.452,
+     "end": 0.947,
+     "id": "w02_1"
+    },
+    {
+     "text": "Trier.",
+     "start": 1.147,
+     "end": 1.785,
+     "id": "w02_2"
+    },
+    {
+     "text": "Saisir.",
+     "start": 2.037,
+     "end": 2.762,
+     "id": "w02_3"
+    },
+    {
+     "text": "Répondre.",
+     "start": 3.036,
+     "end": 3.62,
+     "id": "w02_4"
+    },
+    {
+     "text": "À",
+     "start": 4.092,
+     "end": 4.178,
+     "id": "w02_5"
+    },
+    {
+     "text": "la",
+     "start": 4.178,
+     "end": 4.292,
+     "id": "w02_6"
+    },
+    {
+     "text": "main.",
+     "start": 4.292,
+     "end": 4.493,
+     "id": "w02_7"
+    },
+    {
+     "text": "Chaque",
+     "start": 4.906,
+     "end": 5.279,
+     "id": "w02_8"
+    },
+    {
+     "text": "jour.",
+     "start": 5.279,
+     "end": 5.606,
+     "id": "w02_9"
+    }
+   ]
+  },
+  {
+   "frame": 3,
+   "path": "assets/voice/03.wav",
+   "duration_s": 3.91,
+   "words": [
+    {
+     "text": "Et",
+     "start": 0.64,
+     "end": 0.78,
+     "id": "w03_0"
+    },
+    {
+     "text": "si",
+     "start": 0.78,
+     "end": 0.92,
+     "id": "w03_1"
+    },
+    {
+     "text": "vos",
+     "start": 0.92,
+     "end": 1.095,
+     "id": "w03_2"
+    },
+    {
+     "text": "courriers",
+     "start": 1.095,
+     "end": 1.48,
+     "id": "w03_3"
+    },
+    {
+     "text": "se",
+     "start": 1.48,
+     "end": 1.62,
+     "id": "w03_4"
+    },
+    {
+     "text": "traitaient",
+     "start": 1.62,
+     "end": 2.04,
+     "id": "w03_5"
+    },
+    {
+     "text": "tout",
+     "start": 2.04,
+     "end": 2.25,
+     "id": "w03_6"
+    },
+    {
+     "text": "seuls ?",
+     "start": 2.25,
+     "end": 2.53,
+     "id": "w03_7"
+    }
+   ]
+  },
+  {
+   "frame": 4,
+   "path": "assets/voice/04.wav",
+   "duration_s": 5.73,
+   "words": [
+    {
+     "text": "Un",
+     "start": 0.64,
+     "end": 0.795,
+     "id": "w04_0"
+    },
+    {
+     "text": "mail",
+     "start": 0.795,
+     "end": 1.028,
+     "id": "w04_1"
+    },
+    {
+     "text": "arrive.",
+     "start": 1.028,
+     "end": 1.378,
+     "id": "w04_2"
+    },
+    {
+     "text": "L'agent",
+     "start": 1.726,
+     "end": 2.116,
+     "id": "w04_3"
+    },
+    {
+     "text": "le",
+     "start": 2.116,
+     "end": 2.289,
+     "id": "w04_4"
+    },
+    {
+     "text": "détecte",
+     "start": 2.289,
+     "end": 2.679,
+     "id": "w04_5"
+    },
+    {
+     "text": "aussitôt.",
+     "start": 2.679,
+     "end": 3.156,
+     "id": "w04_6"
+    },
+    {
+     "text": "Même",
+     "start": 3.455,
+     "end": 3.654,
+     "id": "w04_7"
+    },
+    {
+     "text": "à",
+     "start": 3.654,
+     "end": 3.754,
+     "id": "w04_8"
+    },
+    {
+     "text": "trois",
+     "start": 3.754,
+     "end": 3.986,
+     "id": "w04_9"
+    },
+    {
+     "text": "heures",
+     "start": 3.986,
+     "end": 4.252,
+     "id": "w04_10"
+    },
+    {
+     "text": "du",
+     "start": 4.252,
+     "end": 4.384,
+     "id": "w04_11"
+    },
+    {
+     "text": "matin.",
+     "start": 4.384,
+     "end": 4.65,
+     "id": "w04_12"
+    }
+   ]
+  },
+  {
+   "frame": 5,
+   "path": "assets/voice/05.wav",
+   "duration_s": 4.404,
+   "words": [
+    {
+     "text": "Il",
+     "start": 0.64,
+     "end": 0.789,
+     "id": "w05_0"
+    },
+    {
+     "text": "lit",
+     "start": 0.789,
+     "end": 0.976,
+     "id": "w05_1"
+    },
+    {
+     "text": "la",
+     "start": 0.976,
+     "end": 1.125,
+     "id": "w05_2"
+    },
+    {
+     "text": "pièce",
+     "start": 1.125,
+     "end": 1.386,
+     "id": "w05_3"
+    },
+    {
+     "text": "jointe.",
+     "start": 1.386,
+     "end": 1.721,
+     "id": "w05_4"
+    },
+    {
+     "text": "Même",
+     "start": 2.001,
+     "end": 2.234,
+     "id": "w05_5"
+    },
+    {
+     "text": "un",
+     "start": 2.234,
+     "end": 2.388,
+     "id": "w05_6"
+    },
+    {
+     "text": "document",
+     "start": 2.388,
+     "end": 2.776,
+     "id": "w05_7"
+    },
+    {
+     "text": "scanné.",
+     "start": 2.776,
+     "end": 3.124,
+     "id": "w05_8"
+    }
+   ]
+  },
+  {
+   "frame": 6,
+   "path": "assets/voice/06.wav",
+   "duration_s": 4.812,
+   "words": [
+    {
+     "text": "Il",
+     "start": 0.44,
+     "end": 0.606,
+     "id": "w06_0"
+    },
+    {
+     "text": "comprend",
+     "start": 0.606,
+     "end": 1.021,
+     "id": "w06_1"
+    },
+    {
+     "text": "le",
+     "start": 1.021,
+     "end": 1.187,
+     "id": "w06_2"
+    },
+    {
+     "text": "courrier,",
+     "start": 1.187,
+     "end": 1.644,
+     "id": "w06_3"
+    },
+    {
+     "text": "et",
+     "start": 1.644,
+     "end": 1.81,
+     "id": "w06_4"
+    },
+    {
+     "text": "en",
+     "start": 1.81,
+     "end": 1.976,
+     "id": "w06_5"
+    },
+    {
+     "text": "extrait",
+     "start": 1.976,
+     "end": 2.35,
+     "id": "w06_6"
+    },
+    {
+     "text": "l'essentiel.",
+     "start": 2.35,
+     "end": 2.932,
+     "id": "w06_7"
+    }
+   ]
+  },
+  {
+   "frame": 7,
+   "path": "assets/voice/07.wav",
+   "duration_s": 6.629,
+   "words": [
+    {
+     "text": "Il",
+     "start": 0.34,
+     "end": 0.523,
+     "id": "w07_0"
+    },
+    {
+     "text": "l'enregistre.",
+     "start": 0.523,
+     "end": 1.208,
+     "id": "w07_1"
+    },
+    {
+     "text": "Et",
+     "start": 1.441,
+     "end": 1.601,
+     "id": "w07_2"
+    },
+    {
+     "text": "l'expéditeur",
+     "start": 1.601,
+     "end": 2.162,
+     "id": "w07_3"
+    },
+    {
+     "text": "reçoit",
+     "start": 2.162,
+     "end": 2.482,
+     "id": "w07_4"
+    },
+    {
+     "text": "son",
+     "start": 2.482,
+     "end": 2.682,
+     "id": "w07_5"
+    },
+    {
+     "text": "accusé",
+     "start": 2.682,
+     "end": 3.002,
+     "id": "w07_6"
+    },
+    {
+     "text": "de",
+     "start": 3.002,
+     "end": 3.162,
+     "id": "w07_7"
+    },
+    {
+     "text": "réception.",
+     "start": 3.162,
+     "end": 3.643,
+     "id": "w07_8"
+    },
+    {
+     "text": "En",
+     "start": 3.929,
+     "end": 4.092,
+     "id": "w07_9"
+    },
+    {
+     "text": "quelques",
+     "start": 4.092,
+     "end": 4.5,
+     "id": "w07_10"
+    },
+    {
+     "text": "secondes.",
+     "start": 4.5,
+     "end": 4.949,
+     "id": "w07_11"
+    }
+   ]
+  },
+  {
+   "frame": 8,
+   "path": "assets/voice/08.wav",
+   "duration_s": 4.977,
+   "words": [
+    {
+     "text": "Un",
+     "start": 0.54,
+     "end": 0.679,
+     "id": "w08_0"
+    },
+    {
+     "text": "doute ?",
+     "start": 0.679,
+     "end": 0.956,
+     "id": "w08_1"
+    },
+    {
+     "text": "Il",
+     "start": 1.239,
+     "end": 1.358,
+     "id": "w08_2"
+    },
+    {
+     "text": "vous",
+     "start": 1.358,
+     "end": 1.536,
+     "id": "w08_3"
+    },
+    {
+     "text": "le",
+     "start": 1.536,
+     "end": 1.654,
+     "id": "w08_4"
+    },
+    {
+     "text": "transmet.",
+     "start": 1.654,
+     "end": 1.98,
+     "id": "w08_5"
+    },
+    {
+     "text": "Une",
+     "start": 2.296,
+     "end": 2.531,
+     "id": "w08_6"
+    },
+    {
+     "text": "pub ?",
+     "start": 2.531,
+     "end": 2.812,
+     "id": "w08_7"
+    },
+    {
+     "text": "Il",
+     "start": 3.096,
+     "end": 3.256,
+     "id": "w08_8"
+    },
+    {
+     "text": "l'ignore.",
+     "start": 3.256,
+     "end": 3.697,
+     "id": "w08_9"
+    }
+   ]
+  },
+  {
+   "frame": 9,
+   "path": "assets/voice/09.wav",
+   "duration_s": 4.028,
+   "words": [
+    {
+     "text": "Zéro",
+     "start": 0.34,
+     "end": 0.668,
+     "id": "w09_0"
+    },
+    {
+     "text": "saisie.",
+     "start": 0.668,
+     "end": 1.16,
+     "id": "w09_1"
+    },
+    {
+     "text": "Zéro",
+     "start": 1.342,
+     "end": 1.665,
+     "id": "w09_2"
+    },
+    {
+     "text": "oubli.",
+     "start": 1.665,
+     "end": 2.096,
+     "id": "w09_3"
+    },
+    {
+     "text": "Tout",
+     "start": 2.375,
+     "end": 2.588,
+     "id": "w09_4"
+    },
+    {
+     "text": "est",
+     "start": 2.588,
+     "end": 2.765,
+     "id": "w09_5"
+    },
+    {
+     "text": "tracé.",
+     "start": 2.765,
+     "end": 3.048,
+     "id": "w09_6"
+    }
+   ]
+  },
+  {
+   "frame": 10,
+   "path": "assets/voice/10.wav",
+   "duration_s": 6.552,
+   "words": [
+    {
+     "text": "Agent",
+     "start": 1.44,
+     "end": 1.734,
+     "id": "w10_0"
+    },
+    {
+     "text": "Courrier.",
+     "start": 1.734,
+     "end": 2.197,
+     "id": "w10_1"
+    },
+    {
+     "text": "Vos",
+     "start": 2.576,
+     "end": 2.769,
+     "id": "w10_2"
+    },
+    {
+     "text": "courriers",
+     "start": 2.769,
+     "end": 3.193,
+     "id": "w10_3"
+    },
+    {
+     "text": "se",
+     "start": 3.193,
+     "end": 3.347,
+     "id": "w10_4"
+    },
+    {
+     "text": "traitent",
+     "start": 3.347,
+     "end": 3.732,
+     "id": "w10_5"
+    },
+    {
+     "text": "tout",
+     "start": 3.732,
+     "end": 3.963,
+     "id": "w10_6"
+    },
+    {
+     "text": "seuls.",
+     "start": 3.963,
+     "end": 4.272,
+     "id": "w10_7"
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "frame": 1,
+   "file": "assets/sfx/whoosh-cinematic.mp3",
+   "offset_s": 0,
+   "duration_s": 4.331,
+   "volume": 0.09
+  },
+  {
+   "frame": 1,
+   "file": "assets/sfx/impact-bass-1.mp3",
+   "offset_s": 0.565,
+   "duration_s": 2.12,
+   "volume": 0.165
+  },
+  {
+   "frame": 2,
+   "file": "assets/sfx/click.mp3",
+   "offset_s": 0.422,
+   "duration_s": 0.37,
+   "volume": 0.413
+  },
+  {
+   "frame": 2,
+   "file": "assets/sfx/click.mp3",
+   "offset_s": 1.117,
+   "duration_s": 0.37,
+   "volume": 0.413
+  },
+  {
+   "frame": 2,
+   "file": "assets/sfx/click.mp3",
+   "offset_s": 2.007,
+   "duration_s": 0.37,
+   "volume": 0.413
+  },
+  {
+   "frame": 2,
+   "file": "assets/sfx/click.mp3",
+   "offset_s": 3.006,
+   "duration_s": 0.37,
+   "volume": 0.413
+  },
+  {
+   "frame": 2,
+   "file": "assets/sfx/impact-bass-2.mp3",
+   "offset_s": 4.142,
+   "duration_s": 2.59,
+   "volume": 0.3
+  },
+  {
+   "frame": 3,
+   "file": "assets/sfx/glitch-1.mp3",
+   "offset_s": 0,
+   "duration_s": 2.64,
+   "volume": 0.188
+  },
+  {
+   "frame": 3,
+   "file": "assets/sfx/sparkle.mp3",
+   "offset_s": 2.04,
+   "duration_s": 1.8,
+   "volume": 0.225
+  },
+  {
+   "frame": 4,
+   "file": "assets/sfx/notification.mp3",
+   "offset_s": 0.928,
+   "duration_s": 2.46,
+   "volume": 0.3
+  },
+  {
+   "frame": 4,
+   "file": "assets/sfx/ping.mp3",
+   "offset_s": 2.289,
+   "duration_s": 1.32,
+   "volume": 0.262
+  },
+  {
+   "frame": 5,
+   "file": "assets/sfx/typing.mp3",
+   "offset_s": 0.789,
+   "duration_s": 1.5,
+   "volume": 0.165
+  },
+  {
+   "frame": 5,
+   "file": "assets/sfx/typing.mp3",
+   "offset_s": 2.388,
+   "duration_s": 1.5,
+   "volume": 0.165
+  },
+  {
+   "frame": 6,
+   "file": "assets/sfx/whoosh-short.mp3",
+   "offset_s": 1.976,
+   "duration_s": 0.57,
+   "volume": 0.262
+  },
+  {
+   "frame": 6,
+   "file": "assets/sfx/whoosh-short.mp3",
+   "offset_s": 2.426,
+   "duration_s": 0.57,
+   "volume": 0.225
+  },
+  {
+   "frame": 6,
+   "file": "assets/sfx/whoosh-short.mp3",
+   "offset_s": 2.876,
+   "duration_s": 0.57,
+   "volume": 0.225
+  },
+  {
+   "frame": 6,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 3.512,
+   "duration_s": 0.72,
+   "volume": 0.262
+  },
+  {
+   "frame": 7,
+   "file": "assets/sfx/click-soft.mp3",
+   "offset_s": 0.523,
+   "duration_s": 0.37,
+   "volume": 0.375
+  },
+  {
+   "frame": 7,
+   "file": "assets/sfx/whoosh.mp3",
+   "offset_s": 1.601,
+   "duration_s": 0.57,
+   "volume": 0.3
+  },
+  {
+   "frame": 7,
+   "file": "assets/sfx/chime.mp3",
+   "offset_s": 3.162,
+   "duration_s": 2.5,
+   "volume": 0.262
+  },
+  {
+   "frame": 8,
+   "file": "assets/sfx/whoosh-short.mp3",
+   "offset_s": 0.679,
+   "duration_s": 0.57,
+   "volume": 0.262
+  },
+  {
+   "frame": 8,
+   "file": "assets/sfx/whoosh-short.mp3",
+   "offset_s": 2.531,
+   "duration_s": 0.57,
+   "volume": 0.262
+  },
+  {
+   "frame": 8,
+   "file": "assets/sfx/error.mp3",
+   "offset_s": 3.256,
+   "duration_s": 1.62,
+   "volume": 0.15
+  },
+  {
+   "frame": 9,
+   "file": "assets/sfx/impact-bass-1.mp3",
+   "offset_s": 0.29,
+   "duration_s": 2.12,
+   "volume": 0.3
+  },
+  {
+   "frame": 9,
+   "file": "assets/sfx/impact-bass-2.mp3",
+   "offset_s": 1.292,
+   "duration_s": 2.59,
+   "volume": 0.3
+  },
+  {
+   "frame": 9,
+   "file": "assets/sfx/impact-bass-1.mp3",
+   "offset_s": 2.325,
+   "duration_s": 2.12,
+   "volume": 0.3
+  },
+  {
+   "frame": 10,
+   "file": "assets/sfx/whoosh-cinematic.mp3",
+   "offset_s": 0,
+   "duration_s": 5.54,
+   "volume": 0.188
+  },
+  {
+   "frame": 10,
+   "file": "assets/sfx/sparkle.mp3",
+   "offset_s": 1.634,
+   "duration_s": 1.8,
+   "volume": 0.262
+  }
+ ]
+}

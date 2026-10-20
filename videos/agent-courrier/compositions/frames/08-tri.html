@@ -1,0 +1,75 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-latin.woff2") format("woff2"); font-weight: 300 700; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-latin.woff2") format("woff2"); font-weight: 100 900; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #F4F6FB; font-family: "Inter", sans-serif; }
+    .f08-bg { position: absolute; inset: 0; background: radial-gradient(90% 50% at 50% 20%, #15225a 0%, #070B18 70%); }
+    .f08-lines { position: absolute; inset: 0; }
+    .f08-core { position: absolute; left: 420px; top: 220px; width: 240px; height: 240px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #a8c6ff, #3D7BFF 50%, #5b3fd9 100%); box-shadow: 0 0 120px rgba(61,123,255,0.65); display: grid; place-items: center; }
+    .f08-corelabel { position: absolute; left: 0; right: 0; top: 490px; text-align: center; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 44px; }
+    .f08-node { position: absolute; top: 980px; width: 280px; margin-left: -140px; text-align: center; }
+    .f08-disc { width: 190px; height: 190px; margin: 0 auto; border-radius: 50%; display: grid; place-items: center; background: #0E1430; border: 4px solid rgba(154,163,184,0.3); }
+    .f08-nl { margin-top: 22px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 40px; }
+    .f08-ns { margin-top: 6px; font-size: 26px; color: #9AA3B8; line-height: 1.25; }
+    .f08-chip { position: absolute; left: 0; top: 0; padding: 14px 24px; border-radius: 16px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 34px; white-space: nowrap; transform-origin: 50% 50%; }
+    .f08-q { background: #1b2a66; border: 2px solid #9cc0ff; color: #F4F6FB; }
+    .f08-p { background: #3a2030; border: 2px solid #FF5C7A; color: #FF5C7A; }
+  </style>
+
+  <div id="root" data-composition-id="08-tri" data-width="1080" data-height="1920" data-duration="5.377">
+    <div id="f08-bg" class="f08-bg clip" data-start="0" data-duration="5.377" data-track-index="0"></div>
+    <svg id="f08-lines" class="f08-lines clip" data-start="0" data-duration="5.377" data-track-index="1" viewBox="0 0 1080 1920">
+      <path id="f08-pl" d="M540 570 L190 975" stroke="#38E1A6" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path id="f08-pc" d="M540 570 L540 975" stroke="#3D7BFF" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path id="f08-pr" d="M540 570 L890 975" stroke="#5C6680" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="4 18"/>
+    </svg>
+    <div id="f08-top" class="clip" data-start="0" data-duration="5.377" data-track-index="2" style="position:absolute;inset:0">
+      <div class="f08-core" id="f08-core"><svg width="120" height="84" viewBox="0 0 120 84"><rect x="6" y="6" width="108" height="72" rx="12" fill="none" stroke="#F4F6FB" stroke-width="7"/><path d="M10 12l50 34 50-34" fill="none" stroke="#F4F6FB" stroke-width="7" stroke-linejoin="round"/></svg></div>
+      <div class="f08-corelabel" id="f08-corelabel">Agent Courrier</div>
+    </div>
+    <div id="f08-nodes" class="clip" data-start="0" data-duration="5.377" data-track-index="3" style="position:absolute;inset:0">
+      <div class="f08-node" id="f08-nl" style="left:190px"><div class="f08-disc" id="f08-dl" style="border-color:#38E1A6;box-shadow:0 0 60px rgba(56,225,166,0.35)"><svg width="90" height="90" viewBox="0 0 90 90"><path d="M20 47l17 17 34-38" fill="none" stroke="#38E1A6" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="f08-nl" style="color:#38E1A6">Enregistré</div><div class="f08-ns">courrier officiel</div></div>
+      <div class="f08-node" id="f08-nc" style="left:540px"><div class="f08-disc" id="f08-dc"><svg width="90" height="90" viewBox="0 0 90 90"><circle cx="45" cy="32" r="16" fill="none" stroke="#9cc0ff" stroke-width="7"/><path d="M15 80c4-18 16-26 30-26s26 8 30 26" fill="none" stroke="#9cc0ff" stroke-width="7" stroke-linecap="round"/></svg></div><div class="f08-nl">Votre équipe</div><div class="f08-ns" id="f08-ncs">à valider<br/>+ document joint</div></div>
+      <div class="f08-node" id="f08-nr" style="left:890px"><div class="f08-disc" id="f08-dr"><svg width="90" height="90" viewBox="0 0 90 90"><circle cx="45" cy="45" r="30" fill="none" stroke="#5C6680" stroke-width="7"/><path d="M24 66L66 24" stroke="#5C6680" stroke-width="7" stroke-linecap="round"/></svg></div><div class="f08-nl" style="color:#9AA3B8">Ignoré</div><div class="f08-ns">pub, notification</div></div>
+    </div>
+    <div id="f08-chips" class="clip" data-start="0" data-duration="5.377" data-track-index="4" style="position:absolute;inset:0">
+      <div class="f08-chip f08-q" id="f08-cq">Courrier ?</div>
+      <div class="f08-chip f08-p" id="f08-cp">PROMO −50 %</div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const R = document.querySelector('[data-composition-id="08-tri"]');
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#f08-core", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 0);
+      tl.fromTo("#f08-corelabel", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 0.15);
+      // three routes self-draw from the core
+      ["#f08-pl", "#f08-pc"].forEach((s, i) => {
+        const p = R.querySelector(s); const L = p.getTotalLength();
+        tl.fromTo(p, { strokeDasharray: L, strokeDashoffset: L }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, 0.15 + i * 0.1);
+      });
+      tl.fromTo("#f08-pr", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 0.35);
+      tl.fromTo("#f08-nl", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 0.4);
+      tl.fromTo("#f08-nc", { opacity: 0.35, y: 30 }, { opacity: 0.55, y: 0, duration: 0.45, ease: "power3.out" }, 0.45);
+      tl.fromTo("#f08-nr", { opacity: 0.35, y: 30 }, { opacity: 0.55, y: 0, duration: 0.45, ease: "power3.out" }, 0.5);
+      // "Un doute ?" → a doubtful mail travels the centre route to a human
+      const cq = R.querySelector("#f08-cq");
+      tl.fromTo(cq, { x: 540, y: 570, xPercent: -50, yPercent: -50, opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.25, ease: "power3.out" }, 0.62);
+      tl.to(cq, { y: 900, duration: 0.85, ease: "power2.inOut" }, 0.72);
+      tl.to(cq, { scale: 0.3, opacity: 0, duration: 0.2, ease: "power2.in" }, 1.55);
+      tl.to("#f08-nc", { opacity: 1, duration: 0.3 }, 1.55);
+      tl.to("#f08-dc", { borderColor: "#3D7BFF", boxShadow: "0 0 70px rgba(61,123,255,0.6)", duration: 0.35, ease: "power2.out" }, 1.55);
+      // "Une pub ?" → the promo travels right and is dropped
+      const cp = R.querySelector("#f08-cp");
+      tl.fromTo(cp, { x: 540, y: 570, xPercent: -50, yPercent: -50, opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.25, ease: "power3.out" }, 2.4);
+      tl.to(cp, { x: 840, y: 880, duration: 0.75, ease: "power2.inOut" }, 2.5);
+      tl.to("#f08-nr", { opacity: 1, duration: 0.3 }, 3.15);
+      tl.to(cp, { color: "#5C6680", borderColor: "#5C6680", backgroundColor: "#141a30", duration: 0.2 }, 3.2);
+      tl.to(cp, { y: 960, scale: 0.4, opacity: 0, rotation: 12, filter: "blur(6px)", duration: 0.45, ease: "power2.in" }, 3.35);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["08-tri"] = tl;
+    })();
+  </script>
+</template>

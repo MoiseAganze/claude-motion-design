@@ -1,0 +1,86 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-latin.woff2") format("woff2"); font-weight: 300 700; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-latin.woff2") format("woff2"); font-weight: 100 900; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #F4F6FB; font-family: "Inter", sans-serif; }
+    .f06-bg { position: absolute; inset: 0; background: radial-gradient(90% 55% at 50% 45%, #142150 0%, #070B18 72%); }
+    .f06-page { position: absolute; left: 160px; top: 250px; width: 760px; height: 1040px; border-radius: 10px; background: #ECE9E1; box-shadow: 0 30px 90px rgba(0,0,0,0.55); overflow: hidden; color: #20232b; transform-origin: 50% 0%; }
+    .f06-grain { position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(0,0,0,0.035) 0 2px, rgba(0,0,0,0) 2px 5px); mix-blend-mode: multiply; }
+    .f06-l { position: absolute; left: 70px; right: 70px; font-size: 24px; line-height: 1.3; white-space: nowrap; }
+    .f06-l b { font-weight: 700; }
+    .f06-box { position: absolute; left: 58px; right: 58px; height: 48px; border: 2.5px solid #3D7BFF; border-radius: 6px; background: rgba(61,123,255,0.07); }
+    .f06-card { position: absolute; left: 90px; top: 760px; width: 900px; height: 560px; border-radius: 30px; background: linear-gradient(180deg, rgba(20,30,68,0.97), rgba(14,20,48,0.97)); border: 2px solid rgba(61,123,255,0.35); box-shadow: 0 0 90px rgba(61,123,255,0.20); }
+    .f06-ch { display: flex; align-items: center; gap: 16px; padding: 30px 40px 18px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 40px; }
+    .f06-ch .core { width: 34px; height: 34px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #9cc0ff, #3D7BFF 55%, #7C5CFF); box-shadow: 0 0 22px #3D7BFF; }
+    .f06-row { position: absolute; left: 40px; right: 40px; height: 100px; display: flex; align-items: center; border-top: 2px solid rgba(61,123,255,0.14); }
+    .f06-k { width: 280px; font-family: "Space Grotesk", sans-serif; font-weight: 600; font-size: 28px; letter-spacing: 0.1em; text-transform: uppercase; color: #9AA3B8; }
+    .f06-slot { position: absolute; left: 280px; top: 26px; width: 520px; height: 48px; border-radius: 10px; background: rgba(61,123,255,0.07); border: 2px dashed rgba(61,123,255,0.25); }
+    .f06-chip { position: absolute; left: 320px; padding: 10px 22px; border-radius: 14px; background: #1b2a66; border: 2px solid rgba(61,123,255,0.6); font-size: 34px; font-weight: 600; color: #F4F6FB; white-space: nowrap; }
+    .f06-chip.hot { background: #3D7BFF; border-color: #9cc0ff; font-family: "Space Grotesk", sans-serif; font-weight: 700; letter-spacing: 0.06em; }
+    .f06-badge { position: absolute; right: 30px; top: -36px; padding: 16px 28px; border-radius: 100px; background: #0f2a26; border: 2px solid #38E1A6; color: #38E1A6; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 34px; box-shadow: 0 0 40px rgba(56,225,166,0.35); }
+  </style>
+
+  <div id="root" data-composition-id="06-comprehension" data-width="1080" data-height="1920" data-duration="5.312">
+    <div id="f06-bg" class="f06-bg clip" data-start="0" data-duration="5.312" data-track-index="0"></div>
+    <div id="f06-page" class="f06-page clip" data-start="0" data-duration="5.312" data-track-index="1"><div class="f06-grain"></div></div>
+    <div id="f06-card" class="f06-card clip" data-start="0" data-duration="5.312" data-track-index="2">
+      <div class="f06-ch"><div class="core"></div>Fiche courrier</div>
+      <div class="f06-row" style="top:100px"><div class="f06-k">Objet</div><div class="f06-slot"></div></div>
+      <div class="f06-row" style="top:200px"><div class="f06-k">Expéditeur</div><div class="f06-slot"></div></div>
+      <div class="f06-row" style="top:300px"><div class="f06-k">Date</div><div class="f06-slot"></div></div>
+      <div class="f06-row" style="top:400px"><div class="f06-k">Priorité</div><div class="f06-slot"></div></div>
+      <div class="f06-badge" id="f06-badge">Courrier identifié ✓</div>
+    </div>
+    <div id="f06-chips" class="clip" data-start="0" data-duration="5.312" data-track-index="3" style="position:absolute;inset:0">
+      <div class="f06-chip" id="f06-c0" style="top:884px">Demande de partenariat</div>
+      <div class="f06-chip" id="f06-c1" style="top:984px">Société Lumen</div>
+      <div class="f06-chip" id="f06-c2" style="top:1084px">14/10/2026</div>
+      <div class="f06-chip hot" id="f06-c3" style="top:1184px">HAUTE</div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const R = document.querySelector('[data-composition-id="06-comprehension"]');
+      const page = R.querySelector("#f06-page");
+      const LINES = [
+        [70, "<b>SOCIÉTÉ LUMEN</b>"], [104, "12, avenue des Arts — 75011 Paris"], [138, "contact@lumen-studio.fr"],
+        [230, "À l'attention de la Direction"], [300, "Paris, le 14 octobre 2026"], [380, "<b>Objet : Demande de partenariat</b>"],
+        [460, "Madame, Monsieur,"], [520, "Nous souhaitons vous proposer un partenariat"], [556, "pour la numérisation de vos archives et"],
+        [592, "la mise en place d'un accompagnement dédié."], [652, "Nous vous serions reconnaissants de bien vouloir"],
+        [688, "nous indiquer vos disponibilités pour un premier"], [724, "rendez-vous dans les meilleurs délais."],
+        [790, "Veuillez agréer nos salutations distinguées."], [880, "<b>Claire Martin</b>"], [914, "Directrice des partenariats"],
+      ];
+      LINES.forEach(([y, html]) => { const el = document.createElement("div"); el.className = "f06-l"; el.innerHTML = html; el.style.top = y + "px"; page.appendChild(el); });
+      // boxes carried over from frame 5 (Lumen, date, objet) + the urgency line found by the AI
+      const BOX = [380, 70, 300, 724];
+      const boxes = BOX.map((y, i) => { const b = document.createElement("div"); b.className = "f06-box"; b.id = "f06-b" + i; b.style.top = (y - 8) + "px"; page.appendChild(b); return b; });
+      const tl = gsap.timeline({ paused: true });
+      // handoff from frame 5: page starts at its end state, then shrinks into the upper third
+      tl.fromTo(page, { scale: 1, y: 0, opacity: 1 }, { scale: 0.5, y: -150, opacity: 0.85, duration: 0.8, ease: "power3.inOut" }, 0);
+      tl.fromTo(boxes[3], { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0.9);
+      // "Il comprend le courrier" → key phrases glow (attack-decay-rest)
+      boxes.forEach((b, i) => {
+        tl.fromTo(b, { boxShadow: "0 0 0px rgba(61,123,255,0)", backgroundColor: "rgba(61,123,255,0.07)" },
+          { boxShadow: "0 0 30px rgba(61,123,255,0.9)", backgroundColor: "rgba(61,123,255,0.30)", duration: 0.25, ease: "power2.out", immediateRender: false }, 0.75 + i * 0.12)
+          .to(b, { boxShadow: "0 0 10px rgba(61,123,255,0.5)", backgroundColor: "rgba(61,123,255,0.16)", duration: 0.5, ease: "power2.inOut" }, 1.0 + i * 0.12);
+      });
+      tl.fromTo("#f06-card", { opacity: 0, y: 80, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: "power3.out" }, 0.55);
+      // "en extrait l'essentiel" → each phrase detaches and flies along a curve into its row
+      const pageLeft = 540 - 380 * 0.5, pageTop = 250 - 150;
+      BOX.forEach((y, i) => {
+        const c = R.querySelector("#f06-c" + i);
+        const endTop = 884 + i * 100;
+        const dx = (pageLeft + 70 * 0.5) - 320, dy = (pageTop + (y - 8) * 0.5) - endTop;
+        const t = 1.95 + i * 0.4;
+        tl.fromTo(c, { x: dx, opacity: 0, scale: 0.55 }, { x: 0, opacity: 1, scale: 1, duration: 0.6, ease: "power2.out" }, t);
+        tl.fromTo(c, { y: dy, filter: "blur(6px)" }, { y: 0, filter: "blur(0px)", duration: 0.6, ease: "power2.in" }, t);
+      });
+      tl.fromTo("#f06-badge", { opacity: 0, scale: 0.7, y: 10 }, { opacity: 1, scale: 1, y: 0, duration: 0.45, ease: "expo.out" }, 3.55);
+      tl.to("#f06-card", { boxShadow: "0 0 140px rgba(61,123,255,0.40)", duration: 0.8, ease: "power2.out" }, 3.55);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["06-comprehension"] = tl;
+    })();
+  </script>
+</template>

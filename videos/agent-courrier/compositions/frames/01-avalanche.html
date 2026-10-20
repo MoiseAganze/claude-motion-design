@@ -1,0 +1,77 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-latin.woff2") format("woff2"); font-weight: 300 700; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-latin.woff2") format("woff2"); font-weight: 100 900; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #F4F6FB; font-family: "Inter", sans-serif; }
+    .f01-bg { position: absolute; inset: 0; background: radial-gradient(120% 70% at 50% 18%, #111a3d 0%, #070B18 60%); }
+    .f01-layer { position: absolute; inset: 0; }
+    .f01-env { position: absolute; width: 230px; height: 150px; border-radius: 14px; background: #0E1430; border: 2px solid rgba(61,123,255,0.35); box-shadow: 0 0 40px rgba(61,123,255,0.10); }
+    .f01-env svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .f01-env .dot { position: absolute; right: 16px; top: 14px; width: 22px; height: 22px; border-radius: 50%; background: #FF5C7A; box-shadow: 0 0 16px #FF5C7A; }
+    .f01-counter-wrap { position: absolute; left: 0; right: 0; top: 250px; text-align: center; }
+    .f01-num { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 300px; line-height: 1; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; color: #F4F6FB; text-shadow: 0 0 60px rgba(61,123,255,0.45); display: inline-block; }
+    .f01-label { margin-top: 18px; font-family: "Space Grotesk", sans-serif; font-weight: 600; font-size: 54px; letter-spacing: 0.08em; text-transform: uppercase; color: #9AA3B8; }
+    .f01-label b { color: #FF5C7A; font-weight: 700; }
+  </style>
+
+  <div id="root" data-composition-id="01-avalanche" data-width="1080" data-height="1920" data-duration="3.831">
+    <div id="f01-bg" class="f01-bg clip" data-start="0" data-duration="3.831" data-track-index="0"></div>
+    <div id="f01-far" class="f01-layer clip" data-start="0" data-duration="3.831" data-track-index="1"></div>
+    <div id="f01-mid" class="f01-layer clip" data-start="0" data-duration="3.831" data-track-index="2"></div>
+    <div id="f01-counter" class="f01-counter-wrap clip" data-start="0" data-duration="3.831" data-track-index="3">
+      <div id="f01-num" class="f01-num">12</div>
+      <div id="f01-label" class="f01-label">courriers <b>/</b> mois</div>
+    </div>
+    <div id="f01-near" class="f01-layer clip" data-start="0" data-duration="3.831" data-track-index="4"></div>
+  </div>
+
+  <script>
+    (function () {
+      const R = document.querySelector('[data-composition-id="01-avalanche"]');
+      const q = (s) => R.querySelector(s);
+      const ENV_SVG = '<svg viewBox="0 0 230 150" preserveAspectRatio="none"><path d="M10 12 L115 86 L220 12" fill="none" stroke="rgba(61,123,255,0.55)" stroke-width="4" stroke-linejoin="round"/><path d="M10 140 L88 70 M220 140 L142 70" fill="none" stroke="rgba(61,123,255,0.22)" stroke-width="3"/></svg>';
+      // deterministic pseudo-random from index
+      const h = (i, s) => { const x = Math.sin(i * 12.9898 + s * 78.233) * 43758.5453; return x - Math.floor(x); };
+      const layers = [
+        { el: q("#f01-far"), n: 18, scale: 0.55, blur: 6, op: 0.45, yMin: 1050, yMax: 1380 },
+        { el: q("#f01-mid"), n: 16, scale: 0.85, blur: 1.5, op: 0.8, yMin: 980, yMax: 1400 },
+        { el: q("#f01-near"), n: 10, scale: 1.2, blur: 0, op: 1, yMin: 1150, yMax: 1460 },
+      ];
+      const tl = gsap.timeline({ paused: true });
+      let k = 0;
+      layers.forEach((L, li) => {
+        for (let i = 0; i < L.n; i++, k++) {
+          const e = document.createElement("div");
+          e.className = "f01-env";
+          e.innerHTML = ENV_SVG + (h(k, 3) > 0.72 ? '<div class="dot"></div>' : "");
+          L.el.appendChild(e);
+          const x = 40 + h(k, 1) * 860;
+          const y = L.yMin + h(k, 2) * (L.yMax - L.yMin);
+          const rot = (h(k, 4) - 0.5) * 50;
+          gsap.set(e, { left: x, top: 0, filter: `blur(${L.blur}px)`, opacity: L.op });
+          // accelerating cascade: later envelopes start closer together
+          const t0 = Math.pow(i / L.n, 0.7) * 2.3 + li * 0.05;
+          // the first envelopes are already mid-fall at t=0 so the hook frame is never empty
+          const y0 = i < 4 ? 150 + h(k, 7) * 500 : -260 - h(k, 5) * 300;
+          tl.fromTo(e, { y: y0, rotation: rot * 2, scale: L.scale },
+            { y: y, rotation: rot, scale: L.scale, duration: 0.55 + h(k, 6) * 0.25, ease: "power3.in" }, t0)
+            .to(e, { y: y - 10, duration: 0.12, ease: "power2.out" }, t0 + 0.6)
+            .to(e, { y: y, duration: 0.18, ease: "power2.in" }, t0 + 0.72);
+        }
+      });
+      // counter lands on "centaines" (0.61) and counts up, growing with the value
+      const num = q("#f01-num");
+      const c = { v: 12 };
+      tl.fromTo("#f01-counter", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "expo.out" }, 0.5);
+      tl.fromTo(num, { scale: 0.72 }, { scale: 1.06, duration: 1.7, ease: "power2.in" }, 0.6);
+      tl.fromTo(c, { v: 12 }, { v: 247, duration: 1.7, ease: "power2.in", onUpdate: () => { num.textContent = Math.round(c.v); } }, 0.6);
+      tl.fromTo("#f01-label", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 1.25);
+      tl.to(num, { color: "#FF5C7A", textShadow: "0 0 70px rgba(255,92,122,0.55)", duration: 0.3, ease: "power2.out" }, 2.25);
+      // held read: subtle jitter only
+      tl.to("#f01-counter", { x: 3, duration: 0.08, ease: "none" }, 2.6).to("#f01-counter", { x: -2, duration: 0.08, ease: "none" }, 2.68).to("#f01-counter", { x: 0, duration: 0.1, ease: "none" }, 2.76);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["01-avalanche"] = tl;
+    })();
+  </script>
+</template>

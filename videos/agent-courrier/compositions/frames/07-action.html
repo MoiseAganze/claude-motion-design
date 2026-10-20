@@ -1,0 +1,95 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-latin.woff2") format("woff2"); font-weight: 300 700; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-latin.woff2") format("woff2"); font-weight: 100 900; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #F4F6FB; font-family: "Inter", sans-serif; }
+    .f07-bg { position: absolute; inset: 0; background: radial-gradient(100% 60% at 50% 40%, #13204c 0%, #070B18 72%); }
+    .f07-world { position: absolute; left: 0; top: 0; width: 1080px; height: 2600px; }
+    .f07-reg { position: absolute; left: 70px; top: 200px; width: 940px; border-radius: 30px; background: linear-gradient(180deg, rgba(20,30,68,0.97), rgba(14,20,48,0.97)); border: 2px solid rgba(61,123,255,0.3); overflow: hidden; }
+    .f07-rh { padding: 30px 38px 20px; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 40px; display: flex; align-items: center; gap: 16px; }
+    .f07-cols, .f07-r { display: grid; grid-template-columns: 200px 250px 1fr 190px; align-items: center; padding: 0 38px; }
+    .f07-cols { height: 60px; font-family: "Space Grotesk", sans-serif; font-weight: 600; font-size: 22px; letter-spacing: 0.1em; text-transform: uppercase; color: #5C6680; border-bottom: 2px solid rgba(61,123,255,0.14); }
+    .f07-rows { position: relative; height: 440px; }
+    .f07-r { position: absolute; left: 0; right: 0; height: 110px; font-size: 28px; color: #9AA3B8; border-bottom: 2px solid rgba(61,123,255,0.10); }
+    .f07-r .n { font-family: "Space Grotesk", sans-serif; font-variant-numeric: tabular-nums; }
+    .f07-st { justify-self: start; padding: 6px 14px; border-radius: 100px; font-size: 22px; font-weight: 700; color: #38E1A6; background: rgba(56,225,166,0.12); }
+    .f07-new { background: rgba(61,123,255,0.12); color: #F4F6FB; font-weight: 600; }
+    .f07-stamp { position: absolute; left: 470px; top: 30px; padding: 8px 26px; border: 6px solid #38E1A6; border-radius: 12px; color: #38E1A6; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 44px; letter-spacing: 0.06em; background: rgba(7,11,24,0.6); }
+    .f07-phone { position: absolute; left: 340px; top: 1160px; width: 400px; height: 720px; border-radius: 64px; background: linear-gradient(160deg, #1a2350, #0b1030); border: 3px solid rgba(156,192,255,0.35); box-shadow: 0 40px 120px rgba(0,0,0,0.6), 0 0 80px rgba(61,123,255,0.15); }
+    .f07-screen { position: absolute; inset: 18px; border-radius: 48px; background: radial-gradient(120% 80% at 50% 0%, #1e3170, #0a0f28 70%); overflow: hidden; }
+    .f07-notch { position: absolute; left: 50%; top: 16px; width: 120px; height: 30px; margin-left: -60px; border-radius: 20px; background: #05070f; }
+    .f07-clock { position: absolute; left: 0; right: 0; top: 90px; text-align: center; font-family: "Space Grotesk", sans-serif; font-weight: 600; font-size: 96px; letter-spacing: -0.02em; color: rgba(244,246,251,0.9); }
+    .f07-notif { position: absolute; left: 20px; right: 20px; top: 250px; padding: 22px 22px; border-radius: 28px; background: rgba(244,246,251,0.95); color: #0b1030; display: flex; gap: 16px; }
+    .f07-ico { flex: none; width: 60px; height: 60px; border-radius: 16px; background: #38E1A6; display: grid; place-items: center; }
+    .f07-nt { font-weight: 800; font-size: 24px; }
+    .f07-nb { font-size: 21px; line-height: 1.3; margin-top: 4px; color: #2b3150; }
+    .f07-env { position: absolute; left: 0; top: 0; width: 120px; height: 80px; margin: -40px 0 0 -60px; border-radius: 12px; background: #3D7BFF; box-shadow: 0 0 40px #3D7BFF; }
+    .f07-trail { position: absolute; left: 0; top: 0; width: 60px; height: 260px; margin: -260px 0 0 -30px; border-radius: 40px; background: linear-gradient(180deg, rgba(61,123,255,0), rgba(61,123,255,0.7)); filter: blur(10px); }
+    .f07-watch { position: absolute; left: 0; right: 0; top: 1030px; display: flex; justify-content: center; }
+    .f07-wchip { display: inline-flex; align-items: center; gap: 16px; padding: 16px 30px; border-radius: 100px; background: rgba(14,20,48,0.95); border: 2px solid rgba(61,123,255,0.4); font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 46px; font-variant-numeric: tabular-nums; }
+  </style>
+
+  <div id="root" data-composition-id="07-action" data-width="1080" data-height="1920" data-duration="7.229">
+    <div id="f07-bg" class="f07-bg clip" data-start="0" data-duration="7.229" data-track-index="0"></div>
+    <div id="f07-world" data-layout-allow-overflow data-layout-allow-occlusion class="f07-world clip" data-start="0" data-duration="7.229" data-track-index="1">
+      <div class="f07-reg" id="f07-reg">
+        <div class="f07-rh"><svg width="40" height="40" viewBox="0 0 40 40"><rect x="5" y="4" width="30" height="32" rx="5" fill="none" stroke="#3D7BFF" stroke-width="3.5"/><path d="M12 14h16M12 21h16M12 28h10" stroke="#3D7BFF" stroke-width="3.5" stroke-linecap="round"/></svg>Registre des courriers</div>
+        <div class="f07-cols"><span>N°</span><span>Expéditeur</span><span>Objet</span><span>Statut</span></div>
+        <div class="f07-rows">
+          <div class="f07-r" id="f07-o1" style="top:110px"><span class="n">2026-0416</span><span>Cabinet Arno</span><span>Rendez-vous</span><span class="f07-st">✓ Traité</span></div>
+          <div class="f07-r" id="f07-o2" style="top:220px"><span class="n">2026-0415</span><span>Ville de Lys</span><span>Invitation</span><span class="f07-st">✓ Traité</span></div>
+          <div class="f07-r" id="f07-o3" style="top:330px"><span class="n">2026-0414</span><span>M. Diallo</span><span>Réclamation</span><span class="f07-st">✓ Traité</span></div>
+          <div class="f07-r f07-new" id="f07-new" style="top:0px" data-layout-allow-overlap><span class="n">2026-0417</span><span>Société Lumen</span><span>Partenariat</span><span class="f07-st" id="f07-st">✓ Enregistré</span>
+            <div class="f07-stamp" id="f07-stamp" data-layout-allow-overlap data-layout-allow-occlusion>ENREGISTRÉ</div></div>
+        </div>
+      </div>
+      <div class="f07-watch" id="f07-watch"><div class="f07-wchip"><svg width="44" height="48" viewBox="0 0 44 48"><circle cx="22" cy="27" r="17" fill="none" stroke="#38E1A6" stroke-width="4"/><path d="M22 27V17M17 4h10" stroke="#38E1A6" stroke-width="4" stroke-linecap="round"/></svg><span id="f07-sec">00:00</span></div></div>
+      <div class="f07-phone" id="f07-phone">
+        <div class="f07-screen">
+          <div class="f07-notch"></div>
+          <div class="f07-clock">03:12</div>
+          <div class="f07-notif" id="f07-notif">
+            <div class="f07-ico"><svg width="34" height="34" viewBox="0 0 34 34"><path d="M7 18l7 7 13-15" fill="none" stroke="#0b1030" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div><div class="f07-nt">Accusé de réception</div><div class="f07-nb">Votre courrier a bien été reçu et enregistré · N° 2026-0417</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="f07-trail" id="f07-trail"></div>
+      <div class="f07-env" id="f07-env"><svg width="120" height="80" viewBox="0 0 120 80"><path d="M10 12l50 34 50-34" fill="none" stroke="#F4F6FB" stroke-width="6" stroke-linejoin="round"/></svg></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const R = document.querySelector('[data-composition-id="07-action"]');
+      const tl = gsap.timeline({ paused: true });
+      // handoff from the extraction card: the new row drops into the register
+      tl.fromTo("#f07-reg", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0);
+      tl.fromTo("#f07-new", { y: -140, opacity: 0, scale: 1.06 }, { y: 0, opacity: 1, scale: 1, duration: 0.5, ease: "expo.out" }, 0.25);
+      // "Il l'enregistre" → stamp prints on the row
+      tl.fromTo("#f07-stamp", { opacity: 0, scale: 2.2, rotation: 4 }, { opacity: 1, scale: 1, rotation: -6, duration: 0.25, ease: "expo.in" }, 0.5);
+      tl.fromTo("#f07-st", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0.75);
+      // "l'expéditeur reçoit" → envelope launches; camera follows it down to the phone
+      tl.fromTo("#f07-world", { y: 0 }, { y: -520, duration: 1.1, ease: "power3.inOut" }, 1.55);
+      tl.fromTo("#f07-env", { x: 540, y: 480, scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.25, ease: "power3.out" }, 1.6);
+      tl.to("#f07-env", { y: 1500, duration: 1.0, ease: "power2.in" }, 1.75);
+      tl.to("#f07-env", { scale: 0.2, opacity: 0, duration: 0.18, ease: "power2.in" }, 2.62);
+      tl.fromTo("#f07-trail", { x: 540, y: 480, opacity: 0 }, { opacity: 1, duration: 0.2 }, 1.8);
+      tl.to("#f07-trail", { y: 1480, duration: 1.0, ease: "power2.in" }, 1.75);
+      tl.to("#f07-trail", { opacity: 0, duration: 0.25 }, 2.6);
+      tl.fromTo("#f07-phone", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.7, ease: "power3.out" }, 1.75);
+      // phone vibrates (finite), notification drops in on "accusé de réception"
+      [0, 1, 2, 3, 4, 5].forEach((i) => tl.to("#f07-phone", { rotation: i % 2 ? -2.2 : 2.2, duration: 0.05, ease: "none" }, 2.7 + i * 0.05));
+      tl.to("#f07-phone", { rotation: 0, duration: 0.08 }, 3.0);
+      tl.fromTo("#f07-notif", { y: -160, opacity: 0, scale: 0.92 }, { y: 0, opacity: 1, scale: 1, duration: 0.5, ease: "expo.out" }, 2.75);
+      // "en quelques secondes" → stopwatch stops at 00:08
+      tl.fromTo("#f07-watch", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 3.85);
+      const sec = R.querySelector("#f07-sec"); const c = { v: 0 };
+      tl.fromTo(c, { v: 0 }, { v: 8, duration: 0.8, ease: "power1.out", onUpdate: () => { sec.textContent = "00:0" + Math.floor(c.v); } }, 3.95);
+      tl.to("#f07-sec", { color: "#38E1A6", duration: 0.2 }, 4.75);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["07-action"] = tl;
+    })();
+  </script>
+</template>

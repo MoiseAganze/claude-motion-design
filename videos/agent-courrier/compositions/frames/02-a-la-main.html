@@ -1,0 +1,90 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Space Grotesk"; src: url("assets/fonts/SpaceGrotesk-latin.woff2") format("woff2"); font-weight: 300 700; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-latin.woff2") format("woff2"); font-weight: 100 900; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #F4F6FB; font-family: "Inter", sans-serif; }
+    .f02-bg { position: absolute; inset: 0; background: radial-gradient(110% 60% at 30% 25%, #121a3a 0%, #070B18 65%); }
+    .f02-pile { position: absolute; inset: 0; filter: blur(10px); opacity: 0.28; }
+    .f02-pile i { position: absolute; width: 230px; height: 150px; border-radius: 14px; background: #0E1430; border: 2px solid rgba(61,123,255,0.4); }
+    .f02-stack { position: absolute; left: 90px; top: 250px; width: 900px; }
+    .f02-word { position: absolute; left: 0; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 168px; line-height: 1; letter-spacing: -0.03em; text-transform: uppercase; color: #F4F6FB; transform-origin: 0% 50%; }
+    .f02-word span { color: #3D7BFF; }
+    .f02-stamp { position: absolute; left: 150px; top: 520px; padding: 22px 46px; border: 10px solid #FF5C7A; border-radius: 18px; color: #FF5C7A; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 120px; letter-spacing: 0.02em; text-transform: uppercase; background: rgba(255,92,122,0.08); box-shadow: 0 0 60px rgba(255,92,122,0.35); }
+    .f02-clockrow { position: absolute; left: 90px; top: 1060px; display: flex; align-items: center; gap: 48px; }
+    .f02-clock { width: 220px; height: 220px; }
+    .f02-days { position: relative; width: 560px; height: 150px; overflow: hidden; }
+    .f02-day { position: absolute; left: 0; top: 0; font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 130px; line-height: 150px; letter-spacing: 0.02em; color: #9AA3B8; }
+  </style>
+
+  <div id="root" data-composition-id="02-a-la-main" data-width="1080" data-height="1920" data-duration="6.886">
+    <div id="f02-bg" class="f02-bg clip" data-start="0" data-duration="6.886" data-track-index="0"></div>
+    <div id="f02-pile" class="f02-pile clip" data-start="0" data-duration="6.886" data-track-index="1"></div>
+    <div id="f02-stack" data-layout-allow-overlap class="f02-stack clip" data-start="0" data-duration="6.886" data-track-index="2">
+      <div class="f02-word" id="f02-w0" style="top:0px">Lire<span>.</span></div>
+      <div class="f02-word" id="f02-w1" style="top:185px">Trier<span>.</span></div>
+      <div class="f02-word" id="f02-w2" style="top:370px">Saisir<span>.</span></div>
+      <div class="f02-word" id="f02-w3" style="top:555px">Répondre<span>.</span></div>
+    </div>
+    <div id="f02-stamp" data-layout-allow-overlap data-layout-allow-occlusion class="f02-stamp clip" data-start="0" data-duration="6.886" data-track-index="3">À la main</div>
+    <div id="f02-clockrow" class="f02-clockrow clip" data-start="0" data-duration="6.886" data-track-index="4">
+      <svg class="f02-clock" viewBox="0 0 220 220">
+        <circle cx="110" cy="110" r="100" fill="#0E1430" stroke="rgba(61,123,255,0.5)" stroke-width="6"/>
+        <g stroke="rgba(244,246,251,0.35)" stroke-width="5" stroke-linecap="round">
+          <line x1="110" y1="22" x2="110" y2="38"/><line x1="110" y1="182" x2="110" y2="198"/><line x1="22" y1="110" x2="38" y2="110"/><line x1="182" y1="110" x2="198" y2="110"/>
+        </g>
+        <line id="f02-hour" x1="110" y1="110" x2="110" y2="62" stroke="#F4F6FB" stroke-width="10" stroke-linecap="round"/>
+        <line id="f02-min" x1="110" y1="110" x2="110" y2="36" stroke="#3D7BFF" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="110" cy="110" r="9" fill="#F4F6FB"/>
+      </svg>
+      <div class="f02-days" id="f02-days" data-layout-allow-overlap>
+        <div class="f02-day">LUN</div><div class="f02-day">MAR</div><div class="f02-day">MER</div><div class="f02-day">JEU</div><div class="f02-day">VEN</div><div class="f02-day">SAM</div><div class="f02-day">DIM</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const R = document.querySelector('[data-composition-id="02-a-la-main"]');
+      const q = (s) => R.querySelector(s);
+      const h = (i, s) => { const x = Math.sin(i * 12.9898 + s * 78.233) * 43758.5453; return x - Math.floor(x); };
+      const pile = q("#f02-pile");
+      for (let i = 0; i < 26; i++) {
+        const e = document.createElement("i");
+        e.style.left = (20 + h(i, 1) * 860) + "px";
+        e.style.top = (980 + h(i, 2) * 520) + "px";
+        e.style.transform = `rotate(${(h(i, 3) - 0.5) * 50}deg)`;
+        pile.appendChild(e);
+      }
+      const tl = gsap.timeline({ paused: true });
+      // each chore slams in on its spoken cue
+      const cues = [0.45, 1.15, 2.04, 3.04];
+      cues.forEach((t, i) => {
+        const w = q("#f02-w" + i);
+        tl.fromTo(w, { opacity: 0, scale: 1.7, filter: "blur(12px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.28, ease: "expo.out" }, t - 0.05);
+        if (i > 0) tl.to(q("#f02-w" + (i - 1)), { color: "#5C6680", duration: 0.3, ease: "power2.out" }, t);
+        tl.to("#f02-stack", { y: 8, duration: 0.06, ease: "none" }, t + 0.18).to("#f02-stack", { y: 0, duration: 0.14, ease: "power2.out" }, t + 0.24);
+      });
+      tl.to("#f02-w3", { color: "#5C6680", duration: 0.3 }, 4.0);
+      // "À la main" stamp
+      tl.fromTo("#f02-stamp", { opacity: 0, scale: 2.4, rotation: -2 }, { opacity: 1, scale: 1, rotation: -9, duration: 0.3, ease: "expo.in" }, 3.88);
+      tl.to("#f02-stack", { x: -10, duration: 0.05, ease: "none" }, 4.18).to("#f02-stack", { x: 6, duration: 0.05 }, 4.23).to("#f02-stack", { x: 0, duration: 0.1 }, 4.28);
+      // "Chaque jour": clock spins (finite), days flip
+      tl.fromTo("#f02-clockrow", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 4.75);
+      tl.fromTo("#f02-min", { rotation: 0 }, { rotation: 360 * 5, svgOrigin: "110 110", duration: 1.5, ease: "power1.inOut" }, 4.85);
+      tl.fromTo("#f02-hour", { rotation: 0 }, { rotation: 150, svgOrigin: "110 110", duration: 1.5, ease: "power1.inOut" }, 4.85);
+      const days = R.querySelectorAll(".f02-day");
+      days.forEach((d, i) => {
+        gsap.set(d, { yPercent: i === 0 ? 0 : 100 });
+        if (i > 0) {
+          const t = 4.95 + i * 0.2;
+          tl.fromTo(d, { yPercent: 100 }, { yPercent: 0, duration: 0.12, ease: "power2.out" }, t);
+          tl.to(days[i - 1], { yPercent: -100, duration: 0.12, ease: "power2.in" }, t);
+        }
+      });
+      tl.to(days[6], { color: "#FF5C7A", duration: 0.2 }, 6.2);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["02-a-la-main"] = tl;
+    })();
+  </script>
+</template>
