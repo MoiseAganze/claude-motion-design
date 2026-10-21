@@ -648,7 +648,7 @@
   {
    "frame": 1,
    "file": "assets/sfx/whoosh-cinematic.mp3",
-   "offset_s": 0,
+   "offset_s": 0.0,
    "duration_s": 4.331,
    "volume": 0.09
   },
@@ -697,7 +697,7 @@
   {
    "frame": 3,
    "file": "assets/sfx/glitch-1.mp3",
-   "offset_s": 0,
+   "offset_s": 0.0,
    "duration_s": 2.64,
    "volume": 0.188
   },
@@ -830,7 +830,7 @@
   {
    "frame": 10,
    "file": "assets/sfx/whoosh-cinematic.mp3",
-   "offset_s": 0,
+   "offset_s": 0.0,
    "duration_s": 5.54,
    "volume": 0.188
   },
