@@ -617,6 +617,31 @@
      "id": "w10_7"
     }
    ]
+  },
+  {
+   "frame": 11,
+   "path": "assets/voice/11.wav",
+   "duration_s": 7.01,
+   "words": [
+    {
+     "text": "Contactez-nous",
+     "start": 0.5,
+     "end": 1.282,
+     "id": "w11_0"
+    },
+    {
+     "text": "dès",
+     "start": 1.282,
+     "end": 1.526,
+     "id": "w11_1"
+    },
+    {
+     "text": "aujourd'hui.",
+     "start": 1.526,
+     "end": 2.21,
+     "id": "w11_2"
+    }
+   ]
   }
  ],
  "sfx": [
@@ -815,6 +840,34 @@
    "offset_s": 1.634,
    "duration_s": 1.8,
    "volume": 0.262
+  },
+  {
+   "frame": 11,
+   "file": "assets/sfx/whoosh-short.mp3",
+   "offset_s": 0.25,
+   "duration_s": 0.57,
+   "volume": 0.225
+  },
+  {
+   "frame": 11,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 1.5,
+   "duration_s": 0.72,
+   "volume": 0.225
+  },
+  {
+   "frame": 11,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 1.95,
+   "duration_s": 0.72,
+   "volume": 0.225
+  },
+  {
+   "frame": 11,
+   "file": "assets/sfx/chime.mp3",
+   "offset_s": 2.426,
+   "duration_s": 2.5,
+   "volume": 0.188
   }
  ]
 }

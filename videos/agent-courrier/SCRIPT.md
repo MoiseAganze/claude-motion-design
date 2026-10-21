@@ -73,3 +73,11 @@
 **Delivery:** Premium, lent, chaleureux ; laisser respirer le slogan.
 
     Agent Courrier. Vos courriers se traitent tout seuls.
+
+## Line 11 — CTA (Frame 11)
+
+**Time:** 45.0 – 52.0s
+**Delivery:** Chaleureuse, invitante.
+
+    Contactez-nous dès aujourd'hui.
+

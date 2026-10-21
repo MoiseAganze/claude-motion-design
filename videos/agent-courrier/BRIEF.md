@@ -7,7 +7,7 @@ destination: tiktok
 aspect: 1080x1920
 language: fr
 audience: "Organisations (administrations, cabinets, entreprises) qui reçoivent beaucoup de courriers par mail"
-length: 50s
+length: 58s
 angle: problem-solution-demo
 voice: "ElevenLabs — féminine, chaleureuse, premium (fr)"
 ---
@@ -34,6 +34,6 @@ démo concrète : on suit UN courrier de bout en bout. Doit être impressionnant
 ## Notes
 
 - PAS de musique (l'utilisateur l'ajoute lui-même) → `music: none`.
-- PAS d'appel à l'action, numéro ou contact pour l'instant.
+- Appel à l'action final (ajouté à la demande) : site https://chronoconcept.net/ + téléphones +243853420317 et +243812316707, affichés à l'écran ; VO courte « Contactez-nous dès aujourd'hui. »
 - Pas de mention d'OpenRouter / coûts.
 - Source : user_script.txt (script validé dans la conversation), VO_MODE: verbatim.

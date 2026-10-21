@@ -37,7 +37,7 @@
       id="root"
       data-composition-id="main"
       data-start="0"
-      data-duration="50.859"
+      data-duration="57.869"
       data-width="1080"
       data-height="1920"
     >
@@ -209,7 +209,7 @@
         data-composition-id="10-outro"
         data-composition-src="compositions/frames/10-outro.html"
         data-start="44.306999999999995"
-        data-duration="6.552"
+        data-duration="7.052"
         data-track-index="1"
       ></div>
       <audio
@@ -221,6 +221,24 @@
         data-volume="1"
       ></audio>
 
+      <div
+        id="el-11-contact"
+        class="scene"
+        data-composition-id="11-contact"
+        data-composition-src="compositions/frames/11-contact.html"
+        data-start="50.858999999999995"
+        data-duration="7.01"
+        data-track-index="0"
+      ></div>
+      <audio
+        id="el-11-contact-voice"
+        src="assets/voice/11.wav"
+        data-start="50.858999999999995"
+        data-duration="7.01"
+        data-track-index="10"
+        data-volume="1"
+      ></audio>
+
       <!-- captions -->
       <div
         id="el-captions"
@@ -228,7 +246,7 @@
         data-composition-id="captions"
         data-composition-src="compositions/captions.html"
         data-start="0"
-        data-duration="50.859"
+        data-duration="57.869"
         data-track-index="2"
       ></div>
 
@@ -457,6 +475,38 @@
         data-track-index="47"
         data-volume="0.262"
       ></audio>
+      <audio
+        id="el-sfx-28"
+        src="assets/sfx/whoosh-short.mp3"
+        data-start="51.109"
+        data-duration="0.57"
+        data-track-index="48"
+        data-volume="0.225"
+      ></audio>
+      <audio
+        id="el-sfx-29"
+        src="assets/sfx/pop.mp3"
+        data-start="52.359"
+        data-duration="0.72"
+        data-track-index="49"
+        data-volume="0.225"
+      ></audio>
+      <audio
+        id="el-sfx-30"
+        src="assets/sfx/pop.mp3"
+        data-start="52.809"
+        data-duration="0.72"
+        data-track-index="50"
+        data-volume="0.225"
+      ></audio>
+      <audio
+        id="el-sfx-31"
+        src="assets/sfx/chime.mp3"
+        data-start="53.285"
+        data-duration="2.5"
+        data-track-index="51"
+        data-volume="0.188"
+      ></audio>
     </div>
 
     <script>
@@ -480,7 +530,9 @@
         tl.fromTo("#el-09-benefices", { scale: 0.5, opacity: 0, filter: "blur(8px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.4, ease: "power3.out" }, 40.279);
         tl.to("#el-09-benefices", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 44.307);
         tl.fromTo("#el-10-outro", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 44.307);
-        tl.to({}, { duration: 50.859 }, 0); // full-span anchor — main.duration() == composition total (Studio master duration)
+        tl.to("#el-10-outro", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 50.859);
+        tl.fromTo("#el-11-contact", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 50.859);
+        tl.to({}, { duration: 57.869 }, 0); // full-span anchor — main.duration() == composition total (Studio master duration)
       })();
     </script>
   </body>

@@ -1,5 +1,5 @@
 {
-  "total_duration_s": 50.859,
+  "total_duration_s": 57.869,
   "width": 1080,
   "height": 1920,
   "groups": [
@@ -951,6 +951,33 @@
           "text": "seuls.",
           "start": 48.27,
           "end": 48.579
+        }
+      ]
+    },
+    {
+      "id": "caption-group-45",
+      "frame": 11,
+      "start": 51.359,
+      "end": 53.189,
+      "text": "Contactez-nous dès aujourd'hui.",
+      "words": [
+        {
+          "id": "caption-word-45-0",
+          "text": "Contactez-nous",
+          "start": 51.359,
+          "end": 52.141
+        },
+        {
+          "id": "caption-word-45-1",
+          "text": "dès",
+          "start": 52.141,
+          "end": 52.385
+        },
+        {
+          "id": "caption-word-45-2",
+          "text": "aujourd'hui.",
+          "start": 52.385,
+          "end": 53.069
         }
       ]
     }

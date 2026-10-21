@@ -1,6 +1,6 @@
 ---
 format: 1080x1920
-duration: 50s
+duration: 58s
 message: "Vos courriers se traitent tout seuls."
 arc: Hook → Problem → Turn → Demo (détecter · lire · comprendre · agir · trier) → Benefits → Brand_Outro
 audience: organisations qui reçoivent beaucoup de courriers par mail
@@ -265,4 +265,32 @@ Adapt: morph-from-object variant — the envelope itself becomes the mark (an en
 Scene 1 (0.0–1.4s): a single envelope glides in from below and settles center; its outline redraws as the mark (`svg-path-draw`) while a blue/violet bloom opens behind (`ambient-glow-bloom`).
 Scene 2 (1.4–2.8s): on "Agent Courrier", the wordmark reveals letter-cascade under the mark (Space Grotesk 700, ink white, "Courrier" in blue).
 Scene 3 (2.8–4.4s): on "Vos courriers se traitent tout seuls.", the slogan reveals per word beneath in Inter, muted→white.
-Scene 4 (4.4–5.0s): smooth ending — the bloom gently contracts and the whole lockup eases to the canvas color (final frame exit; no hard cut).
+Scene 4 (4.4–6.5s): held read of the lockup; the bloom gently contracts. No exit — frame 11 (CTA) follows on a crossfade.
+
+## Frame 11 — Contactez-nous
+
+- scene: Petit logo en haut, « Contactez-nous » puis deux cartes : le site web et les deux numéros de téléphone ; fondu final premium
+- voiceover: "Contactez-nous dès aujourd'hui."
+- duration: 7.01s
+- transition_in: crossfade
+- status: animated
+- src: compositions/frames/11-contact.html
+- type: cta
+- persuasion: Friction reduction (deux canaux, lisibles et tenus à l'écran)
+- beat: urgency-to-act
+- blueprint: titlecard-reveal (Adapt)
+- focal: contact cards
+- roles: mini lockup = supporting · headline = cutout · web card + phone card = cutout hero
+- asset_candidates:
+- sfx: whoosh-short, pop, pop, chime
+
+narrativeRole: convert — give the viewer exactly where to go, long enough to read/screenshot.
+keyMessage: chronoconcept.net · +243 853 420 317 · +243 812 316 707.
+
+Adapt: one calm landing beat, but the two contact cards reveal sequentially instead of one title.
+Scene 1 (0.0–0.5s): mini logo mark + "Agent Courrier" settles at the top (continuity with frame 10's lockup).
+Scene 2 (0.5–1.6s): on "Contactez-nous", the headline reveals per word, big, centered; "dès aujourd'hui" in muted under it on its cue.
+Scene 3 (1.6–2.6s): the web card slides up (globe icon · "chronoconcept.net"), then the phone card (phone icon · two numbers stacked, tabular); a single light sweep crosses each card border once.
+Scene 4 (2.6–6.3s): held read — long enough to note the numbers; two finite ring pulses on the phone icon; subtle stillness.
+Scene 5 (6.3–7.0s): smooth ending — the bloom contracts and the whole card stack eases to the night canvas.
+
