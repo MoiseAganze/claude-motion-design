@@ -821,5 +821,16 @@
       ]
     },
     "unversioned": []
-  }
+  },
+  "renders": {
+    "latest": {
+      "id": "97a9f3c1-38f0-463d-8f5d-995ec30d4cc8",
+      "completedAt": 1792613739046,
+      "output": "/home/user/claude-motion-design/videos/signal-esursi/renders/signal-esursi-brouillon.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
 }
