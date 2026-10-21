@@ -1,0 +1,33 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/CormorantGaramond-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #FFFFFF; font-family: "Cormorant Garamond", serif; }
+    .f13-bg { position: absolute; inset: 0; background: radial-gradient(900px 900px at 50% 40%, rgba(0,127,255,0.22), rgba(0,27,61,0) 70%), #00142E; }
+    .f13-list { position: absolute; left: 0; right: 0; top: 360px; text-align: center; }
+    .f13-w { position: relative; display: table; margin: 0 auto 90px; font-weight: 700; font-size: 150px; line-height: 1; }
+    .f13-u { position: absolute; left: 10%; right: 10%; bottom: -26px; height: 14px; border-radius: 7px; transform-origin: center; }
+  </style>
+
+  <div id="root" data-composition-id="13-devise" data-width="1080" data-height="1920" data-duration="4.577">
+    <div id="f13-bg" class="f13-bg clip" data-start="0" data-duration="4.577" data-track-index="0"></div>
+    <div id="f13-list" class="f13-list clip" data-start="0" data-duration="4.577" data-track-index="1">
+      <div class="f13-w" id="f13-a">Justice.<i class="f13-u" id="f13-ua" style="background:#007FFF"></i></div>
+      <div class="f13-w" id="f13-b">Transparence.<i class="f13-u" id="f13-ub" style="background:#F7D117"></i></div>
+      <div class="f13-w" id="f13-c">Mérite.<i class="f13-u" id="f13-uc" style="background:#CE1126"></i></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      [["#f13-a", "#f13-ua", 0.55], ["#f13-b", "#f13-ub", 1.45], ["#f13-c", "#f13-uc", 2.45]].forEach(([w, u, t]) => {
+        tl.fromTo(w, { opacity: 0, y: 60, filter: "blur(12px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.55, ease: "power3.out" }, t);
+        tl.fromTo(u, { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "expo.out" }, t + 0.2);
+      });
+      tl.to("#f13-list", { scale: 1.04, duration: 4.177, ease: "none" }, 0);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["13-devise"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,65 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/CormorantGaramond-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
+    @font-face { font-family: "Source Sans 3"; src: url("assets/fonts/SourceSans3-400.woff2") format("woff2"); font-weight: 400 700; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #FFFFFF; font-family: "Source Sans 3", sans-serif; }
+    .f10-bg { position: absolute; inset: 0; background: radial-gradient(900px 700px at 50% 45%, rgba(0,127,255,0.30), rgba(0,27,61,0) 70%), #001B3D; }
+    .f10-stripe { position: absolute; left: 0; top: 0; width: 1080px; height: 10px; background: linear-gradient(90deg, #007FFF 0 33%, #F7D117 33% 67%, #CE1126 67%); }
+    .f10-title { position: absolute; left: 70px; right: 70px; top: 150px; font-family: "Cormorant Garamond", serif; font-weight: 700; font-size: 104px; line-height: 1; }
+    .f10-title span { color: #F7D117; }
+    .f10-kick { position: absolute; left: 70px; top: 280px; font-weight: 700; font-size: 34px; letter-spacing: 0.18em; text-transform: uppercase; color: #B8C7DB; }
+    .f10-win { position: absolute; left: 40px; top: 380px; width: 1000px; height: 690px; border-radius: 22px; background: #FFFFFF; overflow: hidden; box-shadow: 0 0 0 2px rgba(255,255,255,0.18), 0 40px 110px rgba(0,0,0,0.5); }
+    .f10-bar { position: absolute; left: 0; top: 0; width: 1000px; height: 52px; background: #E2E8F0; }
+    .f10-bar i { position: absolute; top: 18px; width: 16px; height: 16px; border-radius: 50%; }
+    .f10-url { position: absolute; left: 110px; top: 10px; width: 760px; height: 32px; border-radius: 16px; background: #FFFFFF; color: #475569; font-weight: 600; font-size: 20px; line-height: 32px; padding-left: 20px; box-sizing: border-box; }
+    .f10-view { position: absolute; left: 0; top: 52px; width: 1000px; height: 638px; overflow: hidden; background: #F5F9FC; }
+    .f10-view img { position: absolute; left: 0; top: 0; width: 1000px; height: 625px; transform-origin: 0 0; }
+    .f10-kpis { position: absolute; left: 40px; top: 1110px; width: 1000px; height: 220px; display: flex; gap: 30px; }
+    .f10-kpi { flex: 1; border-radius: 22px; background: #FFFFFF; color: #0F2744; position: relative; overflow: hidden; padding: 30px 36px 0; box-sizing: border-box; }
+    .f10-kpi::before { content: ""; position: absolute; left: 0; top: 0; right: 0; height: 8px; background: linear-gradient(90deg, #007FFF, #F7D117, #CE1126); }
+    .f10-kpi small { display: block; font-weight: 600; font-size: 28px; letter-spacing: 0.1em; color: #64748B; }
+    .f10-kpi b { display: block; margin-top: 6px; font-weight: 700; font-size: 110px; line-height: 1; }
+  </style>
+
+  <div id="root" data-composition-id="10-ministere" data-width="1080" data-height="1920" data-duration="6.185">
+    <div id="f10-bg" class="f10-bg clip" data-start="0" data-duration="6.185" data-track-index="0"></div>
+    <div id="f10-title" class="f10-title clip" data-start="0" data-duration="6.185" data-track-index="1">Et côté <span>Ministère</span> ?</div>
+    <div id="f10-kick" class="f10-kick clip" data-start="0" data-duration="6.185" data-track-index="2">Tableau de bord national</div>
+    <div id="f10-win" class="f10-win clip" data-start="0" data-duration="6.185" data-track-index="3">
+      <div class="f10-bar"><i style="left:22px;background:#CE1126"></i><i style="left:48px;background:#F7D117"></i><i style="left:74px;background:#2BD47D"></i><div class="f10-url" id="f10-url">signal.minesursi.gouv.cd/connexion</div></div>
+      <div class="f10-view" data-layout-allow-overlap>
+        <img id="f10-login" src="assets/img/d-login.jpg" alt="">
+        <img id="f10-dash" src="assets/img/d-admin.jpg" alt="">
+      </div>
+    </div>
+    <div id="f10-kpis" class="f10-kpis clip" data-start="0" data-duration="6.185" data-track-index="4">
+      <div class="f10-kpi" id="f10-k1"><small>TOTAL</small><b id="f10-n1">25</b></div>
+      <div class="f10-kpi" id="f10-k2"><small>CRITIQUES</small><b id="f10-n2" style="color:#CE1126">5</b></div>
+      <div class="f10-kpi" id="f10-k3"><small>EN RETARD</small><b id="f10-n3">0</b></div>
+    </div>
+    <div id="f10-stripe" class="f10-stripe clip" data-start="0" data-duration="6.185" data-track-index="5"></div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#f10-title", { opacity: 0, y: 40, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.55, ease: "power3.out" }, 0.4);
+      tl.fromTo("#f10-win", { opacity: 0, y: 140, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: "expo.out" }, 0.6);
+      // secure agent login (real page), then the real national dashboard
+      tl.fromTo("#f10-login", { scale: 1.35, x: -180, y: -60 }, { scale: 1.2, x: -100, y: -40, duration: 1.0, ease: "none" }, 0.6);
+      tl.fromTo("#f10-dash", { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power2.out" }, 1.55);
+      tl.to("#f10-url", { opacity: 0, duration: 0.12 }, 1.55);
+      tl.fromTo("#f10-kick", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 2.9);
+      // camera: full dashboard -> push toward the KPI row
+      tl.fromTo("#f10-dash", { scale: 1, x: 0, y: 0 }, { scale: 1.45, x: -170, y: -40, duration: 1.6, ease: "power3.inOut" }, 1.9);
+      [["#f10-k1", 2.9], ["#f10-k2", 3.1], ["#f10-k3", 3.3]].forEach(([s, t]) => tl.fromTo(s, { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, t));
+      tl.fromTo("#f10-n1", { textContent: 0 }, { textContent: 25, snap: { textContent: 1 }, duration: 0.9, ease: "power2.out" }, 2.95);
+      tl.fromTo("#f10-n2", { textContent: 0 }, { textContent: 5, snap: { textContent: 1 }, duration: 0.7, ease: "power2.out" }, 3.15);
+      // then slide down toward the map (continues in frame 11)
+      tl.to("#f10-dash", { y: -250, duration: 1.3, ease: "power2.in" }, 4.35);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["10-ministere"] = tl;
+    })();
+  </script>
+</template>

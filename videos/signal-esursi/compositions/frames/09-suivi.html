@@ -1,0 +1,69 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/CormorantGaramond-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
+    @font-face { font-family: "Source Sans 3"; src: url("assets/fonts/SourceSans3-400.woff2") format("woff2"); font-weight: 400 700; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #FFFFFF; font-family: "Source Sans 3", sans-serif; }
+    .f09-bg { position: absolute; inset: 0; background: radial-gradient(800px 800px at 50% 35%, rgba(0,127,255,0.28), rgba(0,27,61,0) 70%), #001B3D; }
+    .f09-stripe { position: absolute; left: 0; top: 0; width: 1080px; height: 10px; background: linear-gradient(90deg, #007FFF 0 33%, #F7D117 33% 67%, #CE1126 67%); }
+    .f09-ticket { position: absolute; left: 90px; top: 170px; width: 900px; height: 520px; border-radius: 30px; background: #FFFFFF; color: #0F2744; box-shadow: 0 30px 90px rgba(0,0,0,0.45); overflow: hidden; }
+    .f09-ticket::before { content: ""; position: absolute; left: 0; top: 0; right: 0; height: 8px; background: linear-gradient(90deg, #007FFF, #F7D117, #CE1126); }
+    .f09-ok { position: absolute; left: 50px; top: 50px; display: flex; align-items: center; gap: 18px; font-weight: 700; font-size: 38px; color: #059669; }
+    .f09-ok svg { width: 56px; height: 56px; }
+    .f09-k { position: absolute; left: 50px; font-weight: 600; font-size: 30px; letter-spacing: 0.12em; text-transform: uppercase; color: #64748B; }
+    .f09-ref { position: absolute; left: 50px; top: 190px; font-family: "Courier New", monospace; font-weight: 700; font-size: 62px; color: #0057B8; white-space: nowrap; }
+    .f09-ref i { display: inline-block; width: 0; overflow: hidden; vertical-align: bottom; font-style: normal; white-space: nowrap; }
+    .f09-code { position: absolute; left: 50px; top: 360px; display: flex; gap: 16px; }
+    .f09-code span { width: 64px; height: 84px; border-radius: 14px; background: #E8F4FF; border: 2px solid #BFDBFE; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 54px; color: #003A7A; }
+    .f09-ex { position: absolute; right: 44px; top: 56px; font-weight: 600; font-size: 26px; color: #64748B; }
+    .f09-tl { position: absolute; left: 90px; top: 740px; width: 900px; }
+    .f09-tl h4 { margin: 0 0 36px; font-family: "Cormorant Garamond", serif; font-weight: 700; font-size: 70px; color: #FFFFFF; }
+    .f09-st { position: relative; height: 74px; display: flex; align-items: center; gap: 30px; font-weight: 600; font-size: 40px; color: #8296B0; }
+    .f09-st b { flex: 0 0 34px; height: 34px; border-radius: 50%; border: 5px solid #8296B0; box-sizing: border-box; margin-left: 8px; }
+    .f09-line { position: absolute; left: 23px; top: 157px; width: 4px; height: 370px; background: rgba(130,150,176,0.4); }
+    .f09-prog { position: absolute; left: 23px; top: 157px; width: 4px; height: 370px; background: #F7D117; transform-origin: top center; }
+  </style>
+
+  <div id="root" data-composition-id="09-suivi" data-width="1080" data-height="1920" data-duration="6.825">
+    <div id="f09-bg" class="f09-bg clip" data-start="0" data-duration="6.825" data-track-index="0"></div>
+    <div id="f09-ticket" class="f09-ticket clip" data-start="0" data-duration="6.825" data-track-index="1">
+      <div class="f09-ok"><svg viewBox="0 0 56 56" fill="none" stroke="#059669" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="28" r="24"/><path d="M17 29l7 7 15-16"/></svg>Signalement envoyé</div>
+      <div class="f09-ex">exemple</div>
+      <div class="f09-k" style="top:140px">Référence</div>
+      <div class="f09-ref"><i id="f09-reftxt">SIG-ESU-2026-ABC123</i></div>
+      <div class="f09-k" style="top:310px">Code de suivi</div>
+      <div class="f09-code" id="f09-code"><span>•</span><span>•</span><span>•</span><span>•</span><span>•</span><span>•</span></div>
+    </div>
+    <div id="f09-tl" class="f09-tl clip" data-start="0" data-duration="6.825" data-track-index="2">
+      <h4 id="f09-h">Étape par étape</h4>
+      <i class="f09-line"></i><i class="f09-prog" id="f09-prog"></i>
+      <div class="f09-st" id="f09-s1"><b></b>Reçu</div>
+      <div class="f09-st" id="f09-s2"><b></b>En vérification</div>
+      <div class="f09-st" id="f09-s3"><b></b>Pris en charge</div>
+      <div class="f09-st" id="f09-s4"><b></b>Investigation en cours</div>
+      <div class="f09-st" id="f09-s5"><b></b>Décision prise</div>
+      <div class="f09-st" id="f09-s6"><b></b>Clôturé</div>
+    </div>
+    <div id="f09-stripe" class="f09-stripe clip" data-start="0" data-duration="6.825" data-track-index="3"></div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#f09-ticket", { opacity: 0, y: 100, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: "expo.out" }, 0);
+      // reference types in (steps keep it seek-safe), code dots pop
+      tl.fromTo("#f09-reftxt", { width: 0 }, { width: 780, duration: 0.9, ease: "steps(19)" }, 1.0);
+      tl.fromTo("#f09-code span", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.25, stagger: 0.07, ease: "power3.out" }, 1.75);
+      tl.fromTo("#f09-tl", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.6, ease: "expo.out" }, 2.6);
+      tl.fromTo("#f09-prog", { scaleY: 0 }, { scaleY: 1, duration: 2.6, ease: "power1.inOut" }, 3.1);
+      const lit = { color: "#FFFFFF", duration: 0.2 };
+      for (let i = 1; i <= 6; i++) {
+        const t = 3.1 + (i - 1) * 0.5;
+        tl.to("#f09-s" + i, lit, t);
+        tl.to("#f09-s" + i + " b", { borderColor: "#F7D117", backgroundColor: "#F7D117", duration: 0.2 }, t);
+      }
+      window.__timelines = window.__timelines || {};
+      window.__timelines["09-suivi"] = tl;
+    })();
+  </script>
+</template>

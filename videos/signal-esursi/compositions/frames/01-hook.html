@@ -1,0 +1,44 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/CormorantGaramond-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
+    @font-face { font-family: "Source Sans 3"; src: url("assets/fonts/SourceSans3-400.woff2") format("woff2"); font-weight: 400 700; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #FFFFFF; font-family: "Source Sans 3", sans-serif; }
+    .f01-bg { position: absolute; inset: 0; background: #001B3D; }
+    .f01-photo { position: absolute; inset: 0; overflow: hidden; }
+    .f01-photo img { position: absolute; left: -1520px; top: -80px; width: 2880px; height: 1920px; transform-origin: 2060px 600px; }
+    .f01-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,27,61,0.55) 0%, rgba(0,27,61,0.25) 35%, rgba(0,27,61,0.88) 62%, #001B3D 82%); }
+    .f01-stripe { position: absolute; left: 0; top: 0; width: 1080px; height: 10px; background: linear-gradient(90deg, #007FFF 0 33%, #F7D117 33% 67%, #CE1126 67%); transform-origin: left center; }
+    .f01-copy { position: absolute; left: 70px; right: 70px; top: 880px; }
+    .f01-l1 { font-weight: 700; font-size: 190px; line-height: 0.92; letter-spacing: -0.03em; }
+    .f01-red { display: inline-block; padding: 0 22px 10px; background: #CE1126; color: #FFFFFF; transform-origin: left center; }
+    .f01-l2 { margin-top: 26px; font-weight: 700; font-size: 104px; line-height: 1.0; letter-spacing: -0.02em; }
+    .f01-l2 span { display: inline-block; }
+  </style>
+
+  <div id="root" data-composition-id="01-hook" data-width="1080" data-height="1920" data-duration="2.34">
+    <div id="f01-bg" class="f01-bg clip" data-start="0" data-duration="2.34" data-track-index="0"></div>
+    <div id="f01-photo" class="f01-photo clip" data-start="0" data-duration="2.34" data-track-index="1"><img id="f01-img" src="assets/img/abus.jpg" alt=""></div>
+    <div id="f01-shade" class="f01-shade clip" data-start="0" data-duration="2.34" data-track-index="2"></div>
+    <div id="f01-copy" class="f01-copy clip" data-start="0" data-duration="2.34" data-track-index="3" data-layout-allow-overflow>
+      <div class="f01-l1"><span id="f01-red" class="f01-red">Un abus</span></div>
+      <div class="f01-l2"><span id="f01-a">dans votre</span> <span id="f01-b">université ?</span></div>
+    </div>
+    <div id="f01-stripe" class="f01-stripe clip" data-start="0" data-duration="2.34" data-track-index="4"></div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      // photo already drifting at t=0 (slow push-in on the student)
+      tl.fromTo("#f01-img", { scale: 1.12, x: -60 }, { scale: 1.0, x: 0, duration: 2.34, ease: "none" }, 0);
+      tl.fromTo("#f01-stripe", { scaleX: 0.3 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, 0);
+      tl.fromTo("#f01-red", { opacity: 0.4, scaleX: 0.6, y: 40 }, { opacity: 1, scaleX: 1, y: 0, duration: 0.42, ease: "expo.out" }, 0.05);
+      tl.fromTo("#f01-a", { opacity: 0, y: 50, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.4, ease: "power3.out" }, 0.62);
+      tl.fromTo("#f01-b", { opacity: 0, y: 50, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.45, ease: "power3.out" }, 1.08);
+      tl.to("#f01-copy", { scale: 1.03, transformOrigin: "left center", duration: 0.8, ease: "none" }, 1.54);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["01-hook"] = tl;
+    })();
+  </script>
+</template>

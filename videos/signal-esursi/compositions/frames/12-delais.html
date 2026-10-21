@@ -1,0 +1,54 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/CormorantGaramond-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
+    @font-face { font-family: "Source Sans 3"; src: url("assets/fonts/SourceSans3-400.woff2") format("woff2"); font-weight: 400 700; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #FFFFFF; font-family: "Source Sans 3", sans-serif; }
+    .f12-bg { position: absolute; inset: 0; background: radial-gradient(800px 700px at 50% 32%, rgba(206,17,38,0.20), rgba(0,27,61,0) 70%), #001B3D; }
+    .f12-stripe { position: absolute; left: 0; top: 0; width: 1080px; height: 10px; background: linear-gradient(90deg, #007FFF 0 33%, #F7D117 33% 67%, #CE1126 67%); }
+    .f12-badge { position: absolute; left: 70px; top: 170px; padding: 12px 28px; border-radius: 100px; background: #CE1126; font-weight: 700; font-size: 44px; letter-spacing: 0.12em; text-transform: uppercase; }
+    .f12-ring { position: absolute; left: 70px; top: 290px; width: 520px; height: 520px; }
+    .f12-big { position: absolute; left: 70px; top: 290px; width: 520px; height: 520px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .f12-big b { font-weight: 700; font-size: 230px; line-height: 0.85; }
+    .f12-big span { font-weight: 600; font-size: 54px; color: #B8C7DB; }
+    .f12-side { position: absolute; left: 630px; top: 400px; width: 380px; font-family: "Cormorant Garamond", serif; font-weight: 700; font-size: 66px; line-height: 1.05; }
+    .f12-rows { position: absolute; left: 70px; top: 880px; width: 940px; }
+    .f12-row { display: flex; justify-content: space-between; align-items: center; height: 108px; border-bottom: 2px solid rgba(255,255,255,0.12); font-size: 48px; }
+    .f12-row i { font-style: normal; font-weight: 600; color: #B8C7DB; }
+    .f12-row b { font-weight: 700; }
+    .f12-k { position: absolute; left: 70px; top: 1300px; font-weight: 400; font-size: 30px; color: #8296B0; }
+  </style>
+
+  <div id="root" data-composition-id="12-delais" data-width="1080" data-height="1920" data-duration="4.92">
+    <div id="f12-bg" class="f12-bg clip" data-start="0" data-duration="4.92" data-track-index="0"></div>
+    <div id="f12-badge" class="f12-badge clip" data-start="0" data-duration="4.92" data-track-index="1">Dossier critique</div>
+    <svg id="f12-ring" class="f12-ring clip" data-start="0" data-duration="4.92" data-track-index="2" viewBox="0 0 520 520">
+      <circle cx="260" cy="260" r="236" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="22"/>
+      <circle id="f12-arc" cx="260" cy="260" r="236" fill="none" stroke="#F7D117" stroke-width="22" stroke-linecap="round" transform="rotate(-90 260 260)" stroke-dasharray="1483" stroke-dashoffset="1483"/>
+    </svg>
+    <div id="f12-big" class="f12-big clip" data-start="0" data-duration="4.92" data-track-index="3"><b id="f12-n">24</b><span>heures</span></div>
+    <div id="f12-side" class="f12-side clip" data-start="0" data-duration="4.92" data-track-index="4">pour une première prise en charge</div>
+    <div id="f12-rows" class="f12-rows clip" data-start="0" data-duration="4.92" data-track-index="5">
+      <div class="f12-row" id="f12-r1"><i>Élevée</i><b>72 heures</b></div>
+      <div class="f12-row" id="f12-r2"><i>Normale</i><b>7 jours</b></div>
+      <div class="f12-row" id="f12-r3"><i>Faible</i><b>15 jours</b></div>
+    </div>
+    <div id="f12-k" class="f12-k clip" data-start="0" data-duration="4.92" data-track-index="6">Délais cibles selon la gravité — procédure officielle</div>
+    <div id="f12-stripe" class="f12-stripe clip" data-start="0" data-duration="4.92" data-track-index="7"></div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#f12-badge", { opacity: 0, scale: 0.7, transformOrigin: "left center" }, { opacity: 1, scale: 1, duration: 0.4, ease: "expo.out" }, 0.3);
+      tl.fromTo("#f12-big", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.5, ease: "expo.out" }, 0.9);
+      tl.fromTo("#f12-arc", { strokeDashoffset: 1483 }, { strokeDashoffset: 0, duration: 1.8, ease: "power2.inOut" }, 1.0);
+      tl.fromTo("#f12-n", { textContent: 0 }, { textContent: 24, snap: { textContent: 1 }, duration: 1.4, ease: "power2.out" }, 1.0);
+      tl.fromTo("#f12-side", { opacity: 0, x: 30 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 2.3);
+      [["#f12-r1", 2.6], ["#f12-r2", 2.8], ["#f12-r3", 3.0]].forEach(([s, t]) => tl.fromTo(s, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, t));
+      tl.fromTo("#f12-k", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 3.2);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["12-delais"] = tl;
+    })();
+  </script>
+</template>

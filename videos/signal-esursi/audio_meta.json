@@ -1,0 +1,1281 @@
+{
+ "bgm": null,
+ "bgm_pending": false,
+ "voices": [
+  {
+   "frame": 1,
+   "path": "assets/voice/01.wav",
+   "duration_s": 2.34,
+   "words": [
+    {
+     "text": "Un",
+     "start": 0.3,
+     "end": 0.451,
+     "id": "w01_0"
+    },
+    {
+     "text": "abus",
+     "start": 0.451,
+     "end": 0.678,
+     "id": "w01_1"
+    },
+    {
+     "text": "dans",
+     "start": 0.678,
+     "end": 0.905,
+     "id": "w01_2"
+    },
+    {
+     "text": "votre",
+     "start": 0.905,
+     "end": 1.169,
+     "id": "w01_3"
+    },
+    {
+     "text": "université ?",
+     "start": 1.169,
+     "end": 1.66,
+     "id": "w01_4"
+    }
+   ]
+  },
+  {
+   "frame": 2,
+   "path": "assets/voice/02.wav",
+   "duration_s": 5.819,
+   "words": [
+    {
+     "text": "Des",
+     "start": 0.24,
+     "end": 0.405,
+     "id": "w02_0"
+    },
+    {
+     "text": "points",
+     "start": 0.405,
+     "end": 0.668,
+     "id": "w02_1"
+    },
+    {
+     "text": "qui",
+     "start": 0.668,
+     "end": 0.833,
+     "id": "w02_2"
+    },
+    {
+     "text": "se",
+     "start": 0.833,
+     "end": 0.964,
+     "id": "w02_3"
+    },
+    {
+     "text": "vendent.",
+     "start": 0.964,
+     "end": 1.293,
+     "id": "w02_4"
+    },
+    {
+     "text": "Des",
+     "start": 1.679,
+     "end": 1.882,
+     "id": "w02_5"
+    },
+    {
+     "text": "frais",
+     "start": 1.882,
+     "end": 2.167,
+     "id": "w02_6"
+    },
+    {
+     "text": "illégaux.",
+     "start": 2.167,
+     "end": 2.614,
+     "id": "w02_7"
+    },
+    {
+     "text": "De",
+     "start": 3.047,
+     "end": 3.207,
+     "id": "w02_8"
+    },
+    {
+     "text": "faux",
+     "start": 3.207,
+     "end": 3.446,
+     "id": "w02_9"
+    },
+    {
+     "text": "diplômes.",
+     "start": 3.446,
+     "end": 3.885,
+     "id": "w02_10"
+    },
+    {
+     "text": "Du",
+     "start": 4.321,
+     "end": 4.48,
+     "id": "w02_11"
+    },
+    {
+     "text": "harcèlement.",
+     "start": 4.48,
+     "end": 5.039,
+     "id": "w02_12"
+    }
+   ]
+  },
+  {
+   "frame": 3,
+   "path": "assets/voice/03.wav",
+   "duration_s": 5.427,
+   "words": [
+    {
+     "text": "Trop",
+     "start": 0.54,
+     "end": 0.814,
+     "id": "w03_0"
+    },
+    {
+     "text": "souvent,",
+     "start": 0.814,
+     "end": 1.272,
+     "id": "w03_1"
+    },
+    {
+     "text": "on",
+     "start": 1.272,
+     "end": 1.455,
+     "id": "w03_2"
+    },
+    {
+     "text": "se",
+     "start": 1.455,
+     "end": 1.638,
+     "id": "w03_3"
+    },
+    {
+     "text": "tait.",
+     "start": 1.638,
+     "end": 1.958,
+     "id": "w03_4"
+    },
+    {
+     "text": "Par",
+     "start": 2.389,
+     "end": 2.63,
+     "id": "w03_5"
+    },
+    {
+     "text": "peur,",
+     "start": 2.63,
+     "end": 2.968,
+     "id": "w03_6"
+    },
+    {
+     "text": "ou",
+     "start": 3.17,
+     "end": 3.298,
+     "id": "w03_7"
+    },
+    {
+     "text": "faute",
+     "start": 3.298,
+     "end": 3.522,
+     "id": "w03_8"
+    },
+    {
+     "text": "de",
+     "start": 3.522,
+     "end": 3.649,
+     "id": "w03_9"
+    },
+    {
+     "text": "savoir",
+     "start": 3.649,
+     "end": 3.905,
+     "id": "w03_10"
+    },
+    {
+     "text": "à",
+     "start": 3.905,
+     "end": 4.0,
+     "id": "w03_11"
+    },
+    {
+     "text": "qui",
+     "start": 4.0,
+     "end": 4.16,
+     "id": "w03_12"
+    },
+    {
+     "text": "parler.",
+     "start": 4.16,
+     "end": 4.447,
+     "id": "w03_13"
+    }
+   ]
+  },
+  {
+   "frame": 4,
+   "path": "assets/voice/04.wav",
+   "duration_s": 5.777,
+   "words": [
+    {
+     "text": "Voici",
+     "start": 0.64,
+     "end": 0.915,
+     "id": "w04_0"
+    },
+    {
+     "text": "la",
+     "start": 0.915,
+     "end": 1.073,
+     "id": "w04_1"
+    },
+    {
+     "text": "plateforme",
+     "start": 1.073,
+     "end": 1.545,
+     "id": "w04_2"
+    },
+    {
+     "text": "nationale",
+     "start": 1.545,
+     "end": 1.978,
+     "id": "w04_3"
+    },
+    {
+     "text": "de",
+     "start": 1.978,
+     "end": 2.136,
+     "id": "w04_4"
+    },
+    {
+     "text": "signalement",
+     "start": 2.136,
+     "end": 2.647,
+     "id": "w04_5"
+    },
+    {
+     "text": "du",
+     "start": 2.647,
+     "end": 2.805,
+     "id": "w04_6"
+    },
+    {
+     "text": "Ministère",
+     "start": 2.805,
+     "end": 3.238,
+     "id": "w04_7"
+    },
+    {
+     "text": "de",
+     "start": 3.238,
+     "end": 3.395,
+     "id": "w04_8"
+    },
+    {
+     "text": "l'Enseignement",
+     "start": 3.395,
+     "end": 4.025,
+     "id": "w04_9"
+    },
+    {
+     "text": "Supérieur.",
+     "start": 4.025,
+     "end": 4.497,
+     "id": "w04_10"
+    }
+   ]
+  },
+  {
+   "frame": 5,
+   "path": "assets/voice/05.wav",
+   "duration_s": 4.82,
+   "words": [
+    {
+     "text": "Depuis",
+     "start": 0.44,
+     "end": 0.758,
+     "id": "w05_0"
+    },
+    {
+     "text": "votre",
+     "start": 0.758,
+     "end": 1.036,
+     "id": "w05_1"
+    },
+    {
+     "text": "téléphone,",
+     "start": 1.036,
+     "end": 1.513,
+     "id": "w05_2"
+    },
+    {
+     "text": "vous",
+     "start": 1.513,
+     "end": 1.752,
+     "id": "w05_3"
+    },
+    {
+     "text": "déposez",
+     "start": 1.752,
+     "end": 2.11,
+     "id": "w05_4"
+    },
+    {
+     "text": "un",
+     "start": 2.11,
+     "end": 2.269,
+     "id": "w05_5"
+    },
+    {
+     "text": "signalement",
+     "start": 2.269,
+     "end": 2.786,
+     "id": "w05_6"
+    },
+    {
+     "text": "en",
+     "start": 2.786,
+     "end": 2.945,
+     "id": "w05_7"
+    },
+    {
+     "text": "quelques",
+     "start": 2.945,
+     "end": 3.342,
+     "id": "w05_8"
+    },
+    {
+     "text": "minutes.",
+     "start": 3.342,
+     "end": 3.74,
+     "id": "w05_9"
+    }
+   ]
+  },
+  {
+   "frame": 6,
+   "path": "assets/voice/06.wav",
+   "duration_s": 5.731,
+   "words": [
+    {
+     "text": "Neuf",
+     "start": 0.34,
+     "end": 0.594,
+     "id": "w06_0"
+    },
+    {
+     "text": "catégories",
+     "start": 0.594,
+     "end": 1.103,
+     "id": "w06_1"
+    },
+    {
+     "text": "officielles.",
+     "start": 1.103,
+     "end": 1.696,
+     "id": "w06_2"
+    },
+    {
+     "text": "Corruption,",
+     "start": 1.931,
+     "end": 2.636,
+     "id": "w06_3"
+    },
+    {
+     "text": "fraude,",
+     "start": 2.636,
+     "end": 3.124,
+     "id": "w06_4"
+    },
+    {
+     "text": "faux",
+     "start": 3.124,
+     "end": 3.449,
+     "id": "w06_5"
+    },
+    {
+     "text": "diplôme,",
+     "start": 3.449,
+     "end": 3.992,
+     "id": "w06_6"
+    },
+    {
+     "text": "harcèlement…",
+     "start": 3.992,
+     "end": 4.751,
+     "id": "w06_7"
+    }
+   ]
+  },
+  {
+   "frame": 7,
+   "path": "assets/voice/07.wav",
+   "duration_s": 5.677,
+   "words": [
+    {
+     "text": "Huit",
+     "start": 0.34,
+     "end": 0.595,
+     "id": "w07_0"
+    },
+    {
+     "text": "étapes",
+     "start": 0.595,
+     "end": 0.936,
+     "id": "w07_1"
+    },
+    {
+     "text": "guidées.",
+     "start": 0.936,
+     "end": 1.361,
+     "id": "w07_2"
+    },
+    {
+     "text": "La",
+     "start": 1.588,
+     "end": 1.783,
+     "id": "w07_3"
+    },
+    {
+     "text": "province,",
+     "start": 1.783,
+     "end": 2.319,
+     "id": "w07_4"
+    },
+    {
+     "text": "l'établissement,",
+     "start": 2.319,
+     "end": 3.197,
+     "id": "w07_5"
+    },
+    {
+     "text": "les",
+     "start": 3.197,
+     "end": 3.44,
+     "id": "w07_6"
+    },
+    {
+     "text": "faits,",
+     "start": 3.44,
+     "end": 3.83,
+     "id": "w07_7"
+    },
+    {
+     "text": "et",
+     "start": 4.065,
+     "end": 4.198,
+     "id": "w07_8"
+    },
+    {
+     "text": "vos",
+     "start": 4.198,
+     "end": 4.364,
+     "id": "w07_9"
+    },
+    {
+     "text": "preuves.",
+     "start": 4.364,
+     "end": 4.697,
+     "id": "w07_10"
+    }
+   ]
+  },
+  {
+   "frame": 8,
+   "path": "assets/voice/08.wav",
+   "duration_s": 6.728,
+   "words": [
+    {
+     "text": "Anonyme",
+     "start": 0.34,
+     "end": 0.729,
+     "id": "w08_0"
+    },
+    {
+     "text": "ou",
+     "start": 0.729,
+     "end": 0.902,
+     "id": "w08_1"
+    },
+    {
+     "text": "identifié",
+     "start": 0.902,
+     "end": 1.378,
+     "id": "w08_2"
+    },
+    {
+     "text": ":",
+     "start": 1.378,
+     "end": 1.508,
+     "id": "w08_3"
+    },
+    {
+     "text": "c'est",
+     "start": 1.508,
+     "end": 1.81,
+     "id": "w08_4"
+    },
+    {
+     "text": "vous",
+     "start": 1.81,
+     "end": 2.07,
+     "id": "w08_5"
+    },
+    {
+     "text": "qui",
+     "start": 2.07,
+     "end": 2.286,
+     "id": "w08_6"
+    },
+    {
+     "text": "choisissez.",
+     "start": 2.286,
+     "end": 2.848,
+     "id": "w08_7"
+    },
+    {
+     "text": "En",
+     "start": 3.099,
+     "end": 3.249,
+     "id": "w08_8"
+    },
+    {
+     "text": "mode",
+     "start": 3.249,
+     "end": 3.474,
+     "id": "w08_9"
+    },
+    {
+     "text": "anonyme,",
+     "start": 3.474,
+     "end": 3.849,
+     "id": "w08_10"
+    },
+    {
+     "text": "aucune",
+     "start": 3.849,
+     "end": 4.149,
+     "id": "w08_11"
+    },
+    {
+     "text": "donnée",
+     "start": 4.149,
+     "end": 4.449,
+     "id": "w08_12"
+    },
+    {
+     "text": "personnelle",
+     "start": 4.449,
+     "end": 4.936,
+     "id": "w08_13"
+    },
+    {
+     "text": "n'est",
+     "start": 4.936,
+     "end": 5.198,
+     "id": "w08_14"
+    },
+    {
+     "text": "conservée.",
+     "start": 5.198,
+     "end": 5.648,
+     "id": "w08_15"
+    }
+   ]
+  },
+  {
+   "frame": 9,
+   "path": "assets/voice/09.wav",
+   "duration_s": 6.425,
+   "words": [
+    {
+     "text": "Vous",
+     "start": 0.34,
+     "end": 0.569,
+     "id": "w09_0"
+    },
+    {
+     "text": "recevez",
+     "start": 0.569,
+     "end": 0.912,
+     "id": "w09_1"
+    },
+    {
+     "text": "une",
+     "start": 0.912,
+     "end": 1.103,
+     "id": "w09_2"
+    },
+    {
+     "text": "référence",
+     "start": 1.103,
+     "end": 1.523,
+     "id": "w09_3"
+    },
+    {
+     "text": "et",
+     "start": 1.523,
+     "end": 1.675,
+     "id": "w09_4"
+    },
+    {
+     "text": "un",
+     "start": 1.675,
+     "end": 1.828,
+     "id": "w09_5"
+    },
+    {
+     "text": "code",
+     "start": 1.828,
+     "end": 2.057,
+     "id": "w09_6"
+    },
+    {
+     "text": "de",
+     "start": 2.057,
+     "end": 2.209,
+     "id": "w09_7"
+    },
+    {
+     "text": "suivi.",
+     "start": 2.209,
+     "end": 2.514,
+     "id": "w09_8"
+    },
+    {
+     "text": "Et",
+     "start": 2.76,
+     "end": 2.933,
+     "id": "w09_9"
+    },
+    {
+     "text": "vous",
+     "start": 2.933,
+     "end": 3.194,
+     "id": "w09_10"
+    },
+    {
+     "text": "suivez",
+     "start": 3.194,
+     "end": 3.541,
+     "id": "w09_11"
+    },
+    {
+     "text": "votre",
+     "start": 3.541,
+     "end": 3.844,
+     "id": "w09_12"
+    },
+    {
+     "text": "dossier,",
+     "start": 3.844,
+     "end": 4.278,
+     "id": "w09_13"
+    },
+    {
+     "text": "étape",
+     "start": 4.278,
+     "end": 4.582,
+     "id": "w09_14"
+    },
+    {
+     "text": "par",
+     "start": 4.582,
+     "end": 4.798,
+     "id": "w09_15"
+    },
+    {
+     "text": "étape.",
+     "start": 4.798,
+     "end": 5.145,
+     "id": "w09_16"
+    }
+   ]
+  },
+  {
+   "frame": 10,
+   "path": "assets/voice/10.wav",
+   "duration_s": 5.685,
+   "words": [
+    {
+     "text": "Et",
+     "start": 0.54,
+     "end": 0.698,
+     "id": "w10_0"
+    },
+    {
+     "text": "côté",
+     "start": 0.698,
+     "end": 0.935,
+     "id": "w10_1"
+    },
+    {
+     "text": "Ministère ?",
+     "start": 0.935,
+     "end": 1.408,
+     "id": "w10_2"
+    },
+    {
+     "text": "Chaque",
+     "start": 1.408,
+     "end": 1.724,
+     "id": "w10_3"
+    },
+    {
+     "text": "signalement",
+     "start": 1.724,
+     "end": 2.237,
+     "id": "w10_4"
+    },
+    {
+     "text": "arrive",
+     "start": 2.237,
+     "end": 2.553,
+     "id": "w10_5"
+    },
+    {
+     "text": "sur",
+     "start": 2.553,
+     "end": 2.75,
+     "id": "w10_6"
+    },
+    {
+     "text": "le",
+     "start": 2.75,
+     "end": 2.908,
+     "id": "w10_7"
+    },
+    {
+     "text": "tableau",
+     "start": 2.908,
+     "end": 3.263,
+     "id": "w10_8"
+    },
+    {
+     "text": "de",
+     "start": 3.263,
+     "end": 3.421,
+     "id": "w10_9"
+    },
+    {
+     "text": "bord",
+     "start": 3.421,
+     "end": 3.658,
+     "id": "w10_10"
+    },
+    {
+     "text": "national",
+     "start": 3.658,
+     "end": 4.053,
+     "id": "w10_11"
+    },
+    {
+     "text": "des",
+     "start": 4.053,
+     "end": 4.25,
+     "id": "w10_12"
+    },
+    {
+     "text": "agents.",
+     "start": 4.25,
+     "end": 4.605,
+     "id": "w10_13"
+    }
+   ]
+  },
+  {
+   "frame": 11,
+   "path": "assets/voice/11.wav",
+   "duration_s": 5.75,
+   "words": [
+    {
+     "text": "Province",
+     "start": 0.44,
+     "end": 0.91,
+     "id": "w11_0"
+    },
+    {
+     "text": "par",
+     "start": 0.91,
+     "end": 1.144,
+     "id": "w11_1"
+    },
+    {
+     "text": "province,",
+     "start": 1.144,
+     "end": 1.661,
+     "id": "w11_2"
+    },
+    {
+     "text": "sur",
+     "start": 1.661,
+     "end": 1.896,
+     "id": "w11_3"
+    },
+    {
+     "text": "la",
+     "start": 1.896,
+     "end": 2.084,
+     "id": "w11_4"
+    },
+    {
+     "text": "carte",
+     "start": 2.084,
+     "end": 2.412,
+     "id": "w11_5"
+    },
+    {
+     "text": "de",
+     "start": 2.412,
+     "end": 2.6,
+     "id": "w11_6"
+    },
+    {
+     "text": "la",
+     "start": 2.6,
+     "end": 2.788,
+     "id": "w11_7"
+    },
+    {
+     "text": "RDC.",
+     "start": 2.788,
+     "end": 3.07,
+     "id": "w11_8"
+    }
+   ]
+  },
+  {
+   "frame": 12,
+   "path": "assets/voice/12.wav",
+   "duration_s": 4.42,
+   "words": [
+    {
+     "text": "Un",
+     "start": 0.34,
+     "end": 0.477,
+     "id": "w12_0"
+    },
+    {
+     "text": "dossier",
+     "start": 0.477,
+     "end": 0.784,
+     "id": "w12_1"
+    },
+    {
+     "text": "critique",
+     "start": 0.784,
+     "end": 1.125,
+     "id": "w12_2"
+    },
+    {
+     "text": "doit",
+     "start": 1.125,
+     "end": 1.33,
+     "id": "w12_3"
+    },
+    {
+     "text": "être",
+     "start": 1.33,
+     "end": 1.535,
+     "id": "w12_4"
+    },
+    {
+     "text": "pris",
+     "start": 1.535,
+     "end": 1.74,
+     "id": "w12_5"
+    },
+    {
+     "text": "en",
+     "start": 1.74,
+     "end": 1.876,
+     "id": "w12_6"
+    },
+    {
+     "text": "charge",
+     "start": 1.876,
+     "end": 2.15,
+     "id": "w12_7"
+    },
+    {
+     "text": "sous",
+     "start": 2.15,
+     "end": 2.354,
+     "id": "w12_8"
+    },
+    {
+     "text": "vingt-quatre",
+     "start": 2.354,
+     "end": 2.832,
+     "id": "w12_9"
+    },
+    {
+     "text": "heures.",
+     "start": 2.832,
+     "end": 3.14,
+     "id": "w12_10"
+    }
+   ]
+  },
+  {
+   "frame": 13,
+   "path": "assets/voice/13.wav",
+   "duration_s": 4.177,
+   "words": [
+    {
+     "text": "Justice.",
+     "start": 0.64,
+     "end": 1.312,
+     "id": "w13_0"
+    },
+    {
+     "text": "Transparence.",
+     "start": 1.528,
+     "end": 2.318,
+     "id": "w13_1"
+    },
+    {
+     "text": "Mérite.",
+     "start": 2.526,
+     "end": 3.097,
+     "id": "w13_2"
+    }
+   ]
+  },
+  {
+   "frame": 14,
+   "path": "assets/voice/14.wav",
+   "duration_s": 8.696,
+   "words": [
+    {
+     "text": "Votre",
+     "start": 0.54,
+     "end": 0.873,
+     "id": "w14_0"
+    },
+    {
+     "text": "voix",
+     "start": 0.873,
+     "end": 1.159,
+     "id": "w14_1"
+    },
+    {
+     "text": "compte.",
+     "start": 1.159,
+     "end": 1.587,
+     "id": "w14_2"
+    },
+    {
+     "text": "Signalez,",
+     "start": 1.805,
+     "end": 2.673,
+     "id": "w14_3"
+    },
+    {
+     "text": "sur",
+     "start": 2.673,
+     "end": 3.067,
+     "id": "w14_4"
+    },
+    {
+     "text": "signal.minesursi.gouv.cd.",
+     "start": 3.067,
+     "end": 5.196,
+     "id": "w14_5"
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "frame": 1,
+   "file": "assets/sfx/whoosh-cinematic.mp3",
+   "offset_s": 0.0,
+   "duration_s": 3.34,
+   "volume": 0.09
+  },
+  {
+   "frame": 1,
+   "file": "assets/sfx/impact-bass-1.mp3",
+   "offset_s": 0.151,
+   "duration_s": 2.12,
+   "volume": 0.15
+  },
+  {
+   "frame": 2,
+   "file": "assets/sfx/impact-bass-1.mp3",
+   "offset_s": 0.255,
+   "duration_s": 2.12,
+   "volume": 0.262
+  },
+  {
+   "frame": 2,
+   "file": "assets/sfx/impact-bass-2.mp3",
+   "offset_s": 1.732,
+   "duration_s": 2.59,
+   "volume": 0.262
+  },
+  {
+   "frame": 2,
+   "file": "assets/sfx/impact-bass-1.mp3",
+   "offset_s": 3.057,
+   "duration_s": 2.12,
+   "volume": 0.262
+  },
+  {
+   "frame": 2,
+   "file": "assets/sfx/impact-bass-2.mp3",
+   "offset_s": 4.33,
+   "duration_s": 2.489,
+   "volume": 0.3
+  },
+  {
+   "frame": 3,
+   "file": "assets/sfx/glitch-1.mp3",
+   "offset_s": 0.0,
+   "duration_s": 2.64,
+   "volume": 0.112
+  },
+  {
+   "frame": 3,
+   "file": "assets/sfx/ping.mp3",
+   "offset_s": 4.55,
+   "duration_s": 1.32,
+   "volume": 0.225
+  },
+  {
+   "frame": 4,
+   "file": "assets/sfx/whoosh-cinematic.mp3",
+   "offset_s": 0.0,
+   "duration_s": 5.54,
+   "volume": 0.225
+  },
+  {
+   "frame": 4,
+   "file": "assets/sfx/sparkle.mp3",
+   "offset_s": 0.5,
+   "duration_s": 1.8,
+   "volume": 0.262
+  },
+  {
+   "frame": 5,
+   "file": "assets/sfx/whoosh.mp3",
+   "offset_s": 0.0,
+   "duration_s": 0.57,
+   "volume": 0.225
+  },
+  {
+   "frame": 5,
+   "file": "assets/sfx/click.mp3",
+   "offset_s": 2.05,
+   "duration_s": 0.37,
+   "volume": 0.45
+  },
+  {
+   "frame": 5,
+   "file": "assets/sfx/whoosh-short.mp3",
+   "offset_s": 2.5,
+   "duration_s": 0.57,
+   "volume": 0.225
+  },
+  {
+   "frame": 6,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 1.931,
+   "duration_s": 0.72,
+   "volume": 0.3
+  },
+  {
+   "frame": 6,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 2.636,
+   "duration_s": 0.72,
+   "volume": 0.3
+  },
+  {
+   "frame": 6,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 3.124,
+   "duration_s": 0.72,
+   "volume": 0.3
+  },
+  {
+   "frame": 6,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 3.992,
+   "duration_s": 0.72,
+   "volume": 0.3
+  },
+  {
+   "frame": 7,
+   "file": "assets/sfx/whoosh-short.mp3",
+   "offset_s": 0.0,
+   "duration_s": 0.57,
+   "volume": 0.225
+  },
+  {
+   "frame": 7,
+   "file": "assets/sfx/click.mp3",
+   "offset_s": 1.783,
+   "duration_s": 0.37,
+   "volume": 0.375
+  },
+  {
+   "frame": 7,
+   "file": "assets/sfx/click.mp3",
+   "offset_s": 2.319,
+   "duration_s": 0.37,
+   "volume": 0.375
+  },
+  {
+   "frame": 7,
+   "file": "assets/sfx/typing.mp3",
+   "offset_s": 3.24,
+   "duration_s": 1.5,
+   "volume": 0.188
+  },
+  {
+   "frame": 7,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 4.064,
+   "duration_s": 0.72,
+   "volume": 0.3
+  },
+  {
+   "frame": 8,
+   "file": "assets/sfx/whoosh.mp3",
+   "offset_s": 0.0,
+   "duration_s": 0.57,
+   "volume": 0.225
+  },
+  {
+   "frame": 8,
+   "file": "assets/sfx/click-soft.mp3",
+   "offset_s": 2.286,
+   "duration_s": 0.37,
+   "volume": 0.45
+  },
+  {
+   "frame": 8,
+   "file": "assets/sfx/chime.mp3",
+   "offset_s": 3.149,
+   "duration_s": 2.5,
+   "volume": 0.225
+  },
+  {
+   "frame": 9,
+   "file": "assets/sfx/typing.mp3",
+   "offset_s": 1.0,
+   "duration_s": 1.5,
+   "volume": 0.188
+  },
+  {
+   "frame": 9,
+   "file": "assets/sfx/chime.mp3",
+   "offset_s": 2.109,
+   "duration_s": 2.5,
+   "volume": 0.225
+  },
+  {
+   "frame": 9,
+   "file": "assets/sfx/ping.mp3",
+   "offset_s": 3.194,
+   "duration_s": 1.32,
+   "volume": 0.225
+  },
+  {
+   "frame": 10,
+   "file": "assets/sfx/whoosh.mp3",
+   "offset_s": 0.55,
+   "duration_s": 0.57,
+   "volume": 0.225
+  },
+  {
+   "frame": 10,
+   "file": "assets/sfx/notification.mp3",
+   "offset_s": 2.237,
+   "duration_s": 2.46,
+   "volume": 0.262
+  },
+  {
+   "frame": 11,
+   "file": "assets/sfx/whoosh-short.mp3",
+   "offset_s": 0.0,
+   "duration_s": 0.57,
+   "volume": 0.225
+  },
+  {
+   "frame": 11,
+   "file": "assets/sfx/sparkle.mp3",
+   "offset_s": 2.788,
+   "duration_s": 1.8,
+   "volume": 0.3
+  },
+  {
+   "frame": 12,
+   "file": "assets/sfx/impact-bass-2.mp3",
+   "offset_s": 0.477,
+   "duration_s": 2.59,
+   "volume": 0.262
+  },
+  {
+   "frame": 12,
+   "file": "assets/sfx/ping.mp3",
+   "offset_s": 2.354,
+   "duration_s": 1.32,
+   "volume": 0.225
+  },
+  {
+   "frame": 13,
+   "file": "assets/sfx/riser.mp3",
+   "offset_s": 0.0,
+   "duration_s": 5.177,
+   "volume": 0.15
+  },
+  {
+   "frame": 13,
+   "file": "assets/sfx/impact-bass-1.mp3",
+   "offset_s": 0.59,
+   "duration_s": 2.12,
+   "volume": 0.225
+  },
+  {
+   "frame": 13,
+   "file": "assets/sfx/impact-bass-2.mp3",
+   "offset_s": 1.478,
+   "duration_s": 2.59,
+   "volume": 0.225
+  },
+  {
+   "frame": 13,
+   "file": "assets/sfx/impact-bass-1.mp3",
+   "offset_s": 2.476,
+   "duration_s": 2.12,
+   "volume": 0.262
+  },
+  {
+   "frame": 14,
+   "file": "assets/sfx/whoosh-cinematic.mp3",
+   "offset_s": 0.0,
+   "duration_s": 5.54,
+   "volume": 0.188
+  },
+  {
+   "frame": 14,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 1.805,
+   "duration_s": 0.72,
+   "volume": 0.262
+  },
+  {
+   "frame": 14,
+   "file": "assets/sfx/chime.mp3",
+   "offset_s": 2.973,
+   "duration_s": 2.5,
+   "volume": 0.225
+  }
+ ]
+}

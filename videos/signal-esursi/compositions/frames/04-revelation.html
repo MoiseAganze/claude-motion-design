@@ -1,0 +1,49 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/CormorantGaramond-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
+    @font-face { font-family: "Source Sans 3"; src: url("assets/fonts/SourceSans3-400.woff2") format("woff2"); font-weight: 400 700; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #FFFFFF; font-family: "Source Sans 3", sans-serif; }
+    .f04-bg { position: absolute; inset: 0; background: radial-gradient(800px 800px at 50% 30%, rgba(0,127,255,0.35), rgba(0,27,61,0) 70%), #001B3D; }
+    .f04-burst { position: absolute; left: 140px; top: -90px; width: 800px; height: 800px; border-radius: 50%; border: 3px solid rgba(0,127,255,0.6); }
+    .f04-stripe { position: absolute; left: 0; top: 0; width: 1080px; height: 10px; background: linear-gradient(90deg, #007FFF 0 33%, #F7D117 33% 67%, #CE1126 67%); transform-origin: left center; }
+    .f04-seal { position: absolute; left: 400px; top: 170px; width: 280px; height: 280px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 0 0 10px rgba(255,255,255,0.12), 0 0 80px rgba(0,127,255,0.6); }
+    .f04-seal img { position: absolute; left: 10px; top: 10px; width: 260px; height: 260px; }
+    .f04-brand { position: absolute; left: 0; right: 0; top: 480px; text-align: center; }
+    .f04-name { font-family: "Cormorant Garamond", serif; font-weight: 700; font-size: 150px; line-height: 1; letter-spacing: 0.02em; }
+    .f04-sub { margin-top: 10px; font-weight: 700; font-size: 44px; letter-spacing: 0.3em; text-transform: uppercase; color: #F7D117; }
+    .f04-line { position: absolute; left: 90px; right: 90px; top: 730px; text-align: center; font-weight: 400; font-size: 44px; line-height: 1.3; color: #B8C7DB; }
+    .f04-card { position: absolute; left: 180px; top: 880px; width: 720px; height: 480px; border-radius: 28px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.45); border: 2px solid rgba(255,255,255,0.15); }
+    .f04-card img { position: absolute; left: 0; top: 0; width: 720px; height: 480px; }
+  </style>
+
+  <div id="root" data-composition-id="04-revelation" data-width="1080" data-height="1920" data-duration="6.277">
+    <div id="f04-bg" class="f04-bg clip" data-start="0" data-duration="6.277" data-track-index="0"></div>
+    <div id="f04-burst" class="f04-burst clip" data-start="0" data-duration="6.277" data-track-index="1"></div>
+    <div id="f04-seal" class="f04-seal clip" data-start="0" data-duration="6.277" data-track-index="2"><img src="assets/img/logo_rdc.png" alt=""></div>
+    <div id="f04-brand" class="f04-brand clip" data-start="0" data-duration="6.277" data-track-index="3">
+      <div class="f04-name" id="f04-name">ESURSI</div>
+      <div class="f04-sub" id="f04-sub">Signalement national</div>
+    </div>
+    <div id="f04-line" class="f04-line clip" data-start="0" data-duration="6.277" data-track-index="4">La plateforme nationale de signalement du Ministère de l'Enseignement Supérieur</div>
+    <div id="f04-card" class="f04-card clip" data-start="0" data-duration="6.277" data-track-index="5"><img id="f04-img" src="assets/img/abus.jpg" alt=""></div>
+    <div id="f04-stripe" class="f04-stripe clip" data-start="0" data-duration="6.277" data-track-index="6"></div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      // the blue dot from frame 3 blooms into a ring, the seal lands in it
+      tl.fromTo("#f04-burst", { opacity: 1, scale: 0.05 }, { opacity: 0, scale: 1.4, duration: 1.1, ease: "expo.out" }, 0);
+      tl.fromTo("#f04-stripe", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.inOut" }, 0.1);
+      tl.fromTo("#f04-seal", { opacity: 0, scale: 0.2, rotation: -40 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.8, ease: "expo.out" }, 0.2);
+      tl.fromTo("#f04-name", { opacity: 0, y: 40, scaleX: 1.25 }, { opacity: 1, y: 0, scaleX: 1, duration: 0.8, ease: "power3.out" }, 0.6);
+      tl.fromTo("#f04-sub", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.0);
+      tl.fromTo("#f04-line", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 2.6);
+      tl.fromTo("#f04-card", { opacity: 0, y: 160, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: "expo.out" }, 1.6);
+      tl.fromTo("#f04-img", { scale: 1.0 }, { scale: 1.08, transformOrigin: "30% 40%", duration: 4.1, ease: "none" }, 1.6);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["04-revelation"] = tl;
+    })();
+  </script>
+</template>

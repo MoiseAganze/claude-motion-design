@@ -1,0 +1,47 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/CormorantGaramond-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
+    @font-face { font-family: "Source Sans 3"; src: url("assets/fonts/SourceSans3-400.woff2") format("woff2"); font-weight: 400 700; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #FFFFFF; font-family: "Source Sans 3", sans-serif; }
+    .f03-bg { position: absolute; inset: 0; background: #00142E; }
+    .f03-copy { position: absolute; left: 80px; right: 80px; top: 520px; text-align: center; }
+    .f03-l1 { font-family: "Cormorant Garamond", serif; font-weight: 700; font-size: 128px; line-height: 1.0; letter-spacing: -0.01em; }
+    .f03-l1 span { display: inline-block; }
+    .f03-l2 { margin-top: 70px; font-weight: 400; font-size: 58px; line-height: 1.3; color: #B8C7DB; }
+    .f03-l2 span { display: inline-block; }
+    .f03-mute { position: absolute; left: 470px; top: 300px; width: 140px; height: 140px; }
+    .f03-dot { position: absolute; left: 520px; top: 1180px; width: 40px; height: 40px; border-radius: 50%; background: #007FFF; box-shadow: 0 0 60px 20px rgba(0,127,255,0.55); }
+  </style>
+
+  <div id="root" data-composition-id="03-silence" data-width="1080" data-height="1920" data-duration="5.827">
+    <div id="f03-bg" class="f03-bg clip" data-start="0" data-duration="5.827" data-track-index="0"></div>
+    <svg id="f03-mute" class="f03-mute clip" data-start="0" data-duration="5.827" data-track-index="1" viewBox="0 0 140 140" fill="none" stroke="#B8C7DB" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M28 40h70a12 12 0 0 1 12 12v34a12 12 0 0 1-12 12H62l-22 18v-18H28a12 12 0 0 1-12-12V52a12 12 0 0 1 12-12z"/>
+      <path id="f03-slash" d="M20 124L122 22" stroke="#CE1126"/>
+    </svg>
+    <div id="f03-copy" class="f03-copy clip" data-start="0" data-duration="5.827" data-track-index="2">
+      <div class="f03-l1"><span id="f03-a">Trop souvent,</span><br><span id="f03-b">on se tait.</span></div>
+      <div class="f03-l2"><span id="f03-c">Par peur,</span> <span id="f03-d">ou faute de savoir</span><br><span id="f03-e">à qui parler.</span></div>
+    </div>
+    <div id="f03-dot" class="f03-dot clip" data-start="0" data-duration="5.827" data-track-index="3"></div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#f03-mute", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.1);
+      tl.fromTo("#f03-slash", { strokeDasharray: 150, strokeDashoffset: 150 }, { strokeDashoffset: 0, duration: 0.4, ease: "power2.inOut" }, 1.5);
+      tl.fromTo("#f03-a", { opacity: 0, y: 40, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.6, ease: "power3.out" }, 0.45);
+      tl.fromTo("#f03-b", { opacity: 0, y: 40, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.6, ease: "power3.out" }, 1.2);
+      tl.fromTo("#f03-c", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 2.35);
+      tl.fromTo("#f03-d", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 3.1);
+      tl.fromTo("#f03-e", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 3.85);
+      // a blue point of light is born: the answer (hands off into the reveal)
+      tl.fromTo("#f03-dot", { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.6, ease: "expo.out" }, 4.55);
+      tl.to("#f03-dot", { scale: 1.6, duration: 0.3, ease: "power2.in" }, 5.2);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["03-silence"] = tl;
+    })();
+  </script>
+</template>

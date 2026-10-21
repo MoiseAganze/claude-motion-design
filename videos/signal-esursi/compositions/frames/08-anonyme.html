@@ -1,0 +1,63 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/CormorantGaramond-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
+    @font-face { font-family: "Source Sans 3"; src: url("assets/fonts/SourceSans3-400.woff2") format("woff2"); font-weight: 400 700; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #FFFFFF; font-family: "Source Sans 3", sans-serif; }
+    .f08-bg { position: absolute; inset: 0; background: radial-gradient(800px 800px at 50% 40%, rgba(0,127,255,0.28), rgba(0,27,61,0) 70%), #001B3D; }
+    .f08-stripe { position: absolute; left: 0; top: 0; width: 1080px; height: 10px; background: linear-gradient(90deg, #007FFF 0 33%, #F7D117 33% 67%, #CE1126 67%); }
+    .f08-title { position: absolute; left: 70px; right: 70px; top: 150px; font-family: "Cormorant Garamond", serif; font-weight: 700; font-size: 92px; line-height: 1; }
+    .f08-sub { position: absolute; left: 70px; top: 262px; font-weight: 600; font-size: 46px; color: #F7D117; }
+    .f08-opt { position: absolute; left: 60px; width: 960px; height: 300px; border-radius: 28px; background: #FFFFFF; border: 4px solid #E2E8F0; color: #0F2744; padding: 40px 44px 0 170px; box-sizing: border-box; }
+    .f08-opt h3 { margin: 0; font-weight: 700; font-size: 52px; color: #0057B8; }
+    .f08-opt p { margin: 14px 0 0; font-weight: 400; font-size: 34px; line-height: 1.35; color: #475569; }
+    .f08-ico { position: absolute; left: 44px; top: 48px; width: 96px; height: 96px; }
+    .f08-radio { position: absolute; right: 40px; top: 44px; width: 56px; height: 56px; border-radius: 50%; border: 5px solid #94A3B8; box-sizing: border-box; }
+    .f08-radio i { position: absolute; left: 9px; top: 9px; width: 28px; height: 28px; border-radius: 50%; background: #0057B8; }
+    .f08-proof { position: absolute; left: 60px; top: 1100px; width: 960px; height: 210px; border-radius: 28px; background: #002654; border: 3px solid rgba(43,212,125,0.55); display: flex; align-items: center; gap: 34px; padding: 0 44px; box-sizing: border-box; }
+    .f08-proof svg { flex: 0 0 110px; height: 110px; }
+    .f08-proof div { font-weight: 700; font-size: 46px; line-height: 1.2; }
+    .f08-proof span { color: #2BD47D; }
+  </style>
+
+  <div id="root" data-composition-id="08-anonyme" data-width="1080" data-height="1920" data-duration="7.228">
+    <div id="f08-bg" class="f08-bg clip" data-start="0" data-duration="7.228" data-track-index="0"></div>
+    <div id="f08-title" class="f08-title clip" data-start="0" data-duration="7.228" data-track-index="1">Anonyme ou identifié</div>
+    <div id="f08-sub" class="f08-sub clip" data-start="0" data-duration="7.228" data-track-index="2">c'est vous qui choisissez</div>
+    <div id="f08-a" class="f08-opt clip" data-start="0" data-duration="7.228" data-track-index="3" style="top:400px">
+      <svg class="f08-ico" viewBox="0 0 96 96" fill="none" stroke="#0057B8" stroke-width="6" stroke-linejoin="round"><path d="M48 8l32 12v24c0 22-14 36-32 44C30 80 16 66 16 44V20z"/><path d="M34 48l10 10 18-20" stroke-linecap="round"/></svg>
+      <h3>Signalement anonyme</h3>
+      <p>Aucune donnée personnelle ni adresse IP n'est conservée.</p>
+      <div class="f08-radio" id="f08-ra"><i id="f08-dot"></i></div>
+    </div>
+    <div id="f08-b" class="f08-opt clip" data-start="0" data-duration="7.228" data-track-index="4" style="top:740px">
+      <svg class="f08-ico" viewBox="0 0 96 96" fill="none" stroke="#0057B8" stroke-width="6" stroke-linecap="round"><circle cx="48" cy="34" r="16"/><path d="M18 84c4-16 16-24 30-24s26 8 30 24"/></svg>
+      <h3>Signalement identifié</h3>
+      <p>Votre identité est chiffrée et visible uniquement des agents habilités.</p>
+      <div class="f08-radio"></div>
+    </div>
+    <div id="f08-proof" class="f08-proof clip" data-start="0" data-duration="7.228" data-track-index="5">
+      <svg viewBox="0 0 110 110" fill="none" stroke="#2BD47D" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><rect x="22" y="48" width="66" height="50" rx="10"/><path d="M36 48V34a19 19 0 0 1 38 0v14"/><circle cx="55" cy="72" r="6" fill="#2BD47D"/></svg>
+      <div>En mode anonyme, <span>aucune donnée personnelle</span> n'est conservée.</div>
+    </div>
+    <div id="f08-stripe" class="f08-stripe clip" data-start="0" data-duration="7.228" data-track-index="6"></div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#f08-title", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.2);
+      tl.fromTo("#f08-a", { opacity: 0, x: 120 }, { opacity: 1, x: 0, duration: 0.6, ease: "expo.out" }, 0.3);
+      tl.fromTo("#f08-b", { opacity: 0, x: 120 }, { opacity: 1, x: 0, duration: 0.6, ease: "expo.out" }, 0.75);
+      tl.fromTo("#f08-sub", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 1.5);
+      // the person picks "anonyme"
+      tl.fromTo("#f08-dot", { scale: 0 }, { scale: 1, duration: 0.3, ease: "expo.out" }, 2.3);
+      tl.to("#f08-ra", { borderColor: "#0057B8", duration: 0.2 }, 2.3);
+      tl.to("#f08-a", { borderColor: "#F7D117", boxShadow: "0 0 0 6px rgba(247,209,23,0.35)", scale: 1.02, duration: 0.35, ease: "power2.out" }, 2.3);
+      tl.to("#f08-b", { opacity: 0.78, scale: 0.97, duration: 0.4, ease: "power2.out" }, 2.4);
+      tl.fromTo("#f08-proof", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.6, ease: "expo.out" }, 3.1);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["08-anonyme"] = tl;
+    })();
+  </script>
+</template>
