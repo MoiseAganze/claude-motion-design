@@ -1,5 +1,8 @@
 {
- "bgm": null,
+ "bgm": {
+  "path": "assets/bgm/digital-horizons-bed.mp3",
+  "source": "host"
+ },
  "bgm_pending": false,
  "voices": [
   {

@@ -37,4 +37,4 @@ démo citoyen → côté agent → promesse → CTA).
 - Confidentialité : ne jamais montrer le tableau « Derniers signalements », le graphique « Établissements les plus signalés », ni le nom de l'agent connecté. KPI + carte seulement.
 - Le formulaire réel n'a pas été rempli (refus de sécurité : pas d'action sur le vrai système) → étapes 2-8 recréées en UI animée avec les libellés exacts du site ; référence d'exemple = celle du site (SIG-ESU-2026-ABC123).
 - Identifiants agents fournis dans la conversation : jamais écrits dans le dépôt.
-- `music: none` (pas de bibliothèque musicale accessible), comme agent-courrier.
+- Musique de fond : « Digital Horizons » (MP3 fourni par l'utilisateur ; « Complicit - Cinematic » introuvable via les connecteurs ElevenLabs). Prolongée à 77,5 s par fondu calé sur le tempo, creusée sous la voix (carve). Storyboard garde `music: none` (bgm hôte dans audio_meta.json).

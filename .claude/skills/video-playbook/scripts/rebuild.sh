@@ -16,6 +16,11 @@ python3 -I "$HERE/captions_tune.py" .
 quiet node "$PL/assemble-index.mjs" --storyboard ./STORYBOARD.md --hyperframes . | grep -E "✓|total duration|warn|✗" || true
 quiet node "$PL/transitions.mjs" inject --storyboard ./STORYBOARD.md --hyperframes . | grep -E "✓|✗" || true
 quiet node "$PL/transitions.mjs" verify --storyboard ./STORYBOARD.md --index ./index.html
+# music bed under the voice → group the narration clips and carve the bed (assemble drops both)
+if grep -q 'id="el-bgm"' index.html && grep -q -- '-voice"' index.html; then
+  sed -i -E 's/(id="el-[0-9]{2}-[a-z0-9-]+-voice")( data-audio-group="voiceover")?/\1 data-audio-group="voiceover"/' index.html
+  quiet node "$HERE/../../hyperframes-audio/scripts/carve.mjs" --comp ./index.html | grep -E "^carve|^wrote|rror" || true
+fi
 npx hyperframes check --json 2>/dev/null | python3 -c "
 import json,sys; d=json.load(sys.stdin); errs=[]
 def w(o):

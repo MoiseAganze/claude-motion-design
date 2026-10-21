@@ -38,6 +38,7 @@ shot sequences), then deviate here:
 - `scripts/vo.py` needs **one speech segment per sentence**: the `sentences` list must match the pauses the voice actually makes (very short sentences like "À lire." are their own segment). On mismatch it prints the segments: adjust `silence_db`/`min_silence` or merge sentences. Choose the take whose segment count matches (no need to listen).
 - Per-frame `lead`/`tail` (seconds of silence) are where pacing lives: target length = sum of speech + leads + tails. Give the outro/CTA long tails so text can be read.
 - Match loudness across takes with `gain_db` (compare `ffmpeg -af volumedetect` mean_volume; main take ≈ −26 dB).
+- **User music bed** (e.g. a track downloaded from ElevenLabs Music — the connectors cannot list or fetch the user's saved music, ask for the MP3): copy it to `assets/bgm/`, extend/trim it to the cut with a beat-aligned `acrossfade` so its natural ending lands on the last frame, then set `audio_meta.json` `"bgm": {"path": "assets/bgm/<bed>.mp3", "source": "host"}` (keep `music: none` in the storyboard). `rebuild.sh` tags the voice clips `data-audio-group="voiceover"` and runs the hyperframes-audio carve (needs `npm i -D @hyperframes/core@<pinned>` in the project). Reference: `videos/signal-esursi`.
 
 ## 3. Design system
 
