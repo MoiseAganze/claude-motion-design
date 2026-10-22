@@ -1,0 +1,120 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #031829; }
+    .f07-full { position: absolute; inset: 0; }
+    .f07-cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; }
+    .f07-shot { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+    .f07-off { opacity: 0; }
+    .f07-pin { position: absolute; left: 288px; top: 108px; width: 1608px; height: 78px; box-shadow: 0 10px 24px rgba(3, 24, 41, 0.18); opacity: 0; }
+  </style>
+
+  <div id="root" data-composition-id="f07-analyse" data-width="1920" data-height="1080">
+    <div id="f07-stage" class="f07-full clip" data-start="0" data-duration="51.66" data-track-index="0">
+      <div id="f07-cam" class="f07-cam" data-layout-allow-overflow data-layout-allow-overlap>
+        <img class="f07-shot" src="capture/f07/before.png" alt="" />
+        <div id="f07-run"></div>
+        <div id="f07-a" class="f07-full f07-off"></div>
+        <img id="f07-pin" class="f07-pin" src="capture/f07/pin-banner.png" alt="" />
+        <div id="f07-fx"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const R = document.querySelector('[data-composition-id="f07-analyse"]');
+      const q = (s) => R.querySelector(s);
+      const cam = q("#f07-cam");
+      // the real run, frame by frame (Lecture → Résolution → Croisement → Flux → Restitution)
+      const RUN = [0, 2, 4, 6, 8];
+      RUN.forEach((n) => q("#f07-run").insertAdjacentHTML("beforeend", `<img id="f07-run-${n}" class="f07-shot f07-off" src="capture/f07/run-${String(n).padStart(2, "0")}.png" alt="" />`));
+      const A = KIT.page(q("#f07-a"), "f07-pa", "capture/f07/result.png", "capture/f07/result-tall.png", 4211);
+      // after « Retenir la piste »: only these regions of the page change — real crops of the after state, laid over the page
+      A.win.insertAdjacentHTML("beforebegin", '<img id="f07-chrome2" src="capture/f07/counter-after.png" alt="" style="position:absolute;left:0;top:0;width:1920px;height:1080px;opacity:0;" />');
+      [["card", 280, 745, 370, 360], ["kpi", 1510, 525, 50, 55], ["trace", 925, 3995, 60, 40], ["btn", 1685, 127, 215, 73]].forEach(([n, x, y, w, h]) =>
+        A.layer.insertAdjacentHTML("afterbegin", `<img id="f07-after-${n}" src="capture/f07/after-${n}.png" alt="" style="position:absolute;left:${x}px;top:${y}px;width:${w}px;height:${h}px;opacity:0;" />`));
+      const AFTER = ["#f07-chrome2", "#f07-after-card", "#f07-after-kpi", "#f07-after-trace", "#f07-after-btn"];
+      const B = A;
+      const add = (pgs, id, b, pad) => pgs.map((pg, i) => { const m = KIT.box(id + "-" + i, b, pad); pg.layer.appendChild(m); return m; });
+      const M = {
+        pieces: add([A], "f07-m-pieces", { x: 296, y: 490, w: 388, h: 124 }, 4),
+        card: add([A], "f07-m-card", { x: 302, y: 760, w: 784, h: 354 }, 6),
+        pct: add([A], "f07-m-pct", { x: 950, y: 776, w: 116, h: 30 }, 4),
+        compte: add([A], "f07-m-compte", { x: 330, y: 910, w: 730, h: 26 }, 4),
+        rn1: add([A], "f07-m-rn1", { x: 318, y: 806, w: 480, h: 32 }, 6),
+        mand: add([A], "f07-m-mand", { x: 330, y: 972, w: 530, h: 26 }, 4),
+        signal: add([A], "f07-m-signal", { x: 316, y: 1612, w: 1580, h: 160 }, 4),
+        tags: add([A], "f07-m-tags", { x: 322, y: 1728, w: 590, h: 30 }, 4),
+        angles: add([A], "f07-m-angles", { x: 300, y: 2900, w: 1600, h: 262 }, 6),
+        dec: add([B], "f07-m-dec", { x: 1508, y: 490, w: 388, h: 124 }, 4),
+        statut: add([B], "f07-m-statut", { x: 300, y: 4074, w: 1600, h: 26 }, 6),
+        infra: add([B], "f07-m-infra", { x: 300, y: 4106, w: 1600, h: 46 }, 6),
+        heberg: add([B], "f07-m-heberg", { x: 300, y: 3824, w: 1600, h: 26 }, 6),
+      };
+      const k = KIT.mount(q("#f07-fx"), "f07");
+      const both = (y, t, d) => KIT.scrollTo(tl, A, y, t, d);
+
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#f07-stage", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 0);
+      tl.fromTo(A.scroll, { y: 0 }, { y: 0, duration: 0.01 }, 0);
+      tl.fromTo(cam, KIT.cam(1100, 300, 1.12), { ...KIT.cam(1100, 300, 1.12), duration: 0.01 }, 0);
+      // « Lancer l'analyse » — the five real steps run
+      KIT.cursorAt(tl, k, 1480, 420, 0.2);
+      KIT.move(tl, k, 1799, 164, 0.3, 0.75);
+      KIT.click(tl, k, 1799, 164, 1.1);
+      RUN.forEach((n, i) => tl.fromTo("#f07-run-" + n, { opacity: 0 }, { opacity: 1, duration: 0.06, ease: "none", immediateRender: false }, 1.15 + i * 0.6));
+      KIT.hide(tl, k, 1.6);
+      KIT.camTo(tl, cam, 960, 420, 1.0, 1.3, 1.2);
+      KIT.show(tl, "#f07-a", 4.2, 0.4);
+      // « …lit les cent quarante-huit pièces du dossier… »
+      KIT.mark(tl, M.pieces[0], 4.6, 0.9);
+      // « Elle signale ici un rapprochement : un compte bancaire intermédiaire… »
+      both(560, 5.2, 1.0);
+      KIT.show(tl, "#f07-pin", 5.5, 0.4);
+      KIT.camTo(tl, cam, 694, 400, 1.35, 5.3, 1.1);
+      KIT.mark(tl, M.card[0], 6.64, 8.9);
+      KIT.mark(tl, M.pct[0], 6.9, 2.0);
+      KIT.mark(tl, M.compte[0], 8.0, 7.6);
+      tl.to(cam, { ...KIT.cam(694, 420, 1.45), duration: 6.0, ease: "sine.inOut" }, 9.4);
+      // « …et dans une affaire de marché public suivie par l'APLC. »
+      KIT.mark(tl, M.rn1[0], 13.3, 2.6);
+      // « Le même mandataire signe des deux côtés. Deux institutions, deux procédures, un seul fil. »
+      KIT.mark(tl, M.mand[0], 16.3, 5.0);
+      tl.to(cam, { ...KIT.cam(720, 440, 1.36), duration: 5.6, ease: "sine.inOut" }, 15.6);
+      // « Chaque constat cite la pièce qui le fonde. »
+      both(1450, 21.5, 0.9);
+      KIT.camTo(tl, cam, 1088, 360, 1.2, 21.5, 0.9);
+      KIT.mark(tl, M.signal[0], 22.2, 2.3);
+      KIT.mark(tl, M.tags[0], 23.4, 1.1);
+      // « Et chaque constat dit ce qu'il ne démontre pas… » — held well over three seconds
+      both(2700, 24.2, 1.0);
+      KIT.camTo(tl, cam, 1088, 330, 1.2, 24.2, 1.0);
+      KIT.mark(tl, M.angles[0], 25.3, 5.4);
+      tl.to(cam, { ...KIT.cam(1088, 350, 1.28), duration: 5.4, ease: "sine.inOut" }, 25.3);
+      // « Elle propose. Elle ne décide jamais. C'est un agent habilité qui retient la piste… »
+      both(560, 30.9, 1.0);
+      KIT.camTo(tl, cam, 694, 520, 1.3, 30.9, 1.0);
+      KIT.mark(tl, M.card[0], 31.9, 3.7);
+      KIT.cursorAt(tl, k, 860, 760, 33.5);
+      KIT.move(tl, k, 467, 513, 33.7, 1.1);
+      KIT.click(tl, k, 467, 513, 35.7);
+      AFTER.forEach((s) => KIT.show(tl, s, 35.76, 0.25));
+      // « …et sa décision est tracée. » — DÉCISIONS ENREGISTRÉES 0 / 3 → 1 / 3
+      KIT.hide(tl, k, 36.0);
+      both(300, 36.2, 0.9);
+      KIT.camTo(tl, cam, 1500, 380, 1.3, 36.2, 0.9);
+      KIT.mark(tl, M.dec[0], 37.2, 1.6);
+      // « Dans ce prototype, aucun modèle n'est exécuté : vous voyez la forme du résultat. »
+      both(3131, 38.3, 1.3);
+      KIT.camTo(tl, cam, 1088, 800, 1.15, 38.3, 1.3);
+      KIT.mark(tl, M.statut[0], 39.7, 3.4);
+      // « En exploitation, le traitement reposerait sur un moteur documentaire installé sur site, et sur des serveurs souverains… »
+      KIT.mark(tl, M.infra[0], 43.4, null);
+      KIT.mark(tl, M.heberg[0], 48.38, null);
+      KIT.camTo(tl, cam, 1088, 760, 1.1, 43.3, 1.0);
+      tl.to(cam, { ...KIT.cam(1088, 800, 1.2), duration: 6.6, ease: "sine.inOut" }, 44.4);
+
+      window.__timelines["f07-analyse"] = tl;
+    })();
+  </script>
+</template>

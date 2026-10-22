@@ -1,0 +1,35 @@
+<template>
+  <style>
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-latin.woff2") format("woff2"); font-weight: 400 700; font-display: block; }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #052649; font-family: "Inter", sans-serif; }
+    .f12-full { position: absolute; inset: 0; }
+    .f12-block { position: absolute; left: 0; right: 0; top: 452px; text-align: center; }
+    .f12-rule { width: 120px; height: 2px; margin: 0 auto 40px; background: #D8A828; transform-origin: 50% 50%; }
+    .f12-line { font-size: 32px; line-height: 1.6; color: #F4F1EA; }
+    .f12-line.dim { color: #AFC5D8; }
+    .f12-veil { position: absolute; inset: 0; background: #031829; opacity: 0; }
+  </style>
+
+  <div id="root" data-composition-id="f12-generique" data-width="1920" data-height="1080">
+    <div id="f12-stage" class="f12-full clip" data-start="0" data-duration="8" data-track-index="0">
+      <div class="f12-block">
+        <div id="f12-rule" class="f12-rule"></div>
+        <div id="f12-l1" class="f12-line">Prototype de démonstration.</div>
+        <div id="f12-l2" class="f12-line dim">Données simulées, personnes et affaires fictives.</div>
+        <div id="f12-l3" class="f12-line dim">Aucun modèle d'intelligence artificielle n'est exécuté dans ce prototype.</div>
+      </div>
+      <div id="f12-veil" class="f12-veil"></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#f12-stage", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 0);
+      tl.fromTo("#f12-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power2.inOut" }, 0.4);
+      ["#f12-l1", "#f12-l2", "#f12-l3"].forEach((s, i) => tl.fromTo(s, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, 0.8 + i * 0.35));
+      tl.fromTo("#f12-veil", { opacity: 0 }, { opacity: 1, duration: 1.2, ease: "power1.in" }, 6.8);
+      window.__timelines["f12-generique"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,99 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #031829; }
+    .f06-full { position: absolute; inset: 0; }
+    .f06-cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; }
+    .f06-shot { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+    .f06-off { opacity: 0; }
+    .f06-cover { position: absolute; background: #FFFFFF; }
+    .f06-node { position: absolute; width: 64px; height: 64px; margin: -32px 0 0 -32px; border: 3px solid #D8A828; border-radius: 50%; opacity: 0; }
+  </style>
+
+  <div id="root" data-composition-id="f06-preuve" data-width="1920" data-height="1080">
+    <div id="f06-stage" class="f06-full clip" data-start="0" data-duration="27.66" data-track-index="0">
+      <div id="f06-cam" class="f06-cam" data-layout-allow-overflow data-layout-allow-overlap>
+        <div id="f06-a" class="f06-full"></div>
+        <div id="f06-b" class="f06-full f06-off"></div>
+        <div id="f06-c" class="f06-full f06-off">
+          <img class="f06-shot" src="capture/f06/graphe.png" alt="" />
+          <img id="f06-sel" class="f06-shot f06-off" src="capture/f06/graphe-select.png" alt="" />
+          <div id="f06-nodes"></div>
+        </div>
+        <div id="f06-fx"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const R = document.querySelector('[data-composition-id="f06-preuve"]');
+      const q = (s) => R.querySelector(s);
+      const cam = q("#f06-cam");
+      const A = KIT.page(q("#f06-a"), "f06-pa", "capture/f06/dossier.png", "capture/f06/chronologie-tall.png", 5072);
+      const B = KIT.page(q("#f06-b"), "f06-pb", "capture/f06/preuves.png", "capture/f06/preuves-tall.png", 2293);
+      const add = (pg, id, b, pad) => { const m = KIT.box(id, b, pad); pg.layer.appendChild(m); return m; };
+      const M = {
+        title: add(A, "f06-m-title", { x: 288, y: 138, w: 974, h: 32 }, 10),
+        prej: add(A, "f06-m-prej", { x: 1094, y: 282, w: 210, h: 64 }, 6),
+        comp: add(A, "f06-m-comp", { x: 1300, y: 836, w: 584, h: 34 }, 4),
+        prv: add(B, "f06-m-prv", { x: 313, y: 628, w: 1550, h: 64 }, 6),
+        coll: add(B, "f06-m-coll", { x: 313, y: 776, w: 1550, h: 30 }, 4),
+        cons: add(B, "f06-m-cons", { x: 313, y: 812, w: 1550, h: 30 }, 4),
+        t1: add(B, "f06-m-t1", { x: 313, y: 881, w: 1550, h: 117 }, 2),
+        reg: add(B, "f06-m-reg", { x: 313, y: 851, w: 1550, h: 383 }, 6),
+      };
+      // the transfer register unrolls line by line: entries 2 and 3 sit under paper until their turn
+      const covers = [998, 1115].map((y, i) => { const c = document.createElement("div"); c.className = "f06-cover"; c.id = "f06-cv" + i; c.style.cssText = `left:300px;top:${y}px;width:1580px;height:117px;`; B.layer.insertBefore(c, B.layer.firstChild); return c; });
+      const NODES = { person: [994, 675], company: [896, 788], account: [746, 711], asset: [680, 775] };
+      const rings = {};
+      for (const [k, [x, y]] of Object.entries(NODES)) { const r = document.createElement("div"); r.className = "f06-node"; r.id = "f06-ring-" + k; r.style.left = x + "px"; r.style.top = y + "px"; q("#f06-nodes").appendChild(r); rings[k] = r; }
+      const k = KIT.mount(q("#f06-fx"), "f06");
+
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#f06-stage", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 0);
+      tl.fromTo([A.scroll, B.scroll], { y: 0 }, { y: 0, duration: 0.01 }, 0);
+      covers.forEach((c) => tl.fromTo(c, { opacity: 1 }, { opacity: 1, duration: 0.01 }, 0));
+      // « Le dossier des redevances minières de Kolwezi. Douze millions six cent mille dollars… Enquête transfrontalière. »
+      tl.fromTo(cam, KIT.cam(700, 300, 1.2), { ...KIT.cam(760, 300, 1.25), duration: 3.0, ease: "power1.inOut" }, 0);
+      KIT.mark(tl, M.title, 0.6, 2.4);
+      KIT.camTo(tl, cam, 1000, 330, 1.25, 2.9, 0.9);
+      KIT.mark(tl, M.prej, 3.26, 2.5);
+      KIT.camTo(tl, cam, 1180, 700, 1.15, 5.6, 1.0);
+      KIT.mark(tl, M.comp, 6.16, 1.7);
+      // « Chaque pièce entre au journal officiel des preuves : »
+      KIT.cursorAt(tl, k, 820, 760, 6.9);
+      KIT.camTo(tl, cam, 960, 540, 1, 7.0, 0.8);
+      KIT.move(tl, k, 450, 555, 7.1, 0.8);
+      KIT.click(tl, k, 450, 555, 8.0);
+      KIT.show(tl, "#f06-b", 8.08, 0.3);
+      KIT.hide(tl, k, 8.6);
+      KIT.camTo(tl, cam, 1088, 720, 1.15, 8.5, 1.0);
+      KIT.mark(tl, M.prv, 8.94, 1.4);
+      // « origine, date, heure, agent collecteur, lieu de stockage, et chaque transfert successif. »
+      KIT.mark(tl, M.coll, 10.52, 1.7);
+      KIT.scrollTo(tl, B, 300, 12.0, 0.8);
+      KIT.camTo(tl, cam, 1088, 640, 1.15, 12.0, 0.8);
+      KIT.mark(tl, M.t1, 12.46, 1.0);
+      KIT.mark(tl, M.cons, 13.52, 1.0);
+      KIT.scrollTo(tl, B, 400, 14.4, 0.7);
+      covers.forEach((c, i) => tl.to(c, { opacity: 0, duration: 0.45, ease: "power1.out" }, 15.0 + i * 0.5));
+      // « C'est la chaîne de conservation. C'est elle qui tient devant un juge. »
+      KIT.mark(tl, M.reg, 16.46, 3.0);
+      // « Le graphe relie les personnes, les sociétés, les comptes et les biens. »
+      KIT.show(tl, "#f06-c", 19.7, 0.5);
+      KIT.camTo(tl, cam, 850, 690, 1.3, 19.7, 0.9);
+      KIT.cursorAt(tl, k, 1150, 880, 20.0);
+      const visits = [["person", 20.94], ["company", 21.76], ["account", 22.72], ["asset", 23.38]];
+      visits.forEach(([n, t]) => {
+        KIT.move(tl, k, NODES[n][0] + 6, NODES[n][1] + 6, t - 0.5, 0.5);
+        KIT.mark(tl, rings[n], t, 0.7);
+      });
+      // « Le dossier se construit. Il ne se raconte pas. » — select a person: their links stand out
+      KIT.move(tl, k, NODES.person[0], NODES.person[1], 23.95, 0.55);
+      KIT.click(tl, k, NODES.person[0], NODES.person[1], 24.6);
+      KIT.show(tl, "#f06-sel", 24.68, 0.3);
+
+      window.__timelines["f06-preuve"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,42 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #031829; }
+    .f09-full { position: absolute; inset: 0; }
+    .f09-cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; }
+    .f09-shot { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+  </style>
+
+  <div id="root" data-composition-id="f09-qualite" data-width="1920" data-height="1080">
+    <div id="f09-stage" class="f09-full clip" data-start="0" data-duration="17.46" data-track-index="0">
+      <div id="f09-cam" class="f09-cam" data-layout-allow-overflow data-layout-allow-overlap>
+        <img class="f09-shot" src="capture/f09/qualite.png" alt="" />
+        <div id="f09-fx"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const R = document.querySelector('[data-composition-id="f09-qualite"]');
+      const q = (s) => R.querySelector(s);
+      const cam = q("#f09-cam");
+      // chronology of DPJ-2026-014, last steps (U17 → U21), viewport coordinates of the capture
+      const STEPS = [
+        ["rt", { x: 326, y: 190, w: 936, h: 158 }, 2.78],   // « une revue technique »
+        ["rj", { x: 326, y: 378, w: 936, h: 158 }, 3.9],    // « une revue juridique »
+        ["cie", { x: 326, y: 566, w: 936, h: 158 }, 5.3],   // « puis le comité interne d'examen »
+        ["tr", { x: 326, y: 755, w: 936, h: 158 }, 9.92],   // « Il part ensuite au parquet… »
+        ["ar", { x: 476, y: 872, w: 123, h: 20 }, 14.02],   // « avec accusé de réception »
+        ["fb", { x: 326, y: 944, w: 936, h: 150 }, 15.6],   // « et avec retour attendu » — U21 feedback institutionnel
+      ];
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#f09-stage", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 0);
+      tl.fromTo(cam, KIT.cam(800, 432, 1.25), { ...KIT.cam(800, 560, 1.25), duration: 9.3, ease: "sine.inOut" }, 0);
+      KIT.camTo(tl, cam, 800, 648, 1.25, 9.3, 1.6);
+      tl.to(cam, { ...KIT.cam(990, 648, 1.25), duration: 6.4, ease: "sine.inOut" }, 10.9);
+      STEPS.forEach(([id, b, t]) => { const m = KIT.box("f09-m-" + id, b, id === "ar" ? 5 : 4); q("#f09-fx").appendChild(m); KIT.mark(tl, m, t, null); });
+
+      window.__timelines["f09-qualite"] = tl;
+    })();
+  </script>
+</template>

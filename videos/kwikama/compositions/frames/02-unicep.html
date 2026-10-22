@@ -1,0 +1,56 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #031829; }
+    .f02-full { position: absolute; inset: 0; }
+    .f02-cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; }
+    .f02-shot { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+    .f02-off { opacity: 0; }
+  </style>
+
+  <div id="root" data-composition-id="f02-unicep" data-width="1920" data-height="1080">
+    <div id="f02-stage" class="f02-full clip" data-start="0" data-duration="14.6" data-track-index="0">
+      <div id="f02-cam" class="f02-cam" data-layout-allow-overflow data-layout-allow-overlap>
+        <img id="f02-hero" class="f02-shot" src="capture/f02/hero.png" alt="" />
+        <img id="f02-net" class="f02-shot f02-off" src="capture/f02/network.png" alt="" />
+        <img id="f02-net2" class="f02-shot f02-off" src="capture/f02/network-aplc.png" alt="" />
+        <img id="f02-per" class="f02-shot f02-off" src="capture/f02/perimetres.png" alt="" />
+        <div id="f02-fx"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const R = document.querySelector('[data-composition-id="f02-unicep"]');
+      const q = (s) => R.querySelector(s);
+      const B = { aplc: { x: 1427, y: 282, w: 31, h: 14 }, panel: { x: 364, y: 420, w: 479, h: 174 }, plateforme: { x: 364, y: 325, w: 584, h: 210 } };
+      const fx = q("#f02-fx");
+      const mPanel = KIT.box("f02-m-panel", B.panel, 10), mPlat = KIT.box("f02-m-plat", B.plateforme, 8);
+      fx.appendChild(mPanel); fx.appendChild(mPlat);
+      const k = KIT.mount(fx, "f02");
+      const cam = q("#f02-cam");
+
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#f02-stage", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 0);
+      // « KWIKAMA est son outil de travail. En kikongo, kwikama veut dire intégrité. » — the hero says it in writing
+      tl.fromTo(cam, KIT.cam(960, 540, 1), { ...KIT.cam(640, 420, 1.2), duration: 5.2, ease: "power1.inOut" }, 0);
+      // « L'Agence de prévention et de lutte contre la corruption… » — the eighteen, then APLC
+      KIT.show(tl, "#f02-net", 5.1, 0.7);
+      KIT.camTo(tl, cam, 1240, 400, 1.5, 5.1, 1.3);
+      KIT.cursorAt(tl, k, 1180, 560, 6.2);
+      KIT.move(tl, k, 1442, 289, 6.5, 0.95);
+      KIT.click(tl, k, 1442, 289, 7.58);
+      KIT.show(tl, "#f02-net2", 7.66, 0.3);
+      // « …et elle héberge le laboratoire d'analyse. »
+      KIT.camTo(tl, cam, 930, 420, 1.22, 8.2, 1.2);
+      KIT.hide(tl, k, 9.0);
+      KIT.mark(tl, mPanel, 9.4, 1.7);
+      // « La plateforme, elle, appartient à l'UNICEP. »
+      KIT.show(tl, "#f02-per", 11.0, 0.6);
+      KIT.camTo(tl, cam, 960, 430, 1.25, 11.0, 1.1);
+      KIT.mark(tl, mPlat, 12.58, null);
+
+      window.__timelines["f02-unicep"] = tl;
+    })();
+  </script>
+</template>

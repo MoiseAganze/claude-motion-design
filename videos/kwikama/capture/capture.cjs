@@ -60,14 +60,23 @@ const scenes = {
     const net = p.getByText('Dix-huit institutions, reliées');
     const y = await topOf(p, net);
     await scrollTo(p, y - 260);
+    await p.waitForTimeout(4000);
     await shot(p, 'f02', 'network');
-    const aplc = p.locator('button, [role=button], g, text').filter({ hasText: /^APLC$/ }).first();
+    const aplc = p.locator('svg text, button').filter({ hasText: /^APLC$/ }).first();
     await box(p, 'f02', 'aplc', aplc);
-    await aplc.click();
-    await shot(p, 'f02', 'network-aplc', { wait: 900 });
+    await aplc.click({ force: true });
+    await p.waitForTimeout(1200);
+    (boxes.f02 ||= {}).scrollAfterClick = await p.evaluate(() => window.scrollY);
+    await shot(p, 'f02', 'network-aplc');
+    const panel = p.getByText("Agence de Prévention et de Lutte contre la Corruption").first();
+    await box(p, 'f02', 'aplcPanel', panel.locator('xpath=..'));
     const per = p.getByText('Deux périmètres à ne pas confondre');
     await scrollTo(p, (await topOf(p, per)) - 300);
     await shot(p, 'f02', 'perimetres');
+    for (const [k, t] of [['plateforme', 'La plateforme'], ['laboratoire', 'Le laboratoire']]) {
+      const card = p.getByText(t, { exact: true }).first().locator('xpath=ancestor::*[self::article or self::div][1]');
+      await box(p, 'f02', k, card);
+    }
   },
 
   async f03(p) {
@@ -94,8 +103,13 @@ const scenes = {
     await login(p, 'UNICEP', 'Coordonnateur UNICEP');
     await nav(p, '/app/verification');
     await shot(p, 'f04', 'list');
+    await box(p, 'f04', 'callout', p.getByText('Propre à la filière UNICEP.').first().locator('xpath=..'));
+    await scrollTo(p, 100000);
+    (boxes.f04 ||= {}).scroll = await p.evaluate(() => window.scrollY);
+    await shot(p, 'f04', 'list-bottom');
     const row = p.getByText('SIG-2026-0195');
     await box(p, 'f04', 'row', row);
+    await box(p, 'f04', 'rowCard', row.locator('xpath=ancestor::button[1]'));
     await row.click();
     await shot(p, 'f04', 'panel-0', { wait: 1000 });
     const panel = p.locator('[role=dialog], aside').filter({ has: p.getByText('Contrôles du manuel') }).last();
@@ -113,14 +127,25 @@ const scenes = {
     await box(p, 'f04', 'valider', btn);
     await btn.click();
     await shot(p, 'f04', 'validated', { wait: 1200 });
+    await box(p, 'f04', 'rowCardDone', p.getByText('SIG-2026-0195').locator('xpath=ancestor::button[1]'));
+    await box(p, 'f04', 'session', p.getByText(/Actions de cette session/i).first().locator('xpath=..'));
     await nav(p, '/app/dossiers');
     await shot(p, 'f04', 'registre');
+    await box(p, 'f04', 'numCol', p.locator('table').first());
+    await box(p, 'f04', 'session2', p.getByText(/Actions de cette session/i).first().locator('xpath=..'));
   },
 
   async f05(p) {
     await login(p, 'UNICEP', 'Coordonnateur UNICEP');
     await nav(p, '/app/passerelles');
     await shot(p, 'f05', 'top');
+    await tall(p, 'f05', 'tall');
+    for (const [k, t] of [['tofo', 'Plateforme nationale de transparence des marchés publics'], ['itie', 'Initiative pour la Transparence des Industries Extractives'], ['guce', 'Guichet Unique de Création'], ['guceLine', "L'identité des personnes physiques"], ['kpi', 'REGISTRES RACCORDÉS'], ['simu', 'Architecture simulée']]) {
+      const el = p.getByText(t, { exact: false }).first();
+      const card = ['tofo', 'itie', 'guce'].includes(k) ? el.locator('xpath=ancestor::article[1] | ancestor::section[1]').last() : (k === 'kpi' ? el.locator('xpath=..') : el);
+      const bb = await (await card.count() ? card : el).evaluate(e => { const r = e.getBoundingClientRect(); return { x: Math.round(r.x), y: Math.round(r.y + window.scrollY), w: Math.round(r.width), h: Math.round(r.height) }; });
+      (boxes.f05 ||= {})['doc_' + k] = bb;
+    }
     const guce = p.getByText('Guichet Unique de Création', { exact: false }).first();
     await scrollTo(p, (await topOf(p, guce)) - 420);
     await shot(p, 'f05', 'registres');
@@ -153,9 +178,9 @@ const scenes = {
     await p.locator('main select').first().selectOption({ label: 'DPJ-2026-014' }).catch(() => {});
     await p.waitForTimeout(2500);
     await shot(p, 'f06', 'graphe');
-    const node = p.getByText('Ilunga Mwadi Patrick').first();
-    await box(p, 'f06', 'node', node);
-    await node.click({ force: true });
+    const node = await p.evaluate(() => { const c = [...document.querySelectorAll('main svg circle')].find(c => /Ilunga/.test(c.closest('g')?.textContent || '')); const r = c.getBoundingClientRect(); return { x: Math.round(r.x + r.width / 2), y: Math.round(r.y + r.height / 2) }; });
+    (boxes.f06 ||= {}).node = node;
+    await p.mouse.move(node.x, node.y); await p.mouse.down(); await p.mouse.up();
     await shot(p, 'f06', 'graphe-select', { wait: 1500 });
   },
 
@@ -190,8 +215,16 @@ const scenes = {
   async f08(p) {
     await login(p, 'UNICEP', 'Coordonnateur UNICEP');
     await nav(p, '/app/coordination');
+    await shot(p, 'f08', 'top');
+    await tall(p, 'f08', 'tall');
+    const docBox = (loc) => loc.evaluate(e => { const r = e.getBoundingClientRect(); return { x: Math.round(r.x), y: Math.round(r.y + scrollY), w: Math.round(r.width), h: Math.round(r.height) }; });
+    for (const [k, t] of [['d48', "Notification au parquet de l'ouverture"], ['d7', 'Réquisition d\'informations (banques'], ['d72', 'Suivi des mesures coercitives']]) {
+      (boxes.f08 ||= {})['doc_' + k] = await docBox(p.getByText(t, { exact: false }).last().locator('xpath=ancestor::tr[1]'));
+    }
     const row = p.getByText('RQ-2026-0091').first();
+    (boxes.f08 ||= {}).doc_row = await docBox(row.locator('xpath=ancestor::tr[1]'));
     await scrollTo(p, (await topOf(p, row)) - 520);
+    (boxes.f08 ||= {}).tableScroll = await p.evaluate(() => window.scrollY);
     await shot(p, 'f08', 'table');
     await box(p, 'f08', 'row', row);
     await row.click();
@@ -210,6 +243,7 @@ const scenes = {
     await scrollTo(p, (await topOf(p, line)) - 560);
     await shot(p, 'f08', 'journal');
     await box(p, 'f08', 'line', line.locator('xpath=ancestor::tr'));
+    await box(p, 'f08', 'lineRelance', p.getByText("Relance d'une réquisition en retard").first().locator('xpath=ancestor::tr'));
   },
 
   async f09(p) {
@@ -230,17 +264,31 @@ const scenes = {
     await login(p, 'UNICEP', 'Coordonnateur UNICEP');
     await nav(p, '/app/avoirs');
     await shot(p, 'f10', 'encart');
-    const row = p.getByText('AVR-2026-072').first();
-    await box(p, 'f10', 'row', row);
-    await row.click();
-    await shot(p, 'f10', 'panel-gele', { wait: 1000 });
+    await tall(p, 'f10', 'tall');
+    const docBox = (loc) => loc.evaluate(e => { const r = e.getBoundingClientRect(); return { x: Math.round(r.x), y: Math.round(r.y + scrollY), w: Math.round(r.width), h: Math.round(r.height) }; });
+    const B = (boxes.f10 = {});
+    for (const k of ['Identifiés', 'Gelés', 'Saisis', 'Confisqués ou restitués']) B['doc_' + k] = await docBox(p.getByText(new RegExp('^' + k + '$', 'i')).first().locator('xpath=..'));
+    B.doc_quote = await docBox(p.getByText("Une enquête qui ne récupère rien n'a rien réparé.").first());
+    B.doc_row = await docBox(p.getByText('AVR-2026-072').first().locator('xpath=ancestor::tr[1]'));
+    await scrollTo(p, 300);
+    B.S = await p.evaluate(() => window.scrollY);
+    await shot(p, 'f10', 'listS');
+    await p.getByText('AVR-2026-072').first().click();
+    await p.waitForTimeout(1000);
+    B.scrollPanel = await p.evaluate(() => window.scrollY);
+    await shot(p, 'f10', 'panel-gele');
     const btn = p.getByRole('button', { name: /Passer au statut « Saisi »/ });
     await box(p, 'f10', 'saisir', btn);
     await btn.click();
     await shot(p, 'f10', 'panel-saisi', { wait: 1200 });
     await p.getByRole('button', { name: 'Fermer le panneau de détail' }).click().catch(() => {});
-    await shot(p, 'f10', 'encart-after', { wait: 900 });
-    for (const k of ['Gelés', 'Saisis']) await box(p, 'f10', k, p.getByText(new RegExp('^' + k + '$', 'i')).first().locator('xpath=..'));
+    await p.waitForTimeout(800);
+    await scrollTo(p, B.S);
+    await shot(p, 'f10', 'listS-after');
+    await box(p, 'f10', 'session', p.getByText(/Actions de cette session/i).first().locator('xpath=..'));
+    await scrollTo(p, 0);
+    await shot(p, 'f10', 'encart-after');
+    await tall(p, 'f10', 'tall-after');
   },
 };
 

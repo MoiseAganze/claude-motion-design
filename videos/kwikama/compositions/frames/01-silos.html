@@ -1,0 +1,194 @@
+<template>
+  <style>
+    @font-face { font-family: "Fraunces"; src: url("assets/fonts/Fraunces-latin.woff2") format("woff2"); font-weight: 400 700; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-latin.woff2") format("woff2"); font-weight: 400 700; font-display: block; }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #052649; font-family: "Inter", sans-serif; }
+    .f01-full { position: absolute; inset: 0; }
+    .f01-world { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 960px 540px; }
+    .f01-rule { position: absolute; left: 360px; top: 540px; width: 1200px; height: 1px; background: #E7C266; transform-origin: 0 50%; }
+    .f01-wall { position: absolute; width: 8px; height: 300px; background: #0A3360; transform-origin: 50% 100%; }
+    .f01-card { position: absolute; width: 272px; height: 158px; }
+    .f01-paper { position: absolute; inset: 0; background: #FBF9F5; border-radius: 4px; padding: 16px 18px 14px; box-sizing: border-box; box-shadow: 0 10px 26px rgba(3, 24, 41, 0.35); }
+    .f01-sig { font-weight: 700; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; color: #7F6110; }
+    .f01-type { margin-top: 8px; font-family: "Fraunces", serif; font-weight: 600; font-size: 19px; line-height: 1.15; color: #13181E; }
+    .f01-line { margin-top: 7px; font-size: 15px; line-height: 1.35; color: #495867; }
+    .f01-hl { position: absolute; inset: -5px; border: 3px solid #D8A828; border-radius: 7px; }
+    .f01-links { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: visible; }
+    .f01-emblem { position: absolute; left: 502px; top: 367px; width: 276px; height: 346px; }
+    .f01-emblem svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+    .f01-word { position: absolute; left: 846px; top: 418px; font-family: "Fraunces", serif; font-weight: 600; font-size: 142px; line-height: 1; letter-spacing: 0.05em; color: #F4F1EA; }
+    .f01-sign { position: absolute; left: 852px; top: 590px; font-weight: 500; font-size: 30px; letter-spacing: 0.02em; color: #D8A828; }
+  </style>
+
+  <div id="root" data-composition-id="f01-silos" data-width="1920" data-height="1080">
+    <div id="f01-stage" class="f01-full clip" data-start="0" data-duration="28.76" data-track-index="0">
+      <div id="f01-rule" class="f01-rule"></div>
+      <div id="f01-emblem" class="f01-emblem" data-layout-allow-overlap>
+        <svg viewBox="0 0 552 692">
+          <defs>
+            <mask id="f01-notch" maskUnits="userSpaceOnUse" x="0" y="0" width="552" height="692"><rect width="552" height="692" fill="#fff"/><rect x="93" y="562" width="79" height="140" fill="#000"/></mask>
+            <clipPath id="f01-clip"><path d="M276 10 L544 128 L544 318 C544 470 440 590 276 684 C112 590 8 470 8 318 L8 128 Z"/></clipPath>
+          </defs>
+          <g id="f01-shield" mask="url(#f01-notch)">
+            <path d="M276 10 L544 128 L544 318 C544 470 440 590 276 684 C112 590 8 470 8 318 L8 128 Z" fill="#052649" stroke="#F4F1EA" stroke-width="14" stroke-linejoin="round"/>
+            <g clip-path="url(#f01-clip)" stroke="#F4F1EA" stroke-width="14"><line x1="172" y1="560" x2="172" y2="700"/><line x1="93" y1="560" x2="93" y2="700"/></g>
+          </g>
+          <g id="f01-net" stroke="#D8A828" stroke-width="7" stroke-linecap="round" fill="none"></g>
+          <g id="f01-k" fill="#F4F1EA">
+            <path d="M100 98 L165 68 L165 562 L100 562 Z"/>
+            <path d="M165 270 L292 150 L376 150 L236 306 L165 347 Z"/>
+            <path d="M165 347 L236 306 L466 532 L414 582 Z"/>
+          </g>
+          <g id="f01-nodes" fill="#D8A828"></g>
+        </svg>
+      </div>
+      <div id="f01-world" class="f01-world" data-layout-allow-overlap data-layout-allow-overflow data-layout-allow-occlusion>
+        <div id="f01-walls"></div>
+        <svg id="f01-links" class="f01-links" viewBox="0 0 1920 1080"></svg>
+        <div id="f01-cards"></div>
+      </div>
+      <div id="f01-word" class="f01-word">KWIKAMA</div>
+      <div id="f01-sign" class="f01-sign">le bouclier numérique de l'UNICEP</div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const R = document.querySelector('[data-composition-id="f01-silos"]');
+      const q = (s) => R.querySelector(s);
+      const NS = "http://www.w3.org/2000/svg";
+      const h = (i, s) => { const x = Math.sin(i * 12.9898 + s * 78.233) * 43758.5453; return x - Math.floor(x); };
+      // cubic-bezier(0.2, 0.7, 0.3, 1) from the script, as a GSAP ease function
+      const bez = (x1, y1, x2, y2) => {
+        const cx = 3 * x1, bx = 3 * (x2 - x1) - cx, ax = 1 - cx - bx, cy = 3 * y1, by = 3 * (y2 - y1) - cy, ay = 1 - cy - by;
+        return (p) => { let t = p; for (let i = 0; i < 8; i++) { const x = ((ax * t + bx) * t + cx) * t - p, d = (3 * ax * t + 2 * bx) * t + cx; if (Math.abs(d) < 1e-6) break; t = Math.min(1, Math.max(0, t - x / d)); } return ((ay * t + by) * t + cy) * t; };
+      };
+      const CONV = bez(0.2, 0.7, 0.3, 1);
+
+      // one card per member institution, in grid order (row by row, 6 columns)
+      const CARDS = [
+        ["Parquet Général", "Relevé bancaire", "BCF 00214-…-77 · 14 févr. 2026 · virement émis · 1 850 000 USD"],
+        ["OSCEP", "Déclaration de patrimoine", "Agent public n° 04-2211 · non déposée à l'échéance"],
+        ["CENAREF", "Déclaration de soupçon", "DS-2026-0412 · virements fractionnés vers Atlantic Shore Holdings Ltd"],
+        ["ICCN", "Procès-verbal de constat", "Kalemie · 38 kg d'écailles de pangolin saisis"],
+        ["Min. Défense", "Avis d'appel d'offres", "AAO 012/MDNAC/2026 · équipements de transmission"],
+        ["OAD", "Rapport de saisie", "Aéroport de N'djili · 12 kg · 02 juil. 2026"],
+        ["DIAF", "Permis de coupe", "PC 0942/DIAF/2025 · concession forestière · 12 000 m³"],
+        ["PJ / PNC", "Procès-verbal d'audition", "PV 1184/PJ/KOL · audition du 18 sept. 2026, 10 h 40"],
+        ["APLC", "Signalement", "SIG-2026-0163 · redevances minières non reversées au Trésor"],
+        ["DGI", "Déclaration de production minière", "Permis PE 4471 · T3 2025 · 18 400 t"],
+        ["Cour des comptes", "Procès-verbal d'attribution", "RN1 Matadi–Kasangulu · lot 2 · Nzadi Infrastructure SA"],
+        ["DGDA", "Déclaration en douane", "DAU 2026/KSB/08812 · cuivre cathode · 412 t · export"],
+        ["ANR", "Note de renseignement", "NR-2026-077 · collecte de fonds signalée · Goma"],
+        ["IGF", "Bulletin de paie", "Matricule 409.117 · agent non recensé · 1 240 USD / mois"],
+        ["GUCE", "Extrait du registre du commerce", "RCCM CD/LSH/24-B-01937 · Katanga Mineral Processing Ltd"],
+        ["COGEBISCO", "Fiche de dépôt", "AVR-2026-073 · six véhicules · dépôt de Kolwezi"],
+        ["Auditorat Général", "Réquisition", "RMP 0211/AG/2026 · fournisseur militaire mis en cause"],
+        ["DGM", "Passage de frontière", "Kasumbalesa · 03 mars 2026 · 21 h 47 · sortie"],
+      ];
+      const W = 272, H = 158, CW = 320, CH = 360;
+      const T = { rule: 0.0, dissolve: 2.4, cards: 2.5, walls: 9.12, freeze: 17.54, wallsOut: 17.94, conv: 18.6, net: 20.95, contract: 22.0, word: 23.3, sign: 23.9, end: 28.76 };
+      const HL = [[0, 9.24], [11, 10.9], [14, 12.6]]; // "relevé bancaire ici" · "déclaration en douane là" · "registre d'entreprise ailleurs"
+
+      const tl = gsap.timeline({ paused: true });
+      const cards = [], centers = [], finals = [];
+      CARDS.forEach((c, i) => {
+        const col = i % 6, row = Math.floor(i / 6);
+        const s = 0.86 + h(i, 1) * 0.14;
+        const left = col * CW + (CW - W) / 2 + (h(i, 2) - 0.5) * 24;
+        const top = row * CH + (CH - H) / 2 + (h(i, 3) - 0.5) * 70;
+        const el = document.createElement("div");
+        el.className = "f01-card"; el.id = "f01-card-" + i;
+        el.style.left = left + "px"; el.style.top = top + "px";
+        el.innerHTML = `<div class="f01-drift" id="f01-drift-${i}" style="position:absolute;inset:0"><div class="f01-paper"><div class="f01-sig">${c[0]}</div><div class="f01-type">${c[1]}</div><div class="f01-line">${c[2]}</div></div><div class="f01-hl" id="f01-hl-${i}" style="opacity:0"></div></div>`;
+        q("#f01-cards").appendChild(el);
+        cards.push({ el, s });
+        centers.push([left + W / 2, top + H / 2]);
+        finals.push([960 + ((i % 5) - 2) * 3, 540 + ((i % 4) - 1.5) * 3]);
+      });
+      // walls: 7 per row, rising from the bottom, bottom row first
+      for (let row = 2, k = 0; row >= 0; row--) {
+        for (let col = 0; col <= 6; col++, k++) {
+          const w = document.createElement("div");
+          w.className = "f01-wall"; w.id = `f01-wall-${row}-${col}`;
+          w.style.left = (col * CW - 4) + "px"; w.style.top = (row * CH + 30) + "px";
+          q("#f01-walls").appendChild(w);
+          tl.fromTo(w, { scaleY: 0, opacity: 1 }, { scaleY: 1, duration: 1.4, ease: "power2.out" }, T.walls + (2 - row) * 0.12 + col * 0.02);
+          tl.to(w, { opacity: 0, duration: 0.6, ease: "power1.inOut" }, T.wallsOut);
+        }
+      }
+
+      // 0.0 — the gold rule draws, holds, dissolves
+      tl.fromTo("#f01-rule", { scaleX: 0, opacity: 1 }, { scaleX: 1, duration: 1.2, ease: "power2.out" }, T.rule);
+      tl.to("#f01-rule", { opacity: 0, duration: 0.5, ease: "power1.out" }, T.dissolve);
+
+      // 2.5 — eighteen fragments; slow drift until the hard stop
+      cards.forEach(({ el, s }, i) => {
+        tl.fromTo(el, { opacity: 0, y: 12, scale: s }, { opacity: 1, y: 0, scale: s, duration: 0.6, ease: "power2.out" }, T.cards + i * 0.09);
+        const dy = (h(i, 4) - 0.5) * 14, dx = (h(i, 5) - 0.5) * 10;
+        tl.fromTo("#f01-drift-" + i, { x: 0, y: 0 }, { x: dx, y: dy, duration: T.freeze - T.cards, ease: "none" }, T.cards);
+      });
+      HL.forEach(([i, t]) => {
+        tl.fromTo("#f01-hl-" + i, { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power2.out" }, t);
+        tl.to("#f01-hl-" + i, { opacity: 0, duration: 0.6, ease: "power1.inOut" }, t + 1.5);
+      });
+      // camera steps back to hold all eighteen enclosures at once
+      tl.fromTo("#f01-world", { scale: 1 }, { scale: 0.94, duration: 2.2, ease: "power2.inOut" }, T.walls);
+
+      // 18.6 — convergence on one curve, links trace as fragments meet
+      const t0 = (i) => T.conv + i * 0.04, DUR = 1.8;
+      cards.forEach(({ el }, i) => {
+        tl.to(el, { x: finals[i][0] - centers[i][0], y: finals[i][1] - centers[i][1], duration: DUR, ease: CONV }, t0(i));
+      });
+      const posAt = (i, t) => { const p = CONV(Math.min(1, Math.max(0, (t - t0(i)) / DUR))); return [centers[i][0] + (finals[i][0] - centers[i][0]) * p, centers[i][1] + (finals[i][1] - centers[i][1]) * p]; };
+      const pairs = [];
+      centers.forEach((a, i) => {
+        centers.map((b, j) => [j, Math.hypot(a[0] - b[0], a[1] - b[1])]).filter(([j]) => j !== i).sort((x, y) => x[1] - y[1]).slice(0, 2)
+          .forEach(([j]) => { const key = Math.min(i, j) + "-" + Math.max(i, j); if (!pairs.find((p) => p.key === key)) pairs.push({ key, i: Math.min(i, j), j: Math.max(i, j) }); });
+      });
+      pairs.forEach((p) => {
+        for (let t = T.conv; t < T.conv + 3; t += 1 / 120) { const a = posAt(p.i, t), b = posAt(p.j, t); if (Math.hypot(a[0] - b[0], a[1] - b[1]) < 250) { p.t = t; break; } }
+        const ln = document.createElementNS(NS, "line");
+        ln.setAttribute("stroke", "#D8A828"); ln.setAttribute("stroke-width", "2"); ln.setAttribute("pathLength", "1"); ln.setAttribute("stroke-dasharray", "1");
+        ln.setAttribute("stroke-dashoffset", "1");
+        q("#f01-links").appendChild(ln); p.el = ln;
+      });
+      const drawLinks = (t) => pairs.forEach((p) => {
+        const a = posAt(p.i, t), b = posAt(p.j, t);
+        p.el.setAttribute("x1", a[0]); p.el.setAttribute("y1", a[1]); p.el.setAttribute("x2", b[0]); p.el.setAttribute("y2", b[1]);
+        const k = p.t ? Math.min(1, Math.max(0, (t - p.t) / 0.3)) : 0;
+        p.el.setAttribute("stroke-dashoffset", String(1 - k));
+      });
+      const drv = { t: T.conv };
+      tl.fromTo(drv, { t: T.conv }, { t: T.conv + 3, duration: 3, ease: "none", onUpdate: () => drawLinks(drv.t) }, T.conv);
+      drawLinks(T.conv);
+      tl.fromTo("#f01-links", { opacity: 1 }, { opacity: 0, duration: 0.4, ease: "power1.in" }, T.net);
+
+      // 20.95 — the logo's network completes around the single dossier, then contracts into the emblem
+      const NODES = [[330, 95, 18], [480, 205, 20], [277, 317, 12], [452, 365, 24], [512, 330, 11], [210, 517, 20], [332, 567, 17]];
+      const EDGES = [[330, 95, 480, 205], [330, 95, 290, 150], [480, 205, 277, 317], [277, 317, 452, 365], [480, 205, 452, 365], [452, 365, 512, 330], [452, 365, 430, 505], [210, 517, 332, 567], [210, 517, 262, 430], [210, 517, 150, 482], [332, 567, 356, 518]];
+      EDGES.forEach((e, i) => {
+        const ln = document.createElementNS(NS, "line");
+        ln.setAttribute("x1", e[0]); ln.setAttribute("y1", e[1]); ln.setAttribute("x2", e[2]); ln.setAttribute("y2", e[3]);
+        ln.setAttribute("pathLength", "1"); ln.setAttribute("stroke-dasharray", "1"); ln.id = "f01-e" + i;
+        q("#f01-net").appendChild(ln);
+        tl.fromTo(ln, { attr: { "stroke-dashoffset": 1 } }, { attr: { "stroke-dashoffset": 0 }, duration: 0.3, ease: "power1.out" }, T.net + 0.25 + i * 0.05);
+      });
+      NODES.forEach((n, i) => {
+        const c = document.createElementNS(NS, "circle");
+        c.setAttribute("cx", n[0]); c.setAttribute("cy", n[1]); c.setAttribute("r", n[2]); c.id = "f01-n" + i;
+        q("#f01-nodes").appendChild(c);
+        tl.fromTo(c, { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power2.out" }, i === 2 ? T.contract + 0.5 : T.net + i * 0.06);
+      });
+      tl.fromTo("#f01-emblem", { x: 198, y: 0, scale: 2.6 }, { x: 0, y: 0, scale: 1, duration: 1.4, ease: "power2.inOut" }, T.contract);
+      tl.fromTo(["#f01-shield", "#f01-k"], { opacity: 0 }, { opacity: 1, duration: 0.8, ease: "power1.inOut" }, T.contract + 0.45);
+      tl.fromTo("#f01-world", { opacity: 1 }, { opacity: 0, duration: 0.7, ease: "power1.inOut" }, T.contract + 0.2);
+      tl.fromTo("#f01-word", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, T.word);
+      tl.fromTo("#f01-sign", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, T.sign);
+      // the lockup breathes forward while the voice introduces the UNICEP
+      tl.fromTo("#f01-stage", { scale: 1 }, { scale: 1.035, duration: T.end - T.word, ease: "none" }, T.word);
+
+      window.__timelines["f01-silos"] = tl;
+    })();
+  </script>
+</template>

@@ -39,4 +39,7 @@ filmés sur le prototype, puis souveraineté et clôture. Script complet fourni 
 - N'inventer aucune capture. Écarts entre le script et le prototype : voir notes-exploration.md (4 contrôles au lieu de 3 ; pas de numéro de registre affiché ;
   journal d'audit statique, la relance n'y apparaît pas ; Passerelles sans interrogation ; montants de tête de l'encart RI 8 inchangés).
 - `prefers-reduced-motion` : sans objet pour un MP4.
-- Pas de musique disponible (aucun fournisseur de musique dans cette session) : voix seule, sons très rares.
+- Musique demandée : « TECH | Performance Sprint Pulse (128 BPM) » — Toni V. Brant (Minimal Techno / Tech House), ~2 min.
+  À boucler sur toute la durée sans interruption perceptible (raccord calé sur la mesure, fondu à puissance constante), sous la voix.
+  Fichier à fournir par l'utilisateur (pixabay.com bloqué par le réseau de l'environnement).
+- Planche d'images fixes : laissée à mon choix → construction directe, brouillon de l'ouverture envoyé en premier.

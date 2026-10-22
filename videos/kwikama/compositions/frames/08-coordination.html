@@ -1,0 +1,76 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #031829; }
+    .f08-full { position: absolute; inset: 0; }
+    .f08-cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; }
+    .f08-shot { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+    .f08-off { opacity: 0; }
+  </style>
+
+  <div id="root" data-composition-id="f08-coordination" data-width="1920" data-height="1080">
+    <div id="f08-stage" class="f08-full clip" data-start="0" data-duration="22.08" data-track-index="0">
+      <div id="f08-cam" class="f08-cam" data-layout-allow-overflow data-layout-allow-overlap>
+        <div id="f08-a" class="f08-full"></div>
+        <img id="f08-panel" class="f08-shot f08-off" src="capture/f08/panel.png" alt="" />
+        <img id="f08-done" class="f08-shot f08-off" src="capture/f08/relancee.png" alt="" />
+        <div id="f08-fx"></div>
+      </div>
+      <div id="f08-cam2" class="f08-cam f08-off" data-layout-allow-overflow data-layout-allow-overlap>
+        <img class="f08-shot" src="capture/f08/journal.png" alt="" />
+        <div id="f08-fx2"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const R = document.querySelector('[data-composition-id="f08-coordination"]');
+      const q = (s) => R.querySelector(s);
+      const cam = q("#f08-cam"), cam2 = q("#f08-cam2");
+      const A = KIT.page(q("#f08-a"), "f08-pa", "capture/f08/top.png", "capture/f08/tall.png", 1935);
+      const lay = (id, b, pad) => { const m = KIT.box(id, b, pad); A.layer.appendChild(m); return m; };
+      const M = {
+        d48: lay("f08-m-48", { x: 289, y: 1619, w: 1598, h: 47 }, 3),
+        d7: lay("f08-m-7", { x: 289, y: 1666, w: 1598, h: 47 }, 3),
+        d72: lay("f08-m-72", { x: 289, y: 1761, w: 1598, h: 47 }, 3),
+        row: lay("f08-m-row", { x: 289, y: 572, w: 1598, h: 73 }, 3),
+      };
+      const fx = q("#f08-fx");
+      const mDone = KIT.box("f08-m-done", { x: 289, y: 464, w: 1598, h: 72 }, 3), mSess = KIT.box("f08-m-sess", { x: 12, y: 808, w: 231, h: 92 }, 4);
+      fx.appendChild(mDone); fx.appendChild(mSess);
+      const mLine = KIT.box("f08-m-line", { x: 289, y: 809, w: 1598, h: 50 }, 4);
+      q("#f08-fx2").appendChild(mLine);
+      const k = KIT.mount(fx, "f08");
+
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#f08-stage", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 0);
+      // the POS deadlines table, row by row on the voice
+      tl.fromTo(A.scroll, { y: -855 }, { y: -855, duration: 0.01 }, 0);
+      tl.fromTo(cam, KIT.cam(1088, 800, 1.1), { ...KIT.cam(1088, 830, 1.18), duration: 7.6, ease: "power1.inOut" }, 0);
+      KIT.mark(tl, M.d48, 0.6, 2.1);
+      KIT.mark(tl, M.d7, 2.86, 2.5);
+      KIT.mark(tl, M.d72, 5.54, 2.3);
+      // « Passé le délai, la relance part d'elle-même… » — RQ-2026-0091 is late; relaunch it
+      KIT.scrollTo(tl, A, 52, 7.6, 1.0);
+      KIT.camTo(tl, cam, 960, 540, 1, 7.6, 1.0);
+      KIT.cursorAt(tl, k, 760, 760, 7.9);
+      KIT.move(tl, k, 362, 560, 8.1, 0.9);
+      KIT.mark(tl, M.row, 8.7, 0.7);
+      KIT.click(tl, k, 362, 560, 9.3);
+      KIT.show(tl, "#f08-panel", 9.38, 0.3);
+      KIT.move(tl, k, 1486, 1043, 9.55, 0.75);
+      KIT.click(tl, k, 1486, 1043, 10.46);
+      KIT.show(tl, "#f08-done", 10.55, 0.3);
+      KIT.hide(tl, k, 10.9);
+      KIT.mark(tl, mDone, 10.9, null);
+      // « …et laisse une trace immuable au journal d'audit… »
+      KIT.mark(tl, mSess, 11.3, null);
+      // hard cut to the audit log: the real line on the relaunch of RQ-2026-0091
+      tl.set(cam2, { opacity: 1 }, 12.55);
+      tl.fromTo(cam2, KIT.cam(1088, 834, 1.15), { ...KIT.cam(1088, 834, 1.28), duration: 9.0, ease: "power1.inOut" }, 12.55);
+      KIT.mark(tl, mLine, 12.8, null);
+
+      window.__timelines["f08-coordination"] = tl;
+    })();
+  </script>
+</template>

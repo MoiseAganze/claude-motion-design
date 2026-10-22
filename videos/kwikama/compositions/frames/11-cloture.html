@@ -1,0 +1,132 @@
+<template>
+  <style>
+    @font-face { font-family: "Fraunces"; src: url("assets/fonts/Fraunces-latin.woff2") format("woff2"); font-weight: 400 700; font-display: block; }
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-latin.woff2") format("woff2"); font-weight: 400 700; font-display: block; }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #052649; font-family: "Inter", sans-serif; color: #F4F1EA; }
+    .f11-full { position: absolute; inset: 0; }
+    .f11-col { position: absolute; top: 210px; }
+    .f11-kicker { font-weight: 700; font-size: 28px; letter-spacing: 0.1em; text-transform: uppercase; color: #D8A828; }
+    .f11-item { position: relative; margin-top: 46px; padding-bottom: 22px; }
+    .f11-big { font-family: "Fraunces", serif; font-weight: 600; font-size: 60px; line-height: 1.1; color: #F4F1EA; }
+    .f11-small { margin-top: 10px; font-size: 28px; color: #AFC5D8; }
+    .f11-rule { position: absolute; left: 0; bottom: 0; width: 560px; height: 2px; background: #D8A828; transform-origin: 0 50%; }
+    .f11-ri { position: relative; display: flex; align-items: baseline; margin-top: 40px; }
+    .f11-num { width: 200px; flex: none; white-space: nowrap; font-family: "Fraunces", serif; font-weight: 600; font-size: 72px; color: #D8A828; }
+    .f11-txt { font-family: "Fraunces", serif; font-weight: 500; font-size: 46px; line-height: 1.15; color: #F4F1EA; }
+    .f11-txt small { display: block; margin-top: 8px; font-family: "Inter", sans-serif; font-weight: 600; font-size: 28px; letter-spacing: 0.08em; text-transform: uppercase; color: #AFC5D8; }
+    .f11-ring { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: visible; }
+    .f11-name { position: absolute; width: 300px; font-weight: 600; font-size: 28px; line-height: 1; color: #F4F1EA; white-space: nowrap; }
+    .f11-emblem { position: absolute; left: 502px; top: 367px; width: 276px; height: 346px; }
+    .f11-word { position: absolute; left: 846px; top: 418px; font-family: "Fraunces", serif; font-weight: 600; font-size: 142px; line-height: 1; letter-spacing: 0.05em; color: #F4F1EA; }
+    .f11-sign { position: absolute; left: 852px; top: 590px; font-weight: 500; font-size: 30px; color: #D8A828; }
+  </style>
+
+  <div id="root" data-composition-id="f11-cloture" data-width="1920" data-height="1080">
+    <div id="f11-stage" class="f11-full clip" data-start="0" data-duration="23.96" data-track-index="0">
+      <div id="f11-texts" class="f11-full">
+        <div class="f11-col" style="left:160px; width:640px">
+          <div id="f11-k1" class="f11-kicker">Souveraineté</div>
+          <div id="f11-s1" class="f11-item"><div class="f11-big">Serveurs de l'État</div><div class="f11-small">Aucune donnée de dossier ne quitte l'infrastructure</div><div id="f11-r1" class="f11-rule"></div></div>
+          <div id="f11-s2" class="f11-item"><div class="f11-big">Code du numérique</div><div class="f11-small">Ordonnance-loi n° 23/010 du 13 mars 2023</div><div id="f11-r2" class="f11-rule"></div></div>
+          <div id="f11-s3" class="f11-item"><div class="f11-big">ISO/IEC 27001</div><div class="f11-small">Management de la sécurité de l'information</div><div id="f11-r3" class="f11-rule"></div></div>
+        </div>
+        <div class="f11-col" style="left:1000px; width:780px">
+          <div id="f11-k2" class="f11-kicker">Trois résultats immédiats du GAFI</div>
+          <div id="f11-g1" class="f11-ri"><div class="f11-num">RI 6</div><div class="f11-txt">Le renseignement financier est utilisé<small>Détection</small></div></div>
+          <div id="f11-g2" class="f11-ri"><div class="f11-num">RI 7</div><div class="f11-txt">Les infractions sont poursuivies<small>Répression</small></div></div>
+          <div id="f11-g3" class="f11-ri"><div class="f11-num">RI 8</div><div class="f11-txt">Les avoirs sont confisqués<small>Recouvrement</small></div></div>
+        </div>
+      </div>
+      <div id="f11-net" class="f11-full">
+        <svg id="f11-ring" class="f11-ring" viewBox="0 0 1920 1080"></svg>
+        <div id="f11-names"></div>
+      </div>
+      <div id="f11-lockup" class="f11-full">
+        <div id="f11-emblem" class="f11-emblem" data-layout-allow-overflow>
+          <svg viewBox="0 0 552 692" style="position:absolute;inset:0;width:100%;height:100%">
+            <defs>
+              <mask id="f11-notch" maskUnits="userSpaceOnUse" x="0" y="0" width="552" height="692"><rect width="552" height="692" fill="#fff"/><rect x="93" y="562" width="79" height="140" fill="#000"/></mask>
+              <clipPath id="f11-clip"><path d="M276 10 L544 128 L544 318 C544 470 440 590 276 684 C112 590 8 470 8 318 L8 128 Z"/></clipPath>
+            </defs>
+            <g mask="url(#f11-notch)">
+              <path d="M276 10 L544 128 L544 318 C544 470 440 590 276 684 C112 590 8 470 8 318 L8 128 Z" fill="#052649" stroke="#F4F1EA" stroke-width="14" stroke-linejoin="round"/>
+              <g clip-path="url(#f11-clip)" stroke="#F4F1EA" stroke-width="14"><line x1="172" y1="560" x2="172" y2="700"/><line x1="93" y1="560" x2="93" y2="700"/></g>
+            </g>
+            <g stroke="#D8A828" stroke-width="7" stroke-linecap="round" fill="none">
+              <line x1="330" y1="95" x2="480" y2="205"/><line x1="330" y1="95" x2="290" y2="150"/><line x1="480" y1="205" x2="277" y2="317"/><line x1="277" y1="317" x2="452" y2="365"/><line x1="480" y1="205" x2="452" y2="365"/><line x1="452" y1="365" x2="512" y2="330"/><line x1="452" y1="365" x2="430" y2="505"/><line x1="210" y1="517" x2="332" y2="567"/><line x1="210" y1="517" x2="262" y2="430"/><line x1="210" y1="517" x2="150" y2="482"/><line x1="332" y1="567" x2="356" y2="518"/>
+            </g>
+            <g fill="#F4F1EA"><path d="M100 98 L165 68 L165 562 L100 562 Z"/><path d="M165 270 L292 150 L376 150 L236 306 L165 347 Z"/><path d="M165 347 L236 306 L466 532 L414 582 Z"/></g>
+            <g fill="#D8A828"><circle cx="330" cy="95" r="18"/><circle cx="480" cy="205" r="20"/><circle cx="277" cy="317" r="12"/><circle cx="452" cy="365" r="24"/><circle cx="512" cy="330" r="11"/><circle cx="210" cy="517" r="20"/><circle cx="332" cy="567" r="17"/></g>
+          </svg>
+        </div>
+        <div id="f11-word" class="f11-word">KWIKAMA</div>
+        <div id="f11-sign" class="f11-sign">le bouclier numérique de l'UNICEP</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const R = document.querySelector('[data-composition-id="f11-cloture"]');
+      const q = (s) => R.querySelector(s);
+      const NS = "http://www.w3.org/2000/svg";
+      const NAMES = ["CENAREF", "Parquet Général", "PJ / PNC", "APLC", "IGF", "DGDA", "GUCE", "COGEBISCO", "OSCEP", "DGM", "ICCN", "DIAF", "OAD", "Min. Défense", "DGI", "ANR", "Auditorat Général", "Cour des comptes"];
+      const CX = 960, CY = 540, RAD = 380;
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#f11-stage", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 0);
+
+      // « KWIKAMA est hébergée sur les serveurs de l'État, conformément au Code du numérique et à la norme ISO vingt-sept mille un. »
+      tl.fromTo("#f11-k1", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.6);
+      [["#f11-s1", "#f11-r1", 2.06], ["#f11-s2", "#f11-r2", 3.84], ["#f11-s3", "#f11-r3", 5.46]].forEach(([s, r, t]) => {
+        tl.fromTo(s, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, t - 0.1);
+        tl.fromTo(r, { scaleX: 0 }, { scaleX: 1, duration: 0.8, ease: "power2.inOut" }, t + 0.1);
+      });
+      // « Elle sert trois résultats immédiats du GAFI : … utilisé, … poursuivies, … confisqués. »
+      tl.fromTo("#f11-k2", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 7.3);
+      [["#f11-g1", 9.42], ["#f11-g2", 11.76], ["#f11-g3", 13.62]].forEach(([g, t]) => tl.fromTo(g, { opacity: 0, x: 24 }, { opacity: 1, x: 0, duration: 0.6, ease: "power3.out" }, t - 0.1));
+      tl.to("#f11-texts", { opacity: 0, duration: 0.5, ease: "power1.in" }, 14.9);
+
+      // « Dix-huit institutions. » — the eighteen, reconnected around one centre
+      const nodes = NAMES.map((n, i) => {
+        const a = -Math.PI / 2 + (i / NAMES.length) * Math.PI * 2;
+        const x = CX + Math.cos(a) * RAD, y = CY + Math.sin(a) * RAD * 0.92;
+        const ln = document.createElementNS(NS, "line");
+        ln.setAttribute("x1", CX); ln.setAttribute("y1", CY); ln.setAttribute("x2", x); ln.setAttribute("y2", y);
+        ln.setAttribute("stroke", "#D8A828"); ln.setAttribute("stroke-width", "2"); ln.setAttribute("pathLength", "1"); ln.setAttribute("stroke-dasharray", "1"); ln.setAttribute("stroke-dashoffset", "1"); ln.id = "f11-l" + i;
+        q("#f11-ring").appendChild(ln);
+        const c = document.createElementNS(NS, "circle");
+        c.setAttribute("cx", x); c.setAttribute("cy", y); c.setAttribute("r", "10"); c.setAttribute("fill", "#D8A828"); c.id = "f11-c" + i;
+        q("#f11-ring").appendChild(c);
+        const lab = document.createElement("div");
+        lab.className = "f11-name"; lab.id = "f11-n" + i; lab.textContent = n;
+        const ca = Math.cos(a), sa = Math.sin(a);
+        if (ca > 0.3) { lab.style.left = (x + 22) + "px"; lab.style.top = (y - 14) + "px"; lab.style.textAlign = "left"; }
+        else if (ca < -0.3) { lab.style.left = (x - 322) + "px"; lab.style.top = (y - 14) + "px"; lab.style.textAlign = "right"; }
+        else { lab.style.left = (x - 150) + "px"; lab.style.top = (y + (sa < 0 ? -50 : 22)) + "px"; lab.style.textAlign = "center"; }
+        q("#f11-names").appendChild(lab);
+        return { ln, c, lab, dx: CX - x, dy: CY - y };
+      });
+      const hub = document.createElementNS(NS, "circle");
+      hub.setAttribute("cx", CX); hub.setAttribute("cy", CY); hub.setAttribute("r", "64"); hub.setAttribute("fill", "#052649"); hub.setAttribute("stroke", "#D8A828"); hub.setAttribute("stroke-width", "3"); hub.id = "f11-hub";
+      q("#f11-ring").appendChild(hub);
+      tl.fromTo(hub, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 15.2);
+      nodes.forEach((n, i) => {
+        const t = 15.25 + i * 0.02;
+        tl.fromTo(n.ln, { attr: { "stroke-dashoffset": 1 } }, { attr: { "stroke-dashoffset": 0 }, duration: 0.5, ease: "power2.out" }, t);
+        tl.fromTo([n.c, n.lab], { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power1.out" }, t + 0.15);
+        // « Un seul dossier. » — everything gathers into one
+        tl.to(n.c, { x: n.dx, y: n.dy, duration: 0.75, ease: "power2.in" }, 17.15 + i * 0.01);
+        tl.to(n.lab, { opacity: 0, duration: 0.3, ease: "power1.in" }, 17.15);
+        tl.to(n.ln, { attr: { "stroke-dashoffset": 1 }, duration: 0.7, ease: "power2.in" }, 17.15);
+      });
+      tl.to("#f11-net", { opacity: 0, duration: 0.35, ease: "power1.in" }, 17.8);
+      // « KWIKAMA — le bouclier numérique de l'UNICEP. »
+      tl.fromTo("#f11-emblem", { opacity: 0, x: 320, scale: 0.6 }, { opacity: 1, x: 0, scale: 1, duration: 0.9, ease: "power2.out" }, 17.85);
+      tl.fromTo("#f11-word", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 18.2);
+      tl.fromTo("#f11-sign", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 19.1);
+      tl.fromTo("#f11-lockup", { scale: 1 }, { scale: 1.03, duration: 5.8, ease: "none" }, 18.1);
+
+      window.__timelines["f11-cloture"] = tl;
+    })();
+  </script>
+</template>

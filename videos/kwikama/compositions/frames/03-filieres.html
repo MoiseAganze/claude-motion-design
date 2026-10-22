@@ -1,0 +1,85 @@
+<template>
+  <style>
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-latin.woff2") format("woff2"); font-weight: 400 700; font-display: block; }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #031829; font-family: "Inter", sans-serif; }
+    .f03-full { position: absolute; inset: 0; }
+    .f03-cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; }
+    .f03-shot { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+    .f03-off { opacity: 0; }
+    .f03-half { position: absolute; top: 0; width: 958px; height: 1080px; overflow: hidden; }
+    .f03-half img { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+    .f03-split { position: absolute; inset: 0; background: #031829; }
+    .f03-gap { position: absolute; left: 958px; top: 0; width: 4px; height: 1080px; background: #D8A828; transform-origin: 50% 0; }
+    .f03-label { position: absolute; bottom: 0; height: 92px; width: 958px; background: #052649; display: flex; align-items: center; padding-left: 40px; box-sizing: border-box; font-weight: 600; font-size: 30px; color: #F4F1EA; }
+    .f03-label b { color: #D8A828; font-weight: 700; margin-left: 14px; }
+    .f03-dim { position: absolute; left: 974px; width: 232px; height: 40px; background: #031829; opacity: 0; }
+  </style>
+
+  <div id="root" data-composition-id="f03-filieres" data-width="1920" data-height="1080">
+    <div id="f03-stage" class="f03-full clip" data-start="0" data-duration="21.06" data-track-index="0">
+      <div id="f03-cam" class="f03-cam" data-layout-allow-overflow data-layout-allow-overlap>
+        <img id="f03-unicep" class="f03-shot" src="capture/f03/unicep.png" alt="" />
+        <img id="f03-aplc" class="f03-shot f03-off" src="capture/f03/aplc.png" alt="" />
+        <img id="f03-unicep2" class="f03-shot f03-off" src="capture/f03/unicep-again.png" alt="" />
+        <div id="f03-fx"></div>
+      </div>
+      <div id="f03-split" class="f03-split f03-off" data-layout-allow-overlap>
+        <div class="f03-half" style="left:0" data-layout-allow-overflow><img src="capture/f03/dash-pointfocal.png" alt="" /></div>
+        <div class="f03-half" style="left:962px" data-layout-allow-overflow><img src="capture/f03/dash-coord.png" alt="" /></div>
+        <div id="f03-dims"></div>
+        <div id="f03-gap" class="f03-gap"></div>
+        <div class="f03-label" style="left:0">Point focal · CENAREF <b>5 modules</b></div>
+        <div class="f03-label" style="left:962px">Coordonnateur UNICEP <b>15 modules</b></div>
+        <div id="f03-fx2"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const R = document.querySelector('[data-composition-id="f03-filieres"]');
+      const q = (s) => R.querySelector(s);
+      const cardU = { x: 1006, y: 140, w: 342, h: 202 }, cardA = { x: 1360, y: 140, w: 342, h: 202 };
+      const fx = q("#f03-fx");
+      const mU = KIT.box("f03-m-u", cardU, 6), mA = KIT.box("f03-m-a", cardA, 6);
+      fx.appendChild(mU); fx.appendChild(mA);
+      const k = KIT.mount(fx, "f03");
+      const cam = q("#f03-cam");
+      // modules the coordinator has and the CENAREF focal point does not (sidebar rows, viewport y)
+      const ABSENT = [["Signalements", 180], ["Vérification", 226], ["Dossiers", 272], ["Preuves", 318], ["Enquête financière", 364], ["Analyse assistée", 410], ["Avoirs", 456], ["Rapports", 548], ["Passerelles", 640], ["Risques", 686], ["Suivi du projet", 732]];
+      const dims = ABSENT.map(([n, y], i) => { const d = document.createElement("div"); d.className = "f03-dim"; d.id = "f03-dim-" + i; d.style.top = (y + 2) + "px"; q("#f03-dims").appendChild(d); return d; });
+      const mPanel = KIT.box("f03-m-req", { x: 148, y: 390, w: 790, h: 60 }, 6);
+      const mDos = KIT.box("f03-m-dos", { x: 974, y: 274, w: 232, h: 36 }, 4);
+      q("#f03-fx2").appendChild(mPanel); q("#f03-fx2").appendChild(mDos);
+
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#f03-stage", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 0);
+      tl.fromTo(cam, KIT.cam(1354, 470, 1.3), { ...KIT.cam(1354, 470, 1.3), duration: 0.01 }, 0);
+      // « L'APLC reçoit des signalements… » — the APLC entry: the role list changes
+      KIT.cursorAt(tl, k, 1250, 760, 0.3);
+      KIT.move(tl, k, 1531, 236, 0.55, 0.9);
+      KIT.click(tl, k, 1531, 236, 1.5);
+      KIT.show(tl, "#f03-aplc", 1.58, 0.3);
+      KIT.camTo(tl, cam, 1354, 600, 1.3, 2.2, 1.4);
+      // « L'UNICEP, elle, est saisie par une décision d'autorité. »
+      KIT.camTo(tl, cam, 1354, 470, 1.3, 3.8, 1.0);
+      KIT.move(tl, k, 1177, 236, 3.9, 0.9);
+      KIT.click(tl, k, 1177, 236, 4.9);
+      KIT.show(tl, "#f03-unicep2", 4.98, 0.3);
+      // « Deux procédures, deux entrées : la plateforme porte les deux et ne les confond jamais. »
+      KIT.hide(tl, k, 6.6);
+      KIT.camTo(tl, cam, 1354, 330, 1.3, 6.8, 1.3);
+      KIT.mark(tl, mU, 7.98, 3.4);
+      KIT.mark(tl, mA, 8.94, 2.44);
+      // « Et chacun n'y voit que ce qui le concerne. » — 5 modules against 15
+      KIT.show(tl, "#f03-split", 12.3, 0.6);
+      tl.fromTo("#f03-gap", { scaleY: 0 }, { scaleY: 1, duration: 0.7, ease: "power2.out" }, 12.5);
+      dims.forEach((d, i) => tl.fromTo(d, { opacity: 0 }, { opacity: 0.82, duration: 0.35, ease: "power1.inOut" }, 13.4 + i * 0.16));
+      // « …accède aux réquisitions qui lui sont adressées. Pas au fonds de dossiers. »
+      KIT.mark(tl, mPanel, 17.1, null);
+      KIT.mark(tl, mDos, 19.0, null);
+
+      window.__timelines["f03-filieres"] = tl;
+    })();
+  </script>
+</template>

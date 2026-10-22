@@ -1,0 +1,69 @@
+<template>
+  <style>
+    @font-face { font-family: "Inter"; src: url("assets/fonts/Inter-latin.woff2") format("woff2"); font-weight: 400 700; font-display: block; }
+    #root { position: absolute; inset: 0; overflow: hidden; background: #031829; font-family: "Inter", sans-serif; }
+    .f05-full { position: absolute; inset: 0; }
+    .f05-cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; }
+    .f05-dim { position: absolute; inset: 0; background: #031829; opacity: 0; }
+    .f05-inset { position: absolute; left: 409px; top: 352px; width: 1102px; height: 300px; opacity: 0; }
+    .f05-label { position: absolute; left: 0; top: -8px; font-weight: 700; font-size: 28px; letter-spacing: 0.08em; text-transform: uppercase; color: #D8A828; }
+    .f05-card { position: absolute; left: 0; top: 48px; width: 1102px; height: 236px; background: #FFFFFF; border-radius: 8px; box-shadow: 0 24px 60px rgba(3, 24, 41, 0.55); overflow: hidden; }
+    .f05-row { position: absolute; left: 40px; width: 1022px; height: 68px; overflow: hidden; background: #FFFFFF; }
+    .f05-row img { position: absolute; left: 0; top: 0; width: 1022px; height: 68px; }
+  </style>
+
+  <div id="root" data-composition-id="f05-passerelles" data-width="1920" data-height="1080">
+    <div id="f05-stage" class="f05-full clip" data-start="0" data-duration="19.96" data-track-index="0">
+      <div id="f05-cam" class="f05-cam" data-layout-allow-overflow data-layout-allow-overlap></div>
+      <div id="f05-dim" class="f05-dim"></div>
+      <div id="f05-inset" class="f05-inset" data-layout-allow-overlap>
+        <div class="f05-label">Fiche avoir AVR-2026-072 · module Avoirs</div>
+        <div class="f05-card">
+          <div id="f05-r2" class="f05-row" style="top:44px"><img src="capture/f05/row-be.png" alt="" /></div>
+          <div id="f05-r1" class="f05-row" style="top:44px"><img src="capture/f05/row-proprio.png" alt="" /></div>
+        </div>
+        <div id="f05-be" style="position:absolute;left:456px;top:168px;width:618px;height:80px;border:3px solid #D8A828;border-radius:8px;opacity:0;"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const R = document.querySelector('[data-composition-id="f05-passerelles"]');
+      const q = (s) => R.querySelector(s);
+      const cam = q("#f05-cam");
+      const pg = KIT.page(cam, "f05-pg", "capture/f05/top.png", "capture/f05/tall.png", 1881);
+      const D = { kpi: { x: 288, y: 313, w: 388, h: 123 }, tofo: { x: 288, y: 578, w: 1600, h: 325 }, itie: { x: 288, y: 919, w: 1600, h: 325 }, guce: { x: 288, y: 1259, w: 1600, h: 325 }, line: { x: 313, y: 1395, w: 1550, h: 22 } };
+      const M = {};
+      for (const [k, b] of Object.entries(D)) { M[k] = KIT.box("f05-m-" + k, b, k === "line" ? 8 : 4); pg.layer.appendChild(M[k]); }
+
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#f05-stage", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, 0);
+      tl.fromTo(pg.scroll, { y: 0 }, { y: 0, duration: 0.01 }, 0);
+      tl.fromTo(cam, KIT.cam(1088, 420, 1.05), { ...KIT.cam(1088, 420, 1.12), duration: 4.8, ease: "power1.inOut" }, 0);
+      // « KWIKAMA interroge les registres de l'État : »
+      KIT.mark(tl, M.kpi, 3.5, 1.4);
+      // « TOFONGOLAMISO pour les marchés publics, »
+      KIT.scrollTo(tl, pg, 420, 4.6, 1.0);
+      KIT.camTo(tl, cam, 1088, 540, 1.05, 4.6, 1.0);
+      KIT.mark(tl, M.tofo, 5.22, 2.0);
+      // « l'ITIE pour les paiements du secteur extractif, »
+      KIT.scrollTo(tl, pg, 640, 7.0, 0.9);
+      KIT.mark(tl, M.itie, 7.5, 2.2);
+      // « et le Guichet unique pour les bénéficiaires effectifs. »
+      KIT.scrollTo(tl, pg, 801, 9.7, 0.9);
+      KIT.mark(tl, M.guce, 10.36, 2.4);
+      KIT.camTo(tl, cam, 1088, 620, 1.3, 10.7, 1.3);
+      // « Sans ce dernier registre, une enquête s'arrête à une raison sociale. » — the card says it
+      KIT.mark(tl, M.line, 13.1, null);
+      // the real asset record: declared owner, then the natural person behind it
+      tl.fromTo("#f05-dim", { opacity: 0 }, { opacity: 0.72, duration: 0.5, ease: "power1.inOut" }, 14.25);
+      tl.fromTo("#f05-inset", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 14.4);
+      // « Avec lui, elle atteint une personne. » — the beneficial owner slides out from behind the company
+      tl.fromTo("#f05-r2", { y: 0 }, { y: 82, duration: 0.9, ease: "power3.out" }, 16.7);
+      KIT.mark(tl, "#f05-be", 18.1, null);
+
+      window.__timelines["f05-passerelles"] = tl;
+    })();
+  </script>
+</template>
