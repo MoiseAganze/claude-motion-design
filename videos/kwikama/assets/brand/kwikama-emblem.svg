@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 552 692" width="552" height="692">
+  <defs>
+    <mask id="em-notch" maskUnits="userSpaceOnUse" x="0" y="0" width="552" height="692">
+      <rect width="552" height="692" fill="#fff"/>
+      <rect x="93" y="562" width="79" height="140" fill="#000"/>
+    </mask>
+    <clipPath id="em-clip"><path d="M276 10 L544 128 L544 318 C544 470 440 590 276 684 C112 590 8 470 8 318 L8 128 Z"/></clipPath>
+  </defs>
+  <g id="em-shield" mask="url(#em-notch)">
+    <path d="M276 10 L544 128 L544 318 C544 470 440 590 276 684 C112 590 8 470 8 318 L8 128 Z" fill="#052649" stroke="#F4F1EA" stroke-width="14" stroke-linejoin="round"/>
+    <g clip-path="url(#em-clip)" stroke="#F4F1EA" stroke-width="14"><line x1="172" y1="560" x2="172" y2="700"/><line x1="93" y1="560" x2="93" y2="700"/></g>
+  </g>
+  <g id="em-net" stroke="#D8A828" stroke-width="7" stroke-linecap="round" fill="none">
+    <line id="em-e1" x1="330" y1="95" x2="480" y2="205"/>
+    <line id="em-e2" x1="330" y1="95" x2="290" y2="150"/>
+    <line id="em-e3" x1="480" y1="205" x2="277" y2="317"/>
+    <line id="em-e4" x1="277" y1="317" x2="452" y2="365"/>
+    <line id="em-e5" x1="480" y1="205" x2="452" y2="365"/>
+    <line id="em-e6" x1="452" y1="365" x2="512" y2="330"/>
+    <line id="em-e7" x1="452" y1="365" x2="430" y2="505"/>
+    <line id="em-e8" x1="210" y1="517" x2="332" y2="567"/>
+    <line id="em-e9" x1="210" y1="517" x2="262" y2="430"/>
+    <line id="em-e10" x1="210" y1="517" x2="150" y2="482"/>
+    <line id="em-e11" x1="332" y1="567" x2="356" y2="518"/>
+  </g>
+  <g id="em-k" fill="#F4F1EA">
+    <path d="M100 98 L165 68 L165 562 L100 562 Z"/>
+    <path d="M165 270 L292 150 L376 150 L236 306 L165 347 Z"/>
+    <path d="M165 347 L236 306 L466 532 L414 582 Z"/>
+  </g>
+  <g id="em-nodes" fill="#D8A828">
+    <circle id="em-n1" cx="330" cy="95" r="18"/>
+    <circle id="em-n2" cx="480" cy="205" r="20"/>
+    <circle id="em-n3" cx="277" cy="317" r="12"/>
+    <circle id="em-n4" cx="452" cy="365" r="24"/>
+    <circle id="em-n5" cx="512" cy="330" r="11"/>
+    <circle id="em-n6" cx="210" cy="517" r="20"/>
+    <circle id="em-n7" cx="332" cy="567" r="17"/>
+  </g>
+</svg>

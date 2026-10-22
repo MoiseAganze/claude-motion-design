@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "preferences": {
+    "destination": {
+      "value": "youtube",
+      "confirmed_in": [
+        "kwikama"
+      ],
+      "updated_at": "2026-10-22T11:03:49.810Z"
+    },
+    "aspect": {
+      "value": "1920x1080",
+      "confirmed_in": [
+        "kwikama"
+      ],
+      "updated_at": "2026-10-22T11:03:49.868Z"
+    },
+    "language": {
+      "value": "fr",
+      "confirmed_in": [
+        "kwikama"
+      ],
+      "updated_at": "2026-10-22T11:03:49.931Z"
+    },
+    "flow": {
+      "value": "automation",
+      "confirmed_in": [
+        "kwikama"
+      ],
+      "updated_at": "2026-10-22T11:03:49.995Z"
+    },
+    "storyboard": {
+      "value": "yes",
+      "confirmed_in": [
+        "kwikama"
+      ],
+      "updated_at": "2026-10-22T11:03:50.081Z"
+    },
+    "voice": {
+      "value": "elevenlabs:McVZB9hVxVSk3Equu8EH",
+      "confirmed_in": [
+        "kwikama"
+      ],
+      "updated_at": "2026-10-22T11:03:50.142Z"
+    }
+  },
+  "sightings": {}
+}
