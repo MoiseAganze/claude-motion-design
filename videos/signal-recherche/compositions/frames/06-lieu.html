@@ -1,0 +1,76 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/CormorantGaramond-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
+    @font-face { font-family: "Source Sans 3"; src: url("assets/fonts/SourceSans3-400.woff2") format("woff2"); font-weight: 400 700; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #FFFFFF; font-family: "Source Sans 3", sans-serif; }
+    .bg { position: absolute; inset: 0; background: radial-gradient(800px 900px at 50% 45%, rgba(0,127,255,0.26), rgba(0,27,61,0) 70%), #001B3D; }
+    .stripe { position: absolute; left: 0; top: 0; width: 1080px; height: 10px; background: linear-gradient(90deg, #007FFF 0 33%, #F7D117 33% 67%, #CE1126 67%); }
+    .steps { position: absolute; left: 70px; top: 150px; display: flex; gap: 14px; }
+    .steps b { width: 70px; height: 70px; border-radius: 50%; border: 4px solid #4D9FFF; display: flex; align-items: center; justify-content: center; font-size: 34px; color: #FFFFFF; box-sizing: border-box; }
+    .steps b.on { background: #0057B8; border-color: #0057B8; }
+    .card { position: absolute; left: 60px; top: 270px; width: 960px; height: 900px; border-radius: 28px; background: #FFFFFF; color: #0F2744; overflow: hidden; box-shadow: 0 30px 90px rgba(0,0,0,0.45); }
+    .card::before { content: ""; position: absolute; left: 0; top: 0; right: 0; height: 8px; background: linear-gradient(90deg, #007FFF, #F7D117, #CE1126); }
+    .sec { position: absolute; left: 44px; right: 44px; }
+    .lab { font-weight: 700; font-size: 34px; color: #0057B8; }
+    .lab i { font-style: normal; color: #64748B; font-weight: 600; font-size: 26px; letter-spacing: 0.08em; text-transform: uppercase; margin-right: 12px; }
+    .field { margin-top: 12px; height: 84px; border-radius: 14px; border: 3px solid #CBD5E1; display: flex; align-items: center; padding: 0 24px; font-size: 36px; font-weight: 600; color: #0F2744; box-sizing: border-box; white-space: nowrap; overflow: hidden; }
+    .field.on { border-color: #0057B8; }
+    .typed { display: inline-block; overflow: hidden; white-space: nowrap; vertical-align: bottom; width: 0; }
+    .list { position: absolute; left: 44px; right: 44px; top: 400px; z-index: 2; border-radius: 14px; border: 2px solid #CBD5E1; background: #FFFFFF; box-shadow: 0 14px 40px rgba(0,38,84,0.25); overflow: hidden; }
+    .list div { padding: 16px 22px; font-size: 28px; font-weight: 600; color: #334155; border-bottom: 1px solid #E2E8F0; }
+    .list div.hit { background: #E8F4FF; color: #003A7A; font-weight: 700; }
+    .radios { display: flex; gap: 14px; margin-top: 12px; flex-wrap: wrap; }
+    .radios span { padding: 12px 22px; border-radius: 12px; border: 3px solid #CBD5E1; font-weight: 700; font-size: 30px; color: #475569; }
+    .badge { position: absolute; left: 44px; top: 800px; padding: 10px 22px; border-radius: 100px; background: #2BD47D; color: #001B3D; font-weight: 700; font-size: 30px; }
+  </style>
+
+  <div id="root" data-composition-id="06-lieu" data-width="1080" data-height="1920" data-duration="10.401">
+    <div id="f06-bg" class="bg clip" data-start="0" data-duration="10.401" data-track-index="0"></div>
+    <div id="f06-steps" class="steps clip" data-start="0" data-duration="10.401" data-track-index="1"><b class="on">1</b><b id="f06-s2">2</b><b id="f06-s3">3</b><b id="f06-s4">4</b><b>5</b><b>6</b><b>7</b><b>8</b></div>
+    <div id="f06-card" class="card clip" data-start="0" data-duration="10.401" data-track-index="2" data-layout-allow-overlap>
+      <div class="sec" style="top:44px"><div class="lab"><i>Étape 2</i>Province concernée</div><div class="field" id="f06-f1"><span class="typed" id="f06-t1">Kinshasa</span></div></div>
+      <div class="sec" style="top:244px"><div class="lab"><i>Étape 3</i>Établissement concerné</div><div class="field" id="f06-f2"><span class="typed" id="f06-t2" style="font-size:30px">Centre de Recherche en Eau et Environnement (CREE)</span><span class="typed" id="f06-q">CREE</span></div></div>
+      <div class="list" id="f06-list">
+        <div class="hit" id="f06-hit">Centre de Recherche en Eau et Environnement (CREE)</div>
+        <div>Centre de Recherche en Ecologie et Foresterie (CREF/Mabali)</div>
+        <div>Centre de Recherche sur l'Enseignement de la Mathématique (CREM)</div>
+      </div>
+      <div class="sec" style="top:470px"><div class="lab"><i>Étape 4</i>Personne, service ou structure concernée</div>
+        <div class="radios"><span>Une personne</span><span id="f06-r2">Un service</span><span>Une structure</span></div>
+        <div class="field" id="f06-f3"><span class="typed" id="f06-t3">Laboratoire d'analyse de la qualité des eaux</span></div></div>
+      <div class="badge" id="f06-badge">Sans accusation nominative</div>
+    </div>
+    <div id="f06-stripe" class="stripe clip" data-start="0" data-duration="10.401" data-track-index="3"></div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const on = { backgroundColor: "#0057B8", borderColor: "#0057B8", duration: 0.25 };
+      tl.fromTo("#f06-card", { opacity: 0, y: 100, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: "expo.out" }, 0);
+      tl.fromTo("#f06-steps", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 0.1);
+      // province
+      tl.to("#f06-s2", on, 0.4);
+      tl.to("#f06-f1", { borderColor: "#0057B8", duration: 0.2 }, 0.9);
+      tl.fromTo("#f06-t1", { width: 0 }, { width: 170, duration: 0.5, ease: "steps(8)" }, 1.0);
+      // établissement: type "CREE", pick it in the national referential
+      tl.to("#f06-s3", on, 2.0);
+      tl.to("#f06-f2", { borderColor: "#0057B8", duration: 0.2 }, 2.4);
+      tl.fromTo("#f06-q", { width: 0 }, { width: 110, duration: 0.5, ease: "steps(4)" }, 2.6);
+      tl.fromTo("#f06-list", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }, 3.2);
+      tl.fromTo("#f06-hit", { backgroundColor: "#FFFFFF" }, { backgroundColor: "#E8F4FF", duration: 0.2 }, 3.9);
+      tl.to("#f06-list", { opacity: 0, duration: 0.25 }, 4.6);
+      tl.to("#f06-q", { opacity: 0, duration: 0.05 }, 4.6);
+      tl.fromTo("#f06-t2", { width: 0 }, { width: 840, duration: 0.3, ease: "power2.out" }, 4.62);
+      // personne concernée: un service
+      tl.to("#f06-s4", on, 5.9);
+      tl.to("#f06-r2", { backgroundColor: "#0057B8", borderColor: "#0057B8", color: "#FFFFFF", duration: 0.25 }, 6.75);
+      tl.to("#f06-f3", { borderColor: "#0057B8", duration: 0.2 }, 6.9);
+      tl.fromTo("#f06-t3", { width: 0 }, { width: 820, duration: 1.0, ease: "steps(30)" }, 7.0);
+      tl.fromTo("#f06-badge", { opacity: 0, scale: 0.8, transformOrigin: "left center" }, { opacity: 1, scale: 1, duration: 0.4, ease: "expo.out" }, 7.75);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["06-lieu"] = tl;
+    })();
+  </script>
+</template>

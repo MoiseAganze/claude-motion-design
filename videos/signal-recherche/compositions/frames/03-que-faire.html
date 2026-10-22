@@ -1,0 +1,28 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/CormorantGaramond-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #FFFFFF; font-family: "Cormorant Garamond", serif; }
+    .bg { position: absolute; inset: 0; background: #00142E; }
+    .q { position: absolute; left: 0; right: 0; top: 600px; text-align: center; font-weight: 700; font-size: 190px; line-height: 1; }
+    .q span { color: #F7D117; }
+    .dot { position: absolute; left: 520px; top: 900px; width: 40px; height: 40px; border-radius: 50%; background: #007FFF; box-shadow: 0 0 60px 20px rgba(0,127,255,0.55); }
+  </style>
+
+  <div id="root" data-composition-id="03-que-faire" data-width="1080" data-height="1920" data-duration="1.825">
+    <div id="f03-bg" class="bg clip" data-start="0" data-duration="1.825" data-track-index="0"></div>
+    <div id="f03-q" class="q clip" data-start="0" data-duration="1.825" data-track-index="1">Que faire <span>?</span></div>
+    <div id="f03-dot" class="dot clip" data-start="0" data-duration="1.825" data-track-index="2"></div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#f03-q", { opacity: 0.3, scale: 1.25, filter: "blur(12px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.45, ease: "expo.out" }, 0);
+      tl.fromTo("#f03-dot", { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.4, ease: "expo.out" }, 0.75);
+      tl.to("#f03-dot", { scale: 2.2, duration: 0.25, ease: "power2.in" }, 1.17);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["03-que-faire"] = tl;
+    })();
+  </script>
+</template>

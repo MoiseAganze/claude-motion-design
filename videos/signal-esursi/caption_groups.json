@@ -1,5 +1,5 @@
 {
-  "total_duration_s": 77.472,
+  "total_duration_s": 80.176,
   "width": 1080,
   "height": 1920,
   "groups": [
@@ -513,987 +513,1032 @@
     {
       "id": "caption-group-21",
       "frame": 6,
-      "start": 24.523,
-      "end": 25.999,
-      "text": "Neuf catégories officielles.",
+      "start": 24.483,
+      "end": 26.202,
+      "text": "Treize catégories officielles.",
       "words": [
         {
           "id": "caption-word-21-0",
-          "text": "Neuf",
-          "start": 24.523,
-          "end": 24.777
+          "text": "Treize",
+          "start": 24.483,
+          "end": 24.859
         },
         {
           "id": "caption-word-21-1",
           "text": "catégories",
-          "start": 24.777,
-          "end": 25.286
+          "start": 24.859,
+          "end": 25.423
         },
         {
           "id": "caption-word-21-2",
           "text": "officielles.",
-          "start": 25.286,
-          "end": 25.879
+          "start": 25.423,
+          "end": 26.082
         }
       ]
     },
     {
       "id": "caption-group-22",
       "frame": 6,
-      "start": 26.114,
-      "end": 26.819,
-      "text": "Corruption,",
+      "start": 26.477,
+      "end": 26.852,
+      "text": "De la",
       "words": [
         {
           "id": "caption-word-22-0",
-          "text": "Corruption,",
-          "start": 26.114,
-          "end": 26.819
+          "text": "De",
+          "start": 26.477,
+          "end": 26.665
+        },
+        {
+          "id": "caption-word-22-1",
+          "text": "la",
+          "start": 26.665,
+          "end": 26.852
         }
       ]
     },
     {
       "id": "caption-group-23",
       "frame": 6,
-      "start": 26.819,
-      "end": 27.307,
-      "text": "fraude,",
+      "start": 26.852,
+      "end": 27.88,
+      "text": "corruption au faux",
       "words": [
         {
           "id": "caption-word-23-0",
-          "text": "fraude,",
-          "start": 26.819,
-          "end": 27.307
+          "text": "corruption",
+          "start": 26.852,
+          "end": 27.413
+        },
+        {
+          "id": "caption-word-23-1",
+          "text": "au",
+          "start": 27.413,
+          "end": 27.6
+        },
+        {
+          "id": "caption-word-23-2",
+          "text": "faux",
+          "start": 27.6,
+          "end": 27.88
         }
       ]
     },
     {
       "id": "caption-group-24",
       "frame": 6,
-      "start": 27.307,
-      "end": 28.175,
-      "text": "faux diplôme,",
+      "start": 27.88,
+      "end": 28.468,
+      "text": "diplôme,",
       "words": [
         {
           "id": "caption-word-24-0",
-          "text": "faux",
-          "start": 27.307,
-          "end": 27.632
-        },
-        {
-          "id": "caption-word-24-1",
           "text": "diplôme,",
-          "start": 27.632,
-          "end": 28.175
+          "start": 27.88,
+          "end": 28.348
         }
       ]
     },
     {
       "id": "caption-group-25",
       "frame": 6,
-      "start": 28.175,
-      "end": 29.054,
-      "text": "harcèlement…",
+      "start": 28.571,
+      "end": 29.409,
+      "text": "du harcèlement",
       "words": [
         {
           "id": "caption-word-25-0",
-          "text": "harcèlement…",
-          "start": 28.175,
-          "end": 28.934
+          "text": "du",
+          "start": 28.571,
+          "end": 28.769
+        },
+        {
+          "id": "caption-word-25-1",
+          "text": "harcèlement",
+          "start": 28.769,
+          "end": 29.409
         }
       ]
     },
     {
       "id": "caption-group-26",
-      "frame": 7,
-      "start": 30.254,
-      "end": 31.395,
-      "text": "Huit étapes guidées.",
+      "frame": 6,
+      "start": 29.409,
+      "end": 31.058,
+      "text": "à l'intégrité scientifique.",
       "words": [
         {
           "id": "caption-word-26-0",
-          "text": "Huit",
-          "start": 30.254,
-          "end": 30.509
+          "text": "à",
+          "start": 29.409,
+          "end": 29.557
         },
         {
           "id": "caption-word-26-1",
-          "text": "étapes",
-          "start": 30.509,
-          "end": 30.85
+          "text": "l'intégrité",
+          "start": 29.557,
+          "end": 30.198
         },
         {
           "id": "caption-word-26-2",
-          "text": "guidées.",
-          "start": 30.85,
-          "end": 31.275
+          "text": "scientifique.",
+          "start": 30.198,
+          "end": 30.938
         }
       ]
     },
     {
       "id": "caption-group-27",
       "frame": 7,
-      "start": 31.502,
-      "end": 32.233,
-      "text": "La province,",
+      "start": 32.958,
+      "end": 34.099,
+      "text": "Huit étapes guidées.",
       "words": [
         {
           "id": "caption-word-27-0",
-          "text": "La",
-          "start": 31.502,
-          "end": 31.697
+          "text": "Huit",
+          "start": 32.958,
+          "end": 33.213
         },
         {
           "id": "caption-word-27-1",
-          "text": "province,",
-          "start": 31.697,
-          "end": 32.233
+          "text": "étapes",
+          "start": 33.213,
+          "end": 33.554
+        },
+        {
+          "id": "caption-word-27-2",
+          "text": "guidées.",
+          "start": 33.554,
+          "end": 33.979
         }
       ]
     },
     {
       "id": "caption-group-28",
       "frame": 7,
-      "start": 32.233,
-      "end": 33.111,
-      "text": "l'établissement,",
+      "start": 34.206,
+      "end": 34.937,
+      "text": "La province,",
       "words": [
         {
           "id": "caption-word-28-0",
-          "text": "l'établissement,",
-          "start": 32.233,
-          "end": 33.111
+          "text": "La",
+          "start": 34.206,
+          "end": 34.401
+        },
+        {
+          "id": "caption-word-28-1",
+          "text": "province,",
+          "start": 34.401,
+          "end": 34.937
         }
       ]
     },
     {
       "id": "caption-group-29",
       "frame": 7,
-      "start": 33.111,
-      "end": 33.864,
-      "text": "les faits,",
+      "start": 34.937,
+      "end": 35.815,
+      "text": "l'établissement,",
       "words": [
         {
           "id": "caption-word-29-0",
-          "text": "les",
-          "start": 33.111,
-          "end": 33.354
-        },
-        {
-          "id": "caption-word-29-1",
-          "text": "faits,",
-          "start": 33.354,
-          "end": 33.744
+          "text": "l'établissement,",
+          "start": 34.937,
+          "end": 35.815
         }
       ]
     },
     {
       "id": "caption-group-30",
       "frame": 7,
-      "start": 33.979,
-      "end": 34.731,
-      "text": "et vos preuves.",
+      "start": 35.815,
+      "end": 36.568,
+      "text": "les faits,",
       "words": [
         {
           "id": "caption-word-30-0",
-          "text": "et",
-          "start": 33.979,
-          "end": 34.112
+          "text": "les",
+          "start": 35.815,
+          "end": 36.058
         },
         {
           "id": "caption-word-30-1",
-          "text": "vos",
-          "start": 34.112,
-          "end": 34.278
-        },
-        {
-          "id": "caption-word-30-2",
-          "text": "preuves.",
-          "start": 34.278,
-          "end": 34.611
+          "text": "faits,",
+          "start": 36.058,
+          "end": 36.448
         }
       ]
     },
     {
       "id": "caption-group-31",
-      "frame": 8,
-      "start": 35.931,
-      "end": 37.089,
-      "text": "Anonyme ou identifié",
+      "frame": 7,
+      "start": 36.683,
+      "end": 37.435,
+      "text": "et vos preuves.",
       "words": [
         {
           "id": "caption-word-31-0",
-          "text": "Anonyme",
-          "start": 35.931,
-          "end": 36.32
+          "text": "et",
+          "start": 36.683,
+          "end": 36.816
         },
         {
           "id": "caption-word-31-1",
-          "text": "ou",
-          "start": 36.32,
-          "end": 36.493
+          "text": "vos",
+          "start": 36.816,
+          "end": 36.982
         },
         {
           "id": "caption-word-31-2",
-          "text": "identifié",
-          "start": 36.493,
-          "end": 36.969
+          "text": "preuves.",
+          "start": 36.982,
+          "end": 37.315
         }
       ]
     },
     {
       "id": "caption-group-32",
       "frame": 8,
-      "start": 37.099,
-      "end": 37.661,
-      "text": "c'est vous",
+      "start": 38.635,
+      "end": 39.793,
+      "text": "Anonyme ou identifié",
       "words": [
         {
           "id": "caption-word-32-0",
-          "text": "c'est",
-          "start": 37.099,
-          "end": 37.401
+          "text": "Anonyme",
+          "start": 38.635,
+          "end": 39.024
         },
         {
           "id": "caption-word-32-1",
-          "text": "vous",
-          "start": 37.401,
-          "end": 37.661
+          "text": "ou",
+          "start": 39.024,
+          "end": 39.197
+        },
+        {
+          "id": "caption-word-32-2",
+          "text": "identifié",
+          "start": 39.197,
+          "end": 39.673
         }
       ]
     },
     {
       "id": "caption-group-33",
       "frame": 8,
-      "start": 37.661,
-      "end": 38.559,
-      "text": "qui choisissez.",
+      "start": 39.803,
+      "end": 40.365,
+      "text": "c'est vous",
       "words": [
         {
           "id": "caption-word-33-0",
-          "text": "qui",
-          "start": 37.661,
-          "end": 37.877
+          "text": "c'est",
+          "start": 39.803,
+          "end": 40.105
         },
         {
           "id": "caption-word-33-1",
-          "text": "choisissez.",
-          "start": 37.877,
-          "end": 38.439
+          "text": "vous",
+          "start": 40.105,
+          "end": 40.365
         }
       ]
     },
     {
       "id": "caption-group-34",
       "frame": 8,
-      "start": 38.69,
-      "end": 39.065,
-      "text": "En mode",
+      "start": 40.365,
+      "end": 41.263,
+      "text": "qui choisissez.",
       "words": [
         {
           "id": "caption-word-34-0",
-          "text": "En",
-          "start": 38.69,
-          "end": 38.84
+          "text": "qui",
+          "start": 40.365,
+          "end": 40.581
         },
         {
           "id": "caption-word-34-1",
-          "text": "mode",
-          "start": 38.84,
-          "end": 39.065
+          "text": "choisissez.",
+          "start": 40.581,
+          "end": 41.143
         }
       ]
     },
     {
       "id": "caption-group-35",
       "frame": 8,
-      "start": 39.065,
-      "end": 39.44,
-      "text": "anonyme,",
+      "start": 41.394,
+      "end": 41.769,
+      "text": "En mode",
       "words": [
         {
           "id": "caption-word-35-0",
-          "text": "anonyme,",
-          "start": 39.065,
-          "end": 39.44
+          "text": "En",
+          "start": 41.394,
+          "end": 41.544
+        },
+        {
+          "id": "caption-word-35-1",
+          "text": "mode",
+          "start": 41.544,
+          "end": 41.769
         }
       ]
     },
     {
       "id": "caption-group-36",
       "frame": 8,
-      "start": 39.44,
-      "end": 40.527,
-      "text": "aucune donnée personnelle",
+      "start": 41.769,
+      "end": 42.144,
+      "text": "anonyme,",
       "words": [
         {
           "id": "caption-word-36-0",
-          "text": "aucune",
-          "start": 39.44,
-          "end": 39.74
-        },
-        {
-          "id": "caption-word-36-1",
-          "text": "donnée",
-          "start": 39.74,
-          "end": 40.04
-        },
-        {
-          "id": "caption-word-36-2",
-          "text": "personnelle",
-          "start": 40.04,
-          "end": 40.527
+          "text": "anonyme,",
+          "start": 41.769,
+          "end": 42.144
         }
       ]
     },
     {
       "id": "caption-group-37",
       "frame": 8,
-      "start": 40.527,
-      "end": 41.359,
-      "text": "n'est conservée.",
+      "start": 42.144,
+      "end": 43.231,
+      "text": "aucune donnée personnelle",
       "words": [
         {
           "id": "caption-word-37-0",
-          "text": "n'est",
-          "start": 40.527,
-          "end": 40.789
+          "text": "aucune",
+          "start": 42.144,
+          "end": 42.444
         },
         {
           "id": "caption-word-37-1",
-          "text": "conservée.",
-          "start": 40.789,
-          "end": 41.239
+          "text": "donnée",
+          "start": 42.444,
+          "end": 42.744
+        },
+        {
+          "id": "caption-word-37-2",
+          "text": "personnelle",
+          "start": 42.744,
+          "end": 43.231
         }
       ]
     },
     {
       "id": "caption-group-38",
-      "frame": 9,
-      "start": 42.659,
-      "end": 43.231,
-      "text": "Vous recevez",
+      "frame": 8,
+      "start": 43.231,
+      "end": 44.063,
+      "text": "n'est conservée.",
       "words": [
         {
           "id": "caption-word-38-0",
-          "text": "Vous",
-          "start": 42.659,
-          "end": 42.888
+          "text": "n'est",
+          "start": 43.231,
+          "end": 43.493
         },
         {
           "id": "caption-word-38-1",
-          "text": "recevez",
-          "start": 42.888,
-          "end": 43.231
+          "text": "conservée.",
+          "start": 43.493,
+          "end": 43.943
         }
       ]
     },
     {
       "id": "caption-group-39",
       "frame": 9,
-      "start": 43.231,
-      "end": 43.842,
-      "text": "une référence",
+      "start": 45.363,
+      "end": 45.935,
+      "text": "Vous recevez",
       "words": [
         {
           "id": "caption-word-39-0",
-          "text": "une",
-          "start": 43.231,
-          "end": 43.422
+          "text": "Vous",
+          "start": 45.363,
+          "end": 45.592
         },
         {
           "id": "caption-word-39-1",
-          "text": "référence",
-          "start": 43.422,
-          "end": 43.842
+          "text": "recevez",
+          "start": 45.592,
+          "end": 45.935
         }
       ]
     },
     {
       "id": "caption-group-40",
       "frame": 9,
-      "start": 43.842,
-      "end": 44.147,
-      "text": "et un",
+      "start": 45.935,
+      "end": 46.546,
+      "text": "une référence",
       "words": [
         {
           "id": "caption-word-40-0",
-          "text": "et",
-          "start": 43.842,
-          "end": 43.994
+          "text": "une",
+          "start": 45.935,
+          "end": 46.126
         },
         {
           "id": "caption-word-40-1",
-          "text": "un",
-          "start": 43.994,
-          "end": 44.147
+          "text": "référence",
+          "start": 46.126,
+          "end": 46.546
         }
       ]
     },
     {
       "id": "caption-group-41",
       "frame": 9,
-      "start": 44.147,
-      "end": 44.528,
-      "text": "code de",
+      "start": 46.546,
+      "end": 46.851,
+      "text": "et un",
       "words": [
         {
           "id": "caption-word-41-0",
-          "text": "code",
-          "start": 44.147,
-          "end": 44.376
+          "text": "et",
+          "start": 46.546,
+          "end": 46.698
         },
         {
           "id": "caption-word-41-1",
-          "text": "de",
-          "start": 44.376,
-          "end": 44.528
+          "text": "un",
+          "start": 46.698,
+          "end": 46.851
         }
       ]
     },
     {
       "id": "caption-group-42",
       "frame": 9,
-      "start": 44.528,
-      "end": 44.953,
-      "text": "suivi.",
+      "start": 46.851,
+      "end": 47.232,
+      "text": "code de",
       "words": [
         {
           "id": "caption-word-42-0",
-          "text": "suivi.",
-          "start": 44.528,
-          "end": 44.833
+          "text": "code",
+          "start": 46.851,
+          "end": 47.08
+        },
+        {
+          "id": "caption-word-42-1",
+          "text": "de",
+          "start": 47.08,
+          "end": 47.232
         }
       ]
     },
     {
       "id": "caption-group-43",
       "frame": 9,
-      "start": 45.079,
-      "end": 45.513,
-      "text": "Et vous",
+      "start": 47.232,
+      "end": 47.657,
+      "text": "suivi.",
       "words": [
         {
           "id": "caption-word-43-0",
-          "text": "Et",
-          "start": 45.079,
-          "end": 45.252
-        },
-        {
-          "id": "caption-word-43-1",
-          "text": "vous",
-          "start": 45.252,
-          "end": 45.513
+          "text": "suivi.",
+          "start": 47.232,
+          "end": 47.537
         }
       ]
     },
     {
       "id": "caption-group-44",
       "frame": 9,
-      "start": 45.513,
-      "end": 46.597,
-      "text": "suivez votre dossier,",
+      "start": 47.783,
+      "end": 48.217,
+      "text": "Et vous",
       "words": [
         {
           "id": "caption-word-44-0",
-          "text": "suivez",
-          "start": 45.513,
-          "end": 45.86
+          "text": "Et",
+          "start": 47.783,
+          "end": 47.956
         },
         {
           "id": "caption-word-44-1",
-          "text": "votre",
-          "start": 45.86,
-          "end": 46.163
-        },
-        {
-          "id": "caption-word-44-2",
-          "text": "dossier,",
-          "start": 46.163,
-          "end": 46.597
+          "text": "vous",
+          "start": 47.956,
+          "end": 48.217
         }
       ]
     },
     {
       "id": "caption-group-45",
       "frame": 9,
-      "start": 46.597,
-      "end": 47.584,
-      "text": "étape par étape.",
+      "start": 48.217,
+      "end": 49.301,
+      "text": "suivez votre dossier,",
       "words": [
         {
           "id": "caption-word-45-0",
-          "text": "étape",
-          "start": 46.597,
-          "end": 46.901
+          "text": "suivez",
+          "start": 48.217,
+          "end": 48.564
         },
         {
           "id": "caption-word-45-1",
-          "text": "par",
-          "start": 46.901,
-          "end": 47.117
+          "text": "votre",
+          "start": 48.564,
+          "end": 48.867
         },
         {
           "id": "caption-word-45-2",
-          "text": "étape.",
-          "start": 47.117,
-          "end": 47.464
+          "text": "dossier,",
+          "start": 48.867,
+          "end": 49.301
         }
       ]
     },
     {
       "id": "caption-group-46",
-      "frame": 10,
-      "start": 49.284,
-      "end": 49.679,
-      "text": "Et côté",
+      "frame": 9,
+      "start": 49.301,
+      "end": 50.288,
+      "text": "étape par étape.",
       "words": [
         {
           "id": "caption-word-46-0",
-          "text": "Et",
-          "start": 49.284,
-          "end": 49.442
+          "text": "étape",
+          "start": 49.301,
+          "end": 49.605
         },
         {
           "id": "caption-word-46-1",
-          "text": "côté",
-          "start": 49.442,
-          "end": 49.679
+          "text": "par",
+          "start": 49.605,
+          "end": 49.821
+        },
+        {
+          "id": "caption-word-46-2",
+          "text": "étape.",
+          "start": 49.821,
+          "end": 50.168
         }
       ]
     },
     {
       "id": "caption-group-47",
       "frame": 10,
-      "start": 49.679,
-      "end": 50.152,
-      "text": "Ministère ?",
+      "start": 51.988,
+      "end": 52.383,
+      "text": "Et côté",
       "words": [
         {
           "id": "caption-word-47-0",
-          "text": "Ministère ?",
-          "start": 49.679,
-          "end": 50.152
+          "text": "Et",
+          "start": 51.988,
+          "end": 52.146
+        },
+        {
+          "id": "caption-word-47-1",
+          "text": "côté",
+          "start": 52.146,
+          "end": 52.383
         }
       ]
     },
     {
       "id": "caption-group-48",
       "frame": 10,
-      "start": 50.152,
-      "end": 51.297,
-      "text": "Chaque signalement arrive",
+      "start": 52.383,
+      "end": 52.856,
+      "text": "Ministère ?",
       "words": [
         {
           "id": "caption-word-48-0",
-          "text": "Chaque",
-          "start": 50.152,
-          "end": 50.468
-        },
-        {
-          "id": "caption-word-48-1",
-          "text": "signalement",
-          "start": 50.468,
-          "end": 50.981
-        },
-        {
-          "id": "caption-word-48-2",
-          "text": "arrive",
-          "start": 50.981,
-          "end": 51.297
+          "text": "Ministère ?",
+          "start": 52.383,
+          "end": 52.856
         }
       ]
     },
     {
       "id": "caption-group-49",
       "frame": 10,
-      "start": 51.297,
-      "end": 51.652,
-      "text": "sur le",
+      "start": 52.856,
+      "end": 54.001,
+      "text": "Chaque signalement arrive",
       "words": [
         {
           "id": "caption-word-49-0",
-          "text": "sur",
-          "start": 51.297,
-          "end": 51.494
+          "text": "Chaque",
+          "start": 52.856,
+          "end": 53.172
         },
         {
           "id": "caption-word-49-1",
-          "text": "le",
-          "start": 51.494,
-          "end": 51.652
+          "text": "signalement",
+          "start": 53.172,
+          "end": 53.685
+        },
+        {
+          "id": "caption-word-49-2",
+          "text": "arrive",
+          "start": 53.685,
+          "end": 54.001
         }
       ]
     },
     {
       "id": "caption-group-50",
       "frame": 10,
-      "start": 51.652,
-      "end": 52.165,
-      "text": "tableau de",
+      "start": 54.001,
+      "end": 54.356,
+      "text": "sur le",
       "words": [
         {
           "id": "caption-word-50-0",
-          "text": "tableau",
-          "start": 51.652,
-          "end": 52.007
+          "text": "sur",
+          "start": 54.001,
+          "end": 54.198
         },
         {
           "id": "caption-word-50-1",
-          "text": "de",
-          "start": 52.007,
-          "end": 52.165
+          "text": "le",
+          "start": 54.198,
+          "end": 54.356
         }
       ]
     },
     {
       "id": "caption-group-51",
       "frame": 10,
-      "start": 52.165,
-      "end": 52.797,
-      "text": "bord national",
+      "start": 54.356,
+      "end": 54.869,
+      "text": "tableau de",
       "words": [
         {
           "id": "caption-word-51-0",
-          "text": "bord",
-          "start": 52.165,
-          "end": 52.402
+          "text": "tableau",
+          "start": 54.356,
+          "end": 54.711
         },
         {
           "id": "caption-word-51-1",
-          "text": "national",
-          "start": 52.402,
-          "end": 52.797
+          "text": "de",
+          "start": 54.711,
+          "end": 54.869
         }
       ]
     },
     {
       "id": "caption-group-52",
       "frame": 10,
-      "start": 52.797,
-      "end": 53.469,
-      "text": "des agents.",
+      "start": 54.869,
+      "end": 55.501,
+      "text": "bord national",
       "words": [
         {
           "id": "caption-word-52-0",
-          "text": "des",
-          "start": 52.797,
-          "end": 52.994
+          "text": "bord",
+          "start": 54.869,
+          "end": 55.106
         },
         {
           "id": "caption-word-52-1",
-          "text": "agents.",
-          "start": 52.994,
-          "end": 53.349
+          "text": "national",
+          "start": 55.106,
+          "end": 55.501
         }
       ]
     },
     {
       "id": "caption-group-53",
-      "frame": 11,
-      "start": 54.869,
-      "end": 56.09,
-      "text": "Province par province,",
+      "frame": 10,
+      "start": 55.501,
+      "end": 56.173,
+      "text": "des agents.",
       "words": [
         {
           "id": "caption-word-53-0",
-          "text": "Province",
-          "start": 54.869,
-          "end": 55.339
+          "text": "des",
+          "start": 55.501,
+          "end": 55.698
         },
         {
           "id": "caption-word-53-1",
-          "text": "par",
-          "start": 55.339,
-          "end": 55.573
-        },
-        {
-          "id": "caption-word-53-2",
-          "text": "province,",
-          "start": 55.573,
-          "end": 56.09
+          "text": "agents.",
+          "start": 55.698,
+          "end": 56.053
         }
       ]
     },
     {
       "id": "caption-group-54",
       "frame": 11,
-      "start": 56.09,
-      "end": 56.513,
-      "text": "sur la",
+      "start": 57.573,
+      "end": 58.794,
+      "text": "Province par province,",
       "words": [
         {
           "id": "caption-word-54-0",
-          "text": "sur",
-          "start": 56.09,
-          "end": 56.325
+          "text": "Province",
+          "start": 57.573,
+          "end": 58.043
         },
         {
           "id": "caption-word-54-1",
-          "text": "la",
-          "start": 56.325,
-          "end": 56.513
+          "text": "par",
+          "start": 58.043,
+          "end": 58.277
+        },
+        {
+          "id": "caption-word-54-2",
+          "text": "province,",
+          "start": 58.277,
+          "end": 58.794
         }
       ]
     },
     {
       "id": "caption-group-55",
       "frame": 11,
-      "start": 56.513,
-      "end": 57.029,
-      "text": "carte de",
+      "start": 58.794,
+      "end": 59.217,
+      "text": "sur la",
       "words": [
         {
           "id": "caption-word-55-0",
-          "text": "carte",
-          "start": 56.513,
-          "end": 56.841
+          "text": "sur",
+          "start": 58.794,
+          "end": 59.029
         },
         {
           "id": "caption-word-55-1",
-          "text": "de",
-          "start": 56.841,
-          "end": 57.029
+          "text": "la",
+          "start": 59.029,
+          "end": 59.217
         }
       ]
     },
     {
       "id": "caption-group-56",
       "frame": 11,
-      "start": 57.029,
-      "end": 57.619,
-      "text": "la RDC.",
+      "start": 59.217,
+      "end": 59.733,
+      "text": "carte de",
       "words": [
         {
           "id": "caption-word-56-0",
-          "text": "la",
-          "start": 57.029,
-          "end": 57.217
+          "text": "carte",
+          "start": 59.217,
+          "end": 59.545
         },
         {
           "id": "caption-word-56-1",
-          "text": "RDC.",
-          "start": 57.217,
-          "end": 57.499
+          "text": "de",
+          "start": 59.545,
+          "end": 59.733
         }
       ]
     },
     {
       "id": "caption-group-57",
-      "frame": 12,
-      "start": 60.519,
-      "end": 60.963,
-      "text": "Un dossier",
+      "frame": 11,
+      "start": 59.733,
+      "end": 60.323,
+      "text": "la RDC.",
       "words": [
         {
           "id": "caption-word-57-0",
-          "text": "Un",
-          "start": 60.519,
-          "end": 60.656
+          "text": "la",
+          "start": 59.733,
+          "end": 59.921
         },
         {
           "id": "caption-word-57-1",
-          "text": "dossier",
-          "start": 60.656,
-          "end": 60.963
+          "text": "RDC.",
+          "start": 59.921,
+          "end": 60.203
         }
       ]
     },
     {
       "id": "caption-group-58",
       "frame": 12,
-      "start": 60.963,
-      "end": 61.509,
-      "text": "critique doit",
+      "start": 63.223,
+      "end": 63.667,
+      "text": "Un dossier",
       "words": [
         {
           "id": "caption-word-58-0",
-          "text": "critique",
-          "start": 60.963,
-          "end": 61.304
+          "text": "Un",
+          "start": 63.223,
+          "end": 63.36
         },
         {
           "id": "caption-word-58-1",
-          "text": "doit",
-          "start": 61.304,
-          "end": 61.509
+          "text": "dossier",
+          "start": 63.36,
+          "end": 63.667
         }
       ]
     },
     {
       "id": "caption-group-59",
       "frame": 12,
-      "start": 61.509,
-      "end": 61.919,
-      "text": "être pris",
+      "start": 63.667,
+      "end": 64.213,
+      "text": "critique doit",
       "words": [
         {
           "id": "caption-word-59-0",
-          "text": "être",
-          "start": 61.509,
-          "end": 61.714
+          "text": "critique",
+          "start": 63.667,
+          "end": 64.008
         },
         {
           "id": "caption-word-59-1",
-          "text": "pris",
-          "start": 61.714,
-          "end": 61.919
+          "text": "doit",
+          "start": 64.008,
+          "end": 64.213
         }
       ]
     },
     {
       "id": "caption-group-60",
       "frame": 12,
-      "start": 61.919,
-      "end": 62.329,
-      "text": "en charge",
+      "start": 64.213,
+      "end": 64.623,
+      "text": "être pris",
       "words": [
         {
           "id": "caption-word-60-0",
-          "text": "en",
-          "start": 61.919,
-          "end": 62.055
+          "text": "être",
+          "start": 64.213,
+          "end": 64.418
         },
         {
           "id": "caption-word-60-1",
-          "text": "charge",
-          "start": 62.055,
-          "end": 62.329
+          "text": "pris",
+          "start": 64.418,
+          "end": 64.623
         }
       ]
     },
     {
       "id": "caption-group-61",
       "frame": 12,
-      "start": 62.329,
-      "end": 63.439,
-      "text": "sous vingt-quatre heures.",
+      "start": 64.623,
+      "end": 65.033,
+      "text": "en charge",
       "words": [
         {
           "id": "caption-word-61-0",
-          "text": "sous",
-          "start": 62.329,
-          "end": 62.533
+          "text": "en",
+          "start": 64.623,
+          "end": 64.759
         },
         {
           "id": "caption-word-61-1",
-          "text": "vingt-quatre",
-          "start": 62.533,
-          "end": 63.011
-        },
-        {
-          "id": "caption-word-61-2",
-          "text": "heures.",
-          "start": 63.011,
-          "end": 63.319
+          "text": "charge",
+          "start": 64.759,
+          "end": 65.033
         }
       ]
     },
     {
       "id": "caption-group-62",
-      "frame": 13,
-      "start": 65.239,
-      "end": 66.031,
-      "text": "Justice.",
+      "frame": 12,
+      "start": 65.033,
+      "end": 66.143,
+      "text": "sous vingt-quatre heures.",
       "words": [
         {
           "id": "caption-word-62-0",
-          "text": "Justice.",
-          "start": 65.239,
-          "end": 65.911
+          "text": "sous",
+          "start": 65.033,
+          "end": 65.237
+        },
+        {
+          "id": "caption-word-62-1",
+          "text": "vingt-quatre",
+          "start": 65.237,
+          "end": 65.715
+        },
+        {
+          "id": "caption-word-62-2",
+          "text": "heures.",
+          "start": 65.715,
+          "end": 66.023
         }
       ]
     },
     {
       "id": "caption-group-63",
       "frame": 13,
-      "start": 66.127,
-      "end": 67.037,
-      "text": "Transparence.",
+      "start": 67.943,
+      "end": 68.735,
+      "text": "Justice.",
       "words": [
         {
           "id": "caption-word-63-0",
-          "text": "Transparence.",
-          "start": 66.127,
-          "end": 66.917
+          "text": "Justice.",
+          "start": 67.943,
+          "end": 68.615
         }
       ]
     },
     {
       "id": "caption-group-64",
       "frame": 13,
-      "start": 67.125,
-      "end": 67.816,
-      "text": "Mérite.",
+      "start": 68.831,
+      "end": 69.741,
+      "text": "Transparence.",
       "words": [
         {
           "id": "caption-word-64-0",
-          "text": "Mérite.",
-          "start": 67.125,
-          "end": 67.696
+          "text": "Transparence.",
+          "start": 68.831,
+          "end": 69.621
         }
       ]
     },
     {
       "id": "caption-group-65",
-      "frame": 14,
-      "start": 69.316,
-      "end": 70.483,
-      "text": "Votre voix compte.",
+      "frame": 13,
+      "start": 69.829,
+      "end": 70.52,
+      "text": "Mérite.",
       "words": [
         {
           "id": "caption-word-65-0",
-          "text": "Votre",
-          "start": 69.316,
-          "end": 69.649
-        },
-        {
-          "id": "caption-word-65-1",
-          "text": "voix",
-          "start": 69.649,
-          "end": 69.935
-        },
-        {
-          "id": "caption-word-65-2",
-          "text": "compte.",
-          "start": 69.935,
-          "end": 70.363
+          "text": "Mérite.",
+          "start": 69.829,
+          "end": 70.4
         }
       ]
     },
     {
       "id": "caption-group-66",
       "frame": 14,
-      "start": 70.581,
-      "end": 71.449,
-      "text": "Signalez,",
+      "start": 72.02,
+      "end": 73.187,
+      "text": "Votre voix compte.",
       "words": [
         {
           "id": "caption-word-66-0",
-          "text": "Signalez,",
-          "start": 70.581,
-          "end": 71.449
+          "text": "Votre",
+          "start": 72.02,
+          "end": 72.353
+        },
+        {
+          "id": "caption-word-66-1",
+          "text": "voix",
+          "start": 72.353,
+          "end": 72.639
+        },
+        {
+          "id": "caption-word-66-2",
+          "text": "compte.",
+          "start": 72.639,
+          "end": 73.067
         }
       ]
     },
     {
       "id": "caption-group-67",
       "frame": 14,
-      "start": 71.449,
-      "end": 74.092,
-      "text": "sur signal.minesursi.gouv.cd.",
+      "start": 73.285,
+      "end": 74.153,
+      "text": "Signalez,",
       "words": [
         {
           "id": "caption-word-67-0",
+          "text": "Signalez,",
+          "start": 73.285,
+          "end": 74.153
+        }
+      ]
+    },
+    {
+      "id": "caption-group-68",
+      "frame": 14,
+      "start": 74.153,
+      "end": 76.796,
+      "text": "sur signal.minesursi.gouv.cd.",
+      "words": [
+        {
+          "id": "caption-word-68-0",
           "text": "sur",
-          "start": 71.449,
-          "end": 71.843
+          "start": 74.153,
+          "end": 74.547
         },
         {
-          "id": "caption-word-67-1",
+          "id": "caption-word-68-1",
           "text": "signal.minesursi.gouv.cd.",
-          "start": 71.843,
-          "end": 73.972
+          "start": 74.547,
+          "end": 76.676
         }
       ]
     }

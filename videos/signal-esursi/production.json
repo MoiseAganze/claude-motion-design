@@ -81,15 +81,6 @@
       "tail": 1.0
      },
      {
-      "frame": 6,
-      "sentences": [
-       10,
-       11
-      ],
-      "lead": 0.3,
-      "tail": 0.9
-     },
-     {
       "frame": 7,
       "sentences": [
        12,
@@ -160,6 +151,27 @@
       ],
       "lead": 0.5,
       "tail": 3.5
+     }
+    ]
+   },
+   {
+    "file": "assets/voice/cat13-take.mp3",
+    "silence_db": -38,
+    "min_silence": 0.18,
+    "sentences": [
+     "Treize catégories officielles.",
+     "De la corruption au faux diplôme,",
+     "du harcèlement à l'intégrité scientifique."
+    ],
+    "frames": [
+     {
+      "frame": 6,
+      "sentences": [
+       0,
+       2
+      ],
+      "lead": 0.3,
+      "tail": 1.6
      }
     ]
    }
@@ -258,34 +270,6 @@
     2.5,
     0,
     0.3
-   ],
-   [
-    6,
-    "pop",
-    "corruption",
-    0,
-    0.4
-   ],
-   [
-    6,
-    "pop",
-    "fraude",
-    0,
-    0.4
-   ],
-   [
-    6,
-    "pop",
-    "faux",
-    0,
-    0.4
-   ],
-   [
-    6,
-    "pop",
-    "harcèlement",
-    0,
-    0.4
    ],
    [
     7,
@@ -454,6 +438,34 @@
     "sur",
     0.3,
     0.3
+   ],
+   [
+    6,
+    "pop",
+    "corruption",
+    0,
+    0.35
+   ],
+   [
+    6,
+    "pop",
+    "faux",
+    0,
+    0.35
+   ],
+   [
+    6,
+    "pop",
+    "harcèlement",
+    0,
+    0.35
+   ],
+   [
+    6,
+    "sparkle",
+    "l'intégrité",
+    0,
+    0.35
    ]
   ]
  },

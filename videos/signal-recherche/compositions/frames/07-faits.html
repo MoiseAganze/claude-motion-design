@@ -1,0 +1,69 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/CormorantGaramond-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
+    @font-face { font-family: "Source Sans 3"; src: url("assets/fonts/SourceSans3-400.woff2") format("woff2"); font-weight: 400 700; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #FFFFFF; font-family: "Source Sans 3", sans-serif; }
+    .bg { position: absolute; inset: 0; background: radial-gradient(800px 900px at 50% 45%, rgba(0,127,255,0.26), rgba(0,27,61,0) 70%), #001B3D; }
+    .stripe { position: absolute; left: 0; top: 0; width: 1080px; height: 10px; background: linear-gradient(90deg, #007FFF 0 33%, #F7D117 33% 67%, #CE1126 67%); }
+    .steps { position: absolute; left: 70px; top: 150px; display: flex; gap: 14px; }
+    .steps b { width: 70px; height: 70px; border-radius: 50%; border: 4px solid #0057B8; background: #0057B8; display: flex; align-items: center; justify-content: center; font-size: 34px; color: #FFFFFF; box-sizing: border-box; }
+    .steps b.off { background: transparent; border-color: #4D9FFF; }
+    .card { position: absolute; left: 60px; top: 270px; width: 960px; height: 1070px; border-radius: 28px; background: #FFFFFF; color: #0F2744; overflow: hidden; box-shadow: 0 30px 90px rgba(0,0,0,0.45); }
+    .card::before { content: ""; position: absolute; left: 0; top: 0; right: 0; height: 8px; background: linear-gradient(90deg, #007FFF, #F7D117, #CE1126); }
+    .sec { position: absolute; left: 44px; right: 44px; }
+    .lab { font-weight: 700; font-size: 32px; color: #0057B8; }
+    .lab i { font-style: normal; color: #64748B; font-weight: 600; font-size: 24px; letter-spacing: 0.08em; text-transform: uppercase; margin-right: 12px; }
+    .obj { margin-top: 10px; height: 74px; border-radius: 14px; border: 3px solid #0057B8; display: flex; align-items: center; padding: 0 20px; font-size: 28px; font-weight: 700; box-sizing: border-box; white-space: nowrap; overflow: hidden; }
+    .typed { display: inline-block; overflow: hidden; white-space: nowrap; vertical-align: bottom; width: 0; }
+    .desc { margin-top: 12px; height: 200px; border-radius: 14px; border: 3px solid #CBD5E1; overflow: hidden; position: relative; }
+    .desc p { position: absolute; left: 20px; right: 20px; top: 14px; margin: 0; font-size: 25px; line-height: 1.4; color: #334155; }
+    .grav { display: flex; gap: 12px; margin-top: 12px; }
+    .grav span { flex: 1; text-align: center; padding: 14px 0; border-radius: 12px; border: 3px solid #CBD5E1; font-weight: 700; font-size: 30px; color: #475569; }
+    .note { margin-top: 10px; font-weight: 600; font-size: 26px; color: #A00E1E; }
+    .drop { margin-top: 12px; height: 250px; border-radius: 14px; border: 3px dashed #94A3B8; position: relative; background: #F5F9FC; }
+    .file { position: absolute; left: 18px; right: 18px; height: 62px; border-radius: 12px; background: #FFFFFF; border: 2px solid #BFDBFE; display: flex; align-items: center; gap: 14px; padding: 0 16px; font-weight: 700; font-size: 25px; color: #003A7A; box-sizing: border-box; }
+    .file b { padding: 4px 10px; border-radius: 8px; background: #CE1126; color: #FFFFFF; font-size: 20px; }
+  </style>
+
+  <div id="root" data-composition-id="07-faits" data-width="1080" data-height="1920" data-duration="10.818">
+    <div id="f07-bg" class="bg clip" data-start="0" data-duration="10.818" data-track-index="0"></div>
+    <div id="f07-steps" class="steps clip" data-start="0" data-duration="10.818" data-track-index="1"><b>1</b><b>2</b><b>3</b><b>4</b><b id="f07-s5" class="off">5</b><b id="f07-s6" class="off">6</b><b class="off">7</b><b class="off">8</b></div>
+    <div id="f07-card" class="card clip" data-start="0" data-duration="10.818" data-track-index="2">
+      <div class="sec" style="top:40px"><div class="lab"><i>Étape 5</i>Objet du signalement</div><div class="obj"><span class="typed" id="f07-obj">Résultats d'analyses d'eau modifiés avant publication au CREE</span></div></div>
+      <div class="sec" style="top:190px"><div class="lab">Description des faits</div>
+        <div class="desc"><p id="f07-p">Entre février et mai 2026, notre équipe a analysé 48 échantillons prélevés en aval de la zone industrielle. 17 dépassent les seuils de plomb et de mercure. Le rapport final du 12 juin 2026 n'en présente que 31, tous conformes ; deux autres valeurs ont été corrigées à la baisse. En réunion, le responsable du laboratoire a demandé de retirer les « valeurs gênantes » avant publication.</p></div></div>
+      <div class="sec" style="top:470px"><div class="lab">Niveau de gravité estimé</div>
+        <div class="grav"><span>Faible</span><span>Normale</span><span id="f07-g3">Élevée</span><span>Critique</span></div>
+        <div class="note" id="f07-note">Risque sanitaire · fonds publics</div></div>
+      <div class="sec" style="top:690px"><div class="lab"><i>Étape 6</i>Preuves</div>
+        <div class="drop">
+          <div class="file" id="f07-fa" style="top:14px"><b>PDF</b>releves_bruts_appareil_fev-mai_2026.pdf</div>
+          <div class="file" id="f07-fb" style="top:92px"><b>PDF</b>tableau_rapport_final_12-06-2026.pdf</div>
+          <div class="file" id="f07-fc" style="top:170px"><b>PDF</b>comparatif_echantillons.pdf</div>
+        </div></div>
+    </div>
+    <div id="f07-stripe" class="stripe clip" data-start="0" data-duration="10.818" data-track-index="3"></div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const on = { backgroundColor: "#0057B8", borderColor: "#0057B8", duration: 0.25 };
+      tl.fromTo("#f07-card", { opacity: 0, x: 120 }, { opacity: 1, x: 0, duration: 0.6, ease: "expo.out" }, 0);
+      tl.fromTo("#f07-steps", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 0.1);
+      tl.to("#f07-s5", on, 0.3);
+      tl.fromTo("#f07-obj", { width: 0 }, { width: 860, duration: 1.3, ease: "steps(40)" }, 0.4);
+      // the description is pasted and scrolls quickly
+      tl.fromTo("#f07-p", { opacity: 0, y: 0 }, { opacity: 1, y: -110, duration: 1.8, ease: "power1.inOut" }, 1.0);
+      // gravité: élevée
+      tl.to("#f07-g3", { backgroundColor: "#CE1126", borderColor: "#CE1126", color: "#FFFFFF", duration: 0.25 }, 3.7);
+      tl.fromTo("#f07-note", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, 4.4);
+      // preuves: three files dropped in
+      tl.to("#f07-s6", on, 6.1);
+      [["#f07-fa", 7.4], ["#f07-fb", 8.4], ["#f07-fc", 8.9]].forEach(([s, t]) => tl.fromTo(s, { opacity: 0, y: -60, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" }, t));
+      window.__timelines = window.__timelines || {};
+      window.__timelines["07-faits"] = tl;
+    })();
+  </script>
+</template>

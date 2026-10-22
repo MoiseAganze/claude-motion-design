@@ -1,0 +1,64 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/CormorantGaramond-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
+    @font-face { font-family: "Source Sans 3"; src: url("assets/fonts/SourceSans3-400.woff2") format("woff2"); font-weight: 400 700; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #FFFFFF; font-family: "Source Sans 3", sans-serif; }
+    .bg { position: absolute; inset: 0; background: radial-gradient(800px 800px at 50% 40%, rgba(0,127,255,0.28), rgba(0,27,61,0) 70%), #001B3D; }
+    .stripe { position: absolute; left: 0; top: 0; width: 1080px; height: 10px; background: linear-gradient(90deg, #007FFF 0 33%, #F7D117 33% 67%, #CE1126 67%); }
+    .cert { position: absolute; left: 60px; top: 160px; width: 960px; height: 300px; border-radius: 26px; background: #FFFFFF; color: #0F2744; padding: 34px 40px; box-sizing: border-box; }
+    .row { display: flex; gap: 22px; align-items: flex-start; font-size: 30px; line-height: 1.35; font-weight: 600; color: #334155; }
+    .box { flex: 0 0 52px; height: 52px; border-radius: 10px; border: 4px solid #94A3B8; box-sizing: border-box; position: relative; }
+    .box svg { position: absolute; left: 4px; top: 4px; width: 36px; height: 36px; }
+    .send { margin-top: 26px; height: 84px; border-radius: 16px; background: linear-gradient(180deg, #F7D117, #E6B800); color: #001B3D; font-weight: 700; font-size: 38px; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 0 #B38F00; }
+    .ack { position: absolute; left: 60px; top: 520px; width: 960px; height: 800px; border-radius: 28px; background: #FFFFFF; color: #0F2744; overflow: hidden; box-shadow: 0 30px 90px rgba(0,0,0,0.45); }
+    .ack::before { content: ""; position: absolute; left: 0; top: 0; right: 0; height: 8px; background: linear-gradient(90deg, #007FFF, #F7D117, #CE1126); }
+    .ok { position: absolute; left: 44px; top: 44px; display: flex; align-items: center; gap: 18px; font-family: "Cormorant Garamond", serif; font-weight: 700; font-size: 58px; color: #003A7A; }
+    .ok svg { width: 64px; height: 64px; }
+    .k { position: absolute; left: 44px; font-weight: 600; font-size: 28px; letter-spacing: 0.12em; text-transform: uppercase; color: #64748B; }
+    .v { position: absolute; left: 44px; font-family: "Courier New", monospace; font-weight: 700; font-size: 54px; color: #0057B8; white-space: nowrap; }
+    .v i { display: inline-block; width: 0; overflow: hidden; vertical-align: bottom; font-style: normal; white-space: nowrap; }
+    .secret { position: absolute; left: 44px; top: 520px; padding: 10px 22px; border-radius: 100px; background: #FEF2F2; border: 2px solid #CE1126; color: #A00E1E; font-weight: 700; font-size: 28px; }
+    .pdf { position: absolute; left: 44px; right: 44px; top: 640px; height: 96px; border-radius: 16px; border: 3px solid #0057B8; color: #0057B8; font-weight: 700; font-size: 38px; display: flex; align-items: center; justify-content: center; gap: 16px; }
+    .pdf svg { width: 40px; height: 40px; }
+    .ex { position: absolute; right: 44px; top: 66px; font-weight: 600; font-size: 24px; color: #64748B; }
+  </style>
+
+  <div id="root" data-composition-id="09-accuse" data-width="1080" data-height="1920" data-duration="7.059">
+    <div id="f09-bg" class="bg clip" data-start="0" data-duration="7.059" data-track-index="0"></div>
+    <div id="f09-cert" class="cert clip" data-start="0" data-duration="7.059" data-track-index="1">
+      <div class="row"><div class="box" id="f09-box"><svg viewBox="0 0 36 36" fill="none" stroke="#0057B8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path id="f09-tick" d="M6 19l8 8 16-18"/></svg></div>Je certifie sur l'honneur que les informations fournies sont sincères.</div>
+      <div class="send" id="f09-send">Envoyer le signalement</div>
+    </div>
+    <div id="f09-ack" class="ack clip" data-start="0" data-duration="7.059" data-track-index="2">
+      <div class="ok"><svg viewBox="0 0 64 64" fill="none" stroke="#059669" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="32" r="27"/><path d="M19 33l9 9 17-19"/></svg>Accusé de réception</div>
+      <div class="ex">exemple</div>
+      <div class="k" style="top:170px">Référence du dossier</div>
+      <div class="v" style="top:215px"><i id="f09-ref">SIG-ESURSI-2026-9C8CCC</i></div>
+      <div class="k" style="top:345px">Code de suivi</div>
+      <div class="v" style="top:390px"><i id="f09-code">4F9A1C7E2B3D</i></div>
+      <div class="secret" id="f09-secret">À garder secret : votre seule clé d'accès</div>
+      <div class="pdf" id="f09-pdf"><svg viewBox="0 0 40 40" fill="none" stroke="#0057B8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6v20M12 18l8 8 8-8M8 34h24"/></svg>Télécharger en PDF</div>
+    </div>
+    <div id="f09-stripe" class="stripe clip" data-start="0" data-duration="7.059" data-track-index="3"></div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#f09-cert", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, 0);
+      // "elle certifie" -> tick; "elle envoie" -> press
+      tl.fromTo("#f09-tick", { strokeDasharray: 40, strokeDashoffset: 40 }, { strokeDashoffset: 0, duration: 0.3, ease: "power2.out" }, 0.6);
+      tl.to("#f09-box", { borderColor: "#0057B8", duration: 0.2 }, 0.6);
+      tl.to("#f09-send", { scale: 0.96, duration: 0.15, ease: "power2.out" }, 1.6);
+      tl.to("#f09-send", { scale: 1, duration: 0.25, ease: "power2.out" }, 1.75);
+      tl.fromTo("#f09-ack", { opacity: 0, y: 140, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: "expo.out" }, 2.1);
+      tl.fromTo("#f09-ref", { width: 0 }, { width: 760, duration: 0.9, ease: "steps(22)" }, 2.8);
+      tl.fromTo("#f09-code", { width: 0 }, { width: 420, duration: 0.7, ease: "steps(12)" }, 3.9);
+      tl.fromTo("#f09-secret", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, 4.6);
+      tl.fromTo("#f09-pdf", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.45, ease: "expo.out" }, 5.1);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["09-accuse"] = tl;
+    })();
+  </script>
+</template>

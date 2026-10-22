@@ -1,0 +1,78 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/CormorantGaramond-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
+    @font-face { font-family: "Source Sans 3"; src: url("assets/fonts/SourceSans3-400.woff2") format("woff2"); font-weight: 400 700; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #FFFFFF; font-family: "Source Sans 3", sans-serif; }
+    .bg { position: absolute; inset: 0; background: radial-gradient(900px 800px at 50% 55%, rgba(0,127,255,0.30), rgba(0,27,61,0) 70%), #001B3D; }
+    .stripe { position: absolute; left: 0; top: 0; width: 1080px; height: 10px; background: linear-gradient(90deg, #007FFF 0 33%, #F7D117 33% 67%, #CE1126 67%); transform-origin: left center; }
+    .kick { position: absolute; left: 70px; top: 150px; font-weight: 700; font-size: 40px; letter-spacing: 0.16em; text-transform: uppercase; color: #F7D117; }
+    .title { position: absolute; left: 70px; right: 70px; top: 205px; font-family: "Cormorant Garamond", serif; font-weight: 700; font-size: 104px; line-height: 1; }
+    .lab { position: absolute; left: 0; top: 400px; width: 1080px; height: 900px; }
+    .chip { position: absolute; left: 70px; top: 1210px; padding: 12px 26px; border-radius: 100px; background: rgba(0,127,255,0.16); border: 2px solid rgba(0,127,255,0.55); font-weight: 700; font-size: 36px; }
+    .fict { position: absolute; right: 70px; top: 1228px; font-weight: 600; font-size: 26px; letter-spacing: 0.08em; text-transform: uppercase; color: #B8C7DB; }
+  </style>
+
+  <div id="root" data-composition-id="01-labo" data-width="1080" data-height="1920" data-duration="8.273">
+    <div id="f01-bg" class="bg clip" data-start="0" data-duration="8.273" data-track-index="0"></div>
+    <div id="f01-kick" class="kick clip" data-start="0" data-duration="8.273" data-track-index="1">Intégrité scientifique</div>
+    <div id="f01-title" class="title clip" data-start="0" data-duration="8.273" data-track-index="2">Signaler, c'est protéger</div>
+    <svg id="f01-lab" class="lab clip" data-start="0" data-duration="8.273" data-track-index="3" viewBox="0 0 1080 900" fill="none" stroke-linejoin="round" stroke-linecap="round">
+      <!-- bench -->
+      <rect x="40" y="760" width="1000" height="26" rx="8" fill="#002654" stroke="#3A5A85" stroke-width="3"/>
+      <!-- analyser -->
+      <g id="f01-dev">
+        <rect x="540" y="300" width="460" height="460" rx="28" fill="#0B2C55" stroke="#4D9FFF" stroke-width="4"/>
+        <rect x="575" y="335" width="390" height="230" rx="14" fill="#001B3D" stroke="#2A4F7E" stroke-width="3"/>
+        <polyline id="f01-curve" points="595,520 640,500 685,512 730,450 775,470 820,400 865,430 910,360 945,380" stroke="#4D9FFF" stroke-width="6"/>
+        <line x1="595" y1="410" x2="945" y2="410" stroke="#CE1126" stroke-width="3" stroke-dasharray="10 10"/>
+        <text x="600" y="400" fill="#FF6B7D" font-family="Source Sans 3" font-weight="700" font-size="22">seuil Pb / Hg</text>
+        <circle cx="600" cy="620" r="18" fill="#2BD47D"/><circle cx="655" cy="620" r="18" fill="#F7D117"/>
+        <rect x="720" y="604" width="240" height="32" rx="8" fill="#002654"/>
+        <rect x="575" y="670" width="390" height="60" rx="12" fill="#001B3D"/>
+      </g>
+      <!-- results sheet -->
+      <g id="f01-sheet">
+        <rect x="250" y="170" width="300" height="380" rx="14" fill="#FFFFFF"/>
+        <text x="275" y="215" fill="#003A7A" font-family="Source Sans 3" font-weight="700" font-size="26">Résultats — N'djili</text>
+        <g font-family="Source Sans 3" font-size="22" fill="#334155">
+          <text x="275" y="260">Éch. 07 · Pb 0,014</text><text x="275" y="298">Éch. 12 · Hg 0,009</text><text x="275" y="336">Éch. 19 · Pb 0,021</text>
+          <text x="275" y="374">Éch. 23 · Hg 0,011</text><text x="275" y="412">Éch. 31 · Pb 0,018</text><text x="275" y="450">Éch. 40 · Hg 0,012</text><text x="275" y="488">Éch. 44 · Pb 0,016</text>
+        </g>
+        <line id="f01-x1" x1="270" y1="252" x2="530" y2="252" stroke="#CE1126" stroke-width="6"/>
+        <line id="f01-x2" x1="270" y1="328" x2="530" y2="328" stroke="#CE1126" stroke-width="6"/>
+        <line id="f01-x3" x1="270" y1="404" x2="530" y2="404" stroke="#CE1126" stroke-width="6"/>
+        <line id="f01-x4" x1="270" y1="480" x2="530" y2="480" stroke="#CE1126" stroke-width="6"/>
+      </g>
+      <!-- flasks -->
+      <g id="f01-fl1"><path d="M110 520 L110 600 L60 740 Q55 758 75 758 L225 758 Q245 758 240 740 L190 600 L190 520 Z" fill="rgba(255,255,255,0.08)" stroke="#B8C7DB" stroke-width="5"/><path d="M78 690 L222 690 L240 740 Q245 758 225 758 L75 758 Q55 758 60 740 Z" fill="#007FFF" opacity="0.75"/><rect x="100" y="505" width="100" height="22" rx="6" fill="#B8C7DB"/></g>
+      <g id="f01-fl2"><rect x="290" y="600" width="70" height="158" rx="30" fill="rgba(255,255,255,0.08)" stroke="#B8C7DB" stroke-width="5"/><rect x="295" y="680" width="60" height="74" rx="26" fill="#4D9FFF" opacity="0.8"/></g>
+      <g id="f01-fl3"><rect x="395" y="620" width="70" height="138" rx="30" fill="rgba(255,255,255,0.08)" stroke="#B8C7DB" stroke-width="5"/><rect x="400" y="690" width="60" height="64" rx="26" fill="#A8D0FF" opacity="0.8"/></g>
+      <circle id="f01-b1" cx="140" cy="720" r="9" fill="#FFFFFF" opacity="0.7"/><circle id="f01-b2" cx="175" cy="735" r="6" fill="#FFFFFF" opacity="0.7"/><circle id="f01-b3" cx="320" cy="730" r="6" fill="#FFFFFF" opacity="0.7"/>
+    </svg>
+    <div id="f01-chip" class="chip clip" data-start="0" data-duration="8.273" data-track-index="4">CREE · Kinshasa</div>
+    <div id="f01-fict" class="fict clip" data-start="0" data-duration="8.273" data-track-index="5">Scénario fictif</div>
+    <div id="f01-stripe" class="stripe clip" data-start="0" data-duration="8.273" data-track-index="6"></div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      // something visible and moving at t=0: the lab is already sliding in
+      tl.fromTo("#f01-lab", { y: 60, opacity: 0.5 }, { y: 0, opacity: 1, duration: 0.9, ease: "expo.out" }, 0);
+      tl.fromTo("#f01-stripe", { scaleX: 0.3 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 0);
+      tl.fromTo("#f01-kick", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 0.1);
+      tl.fromTo("#f01-title", { opacity: 0, y: 40, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.6, ease: "power3.out" }, 0.3);
+      tl.fromTo("#f01-chip", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 0.9);
+      tl.fromTo("#f01-fict", { opacity: 0 }, { opacity: 1, duration: 0.5 }, 1.2);
+      tl.fromTo("#f01-curve", { strokeDasharray: 520, strokeDashoffset: 520 }, { strokeDashoffset: 0, duration: 2.0, ease: "power2.out" }, 0.6);
+      tl.fromTo("#f01-sheet", { opacity: 0, x: -60, rotation: -4, transformOrigin: "50% 50%" }, { opacity: 1, x: 0, rotation: -2, duration: 0.7, ease: "expo.out" }, 2.6);
+      [["#f01-b1", 0.2], ["#f01-b2", 1.4], ["#f01-b3", 0.7]].forEach(([b, t]) => tl.fromTo(b, { y: 0, opacity: 0.7 }, { y: -60, opacity: 0, duration: 2.4, ease: "none" }, t));
+      // "modifiés avant publication": values struck out one by one
+      ["#f01-x1", "#f01-x2", "#f01-x3", "#f01-x4"].forEach((x, i) => tl.fromTo(x, { strokeDasharray: 270, strokeDashoffset: 270 }, { strokeDashoffset: 0, duration: 0.25, ease: "power2.out" }, 5.6 + i * 0.22));
+      tl.to("#f01-sheet", { rotation: 2, duration: 1.6, ease: "none" }, 6.1);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["01-labo"] = tl;
+    })();
+  </script>
+</template>

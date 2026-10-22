@@ -38,3 +38,4 @@ démo citoyen → côté agent → promesse → CTA).
 - Le formulaire réel n'a pas été rempli (refus de sécurité : pas d'action sur le vrai système) → étapes 2-8 recréées en UI animée avec les libellés exacts du site ; référence d'exemple = celle du site (SIG-ESU-2026-ABC123).
 - Identifiants agents fournis dans la conversation : jamais écrits dans le dépôt.
 - Musique de fond : « Digital Horizons » (MP3 fourni par l'utilisateur ; « Complicit - Cinematic » introuvable via les connecteurs ElevenLabs). Prolongée à 77,5 s par fondu calé sur le tempo, creusée sous la voix (carve). Storyboard garde `music: none` (bgm hôte dans audio_meta.json).
+- 2026-10-22 : catégories passées à 13 sur le site → scène 6 refaite (grille des 13 libellés exacts, VO « Treize catégories officielles… », prise `cat13-take.mp3`) ; référence SIG-ESURSI-2026-9C8CCC ; captures et chiffres du tableau de bord rafraîchis (26 / 6, Kinshasa 13). Version sœur : `videos/signal-recherche`.

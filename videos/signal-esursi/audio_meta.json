@@ -362,55 +362,91 @@
   {
    "frame": 6,
    "path": "assets/voice/06.wav",
-   "duration_s": 5.731,
+   "duration_s": 8.435,
    "words": [
     {
-     "text": "Neuf",
-     "start": 0.34,
-     "end": 0.594,
+     "text": "Treize",
+     "start": 0.3,
+     "end": 0.676,
      "id": "w06_0"
     },
     {
      "text": "catégories",
-     "start": 0.594,
-     "end": 1.103,
+     "start": 0.676,
+     "end": 1.24,
      "id": "w06_1"
     },
     {
      "text": "officielles.",
-     "start": 1.103,
-     "end": 1.696,
+     "start": 1.24,
+     "end": 1.899,
      "id": "w06_2"
     },
     {
-     "text": "Corruption,",
-     "start": 1.931,
-     "end": 2.636,
+     "text": "De",
+     "start": 2.294,
+     "end": 2.482,
      "id": "w06_3"
     },
     {
-     "text": "fraude,",
-     "start": 2.636,
-     "end": 3.124,
+     "text": "la",
+     "start": 2.482,
+     "end": 2.669,
      "id": "w06_4"
     },
     {
-     "text": "faux",
-     "start": 3.124,
-     "end": 3.449,
+     "text": "corruption",
+     "start": 2.669,
+     "end": 3.23,
      "id": "w06_5"
     },
     {
-     "text": "diplôme,",
-     "start": 3.449,
-     "end": 3.992,
+     "text": "au",
+     "start": 3.23,
+     "end": 3.417,
      "id": "w06_6"
     },
     {
-     "text": "harcèlement…",
-     "start": 3.992,
-     "end": 4.751,
+     "text": "faux",
+     "start": 3.417,
+     "end": 3.697,
      "id": "w06_7"
+    },
+    {
+     "text": "diplôme,",
+     "start": 3.697,
+     "end": 4.165,
+     "id": "w06_8"
+    },
+    {
+     "text": "du",
+     "start": 4.388,
+     "end": 4.586,
+     "id": "w06_9"
+    },
+    {
+     "text": "harcèlement",
+     "start": 4.586,
+     "end": 5.226,
+     "id": "w06_10"
+    },
+    {
+     "text": "à",
+     "start": 5.226,
+     "end": 5.374,
+     "id": "w06_11"
+    },
+    {
+     "text": "l'intégrité",
+     "start": 5.374,
+     "end": 6.015,
+     "id": "w06_12"
+    },
+    {
+     "text": "scientifique.",
+     "start": 6.015,
+     "end": 6.755,
+     "id": "w06_13"
     }
    ]
   },
@@ -1086,34 +1122,6 @@
    "volume": 0.225
   },
   {
-   "frame": 6,
-   "file": "assets/sfx/pop.mp3",
-   "offset_s": 1.931,
-   "duration_s": 0.72,
-   "volume": 0.3
-  },
-  {
-   "frame": 6,
-   "file": "assets/sfx/pop.mp3",
-   "offset_s": 2.636,
-   "duration_s": 0.72,
-   "volume": 0.3
-  },
-  {
-   "frame": 6,
-   "file": "assets/sfx/pop.mp3",
-   "offset_s": 3.124,
-   "duration_s": 0.72,
-   "volume": 0.3
-  },
-  {
-   "frame": 6,
-   "file": "assets/sfx/pop.mp3",
-   "offset_s": 3.992,
-   "duration_s": 0.72,
-   "volume": 0.3
-  },
-  {
    "frame": 7,
    "file": "assets/sfx/whoosh-short.mp3",
    "offset_s": 0.0,
@@ -1280,6 +1288,34 @@
    "offset_s": 2.973,
    "duration_s": 2.5,
    "volume": 0.225
+  },
+  {
+   "frame": 6,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 2.669,
+   "duration_s": 0.72,
+   "volume": 0.262
+  },
+  {
+   "frame": 6,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 3.417,
+   "duration_s": 0.72,
+   "volume": 0.262
+  },
+  {
+   "frame": 6,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 4.586,
+   "duration_s": 0.72,
+   "volume": 0.262
+  },
+  {
+   "frame": 6,
+   "file": "assets/sfx/sparkle.mp3",
+   "offset_s": 5.374,
+   "duration_s": 1.8,
+   "volume": 0.262
   }
  ]
 }

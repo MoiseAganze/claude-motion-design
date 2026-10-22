@@ -1,0 +1,56 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/CormorantGaramond-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
+    @font-face { font-family: "Source Sans 3"; src: url("assets/fonts/SourceSans3-400.woff2") format("woff2"); font-weight: 400 700; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #FFFFFF; font-family: "Source Sans 3", sans-serif; }
+    .bg { position: absolute; inset: 0; background: radial-gradient(900px 800px at 50% 45%, rgba(206,17,38,0.16), rgba(0,27,61,0) 70%), #001B3D; }
+    .stripe { position: absolute; left: 0; top: 0; width: 1080px; height: 10px; background: linear-gradient(90deg, #007FFF 0 33%, #F7D117 33% 67%, #CE1126 67%); }
+    .num { position: absolute; left: 70px; top: 150px; font-weight: 700; font-size: 210px; line-height: 0.85; color: #FFFFFF; }
+    .lab { position: absolute; left: 330px; top: 175px; width: 680px; font-family: "Cormorant Garamond", serif; font-weight: 700; font-size: 62px; line-height: 1.05; }
+    .lab2 { position: absolute; left: 330px; top: 175px; width: 680px; font-family: "Cormorant Garamond", serif; font-weight: 700; font-size: 62px; line-height: 1.05; color: #F7D117; }
+    .grid { position: absolute; inset: 0; }
+    .c { position: absolute; width: 100px; height: 80px; border-radius: 12px; background: rgba(0,127,255,0.22); border: 2px solid rgba(77,159,255,0.6); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 26px; color: #B8C7DB; }
+    .leg { position: absolute; left: 70px; top: 1040px; width: 940px; display: flex; flex-direction: column; gap: 18px; font-weight: 700; font-size: 40px; }
+    .leg div { display: flex; align-items: center; gap: 18px; }
+    .leg i { width: 34px; height: 34px; border-radius: 8px; }
+    .fict { position: absolute; right: 70px; top: 1290px; font-weight: 600; font-size: 26px; letter-spacing: 0.08em; text-transform: uppercase; color: #B8C7DB; }
+  </style>
+
+  <div id="root" data-composition-id="02-echantillons" data-width="1080" data-height="1920" data-duration="8.897">
+    <div id="f02-bg" class="bg clip" data-start="0" data-duration="8.897" data-track-index="0"></div>
+    <div id="f02-num" class="num clip" data-start="0" data-duration="8.897" data-track-index="1">48</div>
+    <div id="f02-lab" class="lab clip" data-start="0" data-duration="8.897" data-track-index="2">échantillons<br>analysés</div>
+    <div id="f02-lab2" class="lab2 clip" data-start="0" data-duration="8.897" data-track-index="3">seulement<br>dans le rapport</div>
+    <div id="f02-grid" class="grid clip" data-start="0" data-duration="8.897" data-track-index="4"><div class="c" id="f02-c0" style="left:98px;top:470px"><span>01</span></div><div class="c" id="f02-c1" style="left:210px;top:470px"><span>02</span></div><div class="c r" id="f02-c2" style="left:322px;top:470px"><span>Pb</span></div><div class="c" id="f02-c3" style="left:434px;top:470px"><span>04</span></div><div class="c" id="f02-c4" style="left:546px;top:470px"><span>05</span></div><div class="c r" id="f02-c5" style="left:658px;top:470px"><span>Hg</span></div><div class="c" id="f02-c6" style="left:770px;top:470px"><span>07</span></div><div class="c l" id="f02-c7" style="left:882px;top:470px"><span>08</span></div><div class="c" id="f02-c8" style="left:98px;top:562px"><span>09</span></div><div class="c r" id="f02-c9" style="left:210px;top:562px"><span>Pb</span></div><div class="c" id="f02-c10" style="left:322px;top:562px"><span>11</span></div><div class="c r" id="f02-c11" style="left:434px;top:562px"><span>Hg</span></div><div class="c" id="f02-c12" style="left:546px;top:562px"><span>13</span></div><div class="c" id="f02-c13" style="left:658px;top:562px"><span>14</span></div><div class="c r" id="f02-c14" style="left:770px;top:562px"><span>Pb</span></div><div class="c" id="f02-c15" style="left:882px;top:562px"><span>16</span></div><div class="c" id="f02-c16" style="left:98px;top:654px"><span>17</span></div><div class="c" id="f02-c17" style="left:210px;top:654px"><span>18</span></div><div class="c r" id="f02-c18" style="left:322px;top:654px"><span>Hg</span></div><div class="c" id="f02-c19" style="left:434px;top:654px"><span>20</span></div><div class="c" id="f02-c20" style="left:546px;top:654px"><span>21</span></div><div class="c r" id="f02-c21" style="left:658px;top:654px"><span>Pb</span></div><div class="c r" id="f02-c22" style="left:770px;top:654px"><span>Hg</span></div><div class="c" id="f02-c23" style="left:882px;top:654px"><span>24</span></div><div class="c" id="f02-c24" style="left:98px;top:746px"><span>25</span></div><div class="c l" id="f02-c25" style="left:210px;top:746px"><span>26</span></div><div class="c" id="f02-c26" style="left:322px;top:746px"><span>27</span></div><div class="c r" id="f02-c27" style="left:434px;top:746px"><span>Pb</span></div><div class="c" id="f02-c28" style="left:546px;top:746px"><span>29</span></div><div class="c" id="f02-c29" style="left:658px;top:746px"><span>30</span></div><div class="c r" id="f02-c30" style="left:770px;top:746px"><span>Hg</span></div><div class="c" id="f02-c31" style="left:882px;top:746px"><span>32</span></div><div class="c" id="f02-c32" style="left:98px;top:838px"><span>33</span></div><div class="c r" id="f02-c33" style="left:210px;top:838px"><span>Pb</span></div><div class="c" id="f02-c34" style="left:322px;top:838px"><span>35</span></div><div class="c" id="f02-c35" style="left:434px;top:838px"><span>36</span></div><div class="c r" id="f02-c36" style="left:546px;top:838px"><span>Hg</span></div><div class="c" id="f02-c37" style="left:658px;top:838px"><span>38</span></div><div class="c r" id="f02-c38" style="left:770px;top:838px"><span>Pb</span></div><div class="c" id="f02-c39" style="left:882px;top:838px"><span>40</span></div><div class="c" id="f02-c40" style="left:98px;top:930px"><span>41</span></div><div class="c r" id="f02-c41" style="left:210px;top:930px"><span>Hg</span></div><div class="c" id="f02-c42" style="left:322px;top:930px"><span>43</span></div><div class="c r" id="f02-c43" style="left:434px;top:930px"><span>Pb</span></div><div class="c" id="f02-c44" style="left:546px;top:930px"><span>45</span></div><div class="c r" id="f02-c45" style="left:658px;top:930px"><span>Hg</span></div><div class="c" id="f02-c46" style="left:770px;top:930px"><span>47</span></div><div class="c r" id="f02-c47" style="left:882px;top:930px"><span>Pb</span></div></div>
+    <div id="f02-leg" class="leg clip" data-start="0" data-duration="8.897" data-track-index="5">
+      <div id="f02-l1"><i style="background:#CE1126"></i>17 écartés : plomb et mercure au-dessus des seuils</div>
+      <div id="f02-l2"><i style="background:#F7D117"></i>2 valeurs corrigées à la baisse</div>
+    </div>
+    <div id="f02-fict" class="fict clip" data-start="0" data-duration="8.897" data-track-index="6">Scénario fictif</div>
+    <div id="f02-stripe" class="stripe clip" data-start="0" data-duration="8.897" data-track-index="7"></div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      const RED = [2, 5, 9, 11, 14, 18, 21, 22, 27, 30, 33, 36, 38, 41, 43, 45, 47], LOW = [7, 25];
+      tl.fromTo("#f02-num", { opacity: 0, scale: 0.6, transformOrigin: "left top" }, { opacity: 1, scale: 1, duration: 0.5, ease: "expo.out" }, 0.2);
+      tl.fromTo("#f02-lab", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 0.5);
+      for (let i = 0; i < 48; i++) tl.fromTo("#f02-c" + i, { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.3, ease: "expo.out" }, 0.3 + i * 0.022);
+      // "31 seulement dans le rapport": the 17 non-conforming samples turn red
+      tl.fromTo("#f02-num", { textContent: 48 }, { textContent: 31, snap: { textContent: 1 }, duration: 0.9, ease: "power2.inOut", immediateRender: false }, 2.4);
+      tl.to("#f02-lab", { opacity: 0, duration: 0.25 }, 2.35);
+      tl.fromTo("#f02-lab2", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 2.5);
+      RED.forEach((i, k) => tl.to("#f02-c" + i, { backgroundColor: "#CE1126", borderColor: "#FF6B7D", color: "#FFFFFF", duration: 0.2 }, 2.45 + k * 0.04));
+      // plomb, mercure ... "ont tout simplement disparu"
+      tl.fromTo("#f02-l1", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 5.5);
+      RED.forEach((i, k) => tl.to("#f02-c" + i, { opacity: 0, scale: 0.2, duration: 0.3, ease: "power2.in" }, 7.4 + k * 0.03));
+      LOW.forEach((i) => tl.to("#f02-c" + i, { backgroundColor: "#F7D117", borderColor: "#F7D117", color: "#001B3D", duration: 0.25 }, 8.0));
+      tl.fromTo("#f02-l2", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 8.0);
+      tl.fromTo("#f02-fict", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 0.6);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["02-echantillons"] = tl;
+    })();
+  </script>
+</template>

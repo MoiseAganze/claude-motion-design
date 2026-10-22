@@ -28,3 +28,7 @@ Droits : protection contre toute forme de représailles.
 Tableau de bord national — Périmètre national : TOTAL 25 · MOIS EN COURS 25 · CRITIQUES 5 · EN RETARD (SLA) 0 · TAUX RÉSOLUTION 0% · DÉLAI MOYEN —
 Carte de la RDC par province (Leaflet, choroplèthe, intensité = volume). Survol : « Kinshasa — 12 signalement(s) ». Équateur 3 ; Ituri, Tshopo, Nord-Ubangi, Tshuapa, Haut-Katanga, Kasaï, Kasaï-Central, Lomami, Lualaba, Kwilu : 1.
 Menus : Tableau de bord · Ma file · Dossiers · Affectation · SLA · Notifications · Rapports …
+
+## Mise à jour 2026-10-22
+13 catégories officielles : Corruption · Abus des enseignants · Faux diplôme · Fraude · Harcèlement et discrimination · Abus administratifs et de pouvoir · Abus académique · Détournement · Abus financiers et de gestion · Intégrité scientifique · Violations éthiques en recherche · Sécurité et conformité réglementaire · Autres irrégularités.
+Accueil : 26 signalements reçus · < 5 traités · 26 provinces · 1,618 établissements. Référence : SIG-ESURSI-2026-XXXXXX. Tableau de bord : Total 26 · Critiques 6 · Kinshasa 13.

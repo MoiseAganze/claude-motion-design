@@ -1,6 +1,6 @@
 ---
 format: 1080x1920
-duration: 77s
+duration: 80s
 message: "Un abus à l'université ? Signalez-le, en toute sécurité : le Ministère agit."
 arc: Hook → Problem → Silence → Reveal → Demo citoyen (accueil · catégories · étapes · anonymat · suivi) → Côté agent (tableau de bord · carte) → Promesse → CTA
 audience: étudiants, enseignants, personnel et citoyens de l'enseignement supérieur en RDC
@@ -77,20 +77,18 @@ music: none
 - type: demo
 - asset_candidates: assets/img/m-home.jpg, assets/img/m-form.jpg
 - sfx: whoosh, click
-- handoff_out: phone x 190 y 360 w 700, screen showing m-form.jpg at scroll 0, opacity 1, static
 
-## Frame 6 — 9 catégories
+## Frame 6 — 13 catégories
 
-- scene: Le formulaire défile jusqu'aux 9 catégories ; Corruption, Fraude, Faux diplôme, Harcèlement s'allument
-- voiceover: "Neuf catégories officielles. Corruption, fraude, faux diplôme, harcèlement…"
-- duration: 5.731s
-- transition_in: cut
+- scene: Les 13 catégories officielles du site (libellés exacts) arrivent une à une ; Corruption, Faux diplôme, Harcèlement et discrimination, Intégrité scientifique s'allument
+- voiceover: "Treize catégories officielles. De la corruption au faux diplôme, du harcèlement à l'intégrité scientifique."
+- duration: 8.435s
+- transition_in: crossfade
 - status: animated
 - src: compositions/frames/06-categories.html
 - type: demo
-- asset_candidates: assets/img/m-form.jpg
-- sfx: pop, click-soft
-- handoff_in: phone x 190 y 360 w 700, screen showing m-form.jpg at scroll 0, opacity 1, static
+- asset_candidates: none (libellés de /signalement, capture 2026-10-22)
+- sfx: pop, sparkle
 
 ## Frame 7 — 8 étapes
 
@@ -118,7 +116,7 @@ music: none
 
 ## Frame 9 — Suivi
 
-- scene: Reçu avec référence SIG-ESU-2026-ABC123 + code de suivi, puis frise Reçu → … → Clôturé
+- scene: Reçu avec référence SIG-ESURSI-2026-9C8CCC + code de suivi, puis frise Reçu → … → Clôturé
 - voiceover: "Vous recevez une référence et un code de suivi. Et vous suivez votre dossier, étape par étape."
 - duration: 6.425s
 - transition_in: crossfade
@@ -130,7 +128,7 @@ music: none
 
 ## Frame 10 — Côté Ministère
 
-- scene: « Et côté Ministère ? » → connexion agents → tableau de bord national réel, KPI 25 / 5 mis en avant
+- scene: « Et côté Ministère ? » → connexion agents → tableau de bord national réel, KPI 26 / 6 mis en avant
 - voiceover: "Et côté Ministère ? Chaque signalement arrive sur le tableau de bord national des agents."
 - duration: 5.685s
 - transition_in: zoom-through
@@ -142,7 +140,7 @@ music: none
 
 ## Frame 11 — La carte
 
-- scene: Carte réelle des 26 provinces qui s'allument une à une, Kinshasa bordée de jaune « Kinshasa — 12 signalement(s) »
+- scene: Carte réelle des 26 provinces qui s'allument une à une, Kinshasa bordée de jaune « Kinshasa — 13 signalement(s) »
 - voiceover: "Province par province, sur la carte de la RDC."
 - duration: 5.75s
 - transition_in: crossfade

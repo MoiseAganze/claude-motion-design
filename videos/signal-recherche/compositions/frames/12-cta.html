@@ -1,0 +1,57 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    @font-face { font-family: "Cormorant Garamond"; src: url("assets/fonts/CormorantGaramond-700.woff2") format("woff2"); font-weight: 700; font-display: block; }
+    @font-face { font-family: "Source Sans 3"; src: url("assets/fonts/SourceSans3-400.woff2") format("woff2"); font-weight: 400 700; font-display: block; }
+    #root { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; color: #FFFFFF; font-family: "Source Sans 3", sans-serif; }
+    .f14-bg { position: absolute; inset: 0; background: radial-gradient(900px 800px at 50% 30%, rgba(0,127,255,0.34), rgba(0,27,61,0) 70%), #001B3D; }
+    .f14-stripe { position: absolute; left: 0; top: 0; width: 1080px; height: 10px; background: linear-gradient(90deg, #007FFF 0 33%, #F7D117 33% 67%, #CE1126 67%); transform-origin: left center; }
+    .f14-seal { position: absolute; left: 430px; top: 190px; width: 220px; height: 220px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 0 0 8px rgba(255,255,255,0.12), 0 0 70px rgba(0,127,255,0.55); }
+    .f14-seal img { position: absolute; left: 8px; top: 8px; width: 204px; height: 204px; }
+    .f14-brand { position: absolute; left: 0; right: 0; top: 440px; text-align: center; }
+    .f14-name { font-family: "Cormorant Garamond", serif; font-weight: 700; font-size: 112px; line-height: 1; letter-spacing: 0.02em; }
+    .f14-sub { margin-top: 6px; font-weight: 700; font-size: 36px; letter-spacing: 0.3em; text-transform: uppercase; color: #F7D117; }
+    .f14-voice { position: absolute; left: 0; right: 0; top: 680px; text-align: center; font-weight: 700; font-size: 112px; line-height: 1; letter-spacing: -0.02em; }
+    .f14-voice span { display: inline-block; }
+    .f14-btn { position: absolute; left: 160px; top: 960px; width: 760px; height: 130px; border-radius: 18px; background: linear-gradient(180deg, #F7D117, #E6B800); color: #001B3D; font-weight: 700; font-size: 54px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 0 #B38F00, 0 20px 60px rgba(247,209,23,0.35); }
+    .f14-url { position: absolute; left: 110px; top: 1110px; width: 860px; height: 110px; border-radius: 100px; border: 3px solid rgba(255,255,255,0.7); display: flex; align-items: center; justify-content: center; gap: 20px; font-weight: 700; font-size: 52px; }
+    .f14-url svg { width: 48px; height: 48px; }
+    .f14-moto { position: absolute; left: 0; right: 0; top: 1265px; text-align: center; font-weight: 600; font-size: 32px; letter-spacing: 0.2em; text-transform: uppercase; color: #B8C7DB; }
+    .f14-fade { position: absolute; inset: 0; background: #001B3D; }
+  </style>
+
+  <div id="root" data-composition-id="12-cta" data-width="1080" data-height="1920" data-duration="8.787">
+    <div id="f14-bg" class="f14-bg clip" data-start="0" data-duration="8.787" data-track-index="0"></div>
+    <div id="f14-seal" class="f14-seal clip" data-start="0" data-duration="8.787" data-track-index="1"><img src="assets/img/logo_rdc.png" alt=""></div>
+    <div id="f14-brand" class="f14-brand clip" data-start="0" data-duration="8.787" data-track-index="2">
+      <div class="f14-name">ESURSI</div>
+      <div class="f14-sub">Signalement national</div>
+    </div>
+    <div id="f14-voice" class="f14-voice clip" data-start="0" data-duration="8.787" data-track-index="3"><span id="f14-v1" style="font-size:96px">Vous êtes témoin ?</span><br><span id="f14-v2" style="font-size:72px;color:#F7D117">Signalez-le, en toute sécurité.</span></div>
+    <div id="f14-btn" class="f14-btn clip" data-start="0" data-duration="8.787" data-track-index="4">Déposer un signalement</div>
+    <div id="f14-url" class="f14-url clip" data-start="0" data-duration="8.787" data-track-index="5"><svg viewBox="0 0 48 48" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"><circle cx="24" cy="24" r="19"/><path d="M5 24h38M24 5c6 6 8 12 8 19s-2 13-8 19M24 5c-6 6-8 12-8 19s2 13 8 19"/></svg>signal.minesursi.gouv.cd</div>
+    <div id="f14-moto" class="f14-moto clip" data-start="0" data-duration="8.787" data-track-index="6">Justice · Transparence · Mérite<br><span style="font-size:24px;letter-spacing:0.08em">Scénario fictif à des fins de démonstration</span></div>
+    <div id="f14-stripe" class="f14-stripe clip" data-start="0" data-duration="8.787" data-track-index="7"></div>
+    <div id="f14-fade" class="f14-fade clip" data-start="0" data-duration="8.787" data-track-index="8"></div>
+  </div>
+
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#f14-stripe", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.inOut" }, 0);
+      tl.fromTo("#f14-seal", { opacity: 0, scale: 0.4, rotation: -30 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.8, ease: "expo.out" }, 0.1);
+      tl.fromTo("#f14-brand", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.3);
+      tl.fromTo("#f14-v1", { opacity: 0, y: 50, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.5, ease: "power3.out" }, 0.55);
+      tl.fromTo("#f14-v2", { opacity: 0, y: 50, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.5, ease: "power3.out" }, 1.35);
+      tl.fromTo("#f14-btn", { opacity: 0, y: 60, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 0.6, ease: "expo.out" }, 1.8);
+      tl.fromTo("#f14-url", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.6, ease: "expo.out" }, 3.8);
+      tl.fromTo("#f14-moto", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power2.out" }, 4.3);
+      // gentle press on the CTA while the URL is read, then hold, then fade out
+      tl.to("#f14-btn", { scale: 0.97, duration: 0.18, ease: "power2.out" }, 5.2);
+      tl.to("#f14-btn", { scale: 1, duration: 0.3, ease: "power2.out" }, 5.38);
+      tl.fromTo("#f14-fade", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power2.in" }, 8.18);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["12-cta"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,1990 @@
+{
+  "total_duration_s": 88.967,
+  "width": 1080,
+  "height": 1920,
+  "groups": [
+    {
+      "id": "caption-group-0",
+      "frame": 1,
+      "start": 0.3,
+      "end": 0.762,
+      "text": "Au Centre",
+      "words": [
+        {
+          "id": "caption-word-0-0",
+          "text": "Au",
+          "start": 0.3,
+          "end": 0.454
+        },
+        {
+          "id": "caption-word-0-1",
+          "text": "Centre",
+          "start": 0.454,
+          "end": 0.762
+        }
+      ]
+    },
+    {
+      "id": "caption-group-1",
+      "frame": 1,
+      "start": 0.762,
+      "end": 1.339,
+      "text": "de Recherche",
+      "words": [
+        {
+          "id": "caption-word-1-0",
+          "text": "de",
+          "start": 0.762,
+          "end": 0.915
+        },
+        {
+          "id": "caption-word-1-1",
+          "text": "Recherche",
+          "start": 0.915,
+          "end": 1.339
+        }
+      ]
+    },
+    {
+      "id": "caption-group-2",
+      "frame": 1,
+      "start": 1.339,
+      "end": 1.685,
+      "text": "en Eau",
+      "words": [
+        {
+          "id": "caption-word-2-0",
+          "text": "en",
+          "start": 1.339,
+          "end": 1.492
+        },
+        {
+          "id": "caption-word-2-1",
+          "text": "Eau",
+          "start": 1.492,
+          "end": 1.685
+        }
+      ]
+    },
+    {
+      "id": "caption-group-3",
+      "frame": 1,
+      "start": 1.685,
+      "end": 2.574,
+      "text": "et Environnement,",
+      "words": [
+        {
+          "id": "caption-word-3-0",
+          "text": "et",
+          "start": 1.685,
+          "end": 1.839
+        },
+        {
+          "id": "caption-word-3-1",
+          "text": "Environnement,",
+          "start": 1.839,
+          "end": 2.454
+        }
+      ]
+    },
+    {
+      "id": "caption-group-4",
+      "frame": 1,
+      "start": 2.763,
+      "end": 3.905,
+      "text": "une chercheuse découvre",
+      "words": [
+        {
+          "id": "caption-word-4-0",
+          "text": "une",
+          "start": 2.763,
+          "end": 2.974
+        },
+        {
+          "id": "caption-word-4-1",
+          "text": "chercheuse",
+          "start": 2.974,
+          "end": 3.482
+        },
+        {
+          "id": "caption-word-4-2",
+          "text": "découvre",
+          "start": 3.482,
+          "end": 3.905
+        }
+      ]
+    },
+    {
+      "id": "caption-group-5",
+      "frame": 1,
+      "start": 3.905,
+      "end": 4.328,
+      "text": "que des",
+      "words": [
+        {
+          "id": "caption-word-5-0",
+          "text": "que",
+          "start": 3.905,
+          "end": 4.116
+        },
+        {
+          "id": "caption-word-5-1",
+          "text": "des",
+          "start": 4.116,
+          "end": 4.328
+        }
+      ]
+    },
+    {
+      "id": "caption-group-6",
+      "frame": 1,
+      "start": 4.328,
+      "end": 5.47,
+      "text": "résultats d'analyse ont",
+      "words": [
+        {
+          "id": "caption-word-6-0",
+          "text": "résultats",
+          "start": 4.328,
+          "end": 4.793
+        },
+        {
+          "id": "caption-word-6-1",
+          "text": "d'analyse",
+          "start": 4.793,
+          "end": 5.258
+        },
+        {
+          "id": "caption-word-6-2",
+          "text": "ont",
+          "start": 5.258,
+          "end": 5.47
+        }
+      ]
+    },
+    {
+      "id": "caption-group-7",
+      "frame": 1,
+      "start": 5.47,
+      "end": 6.104,
+      "text": "été modifiés",
+      "words": [
+        {
+          "id": "caption-word-7-0",
+          "text": "été",
+          "start": 5.47,
+          "end": 5.681
+        },
+        {
+          "id": "caption-word-7-1",
+          "text": "modifiés",
+          "start": 5.681,
+          "end": 6.104
+        }
+      ]
+    },
+    {
+      "id": "caption-group-8",
+      "frame": 1,
+      "start": 6.104,
+      "end": 7.113,
+      "text": "avant publication.",
+      "words": [
+        {
+          "id": "caption-word-8-0",
+          "text": "avant",
+          "start": 6.104,
+          "end": 6.4
+        },
+        {
+          "id": "caption-word-8-1",
+          "text": "publication.",
+          "start": 6.4,
+          "end": 6.993
+        }
+      ]
+    },
+    {
+      "id": "caption-group-9",
+      "frame": 2,
+      "start": 8.113,
+      "end": 9.778,
+      "text": "Quarante-huit échantillons analysés.",
+      "words": [
+        {
+          "id": "caption-word-9-0",
+          "text": "Quarante-huit",
+          "start": 8.113,
+          "end": 8.692
+        },
+        {
+          "id": "caption-word-9-1",
+          "text": "échantillons",
+          "start": 8.692,
+          "end": 9.233
+        },
+        {
+          "id": "caption-word-9-2",
+          "text": "analysés.",
+          "start": 9.233,
+          "end": 9.658
+        }
+      ]
+    },
+    {
+      "id": "caption-group-10",
+      "frame": 2,
+      "start": 10.128,
+      "end": 10.525,
+      "text": "Trente et",
+      "words": [
+        {
+          "id": "caption-word-10-0",
+          "text": "Trente",
+          "start": 10.128,
+          "end": 10.393
+        },
+        {
+          "id": "caption-word-10-1",
+          "text": "et",
+          "start": 10.393,
+          "end": 10.525
+        }
+      ]
+    },
+    {
+      "id": "caption-group-11",
+      "frame": 2,
+      "start": 10.525,
+      "end": 11.022,
+      "text": "un seulement",
+      "words": [
+        {
+          "id": "caption-word-11-0",
+          "text": "un",
+          "start": 10.525,
+          "end": 10.658
+        },
+        {
+          "id": "caption-word-11-1",
+          "text": "seulement",
+          "start": 10.658,
+          "end": 11.022
+        }
+      ]
+    },
+    {
+      "id": "caption-group-12",
+      "frame": 2,
+      "start": 11.022,
+      "end": 11.804,
+      "text": "dans le rapport.",
+      "words": [
+        {
+          "id": "caption-word-12-0",
+          "text": "dans",
+          "start": 11.022,
+          "end": 11.22
+        },
+        {
+          "id": "caption-word-12-1",
+          "text": "le",
+          "start": 11.22,
+          "end": 11.353
+        },
+        {
+          "id": "caption-word-12-2",
+          "text": "rapport.",
+          "start": 11.353,
+          "end": 11.684
+        }
+      ]
+    },
+    {
+      "id": "caption-group-13",
+      "frame": 2,
+      "start": 12.133,
+      "end": 12.695,
+      "text": "Les valeurs",
+      "words": [
+        {
+          "id": "caption-word-13-0",
+          "text": "Les",
+          "start": 12.133,
+          "end": 12.334
+        },
+        {
+          "id": "caption-word-13-1",
+          "text": "valeurs",
+          "start": 12.334,
+          "end": 12.695
+        }
+      ]
+    },
+    {
+      "id": "caption-group-14",
+      "frame": 2,
+      "start": 12.695,
+      "end": 13.338,
+      "text": "non conformes",
+      "words": [
+        {
+          "id": "caption-word-14-0",
+          "text": "non",
+          "start": 12.695,
+          "end": 12.896
+        },
+        {
+          "id": "caption-word-14-1",
+          "text": "conformes",
+          "start": 12.896,
+          "end": 13.338
+        }
+      ]
+    },
+    {
+      "id": "caption-group-15",
+      "frame": 2,
+      "start": 13.338,
+      "end": 13.78,
+      "text": "en plomb",
+      "words": [
+        {
+          "id": "caption-word-15-0",
+          "text": "en",
+          "start": 13.338,
+          "end": 13.499
+        },
+        {
+          "id": "caption-word-15-1",
+          "text": "plomb",
+          "start": 13.499,
+          "end": 13.78
+        }
+      ]
+    },
+    {
+      "id": "caption-group-16",
+      "frame": 2,
+      "start": 13.78,
+      "end": 14.102,
+      "text": "et en",
+      "words": [
+        {
+          "id": "caption-word-16-0",
+          "text": "et",
+          "start": 13.78,
+          "end": 13.941
+        },
+        {
+          "id": "caption-word-16-1",
+          "text": "en",
+          "start": 13.941,
+          "end": 14.102
+        }
+      ]
+    },
+    {
+      "id": "caption-group-17",
+      "frame": 2,
+      "start": 14.102,
+      "end": 14.665,
+      "text": "mercure ont",
+      "words": [
+        {
+          "id": "caption-word-17-0",
+          "text": "mercure",
+          "start": 14.102,
+          "end": 14.464
+        },
+        {
+          "id": "caption-word-17-1",
+          "text": "ont",
+          "start": 14.464,
+          "end": 14.665
+        }
+      ]
+    },
+    {
+      "id": "caption-group-18",
+      "frame": 2,
+      "start": 14.665,
+      "end": 15.91,
+      "text": "tout simplement disparu.",
+      "words": [
+        {
+          "id": "caption-word-18-0",
+          "text": "tout",
+          "start": 14.665,
+          "end": 14.906
+        },
+        {
+          "id": "caption-word-18-1",
+          "text": "simplement",
+          "start": 14.906,
+          "end": 15.388
+        },
+        {
+          "id": "caption-word-18-2",
+          "text": "disparu.",
+          "start": 15.388,
+          "end": 15.79
+        }
+      ]
+    },
+    {
+      "id": "caption-group-19",
+      "frame": 3,
+      "start": 17.01,
+      "end": 17.635,
+      "text": "Que faire ?",
+      "words": [
+        {
+          "id": "caption-word-19-0",
+          "text": "Que",
+          "start": 17.01,
+          "end": 17.204
+        },
+        {
+          "id": "caption-word-19-1",
+          "text": "faire ?",
+          "start": 17.204,
+          "end": 17.515
+        }
+      ]
+    },
+    {
+      "id": "caption-group-20",
+      "frame": 4,
+      "start": 18.535,
+      "end": 19.172,
+      "text": "Le Ministère",
+      "words": [
+        {
+          "id": "caption-word-20-0",
+          "text": "Le",
+          "start": 18.535,
+          "end": 18.705
+        },
+        {
+          "id": "caption-word-20-1",
+          "text": "Ministère",
+          "start": 18.705,
+          "end": 19.172
+        }
+      ]
+    },
+    {
+      "id": "caption-group-21",
+      "frame": 4,
+      "start": 19.172,
+      "end": 19.512,
+      "text": "met à",
+      "words": [
+        {
+          "id": "caption-word-21-0",
+          "text": "met",
+          "start": 19.172,
+          "end": 19.384
+        },
+        {
+          "id": "caption-word-21-1",
+          "text": "à",
+          "start": 19.384,
+          "end": 19.512
+        }
+      ]
+    },
+    {
+      "id": "caption-group-22",
+      "frame": 4,
+      "start": 19.512,
+      "end": 20.786,
+      "text": "disposition une plateforme",
+      "words": [
+        {
+          "id": "caption-word-22-0",
+          "text": "disposition",
+          "start": 19.512,
+          "end": 20.064
+        },
+        {
+          "id": "caption-word-22-1",
+          "text": "une",
+          "start": 20.064,
+          "end": 20.276
+        },
+        {
+          "id": "caption-word-22-2",
+          "text": "plateforme",
+          "start": 20.276,
+          "end": 20.786
+        }
+      ]
+    },
+    {
+      "id": "caption-group-23",
+      "frame": 4,
+      "start": 20.786,
+      "end": 21.415,
+      "text": "sécurisée,",
+      "words": [
+        {
+          "id": "caption-word-23-0",
+          "text": "sécurisée,",
+          "start": 20.786,
+          "end": 21.295
+        }
+      ]
+    },
+    {
+      "id": "caption-group-24",
+      "frame": 4,
+      "start": 21.513,
+      "end": 22.1,
+      "text": "ouverte à",
+      "words": [
+        {
+          "id": "caption-word-24-0",
+          "text": "ouverte",
+          "start": 21.513,
+          "end": 21.953
+        },
+        {
+          "id": "caption-word-24-1",
+          "text": "à",
+          "start": 21.953,
+          "end": 22.1
+        }
+      ]
+    },
+    {
+      "id": "caption-group-25",
+      "frame": 4,
+      "start": 22.1,
+      "end": 22.98,
+      "text": "tout chercheur,",
+      "words": [
+        {
+          "id": "caption-word-25-0",
+          "text": "tout",
+          "start": 22.1,
+          "end": 22.393
+        },
+        {
+          "id": "caption-word-25-1",
+          "text": "chercheur,",
+          "start": 22.393,
+          "end": 22.98
+        }
+      ]
+    },
+    {
+      "id": "caption-group-26",
+      "frame": 4,
+      "start": 22.98,
+      "end": 23.372,
+      "text": "agent,",
+      "words": [
+        {
+          "id": "caption-word-26-0",
+          "text": "agent,",
+          "start": 22.98,
+          "end": 23.372
+        }
+      ]
+    },
+    {
+      "id": "caption-group-27",
+      "frame": 4,
+      "start": 23.372,
+      "end": 24.666,
+      "text": "étudiant ou citoyen.",
+      "words": [
+        {
+          "id": "caption-word-27-0",
+          "text": "étudiant",
+          "start": 23.372,
+          "end": 23.861
+        },
+        {
+          "id": "caption-word-27-1",
+          "text": "ou",
+          "start": 23.861,
+          "end": 24.057
+        },
+        {
+          "id": "caption-word-27-2",
+          "text": "citoyen.",
+          "start": 24.057,
+          "end": 24.546
+        }
+      ]
+    },
+    {
+      "id": "caption-group-28",
+      "frame": 5,
+      "start": 25.766,
+      "end": 26.999,
+      "text": "Parmi treize catégories,",
+      "words": [
+        {
+          "id": "caption-word-28-0",
+          "text": "Parmi",
+          "start": 25.766,
+          "end": 26.044
+        },
+        {
+          "id": "caption-word-28-1",
+          "text": "treize",
+          "start": 26.044,
+          "end": 26.362
+        },
+        {
+          "id": "caption-word-28-2",
+          "text": "catégories,",
+          "start": 26.362,
+          "end": 26.879
+        }
+      ]
+    },
+    {
+      "id": "caption-group-29",
+      "frame": 5,
+      "start": 27.078,
+      "end": 27.709,
+      "text": "elle choisit",
+      "words": [
+        {
+          "id": "caption-word-29-0",
+          "text": "elle",
+          "start": 27.078,
+          "end": 27.283
+        },
+        {
+          "id": "caption-word-29-1",
+          "text": "choisit",
+          "start": 27.283,
+          "end": 27.589
+        }
+      ]
+    },
+    {
+      "id": "caption-group-30",
+      "frame": 5,
+      "start": 28.069,
+      "end": 29.409,
+      "text": "Intégrité scientifique.",
+      "words": [
+        {
+          "id": "caption-word-30-0",
+          "text": "Intégrité",
+          "start": 28.069,
+          "end": 28.585
+        },
+        {
+          "id": "caption-word-30-1",
+          "text": "scientifique.",
+          "start": 28.585,
+          "end": 29.289
+        }
+      ]
+    },
+    {
+      "id": "caption-group-31",
+      "frame": 5,
+      "start": 29.752,
+      "end": 30.051,
+      "text": "Type de",
+      "words": [
+        {
+          "id": "caption-word-31-0",
+          "text": "Type",
+          "start": 29.752,
+          "end": 29.932
+        },
+        {
+          "id": "caption-word-31-1",
+          "text": "de",
+          "start": 29.932,
+          "end": 30.051
+        }
+      ]
+    },
+    {
+      "id": "caption-group-32",
+      "frame": 5,
+      "start": 30.051,
+      "end": 30.381,
+      "text": "faits",
+      "words": [
+        {
+          "id": "caption-word-32-0",
+          "text": "faits",
+          "start": 30.051,
+          "end": 30.261
+        }
+      ]
+    },
+    {
+      "id": "caption-group-33",
+      "frame": 5,
+      "start": 30.597,
+      "end": 31.815,
+      "text": "manipulation de résultats",
+      "words": [
+        {
+          "id": "caption-word-33-0",
+          "text": "manipulation",
+          "start": 30.597,
+          "end": 31.185
+        },
+        {
+          "id": "caption-word-33-1",
+          "text": "de",
+          "start": 31.185,
+          "end": 31.353
+        },
+        {
+          "id": "caption-word-33-2",
+          "text": "résultats",
+          "start": 31.353,
+          "end": 31.815
+        }
+      ]
+    },
+    {
+      "id": "caption-group-34",
+      "frame": 5,
+      "start": 31.815,
+      "end": 32.606,
+      "text": "de recherche.",
+      "words": [
+        {
+          "id": "caption-word-34-0",
+          "text": "de",
+          "start": 31.815,
+          "end": 31.982
+        },
+        {
+          "id": "caption-word-34-1",
+          "text": "recherche.",
+          "start": 31.982,
+          "end": 32.486
+        }
+      ]
+    },
+    {
+      "id": "caption-group-35",
+      "frame": 6,
+      "start": 33.906,
+      "end": 34.446,
+      "text": "Province",
+      "words": [
+        {
+          "id": "caption-word-35-0",
+          "text": "Province",
+          "start": 33.906,
+          "end": 34.326
+        }
+      ]
+    },
+    {
+      "id": "caption-group-36",
+      "frame": 6,
+      "start": 34.695,
+      "end": 35.347,
+      "text": "Kinshasa.",
+      "words": [
+        {
+          "id": "caption-word-36-0",
+          "text": "Kinshasa.",
+          "start": 34.695,
+          "end": 35.227
+        }
+      ]
+    },
+    {
+      "id": "caption-group-37",
+      "frame": 6,
+      "start": 35.656,
+      "end": 36.331,
+      "text": "Établissement",
+      "words": [
+        {
+          "id": "caption-word-37-0",
+          "text": "Établissement",
+          "start": 35.656,
+          "end": 36.211
+        }
+      ]
+    },
+    {
+      "id": "caption-group-38",
+      "frame": 6,
+      "start": 36.602,
+      "end": 37.114,
+      "text": "son centre",
+      "words": [
+        {
+          "id": "caption-word-38-0",
+          "text": "son",
+          "start": 36.602,
+          "end": 36.799
+        },
+        {
+          "id": "caption-word-38-1",
+          "text": "centre",
+          "start": 36.799,
+          "end": 37.114
+        }
+      ]
+    },
+    {
+      "id": "caption-group-39",
+      "frame": 6,
+      "start": 37.114,
+      "end": 37.744,
+      "text": "de recherche,",
+      "words": [
+        {
+          "id": "caption-word-39-0",
+          "text": "de",
+          "start": 37.114,
+          "end": 37.271
+        },
+        {
+          "id": "caption-word-39-1",
+          "text": "recherche,",
+          "start": 37.271,
+          "end": 37.744
+        }
+      ]
+    },
+    {
+      "id": "caption-group-40",
+      "frame": 6,
+      "start": 37.744,
+      "end": 38.295,
+      "text": "retrouvé en",
+      "words": [
+        {
+          "id": "caption-word-40-0",
+          "text": "retrouvé",
+          "start": 37.744,
+          "end": 38.137
+        },
+        {
+          "id": "caption-word-40-1",
+          "text": "en",
+          "start": 38.137,
+          "end": 38.295
+        }
+      ]
+    },
+    {
+      "id": "caption-group-41",
+      "frame": 6,
+      "start": 38.295,
+      "end": 39.202,
+      "text": "quelques lettres.",
+      "words": [
+        {
+          "id": "caption-word-41-0",
+          "text": "quelques",
+          "start": 38.295,
+          "end": 38.689
+        },
+        {
+          "id": "caption-word-41-1",
+          "text": "lettres.",
+          "start": 38.689,
+          "end": 39.082
+        }
+      ]
+    },
+    {
+      "id": "caption-group-42",
+      "frame": 6,
+      "start": 39.546,
+      "end": 40.091,
+      "text": "En cause",
+      "words": [
+        {
+          "id": "caption-word-42-0",
+          "text": "En",
+          "start": 39.546,
+          "end": 39.7
+        },
+        {
+          "id": "caption-word-42-1",
+          "text": "cause",
+          "start": 39.7,
+          "end": 39.971
+        }
+      ]
+    },
+    {
+      "id": "caption-group-43",
+      "frame": 6,
+      "start": 40.345,
+      "end": 41.042,
+      "text": "le service,",
+      "words": [
+        {
+          "id": "caption-word-43-0",
+          "text": "le",
+          "start": 40.345,
+          "end": 40.544
+        },
+        {
+          "id": "caption-word-43-1",
+          "text": "service,",
+          "start": 40.544,
+          "end": 41.042
+        }
+      ]
+    },
+    {
+      "id": "caption-group-44",
+      "frame": 6,
+      "start": 41.042,
+      "end": 42.707,
+      "text": "sans accusation nominative.",
+      "words": [
+        {
+          "id": "caption-word-44-0",
+          "text": "sans",
+          "start": 41.042,
+          "end": 41.341
+        },
+        {
+          "id": "caption-word-44-1",
+          "text": "accusation",
+          "start": 41.341,
+          "end": 41.939
+        },
+        {
+          "id": "caption-word-44-2",
+          "text": "nominative.",
+          "start": 41.939,
+          "end": 42.587
+        }
+      ]
+    },
+    {
+      "id": "caption-group-45",
+      "frame": 7,
+      "start": 43.807,
+      "end": 44.22,
+      "text": "Elle décrit",
+      "words": [
+        {
+          "id": "caption-word-45-0",
+          "text": "Elle",
+          "start": 43.807,
+          "end": 43.984
+        },
+        {
+          "id": "caption-word-45-1",
+          "text": "décrit",
+          "start": 43.984,
+          "end": 44.22
+        }
+      ]
+    },
+    {
+      "id": "caption-group-46",
+      "frame": 7,
+      "start": 44.22,
+      "end": 44.724,
+      "text": "les faits,",
+      "words": [
+        {
+          "id": "caption-word-46-0",
+          "text": "les",
+          "start": 44.22,
+          "end": 44.368
+        },
+        {
+          "id": "caption-word-46-1",
+          "text": "faits,",
+          "start": 44.368,
+          "end": 44.604
+        }
+      ]
+    },
+    {
+      "id": "caption-group-47",
+      "frame": 7,
+      "start": 44.824,
+      "end": 45.938,
+      "text": "précis et datés.",
+      "words": [
+        {
+          "id": "caption-word-47-0",
+          "text": "précis",
+          "start": 44.824,
+          "end": 45.222
+        },
+        {
+          "id": "caption-word-47-1",
+          "text": "et",
+          "start": 45.222,
+          "end": 45.421
+        },
+        {
+          "id": "caption-word-47-2",
+          "text": "datés.",
+          "start": 45.421,
+          "end": 45.818
+        }
+      ]
+    },
+    {
+      "id": "caption-group-48",
+      "frame": 7,
+      "start": 46.26,
+      "end": 46.837,
+      "text": "Gravité",
+      "words": [
+        {
+          "id": "caption-word-48-0",
+          "text": "Gravité",
+          "start": 46.26,
+          "end": 46.717
+        }
+      ]
+    },
+    {
+      "id": "caption-group-49",
+      "frame": 7,
+      "start": 47.215,
+      "end": 47.73,
+      "text": "élevée.",
+      "words": [
+        {
+          "id": "caption-word-49-0",
+          "text": "élevée.",
+          "start": 47.215,
+          "end": 47.61
+        }
+      ]
+    },
+    {
+      "id": "caption-group-50",
+      "frame": 7,
+      "start": 47.889,
+      "end": 48.099,
+      "text": "Il y",
+      "words": [
+        {
+          "id": "caption-word-50-0",
+          "text": "Il",
+          "start": 47.889,
+          "end": 48.009
+        },
+        {
+          "id": "caption-word-50-1",
+          "text": "y",
+          "start": 48.009,
+          "end": 48.099
+        }
+      ]
+    },
+    {
+      "id": "caption-group-51",
+      "frame": 7,
+      "start": 48.099,
+      "end": 48.34,
+      "text": "va de",
+      "words": [
+        {
+          "id": "caption-word-51-0",
+          "text": "va",
+          "start": 48.099,
+          "end": 48.22
+        },
+        {
+          "id": "caption-word-51-1",
+          "text": "de",
+          "start": 48.22,
+          "end": 48.34
+        }
+      ]
+    },
+    {
+      "id": "caption-group-52",
+      "frame": 7,
+      "start": 48.34,
+      "end": 48.672,
+      "text": "la santé",
+      "words": [
+        {
+          "id": "caption-word-52-0",
+          "text": "la",
+          "start": 48.34,
+          "end": 48.461
+        },
+        {
+          "id": "caption-word-52-1",
+          "text": "santé",
+          "start": 48.461,
+          "end": 48.672
+        }
+      ]
+    },
+    {
+      "id": "caption-group-53",
+      "frame": 7,
+      "start": 48.672,
+      "end": 49.304,
+      "text": "des riverains.",
+      "words": [
+        {
+          "id": "caption-word-53-0",
+          "text": "des",
+          "start": 48.672,
+          "end": 48.822
+        },
+        {
+          "id": "caption-word-53-1",
+          "text": "riverains.",
+          "start": 48.822,
+          "end": 49.184
+        }
+      ]
+    },
+    {
+      "id": "caption-group-54",
+      "frame": 7,
+      "start": 49.646,
+      "end": 49.929,
+      "text": "Et elle",
+      "words": [
+        {
+          "id": "caption-word-54-0",
+          "text": "Et",
+          "start": 49.646,
+          "end": 49.759
+        },
+        {
+          "id": "caption-word-54-1",
+          "text": "elle",
+          "start": 49.759,
+          "end": 49.929
+        }
+      ]
+    },
+    {
+      "id": "caption-group-55",
+      "frame": 7,
+      "start": 49.929,
+      "end": 50.268,
+      "text": "joint ses",
+      "words": [
+        {
+          "id": "caption-word-55-0",
+          "text": "joint",
+          "start": 49.929,
+          "end": 50.126
+        },
+        {
+          "id": "caption-word-55-1",
+          "text": "ses",
+          "start": 50.126,
+          "end": 50.268
+        }
+      ]
+    },
+    {
+      "id": "caption-group-56",
+      "frame": 7,
+      "start": 50.268,
+      "end": 50.642,
+      "text": "preuves",
+      "words": [
+        {
+          "id": "caption-word-56-0",
+          "text": "preuves",
+          "start": 50.268,
+          "end": 50.522
+        }
+      ]
+    },
+    {
+      "id": "caption-group-57",
+      "frame": 7,
+      "start": 50.894,
+      "end": 51.822,
+      "text": "les relevés bruts,",
+      "words": [
+        {
+          "id": "caption-word-57-0",
+          "text": "les",
+          "start": 50.894,
+          "end": 51.078
+        },
+        {
+          "id": "caption-word-57-1",
+          "text": "relevés",
+          "start": 51.078,
+          "end": 51.408
+        },
+        {
+          "id": "caption-word-57-2",
+          "text": "bruts,",
+          "start": 51.408,
+          "end": 51.702
+        }
+      ]
+    },
+    {
+      "id": "caption-group-58",
+      "frame": 7,
+      "start": 51.935,
+      "end": 52.214,
+      "text": "et le",
+      "words": [
+        {
+          "id": "caption-word-58-0",
+          "text": "et",
+          "start": 51.935,
+          "end": 52.074
+        },
+        {
+          "id": "caption-word-58-1",
+          "text": "le",
+          "start": 52.074,
+          "end": 52.214
+        }
+      ]
+    },
+    {
+      "id": "caption-group-59",
+      "frame": 7,
+      "start": 52.214,
+      "end": 52.925,
+      "text": "rapport final.",
+      "words": [
+        {
+          "id": "caption-word-59-0",
+          "text": "rapport",
+          "start": 52.214,
+          "end": 52.527
+        },
+        {
+          "id": "caption-word-59-1",
+          "text": "final.",
+          "start": 52.527,
+          "end": 52.805
+        }
+      ]
+    },
+    {
+      "id": "caption-group-60",
+      "frame": 8,
+      "start": 54.125,
+      "end": 54.751,
+      "text": "Elle choisit",
+      "words": [
+        {
+          "id": "caption-word-60-0",
+          "text": "Elle",
+          "start": 54.125,
+          "end": 54.376
+        },
+        {
+          "id": "caption-word-60-1",
+          "text": "choisit",
+          "start": 54.376,
+          "end": 54.751
+        }
+      ]
+    },
+    {
+      "id": "caption-group-61",
+      "frame": 8,
+      "start": 54.751,
+      "end": 55.707,
+      "text": "le mode anonyme.",
+      "words": [
+        {
+          "id": "caption-word-61-0",
+          "text": "le",
+          "start": 54.751,
+          "end": 54.918
+        },
+        {
+          "id": "caption-word-61-1",
+          "text": "mode",
+          "start": 54.918,
+          "end": 55.169
+        },
+        {
+          "id": "caption-word-61-2",
+          "text": "anonyme.",
+          "start": 55.169,
+          "end": 55.587
+        }
+      ]
+    },
+    {
+      "id": "caption-group-62",
+      "frame": 8,
+      "start": 55.956,
+      "end": 56.567,
+      "text": "Identifiée,",
+      "words": [
+        {
+          "id": "caption-word-62-0",
+          "text": "Identifiée,",
+          "start": 55.956,
+          "end": 56.567
+        }
+      ]
+    },
+    {
+      "id": "caption-group-63",
+      "frame": 8,
+      "start": 56.567,
+      "end": 57.647,
+      "text": "son identité serait",
+      "words": [
+        {
+          "id": "caption-word-63-0",
+          "text": "son",
+          "start": 56.567,
+          "end": 56.802
+        },
+        {
+          "id": "caption-word-63-1",
+          "text": "identité",
+          "start": 56.802,
+          "end": 57.271
+        },
+        {
+          "id": "caption-word-63-2",
+          "text": "serait",
+          "start": 57.271,
+          "end": 57.647
+        }
+      ]
+    },
+    {
+      "id": "caption-group-64",
+      "frame": 8,
+      "start": 57.647,
+      "end": 58.284,
+      "text": "chiffrée,",
+      "words": [
+        {
+          "id": "caption-word-64-0",
+          "text": "chiffrée,",
+          "start": 57.647,
+          "end": 58.164
+        }
+      ]
+    },
+    {
+      "id": "caption-group-65",
+      "frame": 8,
+      "start": 58.406,
+      "end": 58.973,
+      "text": "et réservée",
+      "words": [
+        {
+          "id": "caption-word-65-0",
+          "text": "et",
+          "start": 58.406,
+          "end": 58.568
+        },
+        {
+          "id": "caption-word-65-1",
+          "text": "réservée",
+          "start": 58.568,
+          "end": 58.973
+        }
+      ]
+    },
+    {
+      "id": "caption-group-66",
+      "frame": 8,
+      "start": 58.973,
+      "end": 59.459,
+      "text": "aux seuls",
+      "words": [
+        {
+          "id": "caption-word-66-0",
+          "text": "aux",
+          "start": 58.973,
+          "end": 59.176
+        },
+        {
+          "id": "caption-word-66-1",
+          "text": "seuls",
+          "start": 59.176,
+          "end": 59.459
+        }
+      ]
+    },
+    {
+      "id": "caption-group-67",
+      "frame": 8,
+      "start": 59.459,
+      "end": 60.39,
+      "text": "agents habilités.",
+      "words": [
+        {
+          "id": "caption-word-67-0",
+          "text": "agents",
+          "start": 59.459,
+          "end": 59.784
+        },
+        {
+          "id": "caption-word-67-1",
+          "text": "habilités.",
+          "start": 59.784,
+          "end": 60.27
+        }
+      ]
+    },
+    {
+      "id": "caption-group-68",
+      "frame": 9,
+      "start": 61.59,
+      "end": 62.45,
+      "text": "Elle certifie,",
+      "words": [
+        {
+          "id": "caption-word-68-0",
+          "text": "Elle",
+          "start": 61.59,
+          "end": 61.851
+        },
+        {
+          "id": "caption-word-68-1",
+          "text": "certifie,",
+          "start": 61.851,
+          "end": 62.33
+        }
+      ]
+    },
+    {
+      "id": "caption-group-69",
+      "frame": 9,
+      "start": 62.697,
+      "end": 63.359,
+      "text": "elle envoie…",
+      "words": [
+        {
+          "id": "caption-word-69-0",
+          "text": "elle",
+          "start": 62.697,
+          "end": 62.914
+        },
+        {
+          "id": "caption-word-69-1",
+          "text": "envoie…",
+          "start": 62.914,
+          "end": 63.239
+        }
+      ]
+    },
+    {
+      "id": "caption-group-70",
+      "frame": 9,
+      "start": 63.623,
+      "end": 64.128,
+      "text": "et reçoit",
+      "words": [
+        {
+          "id": "caption-word-70-0",
+          "text": "et",
+          "start": 63.623,
+          "end": 63.791
+        },
+        {
+          "id": "caption-word-70-1",
+          "text": "reçoit",
+          "start": 63.791,
+          "end": 64.128
+        }
+      ]
+    },
+    {
+      "id": "caption-group-71",
+      "frame": 9,
+      "start": 64.128,
+      "end": 64.844,
+      "text": "une référence,",
+      "words": [
+        {
+          "id": "caption-word-71-0",
+          "text": "une",
+          "start": 64.128,
+          "end": 64.339
+        },
+        {
+          "id": "caption-word-71-1",
+          "text": "référence,",
+          "start": 64.339,
+          "end": 64.844
+        }
+      ]
+    },
+    {
+      "id": "caption-group-72",
+      "frame": 9,
+      "start": 64.844,
+      "end": 65.181,
+      "text": "et un",
+      "words": [
+        {
+          "id": "caption-word-72-0",
+          "text": "et",
+          "start": 64.844,
+          "end": 65.013
+        },
+        {
+          "id": "caption-word-72-1",
+          "text": "un",
+          "start": 65.013,
+          "end": 65.181
+        }
+      ]
+    },
+    {
+      "id": "caption-group-73",
+      "frame": 9,
+      "start": 65.181,
+      "end": 65.602,
+      "text": "code de",
+      "words": [
+        {
+          "id": "caption-word-73-0",
+          "text": "code",
+          "start": 65.181,
+          "end": 65.434
+        },
+        {
+          "id": "caption-word-73-1",
+          "text": "de",
+          "start": 65.434,
+          "end": 65.602
+        }
+      ]
+    },
+    {
+      "id": "caption-group-74",
+      "frame": 9,
+      "start": 65.602,
+      "end": 66.649,
+      "text": "suivi confidentiel.",
+      "words": [
+        {
+          "id": "caption-word-74-0",
+          "text": "suivi",
+          "start": 65.602,
+          "end": 65.897
+        },
+        {
+          "id": "caption-word-74-1",
+          "text": "confidentiel.",
+          "start": 65.897,
+          "end": 66.529
+        }
+      ]
+    },
+    {
+      "id": "caption-group-75",
+      "frame": 10,
+      "start": 68.149,
+      "end": 68.624,
+      "text": "Elle suit",
+      "words": [
+        {
+          "id": "caption-word-75-0",
+          "text": "Elle",
+          "start": 68.149,
+          "end": 68.387
+        },
+        {
+          "id": "caption-word-75-1",
+          "text": "suit",
+          "start": 68.387,
+          "end": 68.624
+        }
+      ]
+    },
+    {
+      "id": "caption-group-76",
+      "frame": 10,
+      "start": 68.624,
+      "end": 69.218,
+      "text": "son dossier,",
+      "words": [
+        {
+          "id": "caption-word-76-0",
+          "text": "son",
+          "start": 68.624,
+          "end": 68.822
+        },
+        {
+          "id": "caption-word-76-1",
+          "text": "dossier,",
+          "start": 68.822,
+          "end": 69.218
+        }
+      ]
+    },
+    {
+      "id": "caption-group-77",
+      "frame": 10,
+      "start": 69.218,
+      "end": 69.733,
+      "text": "et échange",
+      "words": [
+        {
+          "id": "caption-word-77-0",
+          "text": "et",
+          "start": 69.218,
+          "end": 69.376
+        },
+        {
+          "id": "caption-word-77-1",
+          "text": "échange",
+          "start": 69.376,
+          "end": 69.733
+        }
+      ]
+    },
+    {
+      "id": "caption-group-78",
+      "frame": 10,
+      "start": 69.733,
+      "end": 70.485,
+      "text": "avec l'enquêteur",
+      "words": [
+        {
+          "id": "caption-word-78-0",
+          "text": "avec",
+          "start": 69.733,
+          "end": 69.97
+        },
+        {
+          "id": "caption-word-78-1",
+          "text": "l'enquêteur",
+          "start": 69.97,
+          "end": 70.485
+        }
+      ]
+    },
+    {
+      "id": "caption-group-79",
+      "frame": 10,
+      "start": 70.485,
+      "end": 71.753,
+      "text": "par messagerie sécurisée,",
+      "words": [
+        {
+          "id": "caption-word-79-0",
+          "text": "par",
+          "start": 70.485,
+          "end": 70.683
+        },
+        {
+          "id": "caption-word-79-1",
+          "text": "messagerie",
+          "start": 70.683,
+          "end": 71.158
+        },
+        {
+          "id": "caption-word-79-2",
+          "text": "sécurisée,",
+          "start": 71.158,
+          "end": 71.633
+        }
+      ]
+    },
+    {
+      "id": "caption-group-80",
+      "frame": 10,
+      "start": 71.825,
+      "end": 72.839,
+      "text": "sans jamais révéler",
+      "words": [
+        {
+          "id": "caption-word-80-0",
+          "text": "sans",
+          "start": 71.825,
+          "end": 72.089
+        },
+        {
+          "id": "caption-word-80-1",
+          "text": "jamais",
+          "start": 72.089,
+          "end": 72.442
+        },
+        {
+          "id": "caption-word-80-2",
+          "text": "révéler",
+          "start": 72.442,
+          "end": 72.839
+        }
+      ]
+    },
+    {
+      "id": "caption-group-81",
+      "frame": 10,
+      "start": 72.839,
+      "end": 73.665,
+      "text": "son identité.",
+      "words": [
+        {
+          "id": "caption-word-81-0",
+          "text": "son",
+          "start": 72.839,
+          "end": 73.06
+        },
+        {
+          "id": "caption-word-81-1",
+          "text": "identité.",
+          "start": 73.06,
+          "end": 73.545
+        }
+      ]
+    },
+    {
+      "id": "caption-group-82",
+      "frame": 11,
+      "start": 75.065,
+      "end": 76.34,
+      "text": "Falsifier des résultats,",
+      "words": [
+        {
+          "id": "caption-word-82-0",
+          "text": "Falsifier",
+          "start": 75.065,
+          "end": 75.566
+        },
+        {
+          "id": "caption-word-82-1",
+          "text": "des",
+          "start": 75.566,
+          "end": 75.793
+        },
+        {
+          "id": "caption-word-82-2",
+          "text": "résultats,",
+          "start": 75.793,
+          "end": 76.34
+        }
+      ]
+    },
+    {
+      "id": "caption-group-83",
+      "frame": 11,
+      "start": 76.34,
+      "end": 77.023,
+      "text": "c'est trahir",
+      "words": [
+        {
+          "id": "caption-word-83-0",
+          "text": "c'est",
+          "start": 76.34,
+          "end": 76.658
+        },
+        {
+          "id": "caption-word-83-1",
+          "text": "trahir",
+          "start": 76.658,
+          "end": 77.023
+        }
+      ]
+    },
+    {
+      "id": "caption-group-84",
+      "frame": 11,
+      "start": 77.023,
+      "end": 77.78,
+      "text": "la science,",
+      "words": [
+        {
+          "id": "caption-word-84-0",
+          "text": "la",
+          "start": 77.023,
+          "end": 77.205
+        },
+        {
+          "id": "caption-word-84-1",
+          "text": "science,",
+          "start": 77.205,
+          "end": 77.66
+        }
+      ]
+    },
+    {
+      "id": "caption-group-85",
+      "frame": 11,
+      "start": 77.869,
+      "end": 78.28,
+      "text": "et mettre",
+      "words": [
+        {
+          "id": "caption-word-85-0",
+          "text": "et",
+          "start": 77.869,
+          "end": 78.006
+        },
+        {
+          "id": "caption-word-85-1",
+          "text": "mettre",
+          "start": 78.006,
+          "end": 78.28
+        }
+      ]
+    },
+    {
+      "id": "caption-group-86",
+      "frame": 11,
+      "start": 78.28,
+      "end": 78.655,
+      "text": "des vies",
+      "words": [
+        {
+          "id": "caption-word-86-0",
+          "text": "des",
+          "start": 78.28,
+          "end": 78.45
+        },
+        {
+          "id": "caption-word-86-1",
+          "text": "vies",
+          "start": 78.45,
+          "end": 78.655
+        }
+      ]
+    },
+    {
+      "id": "caption-group-87",
+      "frame": 11,
+      "start": 78.655,
+      "end": 79.22,
+      "text": "en danger.",
+      "words": [
+        {
+          "id": "caption-word-87-0",
+          "text": "en",
+          "start": 78.655,
+          "end": 78.792
+        },
+        {
+          "id": "caption-word-87-1",
+          "text": "danger.",
+          "start": 78.792,
+          "end": 79.1
+        }
+      ]
+    },
+    {
+      "id": "caption-group-88",
+      "frame": 12,
+      "start": 80.62,
+      "end": 80.99,
+      "text": "Vous êtes",
+      "words": [
+        {
+          "id": "caption-word-88-0",
+          "text": "Vous",
+          "start": 80.62,
+          "end": 80.805
+        },
+        {
+          "id": "caption-word-88-1",
+          "text": "êtes",
+          "start": 80.805,
+          "end": 80.99
+        }
+      ]
+    },
+    {
+      "id": "caption-group-89",
+      "frame": 12,
+      "start": 80.99,
+      "end": 81.387,
+      "text": "témoin ?",
+      "words": [
+        {
+          "id": "caption-word-89-0",
+          "text": "témoin ?",
+          "start": 80.99,
+          "end": 81.267
+        }
+      ]
+    },
+    {
+      "id": "caption-group-90",
+      "frame": 12,
+      "start": 81.547,
+      "end": 82.318,
+      "text": "Signalez-le,",
+      "words": [
+        {
+          "id": "caption-word-90-0",
+          "text": "Signalez-le,",
+          "start": 81.547,
+          "end": 82.198
+        }
+      ]
+    },
+    {
+      "id": "caption-group-91",
+      "frame": 12,
+      "start": 82.418,
+      "end": 83.953,
+      "text": "en toute sécurité,",
+      "words": [
+        {
+          "id": "caption-word-91-0",
+          "text": "en",
+          "start": 82.418,
+          "end": 82.697
+        },
+        {
+          "id": "caption-word-91-1",
+          "text": "toute",
+          "start": 82.697,
+          "end": 83.185
+        },
+        {
+          "id": "caption-word-91-2",
+          "text": "sécurité,",
+          "start": 83.185,
+          "end": 83.953
+        }
+      ]
+    },
+    {
+      "id": "caption-group-92",
+      "frame": 12,
+      "start": 83.953,
+      "end": 86.307,
+      "text": "sur signal.minesursi.gouv.cd.",
+      "words": [
+        {
+          "id": "caption-word-92-0",
+          "text": "sur",
+          "start": 83.953,
+          "end": 84.302
+        },
+        {
+          "id": "caption-word-92-1",
+          "text": "signal.minesursi.gouv.cd.",
+          "start": 84.302,
+          "end": 86.187
+        }
+      ]
+    }
+  ]
+}

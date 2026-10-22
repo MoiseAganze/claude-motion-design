@@ -1,0 +1,429 @@
+{
+ "voice": {
+  "takes": [
+   {
+    "file": "assets/voice/take-a.mp3",
+    "silence_db": -38,
+    "min_silence": 0.18,
+    "sentences": [
+     "Au Centre de Recherche en Eau et Environnement,",
+     "une chercheuse découvre que des résultats d'analyse ont été modifiés avant publication.",
+     "Quarante-huit échantillons analysés.",
+     "Trente et un seulement dans le rapport.",
+     "Les valeurs non conformes en plomb et en mercure ont tout simplement disparu.",
+     "Que faire?",
+     "Le Ministère met à disposition une plateforme sécurisée,",
+     "ouverte à tout chercheur, agent, étudiant ou citoyen.",
+     "Parmi treize catégories,",
+     "elle choisit :",
+     "Intégrité scientifique.",
+     "Type de faits :",
+     "manipulation de résultats de recherche.",
+     "Province :",
+     "Kinshasa.",
+     "Établissement :",
+     "son centre de recherche, retrouvé en quelques lettres.",
+     "En cause :",
+     "le service, sans accusation nominative.",
+     "Elle décrit les faits,",
+     "précis et datés.",
+     "Gravité :",
+     "élevée.",
+     "Il y va de la santé des riverains.",
+     "Et elle joint ses preuves :",
+     "les relevés bruts,",
+     "et le rapport final.",
+     "Elle choisit le mode anonyme.",
+     "Identifiée, son identité serait chiffrée,",
+     "et réservée aux seuls agents habilités.",
+     "Elle certifie,",
+     "elle envoie…",
+     "et reçoit une référence, et un code de suivi confidentiel.",
+     "Elle suit son dossier, et échange avec l'enquêteur par messagerie sécurisée,",
+     "sans jamais révéler son identité.",
+     "Falsifier des résultats, c'est trahir la science,",
+     "et mettre des vies en danger.",
+     "Vous êtes témoin ?",
+     "Signalez-le,",
+     "en toute sécurité, sur signal.minesursi.gouv.cd."
+    ],
+    "frames": [
+     {
+      "frame": 1,
+      "sentences": [
+       0,
+       1
+      ],
+      "lead": 0.3,
+      "tail": 0.7
+     },
+     {
+      "frame": 2,
+      "sentences": [
+       2,
+       4
+      ],
+      "lead": 0.3,
+      "tail": 0.8
+     },
+     {
+      "frame": 3,
+      "sentences": [
+       5,
+       5
+      ],
+      "lead": 0.3,
+      "tail": 0.5
+     },
+     {
+      "frame": 4,
+      "sentences": [
+       6,
+       7
+      ],
+      "lead": 0.4,
+      "tail": 0.8
+     },
+     {
+      "frame": 5,
+      "sentences": [
+       8,
+       12
+      ],
+      "lead": 0.3,
+      "tail": 1.0
+     },
+     {
+      "frame": 6,
+      "sentences": [
+       13,
+       18
+      ],
+      "lead": 0.3,
+      "tail": 0.8
+     },
+     {
+      "frame": 7,
+      "sentences": [
+       19,
+       26
+      ],
+      "lead": 0.3,
+      "tail": 0.9
+     },
+     {
+      "frame": 8,
+      "sentences": [
+       27,
+       29
+      ],
+      "lead": 0.3,
+      "tail": 0.9
+     },
+     {
+      "frame": 9,
+      "sentences": [
+       30,
+       32
+      ],
+      "lead": 0.3,
+      "tail": 1.2
+     },
+     {
+      "frame": 10,
+      "sentences": [
+       33,
+       34
+      ],
+      "lead": 0.3,
+      "tail": 1.0
+     },
+     {
+      "frame": 11,
+      "sentences": [
+       35,
+       36
+      ],
+      "lead": 0.4,
+      "tail": 1.0
+     },
+     {
+      "frame": 12,
+      "sentences": [
+       37,
+       39
+      ],
+      "lead": 0.4,
+      "tail": 2.7
+     }
+    ]
+   }
+  ]
+ },
+ "sfx": {
+  "gain": 0.75,
+  "cues": [
+   [
+    1,
+    "whoosh-cinematic",
+    0,
+    0,
+    0.12
+   ],
+   [
+    1,
+    "glitch-1",
+    "modifiés",
+    0,
+    0.15
+   ],
+   [
+    2,
+    "pop",
+    0.3,
+    0,
+    0.2
+   ],
+   [
+    2,
+    "impact-bass-1",
+    "trente",
+    -0.1,
+    0.18
+   ],
+   [
+    2,
+    "error",
+    "disparu",
+    -0.1,
+    0.2
+   ],
+   [
+    3,
+    "whoosh-short",
+    0,
+    0,
+    0.3
+   ],
+   [
+    4,
+    "whoosh",
+    0.4,
+    0,
+    0.3
+   ],
+   [
+    4,
+    "pop",
+    "chercheur",
+    0,
+    0.3
+   ],
+   [
+    4,
+    "pop",
+    "agent",
+    0,
+    0.3
+   ],
+   [
+    4,
+    "pop",
+    "étudiant",
+    0,
+    0.3
+   ],
+   [
+    4,
+    "pop",
+    "citoyen",
+    0,
+    0.3
+   ],
+   [
+    5,
+    "pop",
+    "treize",
+    0,
+    0.3
+   ],
+   [
+    5,
+    "click",
+    "intégrité",
+    0,
+    0.5
+   ],
+   [
+    5,
+    "click-soft",
+    "manipulation",
+    0,
+    0.5
+   ],
+   [
+    6,
+    "typing",
+    "kinshasa",
+    -0.15,
+    0.22
+   ],
+   [
+    6,
+    "typing",
+    "établissement",
+    0.5,
+    0.22
+   ],
+   [
+    6,
+    "click",
+    "service",
+    0,
+    0.5
+   ],
+   [
+    6,
+    "typing",
+    "service",
+    0.2,
+    0.22
+   ],
+   [
+    7,
+    "typing",
+    0.4,
+    0,
+    0.22
+   ],
+   [
+    7,
+    "click",
+    "élevée",
+    -0.1,
+    0.5
+   ],
+   [
+    7,
+    "pop",
+    "bruts",
+    -0.5,
+    0.35
+   ],
+   [
+    7,
+    "pop",
+    "rapport",
+    0,
+    0.35
+   ],
+   [
+    7,
+    "pop",
+    "final",
+    0,
+    0.35
+   ],
+   [
+    8,
+    "click-soft",
+    "anonyme",
+    -0.1,
+    0.6
+   ],
+   [
+    8,
+    "chime",
+    "chiffrée",
+    0,
+    0.3
+   ],
+   [
+    9,
+    "click",
+    "certifie",
+    0,
+    0.5
+   ],
+   [
+    9,
+    "click",
+    "envoie",
+    0,
+    0.6
+   ],
+   [
+    9,
+    "chime",
+    "reçoit",
+    0,
+    0.3
+   ],
+   [
+    9,
+    "typing",
+    "référence",
+    -0.2,
+    0.22
+   ],
+   [
+    10,
+    "ping",
+    "suit",
+    0,
+    0.3
+   ],
+   [
+    10,
+    "notification",
+    "l'enquêteur",
+    0,
+    0.35
+   ],
+   [
+    11,
+    "riser",
+    0,
+    0,
+    0.12
+   ],
+   [
+    11,
+    "impact-bass-2",
+    "danger",
+    0,
+    0.18
+   ],
+   [
+    12,
+    "whoosh-cinematic",
+    0,
+    0,
+    0.25
+   ],
+   [
+    12,
+    "pop",
+    "signalez",
+    0,
+    0.35
+   ],
+   [
+    12,
+    "chime",
+    "sur",
+    0.3,
+    0.3
+   ]
+  ]
+ },
+ "captions": {
+  "band_top": 1370,
+  "band_height": 170,
+  "hide_frames": [
+   3,
+   11,
+   12
+  ]
+ }
+}

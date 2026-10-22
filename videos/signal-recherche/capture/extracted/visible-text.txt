@@ -1,0 +1,30 @@
+# Source: https://signal.minesursi.gouv.cd/ (capturé le 2026-10-21, manuellement via Chrome headless + proxy ; `hyperframes capture` n'utilise pas le proxy)
+
+## Accueil
+République Démocratique du Congo — Ministère de l'ESURSI · Espace agents
+ESURSI — Signalement national
+Bannière : SIGNALEZ LES ABUS dans l'enseignement supérieur, la recherche et l'innovation. Votre voix compte pour des établissements plus transparents, plus justes et plus performants. Pour un secteur plus intègre et plus performant !
+CTA : Déposer un signalement · Suivre mon dossier
+Chiffres : 25 signalements reçus · < 5 dossiers traités · 26 provinces · 1,593 établissements
+Les abus concernent : les établissements de l'ESU ; les membres de comités de gestion ; les agents du Ministère. Bref, toutes les parties prenantes de notre ministère.
+Que pouvez-vous signaler ? 9 catégories officielles : Corruption · Abus des enseignants · Faux diplôme · Fraude · Harcèlement · Abus administratif · Abus académique · Détournement · Autres irrégularités
+Anonyme ou identifié — Vous choisissez le mode de dépôt. Dans tous les cas, un numéro de suivi unique vous est remis pour consulter l'avancement de votre dossier.
+Footer : ESURSI — Justice · Transparence · Mérite. Les signalements anonymes sont traités avec la même diligence. L'identité des signalants est chiffrée et accessible uniquement aux agents habilités ; chaque consultation est tracée.
+
+## /signalement — Déposer un signalement
+8 étapes guidées : 1 Catégorie · 2 Province · 3 Établissement · 4 Personne concernée · 5 Description · 6 Preuves · 7 Mode · 8 Prévisualisation. « Vous recevez une référence et un code de suivi confidentiels. »
+Gravité : Faible · Normale · Élevée · Critique. Preuves : JPG, PNG, PDF, DOC, DOCX, MP4 — 10 fichiers max.
+Mode anonyme : Aucune donnée personnelle ni adresse IP n'est conservée. Mode identifié : identité chiffrée, visible uniquement des agents habilités.
+
+## /suivi
+Référence (ex. SIG-ESU-2026-ABC123) + code de suivi → frise, messagerie, accusé PDF.
+
+## /procedure
+Circuit : Reçu → En vérification → Recevable → Pris en charge → Investigation en cours → Informations complémentaires demandées → Décision prise → Clôturé.
+Délais cibles de première prise en charge : Critique 24 heures · Élevée 72 heures · Normale 7 jours · Faible 15 jours.
+Droits : protection contre toute forme de représailles.
+
+## /admin (espace agents, connexion)
+Tableau de bord national — Périmètre national : TOTAL 25 · MOIS EN COURS 25 · CRITIQUES 5 · EN RETARD (SLA) 0 · TAUX RÉSOLUTION 0% · DÉLAI MOYEN —
+Carte de la RDC par province (Leaflet, choroplèthe, intensité = volume). Survol : « Kinshasa — 12 signalement(s) ». Équateur 3 ; Ituri, Tshopo, Nord-Ubangi, Tshuapa, Haut-Katanga, Kasaï, Kasaï-Central, Lomami, Lualaba, Kwilu : 1.
+Menus : Tableau de bord · Ma file · Dossiers · Affectation · SLA · Notifications · Rapports …

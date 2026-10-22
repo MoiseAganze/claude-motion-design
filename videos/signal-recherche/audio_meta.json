@@ -1,0 +1,1536 @@
+{
+ "bgm": {
+  "path": "assets/bgm/digital-horizons-bed.mp3",
+  "source": "host",
+  "volume": 0.2
+ },
+ "bgm_pending": false,
+ "voices": [
+  {
+   "frame": 1,
+   "path": "assets/voice/01.wav",
+   "duration_s": 7.773,
+   "words": [
+    {
+     "text": "Au",
+     "start": 0.3,
+     "end": 0.454,
+     "id": "w01_0"
+    },
+    {
+     "text": "Centre",
+     "start": 0.454,
+     "end": 0.762,
+     "id": "w01_1"
+    },
+    {
+     "text": "de",
+     "start": 0.762,
+     "end": 0.915,
+     "id": "w01_2"
+    },
+    {
+     "text": "Recherche",
+     "start": 0.915,
+     "end": 1.339,
+     "id": "w01_3"
+    },
+    {
+     "text": "en",
+     "start": 1.339,
+     "end": 1.492,
+     "id": "w01_4"
+    },
+    {
+     "text": "Eau",
+     "start": 1.492,
+     "end": 1.685,
+     "id": "w01_5"
+    },
+    {
+     "text": "et",
+     "start": 1.685,
+     "end": 1.839,
+     "id": "w01_6"
+    },
+    {
+     "text": "Environnement,",
+     "start": 1.839,
+     "end": 2.454,
+     "id": "w01_7"
+    },
+    {
+     "text": "une",
+     "start": 2.763,
+     "end": 2.974,
+     "id": "w01_8"
+    },
+    {
+     "text": "chercheuse",
+     "start": 2.974,
+     "end": 3.482,
+     "id": "w01_9"
+    },
+    {
+     "text": "découvre",
+     "start": 3.482,
+     "end": 3.905,
+     "id": "w01_10"
+    },
+    {
+     "text": "que",
+     "start": 3.905,
+     "end": 4.116,
+     "id": "w01_11"
+    },
+    {
+     "text": "des",
+     "start": 4.116,
+     "end": 4.328,
+     "id": "w01_12"
+    },
+    {
+     "text": "résultats",
+     "start": 4.328,
+     "end": 4.793,
+     "id": "w01_13"
+    },
+    {
+     "text": "d'analyse",
+     "start": 4.793,
+     "end": 5.258,
+     "id": "w01_14"
+    },
+    {
+     "text": "ont",
+     "start": 5.258,
+     "end": 5.47,
+     "id": "w01_15"
+    },
+    {
+     "text": "été",
+     "start": 5.47,
+     "end": 5.681,
+     "id": "w01_16"
+    },
+    {
+     "text": "modifiés",
+     "start": 5.681,
+     "end": 6.104,
+     "id": "w01_17"
+    },
+    {
+     "text": "avant",
+     "start": 6.104,
+     "end": 6.4,
+     "id": "w01_18"
+    },
+    {
+     "text": "publication.",
+     "start": 6.4,
+     "end": 6.993,
+     "id": "w01_19"
+    }
+   ]
+  },
+  {
+   "frame": 2,
+   "path": "assets/voice/02.wav",
+   "duration_s": 8.897,
+   "words": [
+    {
+     "text": "Quarante-huit",
+     "start": 0.34,
+     "end": 0.919,
+     "id": "w02_0"
+    },
+    {
+     "text": "échantillons",
+     "start": 0.919,
+     "end": 1.46,
+     "id": "w02_1"
+    },
+    {
+     "text": "analysés.",
+     "start": 1.46,
+     "end": 1.885,
+     "id": "w02_2"
+    },
+    {
+     "text": "Trente",
+     "start": 2.355,
+     "end": 2.62,
+     "id": "w02_3"
+    },
+    {
+     "text": "et",
+     "start": 2.62,
+     "end": 2.752,
+     "id": "w02_4"
+    },
+    {
+     "text": "un",
+     "start": 2.752,
+     "end": 2.885,
+     "id": "w02_5"
+    },
+    {
+     "text": "seulement",
+     "start": 2.885,
+     "end": 3.249,
+     "id": "w02_6"
+    },
+    {
+     "text": "dans",
+     "start": 3.249,
+     "end": 3.447,
+     "id": "w02_7"
+    },
+    {
+     "text": "le",
+     "start": 3.447,
+     "end": 3.58,
+     "id": "w02_8"
+    },
+    {
+     "text": "rapport.",
+     "start": 3.58,
+     "end": 3.911,
+     "id": "w02_9"
+    },
+    {
+     "text": "Les",
+     "start": 4.36,
+     "end": 4.561,
+     "id": "w02_10"
+    },
+    {
+     "text": "valeurs",
+     "start": 4.561,
+     "end": 4.922,
+     "id": "w02_11"
+    },
+    {
+     "text": "non",
+     "start": 4.922,
+     "end": 5.123,
+     "id": "w02_12"
+    },
+    {
+     "text": "conformes",
+     "start": 5.123,
+     "end": 5.565,
+     "id": "w02_13"
+    },
+    {
+     "text": "en",
+     "start": 5.565,
+     "end": 5.726,
+     "id": "w02_14"
+    },
+    {
+     "text": "plomb",
+     "start": 5.726,
+     "end": 6.007,
+     "id": "w02_15"
+    },
+    {
+     "text": "et",
+     "start": 6.007,
+     "end": 6.168,
+     "id": "w02_16"
+    },
+    {
+     "text": "en",
+     "start": 6.168,
+     "end": 6.329,
+     "id": "w02_17"
+    },
+    {
+     "text": "mercure",
+     "start": 6.329,
+     "end": 6.691,
+     "id": "w02_18"
+    },
+    {
+     "text": "ont",
+     "start": 6.691,
+     "end": 6.892,
+     "id": "w02_19"
+    },
+    {
+     "text": "tout",
+     "start": 6.892,
+     "end": 7.133,
+     "id": "w02_20"
+    },
+    {
+     "text": "simplement",
+     "start": 7.133,
+     "end": 7.615,
+     "id": "w02_21"
+    },
+    {
+     "text": "disparu.",
+     "start": 7.615,
+     "end": 8.017,
+     "id": "w02_22"
+    }
+   ]
+  },
+  {
+   "frame": 3,
+   "path": "assets/voice/03.wav",
+   "duration_s": 1.425,
+   "words": [
+    {
+     "text": "Que",
+     "start": 0.34,
+     "end": 0.534,
+     "id": "w03_0"
+    },
+    {
+     "text": "faire ?",
+     "start": 0.534,
+     "end": 0.845,
+     "id": "w03_1"
+    }
+   ]
+  },
+  {
+   "frame": 4,
+   "path": "assets/voice/04.wav",
+   "duration_s": 7.331,
+   "words": [
+    {
+     "text": "Le",
+     "start": 0.44,
+     "end": 0.61,
+     "id": "w04_0"
+    },
+    {
+     "text": "Ministère",
+     "start": 0.61,
+     "end": 1.077,
+     "id": "w04_1"
+    },
+    {
+     "text": "met",
+     "start": 1.077,
+     "end": 1.289,
+     "id": "w04_2"
+    },
+    {
+     "text": "à",
+     "start": 1.289,
+     "end": 1.417,
+     "id": "w04_3"
+    },
+    {
+     "text": "disposition",
+     "start": 1.417,
+     "end": 1.969,
+     "id": "w04_4"
+    },
+    {
+     "text": "une",
+     "start": 1.969,
+     "end": 2.181,
+     "id": "w04_5"
+    },
+    {
+     "text": "plateforme",
+     "start": 2.181,
+     "end": 2.691,
+     "id": "w04_6"
+    },
+    {
+     "text": "sécurisée,",
+     "start": 2.691,
+     "end": 3.2,
+     "id": "w04_7"
+    },
+    {
+     "text": "ouverte",
+     "start": 3.418,
+     "end": 3.858,
+     "id": "w04_8"
+    },
+    {
+     "text": "à",
+     "start": 3.858,
+     "end": 4.005,
+     "id": "w04_9"
+    },
+    {
+     "text": "tout",
+     "start": 4.005,
+     "end": 4.298,
+     "id": "w04_10"
+    },
+    {
+     "text": "chercheur,",
+     "start": 4.298,
+     "end": 4.885,
+     "id": "w04_11"
+    },
+    {
+     "text": "agent,",
+     "start": 4.885,
+     "end": 5.277,
+     "id": "w04_12"
+    },
+    {
+     "text": "étudiant",
+     "start": 5.277,
+     "end": 5.766,
+     "id": "w04_13"
+    },
+    {
+     "text": "ou",
+     "start": 5.766,
+     "end": 5.962,
+     "id": "w04_14"
+    },
+    {
+     "text": "citoyen.",
+     "start": 5.962,
+     "end": 6.451,
+     "id": "w04_15"
+    }
+   ]
+  },
+  {
+   "frame": 5,
+   "path": "assets/voice/05.wav",
+   "duration_s": 8.14,
+   "words": [
+    {
+     "text": "Parmi",
+     "start": 0.34,
+     "end": 0.618,
+     "id": "w05_0"
+    },
+    {
+     "text": "treize",
+     "start": 0.618,
+     "end": 0.936,
+     "id": "w05_1"
+    },
+    {
+     "text": "catégories,",
+     "start": 0.936,
+     "end": 1.453,
+     "id": "w05_2"
+    },
+    {
+     "text": "elle",
+     "start": 1.652,
+     "end": 1.857,
+     "id": "w05_3"
+    },
+    {
+     "text": "choisit",
+     "start": 1.857,
+     "end": 2.163,
+     "id": "w05_4"
+    },
+    {
+     "text": ":",
+     "start": 2.163,
+     "end": 2.265,
+     "id": "w05_5"
+    },
+    {
+     "text": "Intégrité",
+     "start": 2.643,
+     "end": 3.159,
+     "id": "w05_6"
+    },
+    {
+     "text": "scientifique.",
+     "start": 3.159,
+     "end": 3.863,
+     "id": "w05_7"
+    },
+    {
+     "text": "Type",
+     "start": 4.326,
+     "end": 4.506,
+     "id": "w05_8"
+    },
+    {
+     "text": "de",
+     "start": 4.506,
+     "end": 4.625,
+     "id": "w05_9"
+    },
+    {
+     "text": "faits",
+     "start": 4.625,
+     "end": 4.835,
+     "id": "w05_10"
+    },
+    {
+     "text": ":",
+     "start": 4.835,
+     "end": 4.925,
+     "id": "w05_11"
+    },
+    {
+     "text": "manipulation",
+     "start": 5.171,
+     "end": 5.759,
+     "id": "w05_12"
+    },
+    {
+     "text": "de",
+     "start": 5.759,
+     "end": 5.927,
+     "id": "w05_13"
+    },
+    {
+     "text": "résultats",
+     "start": 5.927,
+     "end": 6.389,
+     "id": "w05_14"
+    },
+    {
+     "text": "de",
+     "start": 6.389,
+     "end": 6.556,
+     "id": "w05_15"
+    },
+    {
+     "text": "recherche.",
+     "start": 6.556,
+     "end": 7.06,
+     "id": "w05_16"
+    }
+   ]
+  },
+  {
+   "frame": 6,
+   "path": "assets/voice/06.wav",
+   "duration_s": 9.901,
+   "words": [
+    {
+     "text": "Province",
+     "start": 0.34,
+     "end": 0.76,
+     "id": "w06_0"
+    },
+    {
+     "text": ":",
+     "start": 0.76,
+     "end": 0.886,
+     "id": "w06_1"
+    },
+    {
+     "text": "Kinshasa.",
+     "start": 1.129,
+     "end": 1.661,
+     "id": "w06_2"
+    },
+    {
+     "text": "Établissement",
+     "start": 2.09,
+     "end": 2.645,
+     "id": "w06_3"
+    },
+    {
+     "text": ":",
+     "start": 2.645,
+     "end": 2.756,
+     "id": "w06_4"
+    },
+    {
+     "text": "son",
+     "start": 3.036,
+     "end": 3.233,
+     "id": "w06_5"
+    },
+    {
+     "text": "centre",
+     "start": 3.233,
+     "end": 3.548,
+     "id": "w06_6"
+    },
+    {
+     "text": "de",
+     "start": 3.548,
+     "end": 3.705,
+     "id": "w06_7"
+    },
+    {
+     "text": "recherche,",
+     "start": 3.705,
+     "end": 4.178,
+     "id": "w06_8"
+    },
+    {
+     "text": "retrouvé",
+     "start": 4.178,
+     "end": 4.571,
+     "id": "w06_9"
+    },
+    {
+     "text": "en",
+     "start": 4.571,
+     "end": 4.729,
+     "id": "w06_10"
+    },
+    {
+     "text": "quelques",
+     "start": 4.729,
+     "end": 5.123,
+     "id": "w06_11"
+    },
+    {
+     "text": "lettres.",
+     "start": 5.123,
+     "end": 5.516,
+     "id": "w06_12"
+    },
+    {
+     "text": "En",
+     "start": 5.98,
+     "end": 6.134,
+     "id": "w06_13"
+    },
+    {
+     "text": "cause",
+     "start": 6.134,
+     "end": 6.405,
+     "id": "w06_14"
+    },
+    {
+     "text": ":",
+     "start": 6.405,
+     "end": 6.521,
+     "id": "w06_15"
+    },
+    {
+     "text": "le",
+     "start": 6.779,
+     "end": 6.978,
+     "id": "w06_16"
+    },
+    {
+     "text": "service,",
+     "start": 6.978,
+     "end": 7.476,
+     "id": "w06_17"
+    },
+    {
+     "text": "sans",
+     "start": 7.476,
+     "end": 7.775,
+     "id": "w06_18"
+    },
+    {
+     "text": "accusation",
+     "start": 7.775,
+     "end": 8.373,
+     "id": "w06_19"
+    },
+    {
+     "text": "nominative.",
+     "start": 8.373,
+     "end": 9.021,
+     "id": "w06_20"
+    }
+   ]
+  },
+  {
+   "frame": 7,
+   "path": "assets/voice/07.wav",
+   "duration_s": 10.318,
+   "words": [
+    {
+     "text": "Elle",
+     "start": 0.34,
+     "end": 0.517,
+     "id": "w07_0"
+    },
+    {
+     "text": "décrit",
+     "start": 0.517,
+     "end": 0.753,
+     "id": "w07_1"
+    },
+    {
+     "text": "les",
+     "start": 0.753,
+     "end": 0.901,
+     "id": "w07_2"
+    },
+    {
+     "text": "faits,",
+     "start": 0.901,
+     "end": 1.137,
+     "id": "w07_3"
+    },
+    {
+     "text": "précis",
+     "start": 1.357,
+     "end": 1.755,
+     "id": "w07_4"
+    },
+    {
+     "text": "et",
+     "start": 1.755,
+     "end": 1.954,
+     "id": "w07_5"
+    },
+    {
+     "text": "datés.",
+     "start": 1.954,
+     "end": 2.351,
+     "id": "w07_6"
+    },
+    {
+     "text": "Gravité",
+     "start": 2.793,
+     "end": 3.25,
+     "id": "w07_7"
+    },
+    {
+     "text": ":",
+     "start": 3.25,
+     "end": 3.402,
+     "id": "w07_8"
+    },
+    {
+     "text": "élevée.",
+     "start": 3.748,
+     "end": 4.143,
+     "id": "w07_9"
+    },
+    {
+     "text": "Il",
+     "start": 4.422,
+     "end": 4.542,
+     "id": "w07_10"
+    },
+    {
+     "text": "y",
+     "start": 4.542,
+     "end": 4.632,
+     "id": "w07_11"
+    },
+    {
+     "text": "va",
+     "start": 4.632,
+     "end": 4.753,
+     "id": "w07_12"
+    },
+    {
+     "text": "de",
+     "start": 4.753,
+     "end": 4.873,
+     "id": "w07_13"
+    },
+    {
+     "text": "la",
+     "start": 4.873,
+     "end": 4.994,
+     "id": "w07_14"
+    },
+    {
+     "text": "santé",
+     "start": 4.994,
+     "end": 5.205,
+     "id": "w07_15"
+    },
+    {
+     "text": "des",
+     "start": 5.205,
+     "end": 5.355,
+     "id": "w07_16"
+    },
+    {
+     "text": "riverains.",
+     "start": 5.355,
+     "end": 5.717,
+     "id": "w07_17"
+    },
+    {
+     "text": "Et",
+     "start": 6.179,
+     "end": 6.292,
+     "id": "w07_18"
+    },
+    {
+     "text": "elle",
+     "start": 6.292,
+     "end": 6.462,
+     "id": "w07_19"
+    },
+    {
+     "text": "joint",
+     "start": 6.462,
+     "end": 6.659,
+     "id": "w07_20"
+    },
+    {
+     "text": "ses",
+     "start": 6.659,
+     "end": 6.801,
+     "id": "w07_21"
+    },
+    {
+     "text": "preuves",
+     "start": 6.801,
+     "end": 7.055,
+     "id": "w07_22"
+    },
+    {
+     "text": ":",
+     "start": 7.055,
+     "end": 7.14,
+     "id": "w07_23"
+    },
+    {
+     "text": "les",
+     "start": 7.427,
+     "end": 7.611,
+     "id": "w07_24"
+    },
+    {
+     "text": "relevés",
+     "start": 7.611,
+     "end": 7.941,
+     "id": "w07_25"
+    },
+    {
+     "text": "bruts,",
+     "start": 7.941,
+     "end": 8.235,
+     "id": "w07_26"
+    },
+    {
+     "text": "et",
+     "start": 8.468,
+     "end": 8.607,
+     "id": "w07_27"
+    },
+    {
+     "text": "le",
+     "start": 8.607,
+     "end": 8.747,
+     "id": "w07_28"
+    },
+    {
+     "text": "rapport",
+     "start": 8.747,
+     "end": 9.06,
+     "id": "w07_29"
+    },
+    {
+     "text": "final.",
+     "start": 9.06,
+     "end": 9.338,
+     "id": "w07_30"
+    }
+   ]
+  },
+  {
+   "frame": 8,
+   "path": "assets/voice/08.wav",
+   "duration_s": 7.465,
+   "words": [
+    {
+     "text": "Elle",
+     "start": 0.34,
+     "end": 0.591,
+     "id": "w08_0"
+    },
+    {
+     "text": "choisit",
+     "start": 0.591,
+     "end": 0.966,
+     "id": "w08_1"
+    },
+    {
+     "text": "le",
+     "start": 0.966,
+     "end": 1.133,
+     "id": "w08_2"
+    },
+    {
+     "text": "mode",
+     "start": 1.133,
+     "end": 1.384,
+     "id": "w08_3"
+    },
+    {
+     "text": "anonyme.",
+     "start": 1.384,
+     "end": 1.802,
+     "id": "w08_4"
+    },
+    {
+     "text": "Identifiée,",
+     "start": 2.171,
+     "end": 2.782,
+     "id": "w08_5"
+    },
+    {
+     "text": "son",
+     "start": 2.782,
+     "end": 3.017,
+     "id": "w08_6"
+    },
+    {
+     "text": "identité",
+     "start": 3.017,
+     "end": 3.486,
+     "id": "w08_7"
+    },
+    {
+     "text": "serait",
+     "start": 3.486,
+     "end": 3.862,
+     "id": "w08_8"
+    },
+    {
+     "text": "chiffrée,",
+     "start": 3.862,
+     "end": 4.379,
+     "id": "w08_9"
+    },
+    {
+     "text": "et",
+     "start": 4.621,
+     "end": 4.783,
+     "id": "w08_10"
+    },
+    {
+     "text": "réservée",
+     "start": 4.783,
+     "end": 5.188,
+     "id": "w08_11"
+    },
+    {
+     "text": "aux",
+     "start": 5.188,
+     "end": 5.391,
+     "id": "w08_12"
+    },
+    {
+     "text": "seuls",
+     "start": 5.391,
+     "end": 5.674,
+     "id": "w08_13"
+    },
+    {
+     "text": "agents",
+     "start": 5.674,
+     "end": 5.999,
+     "id": "w08_14"
+    },
+    {
+     "text": "habilités.",
+     "start": 5.999,
+     "end": 6.485,
+     "id": "w08_15"
+    }
+   ]
+  },
+  {
+   "frame": 9,
+   "path": "assets/voice/09.wav",
+   "duration_s": 6.559,
+   "words": [
+    {
+     "text": "Elle",
+     "start": 0.34,
+     "end": 0.601,
+     "id": "w09_0"
+    },
+    {
+     "text": "certifie,",
+     "start": 0.601,
+     "end": 1.08,
+     "id": "w09_1"
+    },
+    {
+     "text": "elle",
+     "start": 1.447,
+     "end": 1.664,
+     "id": "w09_2"
+    },
+    {
+     "text": "envoie…",
+     "start": 1.664,
+     "end": 1.989,
+     "id": "w09_3"
+    },
+    {
+     "text": "et",
+     "start": 2.373,
+     "end": 2.541,
+     "id": "w09_4"
+    },
+    {
+     "text": "reçoit",
+     "start": 2.541,
+     "end": 2.878,
+     "id": "w09_5"
+    },
+    {
+     "text": "une",
+     "start": 2.878,
+     "end": 3.089,
+     "id": "w09_6"
+    },
+    {
+     "text": "référence,",
+     "start": 3.089,
+     "end": 3.594,
+     "id": "w09_7"
+    },
+    {
+     "text": "et",
+     "start": 3.594,
+     "end": 3.763,
+     "id": "w09_8"
+    },
+    {
+     "text": "un",
+     "start": 3.763,
+     "end": 3.931,
+     "id": "w09_9"
+    },
+    {
+     "text": "code",
+     "start": 3.931,
+     "end": 4.184,
+     "id": "w09_10"
+    },
+    {
+     "text": "de",
+     "start": 4.184,
+     "end": 4.352,
+     "id": "w09_11"
+    },
+    {
+     "text": "suivi",
+     "start": 4.352,
+     "end": 4.647,
+     "id": "w09_12"
+    },
+    {
+     "text": "confidentiel.",
+     "start": 4.647,
+     "end": 5.279,
+     "id": "w09_13"
+    }
+   ]
+  },
+  {
+   "frame": 10,
+   "path": "assets/voice/10.wav",
+   "duration_s": 6.816,
+   "words": [
+    {
+     "text": "Elle",
+     "start": 0.34,
+     "end": 0.578,
+     "id": "w10_0"
+    },
+    {
+     "text": "suit",
+     "start": 0.578,
+     "end": 0.815,
+     "id": "w10_1"
+    },
+    {
+     "text": "son",
+     "start": 0.815,
+     "end": 1.013,
+     "id": "w10_2"
+    },
+    {
+     "text": "dossier,",
+     "start": 1.013,
+     "end": 1.409,
+     "id": "w10_3"
+    },
+    {
+     "text": "et",
+     "start": 1.409,
+     "end": 1.567,
+     "id": "w10_4"
+    },
+    {
+     "text": "échange",
+     "start": 1.567,
+     "end": 1.924,
+     "id": "w10_5"
+    },
+    {
+     "text": "avec",
+     "start": 1.924,
+     "end": 2.161,
+     "id": "w10_6"
+    },
+    {
+     "text": "l'enquêteur",
+     "start": 2.161,
+     "end": 2.676,
+     "id": "w10_7"
+    },
+    {
+     "text": "par",
+     "start": 2.676,
+     "end": 2.874,
+     "id": "w10_8"
+    },
+    {
+     "text": "messagerie",
+     "start": 2.874,
+     "end": 3.349,
+     "id": "w10_9"
+    },
+    {
+     "text": "sécurisée,",
+     "start": 3.349,
+     "end": 3.824,
+     "id": "w10_10"
+    },
+    {
+     "text": "sans",
+     "start": 4.016,
+     "end": 4.28,
+     "id": "w10_11"
+    },
+    {
+     "text": "jamais",
+     "start": 4.28,
+     "end": 4.633,
+     "id": "w10_12"
+    },
+    {
+     "text": "révéler",
+     "start": 4.633,
+     "end": 5.03,
+     "id": "w10_13"
+    },
+    {
+     "text": "son",
+     "start": 5.03,
+     "end": 5.251,
+     "id": "w10_14"
+    },
+    {
+     "text": "identité.",
+     "start": 5.251,
+     "end": 5.736,
+     "id": "w10_15"
+    }
+   ]
+  },
+  {
+   "frame": 11,
+   "path": "assets/voice/11.wav",
+   "duration_s": 5.555,
+   "words": [
+    {
+     "text": "Falsifier",
+     "start": 0.44,
+     "end": 0.941,
+     "id": "w11_0"
+    },
+    {
+     "text": "des",
+     "start": 0.941,
+     "end": 1.168,
+     "id": "w11_1"
+    },
+    {
+     "text": "résultats,",
+     "start": 1.168,
+     "end": 1.715,
+     "id": "w11_2"
+    },
+    {
+     "text": "c'est",
+     "start": 1.715,
+     "end": 2.033,
+     "id": "w11_3"
+    },
+    {
+     "text": "trahir",
+     "start": 2.033,
+     "end": 2.398,
+     "id": "w11_4"
+    },
+    {
+     "text": "la",
+     "start": 2.398,
+     "end": 2.58,
+     "id": "w11_5"
+    },
+    {
+     "text": "science,",
+     "start": 2.58,
+     "end": 3.035,
+     "id": "w11_6"
+    },
+    {
+     "text": "et",
+     "start": 3.244,
+     "end": 3.381,
+     "id": "w11_7"
+    },
+    {
+     "text": "mettre",
+     "start": 3.381,
+     "end": 3.655,
+     "id": "w11_8"
+    },
+    {
+     "text": "des",
+     "start": 3.655,
+     "end": 3.825,
+     "id": "w11_9"
+    },
+    {
+     "text": "vies",
+     "start": 3.825,
+     "end": 4.03,
+     "id": "w11_10"
+    },
+    {
+     "text": "en",
+     "start": 4.03,
+     "end": 4.167,
+     "id": "w11_11"
+    },
+    {
+     "text": "danger.",
+     "start": 4.167,
+     "end": 4.475,
+     "id": "w11_12"
+    }
+   ]
+  },
+  {
+   "frame": 12,
+   "path": "assets/voice/12.wav",
+   "duration_s": 8.787,
+   "words": [
+    {
+     "text": "Vous",
+     "start": 0.44,
+     "end": 0.625,
+     "id": "w12_0"
+    },
+    {
+     "text": "êtes",
+     "start": 0.625,
+     "end": 0.81,
+     "id": "w12_1"
+    },
+    {
+     "text": "témoin ?",
+     "start": 0.81,
+     "end": 1.087,
+     "id": "w12_2"
+    },
+    {
+     "text": "Signalez-le,",
+     "start": 1.367,
+     "end": 2.018,
+     "id": "w12_3"
+    },
+    {
+     "text": "en",
+     "start": 2.238,
+     "end": 2.517,
+     "id": "w12_4"
+    },
+    {
+     "text": "toute",
+     "start": 2.517,
+     "end": 3.005,
+     "id": "w12_5"
+    },
+    {
+     "text": "sécurité,",
+     "start": 3.005,
+     "end": 3.773,
+     "id": "w12_6"
+    },
+    {
+     "text": "sur",
+     "start": 3.773,
+     "end": 4.122,
+     "id": "w12_7"
+    },
+    {
+     "text": "signal.minesursi.gouv.cd.",
+     "start": 4.122,
+     "end": 6.007,
+     "id": "w12_8"
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "frame": 1,
+   "file": "assets/sfx/whoosh-cinematic.mp3",
+   "offset_s": 0.0,
+   "duration_s": 5.54,
+   "volume": 0.09
+  },
+  {
+   "frame": 1,
+   "file": "assets/sfx/glitch-1.mp3",
+   "offset_s": 5.681,
+   "duration_s": 2.64,
+   "volume": 0.112
+  },
+  {
+   "frame": 2,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 0.3,
+   "duration_s": 0.72,
+   "volume": 0.15
+  },
+  {
+   "frame": 2,
+   "file": "assets/sfx/impact-bass-1.mp3",
+   "offset_s": 2.255,
+   "duration_s": 2.12,
+   "volume": 0.135
+  },
+  {
+   "frame": 2,
+   "file": "assets/sfx/error.mp3",
+   "offset_s": 7.515,
+   "duration_s": 1.62,
+   "volume": 0.15
+  },
+  {
+   "frame": 3,
+   "file": "assets/sfx/whoosh-short.mp3",
+   "offset_s": 0.0,
+   "duration_s": 0.57,
+   "volume": 0.225
+  },
+  {
+   "frame": 4,
+   "file": "assets/sfx/whoosh.mp3",
+   "offset_s": 0.4,
+   "duration_s": 0.57,
+   "volume": 0.225
+  },
+  {
+   "frame": 4,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 4.298,
+   "duration_s": 0.72,
+   "volume": 0.225
+  },
+  {
+   "frame": 4,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 4.885,
+   "duration_s": 0.72,
+   "volume": 0.225
+  },
+  {
+   "frame": 4,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 5.277,
+   "duration_s": 0.72,
+   "volume": 0.225
+  },
+  {
+   "frame": 4,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 5.962,
+   "duration_s": 0.72,
+   "volume": 0.225
+  },
+  {
+   "frame": 5,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 0.618,
+   "duration_s": 0.72,
+   "volume": 0.225
+  },
+  {
+   "frame": 5,
+   "file": "assets/sfx/click.mp3",
+   "offset_s": 2.643,
+   "duration_s": 0.37,
+   "volume": 0.375
+  },
+  {
+   "frame": 5,
+   "file": "assets/sfx/click-soft.mp3",
+   "offset_s": 5.171,
+   "duration_s": 0.37,
+   "volume": 0.375
+  },
+  {
+   "frame": 6,
+   "file": "assets/sfx/typing.mp3",
+   "offset_s": 0.979,
+   "duration_s": 1.5,
+   "volume": 0.165
+  },
+  {
+   "frame": 6,
+   "file": "assets/sfx/typing.mp3",
+   "offset_s": 2.59,
+   "duration_s": 1.5,
+   "volume": 0.165
+  },
+  {
+   "frame": 6,
+   "file": "assets/sfx/click.mp3",
+   "offset_s": 6.978,
+   "duration_s": 0.37,
+   "volume": 0.375
+  },
+  {
+   "frame": 6,
+   "file": "assets/sfx/typing.mp3",
+   "offset_s": 7.178,
+   "duration_s": 1.5,
+   "volume": 0.165
+  },
+  {
+   "frame": 7,
+   "file": "assets/sfx/typing.mp3",
+   "offset_s": 0.4,
+   "duration_s": 1.5,
+   "volume": 0.165
+  },
+  {
+   "frame": 7,
+   "file": "assets/sfx/click.mp3",
+   "offset_s": 3.648,
+   "duration_s": 0.37,
+   "volume": 0.375
+  },
+  {
+   "frame": 7,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 7.441,
+   "duration_s": 0.72,
+   "volume": 0.262
+  },
+  {
+   "frame": 7,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 8.747,
+   "duration_s": 0.72,
+   "volume": 0.262
+  },
+  {
+   "frame": 7,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 9.06,
+   "duration_s": 0.72,
+   "volume": 0.262
+  },
+  {
+   "frame": 8,
+   "file": "assets/sfx/click-soft.mp3",
+   "offset_s": 1.284,
+   "duration_s": 0.37,
+   "volume": 0.45
+  },
+  {
+   "frame": 8,
+   "file": "assets/sfx/chime.mp3",
+   "offset_s": 3.862,
+   "duration_s": 2.5,
+   "volume": 0.225
+  },
+  {
+   "frame": 9,
+   "file": "assets/sfx/click.mp3",
+   "offset_s": 0.601,
+   "duration_s": 0.37,
+   "volume": 0.375
+  },
+  {
+   "frame": 9,
+   "file": "assets/sfx/click.mp3",
+   "offset_s": 1.664,
+   "duration_s": 0.37,
+   "volume": 0.45
+  },
+  {
+   "frame": 9,
+   "file": "assets/sfx/chime.mp3",
+   "offset_s": 2.541,
+   "duration_s": 2.5,
+   "volume": 0.225
+  },
+  {
+   "frame": 9,
+   "file": "assets/sfx/typing.mp3",
+   "offset_s": 2.889,
+   "duration_s": 1.5,
+   "volume": 0.165
+  },
+  {
+   "frame": 10,
+   "file": "assets/sfx/ping.mp3",
+   "offset_s": 0.578,
+   "duration_s": 1.32,
+   "volume": 0.225
+  },
+  {
+   "frame": 10,
+   "file": "assets/sfx/notification.mp3",
+   "offset_s": 2.161,
+   "duration_s": 2.46,
+   "volume": 0.262
+  },
+  {
+   "frame": 11,
+   "file": "assets/sfx/riser.mp3",
+   "offset_s": 0.0,
+   "duration_s": 6.555,
+   "volume": 0.09
+  },
+  {
+   "frame": 11,
+   "file": "assets/sfx/impact-bass-2.mp3",
+   "offset_s": 4.167,
+   "duration_s": 2.388,
+   "volume": 0.135
+  },
+  {
+   "frame": 12,
+   "file": "assets/sfx/whoosh-cinematic.mp3",
+   "offset_s": 0.0,
+   "duration_s": 5.54,
+   "volume": 0.188
+  },
+  {
+   "frame": 12,
+   "file": "assets/sfx/pop.mp3",
+   "offset_s": 1.367,
+   "duration_s": 0.72,
+   "volume": 0.262
+  },
+  {
+   "frame": 12,
+   "file": "assets/sfx/chime.mp3",
+   "offset_s": 4.073,
+   "duration_s": 2.5,
+   "volume": 0.225
+  }
+ ]
+}

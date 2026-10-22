@@ -11,7 +11,7 @@
     .f09-ok { position: absolute; left: 50px; top: 50px; display: flex; align-items: center; gap: 18px; font-weight: 700; font-size: 38px; color: #059669; }
     .f09-ok svg { width: 56px; height: 56px; }
     .f09-k { position: absolute; left: 50px; font-weight: 600; font-size: 30px; letter-spacing: 0.12em; text-transform: uppercase; color: #64748B; }
-    .f09-ref { position: absolute; left: 50px; top: 190px; font-family: "Courier New", monospace; font-weight: 700; font-size: 62px; color: #0057B8; white-space: nowrap; }
+    .f09-ref { position: absolute; left: 50px; top: 190px; font-family: "Courier New", monospace; font-weight: 700; font-size: 54px; color: #0057B8; white-space: nowrap; }
     .f09-ref i { display: inline-block; width: 0; overflow: hidden; vertical-align: bottom; font-style: normal; white-space: nowrap; }
     .f09-code { position: absolute; left: 50px; top: 360px; display: flex; gap: 16px; }
     .f09-code span { width: 64px; height: 84px; border-radius: 14px; background: #E8F4FF; border: 2px solid #BFDBFE; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 54px; color: #003A7A; }
@@ -30,7 +30,7 @@
       <div class="f09-ok"><svg viewBox="0 0 56 56" fill="none" stroke="#059669" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><circle cx="28" cy="28" r="24"/><path d="M17 29l7 7 15-16"/></svg>Signalement envoyé</div>
       <div class="f09-ex">exemple</div>
       <div class="f09-k" style="top:140px">Référence</div>
-      <div class="f09-ref"><i id="f09-reftxt">SIG-ESU-2026-ABC123</i></div>
+      <div class="f09-ref"><i id="f09-reftxt">SIG-ESURSI-2026-9C8CCC</i></div>
       <div class="f09-k" style="top:310px">Code de suivi</div>
       <div class="f09-code" id="f09-code"><span>•</span><span>•</span><span>•</span><span>•</span><span>•</span><span>•</span></div>
     </div>
@@ -52,7 +52,7 @@
       const tl = gsap.timeline({ paused: true });
       tl.fromTo("#f09-ticket", { opacity: 0, y: 100, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.7, ease: "expo.out" }, 0);
       // reference types in (steps keep it seek-safe), code dots pop
-      tl.fromTo("#f09-reftxt", { width: 0 }, { width: 780, duration: 0.9, ease: "steps(19)" }, 1.0);
+      tl.fromTo("#f09-reftxt", { width: 0 }, { width: 800, duration: 1.0, ease: "steps(22)" }, 1.0);
       tl.fromTo("#f09-code span", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.25, stagger: 0.07, ease: "power3.out" }, 1.75);
       tl.fromTo("#f09-tl", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.6, ease: "expo.out" }, 2.6);
       tl.fromTo("#f09-prog", { scaleY: 0 }, { scaleY: 1, duration: 2.6, ease: "power1.inOut" }, 3.1);
