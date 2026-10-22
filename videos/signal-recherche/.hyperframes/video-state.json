@@ -1,7 +1,7 @@
 {
   "version": 1,
   "historyId": "0ad13ace-b63f-4241-9690-4c280c9f32fd",
-  "currentRevision": "255ed9c9-44fc-4568-b31a-7f1574046836",
+  "currentRevision": "d4c39fcb-5ee4-4b92-9a5a-07afb9e5fef3",
   "pendingChanges": false,
   "files": {
     "AGENTS.md": {
@@ -253,8 +253,8 @@
       "content": "/root/.cache/hyperframes/history/0ad13ace-b63f-4241-9690-4c280c9f32fd/blobs/44/44d4e8dcefebce0a13f5afa82aa270b0b19a1d3f82e434f92616010cee775dc4"
     },
     "index.html": {
-      "hash": "c77d26ea80a95f0a8f17c81e7f2666a489b3e8c3526dbe21f3b931502efe976a",
-      "content": "/root/.cache/hyperframes/history/0ad13ace-b63f-4241-9690-4c280c9f32fd/blobs/c7/c77d26ea80a95f0a8f17c81e7f2666a489b3e8c3526dbe21f3b931502efe976a"
+      "hash": "ce5b69b4665e4583a3476f9a795892489d44fc8f088889e531456e62c4f7bfae",
+      "content": "/root/.cache/hyperframes/history/0ad13ace-b63f-4241-9690-4c280c9f32fd/blobs/ce/ce5b69b4665e4583a3476f9a795892489d44fc8f088889e531456e62c4f7bfae"
     },
     "meta.json": {
       "hash": "7cd4ae60865fa83be6b4149d40af85093ca6719f2cc94aa882eb187a396a8b1b",
@@ -269,8 +269,8 @@
       "content": "/root/.cache/hyperframes/history/0ad13ace-b63f-4241-9690-4c280c9f32fd/blobs/7a/7af657bf577bae61f1851c8c8605a24ea7eaa3c5dea9496cf4f5fe07ece5c268"
     },
     "production.json": {
-      "hash": "f52ee272393019dc30459e2ab545a9090f25b3c0287b2fe0f7bd62803a7bf88c",
-      "content": "/root/.cache/hyperframes/history/0ad13ace-b63f-4241-9690-4c280c9f32fd/blobs/f5/f52ee272393019dc30459e2ab545a9090f25b3c0287b2fe0f7bd62803a7bf88c"
+      "hash": "c58a13a96df6ceb445d27036070113af544acadf98f2db5a5abdabd12ee5febb",
+      "content": "/root/.cache/hyperframes/history/0ad13ace-b63f-4241-9690-4c280c9f32fd/blobs/c5/c58a13a96df6ceb445d27036070113af544acadf98f2db5a5abdabd12ee5febb"
     },
     "assets/bgm/digital-horizons-bed.mp3": {
       "hash": "eac4964fe646dbecebf999beeb4ce866d82e78421d9d4e6f904a41c44c65b7b5",
@@ -291,6 +291,10 @@
     "capture/screenshots/m-home-full.png": {
       "hash": "d97e3b6bd5602c8e329dd525900fecb698f22b1fef252e9e66a83c27cda2d81f",
       "content": "/root/.cache/hyperframes/history/0ad13ace-b63f-4241-9690-4c280c9f32fd/blobs/d9/d97e3b6bd5602c8e329dd525900fecb698f22b1fef252e9e66a83c27cda2d81f"
+    },
+    "capture/extracted/asset-descriptions.md": {
+      "hash": "77163aeeca187e61a27dad02eb5349d3269fc7f286f22b4c34292cac1e68a824",
+      "content": "/root/.cache/hyperframes/history/0ad13ace-b63f-4241-9690-4c280c9f32fd/blobs/77/77163aeeca187e61a27dad02eb5349d3269fc7f286f22b4c34292cac1e68a824"
     }
   },
   "revisions": {
@@ -312,19 +316,52 @@
           "after": "/root/.cache/hyperframes/history/0ad13ace-b63f-4241-9690-4c280c9f32fd/blobs/51/515855015fda3f1eade1523522040fbc4db13e6be5482cf73282bfcc8650b5ac"
         }
       }
+    },
+    "1232a554-fe31-4a5d-a666-21c923b70bc7": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792668264340,
+      "endedAt": 1792668264342,
+      "files": {
+        "capture/extracted/asset-descriptions.md": {
+          "before": null,
+          "after": "/root/.cache/hyperframes/history/0ad13ace-b63f-4241-9690-4c280c9f32fd/blobs/77/77163aeeca187e61a27dad02eb5349d3269fc7f286f22b4c34292cac1e68a824"
+        }
+      }
+    },
+    "d4c39fcb-5ee4-4b92-9a5a-07afb9e5fef3": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792668553891,
+      "endedAt": 1792668554829,
+      "files": {
+        "index.html": {
+          "before": "/root/.cache/hyperframes/history/0ad13ace-b63f-4241-9690-4c280c9f32fd/blobs/c7/c77d26ea80a95f0a8f17c81e7f2666a489b3e8c3526dbe21f3b931502efe976a",
+          "after": "/root/.cache/hyperframes/history/0ad13ace-b63f-4241-9690-4c280c9f32fd/blobs/ce/ce5b69b4665e4583a3476f9a795892489d44fc8f088889e531456e62c4f7bfae"
+        },
+        "production.json": {
+          "before": "/root/.cache/hyperframes/history/0ad13ace-b63f-4241-9690-4c280c9f32fd/blobs/f5/f52ee272393019dc30459e2ab545a9090f25b3c0287b2fe0f7bd62803a7bf88c",
+          "after": "/root/.cache/hyperframes/history/0ad13ace-b63f-4241-9690-4c280c9f32fd/blobs/c5/c58a13a96df6ceb445d27036070113af544acadf98f2db5a5abdabd12ee5febb"
+        }
+      }
     }
   },
   "checks": {
     "latest": {
-      "revision": "255ed9c9-44fc-4568-b31a-7f1574046836",
-      "id": "89cbd8ca-71cb-48e2-84d4-bffa6c3efa71"
+      "revision": "d4c39fcb-5ee4-4b92-9a5a-07afb9e5fef3",
+      "id": "73e1930b-66ea-4ca6-9b75-489113c02bd9"
     },
     "revisions": {
       "255ed9c9-44fc-4568-b31a-7f1574046836": [
         {
           "id": "89cbd8ca-71cb-48e2-84d4-bffa6c3efa71",
           "scope": "project",
-          "report": "/home/user/claude-motion-design/videos/signal-recherche/.hyperframes/artifacts/checks/89cbd8ca-71cb-48e2-84d4-bffa6c3efa71.json",
           "metadata": {
             "ok": true,
             "browserSkipped": false,
@@ -345,6 +382,37 @@
           "contentHash": "e7e0056a5d4beeaac9b6cfcf2ea40c44747cef8ef46c479ef617f99f6b79f377",
           "revision": "255ed9c9-44fc-4568-b31a-7f1574046836",
           "inputFingerprint": "43cf44f7f0ab045cbbb28db9ee0ae44485130c3655192658eeefdc3128fa9819",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "67eeaf9e-b072-4f40-a3b2-765db2cb6670"
+        }
+      ],
+      "d4c39fcb-5ee4-4b92-9a5a-07afb9e5fef3": [
+        {
+          "id": "73e1930b-66ea-4ca6-9b75-489113c02bd9",
+          "scope": "project",
+          "report": "/home/user/claude-motion-design/videos/signal-recherche/.hyperframes/artifacts/checks/73e1930b-66ea-4ca6-9b75-489113c02bd9.json",
+          "metadata": {
+            "ok": true,
+            "browserSkipped": false,
+            "options": {
+              "samples": 9,
+              "atTransitions": false,
+              "maxIssues": 80,
+              "collapseStatic": true,
+              "tolerance": 2,
+              "timeout": 3000,
+              "contrast": true,
+              "strict": false,
+              "snapshots": false,
+              "browserGpuMode": "auto"
+            }
+          },
+          "createdAt": 1792668562737,
+          "contentHash": "e7e0056a5d4beeaac9b6cfcf2ea40c44747cef8ef46c479ef617f99f6b79f377",
+          "revision": "d4c39fcb-5ee4-4b92-9a5a-07afb9e5fef3",
+          "inputFingerprint": "01fb2946f4d0bd0c50a72fd1801dde91cf1ab0618a76226ac4d1641bafcd45b0",
           "inputScope": "local-project-files",
           "attribution": "recorded-revision"
         }
@@ -648,5 +716,18 @@
         "attribution": "unversioned"
       }
     ]
-  }
+  },
+  "renders": {
+    "latest": {
+      "id": "67eeaf9e-b072-4f40-a3b2-765db2cb6670",
+      "completedAt": 1792668466662,
+      "output": "/home/user/claude-motion-design/videos/signal-recherche/renders/signal-recherche-brouillon.mp4",
+      "status": "completed",
+      "revision": "1232a554-fe31-4a5d-a666-21c923b70bc7"
+    },
+    "retainedRevisions": [
+      "1232a554-fe31-4a5d-a666-21c923b70bc7"
+    ]
+  },
+  "pendingArtifactCleanup": []
 }

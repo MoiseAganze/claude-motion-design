@@ -19,7 +19,8 @@ quiet node "$PL/transitions.mjs" verify --storyboard ./STORYBOARD.md --index ./i
 # music bed under the voice → group the narration clips and carve the bed (assemble drops both)
 if grep -q 'id="el-bgm"' index.html && grep -q -- '-voice"' index.html; then
   sed -i -E 's/(id="el-[0-9]{2}-[a-z0-9-]+-voice")( data-audio-group="voiceover")?/\1 data-audio-group="voiceover"/' index.html
-  quiet node "$HERE/../../hyperframes-audio/scripts/carve.mjs" --comp ./index.html | grep -E "^carve|^wrote|rror" || true
+  CS=$(python3 -c "import json;print(json.load(open('production.json')).get('carve_strength',0.8))")
+  quiet node "$HERE/../../hyperframes-audio/scripts/carve.mjs" --comp ./index.html --strength "$CS" | grep -E "^carve|^wrote|rror" || true
 fi
 npx hyperframes check --json 2>/dev/null | python3 -c "
 import json,sys; d=json.load(sys.stdin); errs=[]
