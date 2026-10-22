@@ -1,7 +1,7 @@
 {
   "version": 1,
   "historyId": "7c433f8d-f74b-4210-bc18-f3b9a4d8a7bb",
-  "currentRevision": "384fdfb2-0770-46f3-8cc1-efca005b5dd2",
+  "currentRevision": "7186a581-90d4-4c15-9255-a675ba5ce2a7",
   "pendingChanges": false,
   "files": {
     "AGENTS.md": {
@@ -289,8 +289,8 @@
       "content": "/root/.cache/hyperframes/history/7c433f8d-f74b-4210-bc18-f3b9a4d8a7bb/blobs/ad/ad5dadeef78a520800a9e5cdd27a92ff5ac37f11b6a07f611b6b52b9f8c79a17"
     },
     "index.html": {
-      "hash": "73ed583676c4d1217329ed45b15dab5dfb89da6e3c5ea8a99ca9f7ef6667dd0e",
-      "content": "/root/.cache/hyperframes/history/7c433f8d-f74b-4210-bc18-f3b9a4d8a7bb/blobs/73/73ed583676c4d1217329ed45b15dab5dfb89da6e3c5ea8a99ca9f7ef6667dd0e"
+      "hash": "48bf13e58acfac1c7e88bc38f6b6b0033a7c39fe5a6d1822c0d20e884d206155",
+      "content": "/root/.cache/hyperframes/history/7c433f8d-f74b-4210-bc18-f3b9a4d8a7bb/blobs/48/48bf13e58acfac1c7e88bc38f6b6b0033a7c39fe5a6d1822c0d20e884d206155"
     },
     "meta.json": {
       "hash": "fa8076f5042ae327dd5d30ea13c03bdbef6c58e85e5cb2ac091553cc5e625dee",
@@ -1034,6 +1034,21 @@
         "compositions/frames/07-analyse.html": {
           "before": "/root/.cache/hyperframes/history/7c433f8d-f74b-4210-bc18-f3b9a4d8a7bb/blobs/c4/c4a3f4b1306208ee4959f114dcfaf380d34d9b21204e58ba28f06fbf7600e82a",
           "after": "/root/.cache/hyperframes/history/7c433f8d-f74b-4210-bc18-f3b9a4d8a7bb/blobs/59/5901d3b9c7062e4e80bfd3c007cccd5b369c325677afbd7496d7fe9d10fd87d6"
+        }
+      }
+    },
+    "7186a581-90d4-4c15-9255-a675ba5ce2a7": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792674232696,
+      "endedAt": 1792674232698,
+      "files": {
+        "index.html": {
+          "before": "/root/.cache/hyperframes/history/7c433f8d-f74b-4210-bc18-f3b9a4d8a7bb/blobs/73/73ed583676c4d1217329ed45b15dab5dfb89da6e3c5ea8a99ca9f7ef6667dd0e",
+          "after": "/root/.cache/hyperframes/history/7c433f8d-f74b-4210-bc18-f3b9a4d8a7bb/blobs/48/48bf13e58acfac1c7e88bc38f6b6b0033a7c39fe5a6d1822c0d20e884d206155"
         }
       }
     }
