@@ -70,7 +70,24 @@ shot sequences), then deviate here:
 - Final: same command with `--quality high --output renders/<name>-final.mp4`.
 - MP4s and `**/.hyperframes/artifacts/` are git-ignored; commit sources, `production.json`, voice takes and SFX.
 
-## 7. Self-check for these scripts
+## 7. Raising the visual bar (don't settle for fades-and-slides)
+
+`agent-courrier` only ever used `power2.inOut`/`power3` fades and slides — zero camera moves, zero
+depth, zero registry blocks. `hyperframes-animation` and `hyperframes-registry` already ship far more;
+the gap was using them, not writing new code. Per project:
+
+- **Pick at least one camera move** (`hyperframes-animation` → Camera & Viewport rules, or blueprint
+  `camera-journey`/`zoom-out-workspace-reveal`) for a Benefits/Key_Feature frame instead of a static shot.
+- **Vary the ease.** `back.out(1.7)` on entrances/payoffs, `power4.out` on camera landings, `sine.inOut`
+  for idle/ambient — `power2.inOut` everywhere reads flat. See `techniques.md` ease cheat-sheet.
+- **Check the registry before hand-building a named effect** (glitch, scanlines, confetti, charts —
+  `hyperframes-registry` search) — ~400 hosted blocks likely already cover it.
+- **One punctuation moment per video**: `particle-burst`, `chromatic-glitch`, or `motion-blur-streak` on
+  the hook or the CTA payoff, not sprinkled everywhere — it reads as intentional, not decoration.
+- Still budget-gated by §1.3 (packet caps) and §4 (one `fromTo` baseline) — a camera rule or particle
+  recipe is extra rule ids against the same 48 KB cap, so cite it instead of composing from scratch.
+
+## 8. Self-check for these scripts
 
 After editing `scripts/`, run `scripts/rebuild.sh videos/agent-courrier` — it must end with `✓ check ok`
 and leave `videos/agent-courrier/audio_meta.json` unchanged (`git diff --stat`).
