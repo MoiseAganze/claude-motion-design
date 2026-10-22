@@ -859,7 +859,6 @@
         {
           "id": "adeb6df8-f865-4bb5-9efa-07601fb20ba4",
           "scope": "project",
-          "report": "/home/user/claude-motion-design/videos/signal-esursi/.hyperframes/artifacts/checks/adeb6df8-f865-4bb5-9efa-07601fb20ba4.json",
           "metadata": {
             "ok": true,
             "browserSkipped": false,
@@ -881,14 +880,15 @@
           "revision": "93ccfb59-af12-4405-860d-d342b51d91d8",
           "inputFingerprint": "3b06f14f1fccae196682c59bfbf300ac1d6f7b9a6997512a5edb964cb6cb2d3d",
           "inputScope": "local-project-files",
-          "attribution": "recorded-revision"
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "6f30b7c0-160f-4355-8424-304ee1f98944"
         }
       ],
       "a8b1d29c-0a0a-4daa-b46f-b818e7ba2d12": [
         {
           "id": "bd213653-8828-41f6-a56c-5a7253de0e77",
           "scope": "project",
-          "report": "/home/user/claude-motion-design/videos/signal-esursi/.hyperframes/artifacts/checks/bd213653-8828-41f6-a56c-5a7253de0e77.json",
           "metadata": {
             "ok": true,
             "browserSkipped": false,
@@ -910,14 +910,15 @@
           "revision": "a8b1d29c-0a0a-4daa-b46f-b818e7ba2d12",
           "inputFingerprint": "9ab83f6f2b6afdad9196a5c3a09d734ebf839d2d30f4582347d9641ccf0512bd",
           "inputScope": "local-project-files",
-          "attribution": "recorded-revision"
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "6f30b7c0-160f-4355-8424-304ee1f98944"
         }
       ],
       "8323bdd5-02cf-4911-be21-580a2634c8c3": [
         {
           "id": "b7b21dd6-bdf8-4067-a27d-ee331b28fd83",
           "scope": "project",
-          "report": "/home/user/claude-motion-design/videos/signal-esursi/.hyperframes/artifacts/checks/b7b21dd6-bdf8-4067-a27d-ee331b28fd83.json",
           "metadata": {
             "ok": true,
             "browserSkipped": false,
@@ -939,7 +940,9 @@
           "revision": "8323bdd5-02cf-4911-be21-580a2634c8c3",
           "inputFingerprint": "aaa5103df5bcee2c55ee4ccdc89f5197ff5fb6db1e94fe1dc10dd5c9ecfcd4a4",
           "inputScope": "local-project-files",
-          "attribution": "recorded-revision"
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "6f30b7c0-160f-4355-8424-304ee1f98944"
         }
       ],
       "9015f45d-ef6a-4450-80b6-661d90364a5f": [
@@ -1003,10 +1006,7 @@
     ]
   },
   "snapshots": {
-    "latest": {
-      "revision": "c0acfae3-c531-4be3-a589-515674794f01",
-      "id": "d7f27852-728c-4a40-836f-a1f33a62c795-6"
-    },
+    "latest": null,
     "revisions": {
       "3533faaa-7401-45cc-bba2-35044fb33807": [
         {
@@ -1329,7 +1329,6 @@
         {
           "scope": "full",
           "id": "d7f27852-728c-4a40-836f-a1f33a62c795-0",
-          "image": "/home/user/claude-motion-design/videos/signal-esursi/.hyperframes/artifacts/snapshots/43946416-5158-4f8c-93bc-9fd6fd04800b/frame-00-at-23.62s.png",
           "time": 23.62,
           "metadata": {
             "width": 1080,
@@ -1344,12 +1343,13 @@
           "revision": "c0acfae3-c531-4be3-a589-515674794f01",
           "inputFingerprint": "b9970c98f478e38fcfa42821c562169a0864a959426cbccb92aef02208be5e4b",
           "inputScope": "local-project-files",
-          "attribution": "recorded-revision"
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "6f30b7c0-160f-4355-8424-304ee1f98944"
         },
         {
           "scope": "full",
           "id": "d7f27852-728c-4a40-836f-a1f33a62c795-1",
-          "image": "/home/user/claude-motion-design/videos/signal-esursi/.hyperframes/artifacts/snapshots/43946416-5158-4f8c-93bc-9fd6fd04800b/frame-01-at-28.6s.png",
           "time": 28.6,
           "metadata": {
             "width": 1080,
@@ -1364,12 +1364,13 @@
           "revision": "c0acfae3-c531-4be3-a589-515674794f01",
           "inputFingerprint": "b9970c98f478e38fcfa42821c562169a0864a959426cbccb92aef02208be5e4b",
           "inputScope": "local-project-files",
-          "attribution": "recorded-revision"
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "6f30b7c0-160f-4355-8424-304ee1f98944"
         },
         {
           "scope": "full",
           "id": "d7f27852-728c-4a40-836f-a1f33a62c795-2",
-          "image": "/home/user/claude-motion-design/videos/signal-esursi/.hyperframes/artifacts/snapshots/43946416-5158-4f8c-93bc-9fd6fd04800b/frame-02-at-31.69s.png",
           "time": 31.69,
           "metadata": {
             "width": 1080,
@@ -1384,12 +1385,13 @@
           "revision": "c0acfae3-c531-4be3-a589-515674794f01",
           "inputFingerprint": "b9970c98f478e38fcfa42821c562169a0864a959426cbccb92aef02208be5e4b",
           "inputScope": "local-project-files",
-          "attribution": "recorded-revision"
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "6f30b7c0-160f-4355-8424-304ee1f98944"
         },
         {
           "scope": "full",
           "id": "d7f27852-728c-4a40-836f-a1f33a62c795-3",
-          "image": "/home/user/claude-motion-design/videos/signal-esursi/.hyperframes/artifacts/snapshots/43946416-5158-4f8c-93bc-9fd6fd04800b/frame-03-at-50.48s.png",
           "time": 50.48,
           "metadata": {
             "width": 1080,
@@ -1404,12 +1406,13 @@
           "revision": "c0acfae3-c531-4be3-a589-515674794f01",
           "inputFingerprint": "b9970c98f478e38fcfa42821c562169a0864a959426cbccb92aef02208be5e4b",
           "inputScope": "local-project-files",
-          "attribution": "recorded-revision"
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "6f30b7c0-160f-4355-8424-304ee1f98944"
         },
         {
           "scope": "full",
           "id": "d7f27852-728c-4a40-836f-a1f33a62c795-4",
-          "image": "/home/user/claude-motion-design/videos/signal-esursi/.hyperframes/artifacts/snapshots/43946416-5158-4f8c-93bc-9fd6fd04800b/frame-04-at-56.4s.png",
           "time": 56.4,
           "metadata": {
             "width": 1080,
@@ -1424,12 +1427,13 @@
           "revision": "c0acfae3-c531-4be3-a589-515674794f01",
           "inputFingerprint": "b9970c98f478e38fcfa42821c562169a0864a959426cbccb92aef02208be5e4b",
           "inputScope": "local-project-files",
-          "attribution": "recorded-revision"
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "6f30b7c0-160f-4355-8424-304ee1f98944"
         },
         {
           "scope": "full",
           "id": "d7f27852-728c-4a40-836f-a1f33a62c795-5",
-          "image": "/home/user/claude-motion-design/videos/signal-esursi/.hyperframes/artifacts/snapshots/43946416-5158-4f8c-93bc-9fd6fd04800b/frame-05-at-62.21s.png",
           "time": 62.21,
           "metadata": {
             "width": 1080,
@@ -1444,12 +1448,13 @@
           "revision": "c0acfae3-c531-4be3-a589-515674794f01",
           "inputFingerprint": "b9970c98f478e38fcfa42821c562169a0864a959426cbccb92aef02208be5e4b",
           "inputScope": "local-project-files",
-          "attribution": "recorded-revision"
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "6f30b7c0-160f-4355-8424-304ee1f98944"
         },
         {
           "scope": "full",
           "id": "d7f27852-728c-4a40-836f-a1f33a62c795-6",
-          "image": "/home/user/claude-motion-design/videos/signal-esursi/.hyperframes/artifacts/snapshots/43946416-5158-4f8c-93bc-9fd6fd04800b/frame-06-at-77.771s.png",
           "time": 77.771,
           "metadata": {
             "width": 1080,
@@ -1464,7 +1469,9 @@
           "revision": "c0acfae3-c531-4be3-a589-515674794f01",
           "inputFingerprint": "b9970c98f478e38fcfa42821c562169a0864a959426cbccb92aef02208be5e4b",
           "inputScope": "local-project-files",
-          "attribution": "recorded-revision"
+          "attribution": "recorded-revision",
+          "status": "cleaned",
+          "cleanedAfterRender": "6f30b7c0-160f-4355-8424-304ee1f98944"
         }
       ]
     },
@@ -1472,13 +1479,14 @@
   },
   "renders": {
     "latest": {
-      "id": "9af7387b-dc45-4699-8eeb-daadd3f7062b",
-      "completedAt": 1792668262139,
+      "id": "6f30b7c0-160f-4355-8424-304ee1f98944",
+      "completedAt": 1792668761576,
       "output": "/home/user/claude-motion-design/videos/signal-esursi/renders/signal-esursi-brouillon-3.mp4",
       "status": "completed",
-      "revision": null
+      "revision": "9015f45d-ef6a-4450-80b6-661d90364a5f"
     },
     "retainedRevisions": [
+      "9015f45d-ef6a-4450-80b6-661d90364a5f",
       "3f68faec-ab95-4c64-96cf-a43b636f8677"
     ]
   },

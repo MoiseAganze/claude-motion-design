@@ -719,13 +719,14 @@
   },
   "renders": {
     "latest": {
-      "id": "67eeaf9e-b072-4f40-a3b2-765db2cb6670",
-      "completedAt": 1792668466662,
+      "id": "d563c23e-681c-4fb6-bedf-3625cedaf066",
+      "completedAt": 1792668965408,
       "output": "/home/user/claude-motion-design/videos/signal-recherche/renders/signal-recherche-brouillon.mp4",
       "status": "completed",
-      "revision": "1232a554-fe31-4a5d-a666-21c923b70bc7"
+      "revision": "d4c39fcb-5ee4-4b92-9a5a-07afb9e5fef3"
     },
     "retainedRevisions": [
+      "d4c39fcb-5ee4-4b92-9a5a-07afb9e5fef3",
       "1232a554-fe31-4a5d-a666-21c923b70bc7"
     ]
   },
