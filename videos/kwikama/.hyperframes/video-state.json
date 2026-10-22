@@ -2650,9 +2650,9 @@
   },
   "renders": {
     "latest": {
-      "id": "603ddf2c-d473-4f4d-bd60-44a08bfe0bf5",
-      "completedAt": 1792672190589,
-      "output": "/home/user/claude-motion-design/videos/kwikama/renders/kwikama-ouverture-brouillon.mp4",
+      "id": "1aa3067f-b05b-44c1-8fdb-f7884d939c56",
+      "completedAt": 1792675312764,
+      "output": "/home/user/claude-motion-design/videos/kwikama/renders/kwikama-brouillon.mp4",
       "status": "completed",
       "revision": null
     },
